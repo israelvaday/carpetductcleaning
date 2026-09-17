@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Clock, MapPin, Phone } from "lucide-react";
 import { ImageHero } from "@/components/blocks";
 import { JsonLd } from "@/components/json-ld";
+import { MapEmbed } from "@/components/map-embed";
 import { CheckList, Section, SectionHead, TrustRow } from "@/components/ui";
 import { asset, img } from "@/lib/images";
 import { breadcrumbs } from "@/lib/schema";
@@ -77,15 +78,12 @@ export default function ContactPage() {
             <div className="mt-8">
               <TrustRow />
             </div>
-            <div className="relative mt-8 aspect-16/9 overflow-hidden rounded-2xl shadow-card">
-              <Image
-                src={asset("/images/map.webp")}
-                alt="Orange County service area map"
-                fill
-                sizes="(min-width: 1024px) 30rem, 100vw"
-                className="object-cover"
-              />
-            </div>
+            <MapEmbed
+              query="Carpet And Duct Cleaning, 191 Pinestone, Irvine, CA 92604"
+              title="Carpet & Duct Cleaning — 191 Pinestone, Irvine, CA 92604"
+              className="mt-8"
+              height="h-64"
+            />
           </div>
 
           <div className="rounded-3xl border border-line bg-white p-6 shadow-lift md:p-8">

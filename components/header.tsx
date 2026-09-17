@@ -3,10 +3,8 @@ import Link from "next/link";
 import { ChevronDown, Menu, Phone } from "lucide-react";
 import { site } from "@/lib/site";
 import { SERVICE_GROUPS } from "@/lib/services";
-import { asset, serviceImage } from "@/lib/images";
+import { asset } from "@/lib/images";
 import { titleCase } from "@/lib/utils";
-
-const featured = ["carpet-cleaning", "air-duct-cleaning", "upholstery-cleaning", "water-damage-restoration"];
 
 const navLinks = [
   { href: "/locations/", label: "Locations" },
@@ -69,24 +67,17 @@ export function Header() {
                   </div>
                 ))}
               </div>
-              <div className="mt-6 grid gap-3 border-t border-line pt-5 sm:grid-cols-4">
-                {featured.map((slug) => {
-                  const image = serviceImage(slug, "card");
-                  return (
-                    <Link key={slug} href={`/${slug}/`} className="group/card block">
-                      <span className="block overflow-hidden rounded-xl">
-                        <Image
-                          src={image.src}
-                          alt={image.alt}
-                          width={360}
-                          height={240}
-                          className="h-24 w-full object-cover transition group-hover/card:scale-105"
-                        />
-                      </span>
-                      <span className="mt-2 block text-sm font-semibold text-navy">{titleCase(slug)}</span>
-                    </Link>
-                  );
-                })}
+              <div className="mt-6 flex flex-wrap items-center justify-between gap-3 rounded-xl border-t border-line bg-sand px-5 py-4 pt-5">
+                <p className="text-sm text-ink/70">
+                  Not sure which service fits? We will tell you on the phone — no obligation.
+                </p>
+                <a
+                  href={site.phoneHref}
+                  className="inline-flex items-center gap-2 rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-dark"
+                >
+                  <Phone className="size-4" />
+                  {site.phone}
+                </a>
               </div>
             </div>
           </details>

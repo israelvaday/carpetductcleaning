@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { ProcessWizard } from "@/components/process-wizard";
+import { ProcessWizard, type ProcessStep } from "@/components/process-wizard";
 import { Reveal } from "@/components/fx";
 import { Breadcrumb, CallButton, CheckList, QuoteButton, RatingPill, Section, SectionHead } from "@/components/ui";
-import { asset, cityImage, gallery, serviceImage, type Img } from "@/lib/images";
+import { asset, gallery, serviceImage, type Img } from "@/lib/images";
 import { serviceBlurb } from "@/lib/services";
 import { site } from "@/lib/site";
 import { cn, titleCase } from "@/lib/utils";
@@ -130,7 +130,7 @@ export function Stats({ tone = "navy" }: { tone?: "navy" | "sand" }) {
   );
 }
 
-export function Process({ tone = "sand" }: { tone?: "light" | "sand" }) {
+export function Process({ tone = "sand", steps }: { tone?: "light" | "sand"; steps?: ProcessStep[] }) {
   return (
     <Section tone={tone}>
       <Reveal>
@@ -141,13 +141,13 @@ export function Process({ tone = "sand" }: { tone?: "light" | "sand" }) {
         />
       </Reveal>
       <Reveal delay={0.1} className="mt-12">
-        <ProcessWizard />
+        <ProcessWizard steps={steps} />
       </Reveal>
     </Section>
   );
 }
 
-export function Gallery({ limit = 8 }: { limit?: number }) {
+export function Gallery({ limit = 8, offset = 0 }: { limit?: number; offset?: number }) {
   return (
     <Section>
       <SectionHead
@@ -156,7 +156,7 @@ export function Gallery({ limit = 8 }: { limit?: number }) {
         body="Photos from our own crews — carpet, rugs, upholstery, tile, and duct work."
       />
       <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
-        {gallery.slice(0, limit).map((photo, i) => (
+        {gallery.slice(offset, offset + limit).map((photo, i) => (
           <Reveal key={photo.src} delay={Math.min(i, 7) * 0.05}>
             <div className="relative aspect-square overflow-hidden rounded-xl shadow-card">
               <Image
@@ -241,33 +241,21 @@ export function CityCards({
   return (
     <Section tone="sand">
       <SectionHead eyebrow="Service areas" title={title} body={body} />
-      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {cities.map((c) => {
-          const image = cityImage(service, c.city);
-          return (
+      {/* Text chips, not photo cards: every city photo is reserved for its own
+          city page and its /locations tile, so nothing ever repeats. */}
+      <ul className="mt-10 flex flex-wrap gap-2.5">
+        {cities.map((c) => (
+          <li key={c.route}>
             <Link
-              key={c.route}
               href={`${c.route}/`}
-              className="group relative overflow-hidden rounded-2xl shadow-card"
+              className="group inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-2.5 text-sm font-medium text-navy shadow-sm transition hover:-translate-y-0.5 hover:border-brand hover:text-brand hover:shadow-card"
             >
-              <div className="relative aspect-16/9">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  sizes="(min-width: 1024px) 22rem, (min-width: 640px) 45vw, 100vw"
-                  className="object-cover transition duration-500 group-hover:scale-105"
-                />
-                <span className="absolute inset-0 bg-linear-to-t from-navy/90 via-navy/25 to-transparent" />
-              </div>
-              <span className="absolute bottom-0 left-0 right-0 flex items-center justify-between gap-2 p-4 text-white">
-                <span className="font-semibold">{titleCase(c.city)}</span>
-                <ArrowRight className="size-4 transition group-hover:translate-x-0.5" />
-              </span>
+              {titleCase(c.city)}
+              <ArrowRight className="size-3.5 text-brand transition group-hover:translate-x-0.5" />
             </Link>
-          );
-        })}
-      </div>
+          </li>
+        ))}
+      </ul>
     </Section>
   );
 }

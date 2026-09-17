@@ -54,7 +54,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       />
 
       <ImageHero
-        image={postImage(slug, title)}
+        image={postImage(slug)}
         breadcrumb={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog/" }, { name: title }]}
         eyebrow="Guide"
         title={title}
@@ -70,32 +70,22 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
       <Section tone="sand">
         <SectionHead eyebrow="Keep reading" title="More from the blog" />
+        {/* Text cards: each post's photo appears on its own page and the blog
+            index only — never burned on a shared "more" rail. */}
         <div className="mt-8 grid gap-6 sm:grid-cols-3">
           {more.map((p) => {
             const t = blogTitle(p);
-            const image = postImage(p.slug, t);
             return (
               <Link
                 key={p.slug}
                 href={`/blog/${p.slug}/`}
-                className="group overflow-hidden rounded-2xl border border-line bg-white shadow-card transition hover:-translate-y-0.5 hover:shadow-lift"
+                className="group flex flex-col justify-between rounded-2xl border border-line bg-white p-5 shadow-card transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-lift"
               >
-                <div className="relative aspect-16/10">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    sizes="(min-width: 640px) 20rem, 100vw"
-                    className="object-cover transition duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-5">
-                  <h3 className="font-semibold leading-snug text-navy">{t}</h3>
-                  <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand">
-                    Read
-                    <ArrowRight className="size-4" />
-                  </span>
-                </div>
+                <h3 className="font-semibold leading-snug text-navy group-hover:text-brand">{t}</h3>
+                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand">
+                  Read
+                  <ArrowRight className="size-4 transition group-hover:translate-x-0.5" />
+                </span>
               </Link>
             );
           })}

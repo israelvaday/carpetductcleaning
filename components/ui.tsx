@@ -9,10 +9,12 @@ export function Section({
   children,
   className,
   tone = "light",
+  id,
 }: {
   children: React.ReactNode;
   className?: string;
   tone?: "light" | "sand" | "navy";
+  id?: string;
 }) {
   const tones = {
     light: "bg-white",
@@ -20,7 +22,7 @@ export function Section({
     navy: "bg-navy text-white",
   };
   return (
-    <section className={cn("py-16 md:py-24", tones[tone], className)}>
+    <section id={id} className={cn("py-16 md:py-24", tones[tone], className)}>
       <div className="container-page">{children}</div>
     </section>
   );

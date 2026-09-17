@@ -3,13 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
-import { ImageHero, Process, Stats } from "@/components/blocks";
+import { ImageHero, Stats } from "@/components/blocks";
 import { Cta } from "@/components/cta";
 import { FaqList } from "@/components/faq-list";
 import { JsonLd } from "@/components/json-ld";
+import { QuoteWizard } from "@/components/quote-wizard";
 import { CallButton, CheckList, QuoteButton, Section, SectionHead } from "@/components/ui";
 import { cityEntries, getCityDoc } from "@/lib/content";
-import { cityImage, gallery } from "@/lib/images";
+import { cityImage, cityJobs } from "@/lib/images";
 import { breadcrumbs, faqLd } from "@/lib/schema";
 import { PROOF_POINTS } from "@/lib/services";
 import { moneyServices, site } from "@/lib/site";
@@ -105,17 +106,17 @@ export default async function CityPage({
       <Section tone="sand">
         <SectionHead
           eyebrow="Recent work"
-          title={`Jobs near ${doc.cityName}`}
-          body="Photos from our own crews across Orange County."
+          title={`${doc.serviceName} jobs near ${doc.cityName}`}
+          body="Photos from our own crews working in this part of Orange County."
         />
-        <div className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-4">
-          {gallery.slice(0, 4).map((photo) => (
-            <div key={photo.src} className="relative aspect-square overflow-hidden rounded-xl">
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {cityJobs(doc.service, doc.city).map((photo) => (
+            <div key={photo.src} className="relative aspect-4/3 overflow-hidden rounded-xl shadow-card">
               <Image
                 src={photo.src}
                 alt={photo.alt}
                 fill
-                sizes="(min-width: 768px) 22vw, 45vw"
+                sizes="(min-width: 640px) 45vw, 90vw"
                 className="object-cover"
               />
             </div>
@@ -123,7 +124,27 @@ export default async function CityPage({
         </div>
       </Section>
 
-      <Process tone="light" />
+      <Section tone="light" id="quote">
+        <div className="grid items-start gap-10 lg:grid-cols-[1fr_1.2fr]">
+          <div>
+            <SectionHead
+              eyebrow={`Serving ${doc.cityName}`}
+              title={`Your local ${doc.serviceName.toLowerCase()} crew in ${doc.cityName}`}
+              body={`Our van is in ${doc.cityName} and the surrounding neighborhoods most days. Answer a few quick questions and we come back with an itemized price range and the next open slot.`}
+            />
+            <div className="mt-8 overflow-hidden rounded-2xl border border-line shadow-card">
+              <iframe
+                title={`Map of ${doc.cityName}, CA service area`}
+                src={`https://www.google.com/maps?q=${encodeURIComponent(`${doc.cityName}, CA`)}&z=12&output=embed`}
+                className="h-64 w-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </div>
+          <QuoteWizard defaultService={doc.service} />
+        </div>
+      </Section>
 
       <FaqList items={doc.faqs} title={`${doc.cityName} questions`} />
 

@@ -1,6 +1,5 @@
-import Image from "next/image";
+import { Phone, Star, ShieldCheck, Clock } from "lucide-react";
 import { CallButton, QuoteButton, TrustRow } from "@/components/ui";
-import { asset } from "@/lib/images";
 import { site } from "@/lib/site";
 
 export function Cta({
@@ -29,14 +28,37 @@ export function Cta({
               <TrustRow dark />
             </div>
           </div>
-          <div className="relative min-h-64 lg:min-h-full">
-            <Image
-              src={asset("/images/truck-mount.webp")}
-              alt="Truck-mounted extraction hose running into an Orange County home"
-              fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
-            />
+          {/* No photo here — the CTA band renders on every page, and repeating
+              one image site-wide is against the house rule. A stat panel keeps
+              the layout balanced without burning a photo. */}
+          <div className="relative flex min-h-64 flex-col justify-center gap-6 bg-gradient-to-br from-brand/25 via-navy to-navy p-8 md:p-12 lg:min-h-full">
+            <div className="absolute inset-0 opacity-[0.07] [background-image:radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] [background-size:22px_22px]" />
+            <div className="relative">
+              <p className="flex items-center gap-1 text-gold">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="size-5 fill-current" />
+                ))}
+              </p>
+              <p className="mt-2 text-2xl font-semibold">{site.rating} on Google</p>
+              <p className="text-sm text-white/65">from {site.reviewCount}+ verified reviews</p>
+            </div>
+            <div className="relative flex flex-col gap-3 text-sm">
+              <p className="flex items-center gap-2.5 text-white/80">
+                <ShieldCheck className="size-4 shrink-0 text-brand-50" />
+                Google Guaranteed · BBB A+ · IICRC certified
+              </p>
+              <p className="flex items-center gap-2.5 text-white/80">
+                <Clock className="size-4 shrink-0 text-brand-50" />
+                Same-day and next-day openings
+              </p>
+              <a
+                href={site.phoneHref}
+                className="mt-1 flex items-center gap-2.5 text-xl font-bold text-white transition hover:text-brand-50"
+              >
+                <Phone className="size-5 shrink-0 text-gold" />
+                {site.phone}
+              </a>
+            </div>
           </div>
         </div>
       </div>

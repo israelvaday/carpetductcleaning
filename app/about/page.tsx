@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Gallery, ImageHero, Process, Stats } from "@/components/blocks";
+import { Gallery, ImageHero, Stats } from "@/components/blocks";
 import { Cta } from "@/components/cta";
 import { JsonLd } from "@/components/json-ld";
 import { CheckList, Section, SectionHead, TrustRow } from "@/components/ui";
@@ -81,8 +81,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 gap-4">
             <div className="relative aspect-3/4 overflow-hidden rounded-2xl shadow-card">
               <Image
-                src={asset("/images/tech.webp")}
-                alt="Technician treating a carpet stain with professional tools"
+                src={img("about-crew").src}
+                alt={img("about-crew").alt}
                 fill
                 sizes="(min-width: 1024px) 20rem, 45vw"
                 className="object-cover"
@@ -108,8 +108,7 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Process tone="light" />
-      <Gallery limit={8} />
+      <Gallery limit={8} offset={8} />
       <Cta title="Work with a local Irvine crew" />
     </>
   );

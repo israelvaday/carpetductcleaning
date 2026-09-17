@@ -42,7 +42,7 @@ export default function BlogIndex() {
           {posts.map((p, i) => {
             const title = blogTitle(p);
             const gen = blogMeta(p);
-            const image = postImage(p.slug, title);
+            const image = postImage(p.slug);
             const excerpt = gen?.excerpt || cleanParagraphs(p.text || "", 1)[0]?.slice(0, 140);
             return (
               <Link

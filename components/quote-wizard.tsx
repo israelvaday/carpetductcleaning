@@ -40,9 +40,13 @@ const URGENCIES: { key: Urgency; label: string; sub: string; Icon: typeof Zap }[
 
 const STEP_LABELS = ["Service", "Property", "Timing", "Details", "Contact"] as const;
 
-export function QuoteWizard() {
-  const [step, setStep] = useState(0);
-  const [service, setService] = useState<string>("");
+export function QuoteWizard({ defaultService = "" }: { defaultService?: string }) {
+  // When the page already knows the service (city/service pages), skip the
+  // picker step — the visitor starts at "property" and the picker photos never
+  // render on those pages (no image repeats site-wide).
+  const startStep = defaultService ? 1 : 0;
+  const [step, setStep] = useState(startStep);
+  const [service, setService] = useState<string>(defaultService);
   const [property, setProperty] = useState<PropertyKey | "">("");
   const [urgency, setUrgency] = useState<Urgency | "">("");
   const [message, setMessage] = useState("");
@@ -64,7 +68,8 @@ export function QuoteWizard() {
     window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
   }, [step]);
 
-  const progress = Math.round(((step + 1) / STEP_LABELS.length) * 100);
+  const totalSteps = STEP_LABELS.length - startStep;
+  const progress = Math.round(((step - startStep + 1) / totalSteps) * 100);
 
   const canAdvance = useMemo(() => {
     switch (step) {
@@ -81,7 +86,7 @@ export function QuoteWizard() {
     if (canAdvance && step < STEP_LABELS.length - 1) setStep((s) => s + 1);
   }
   function back() {
-    if (step > 0) setStep((s) => s - 1);
+    if (step > startStep) setStep((s) => s - 1);
   }
 
   function submit() {
@@ -111,7 +116,7 @@ export function QuoteWizard() {
             <Sparkles className="size-3" /> Free quote
           </span>
           <span className="text-[11px] font-bold uppercase tracking-wider text-ink/50">
-            Step {step + 1} of {STEP_LABELS.length} — {STEP_LABELS[step]}
+            Step {step - startStep + 1} of {totalSteps} — {STEP_LABELS[step]}
           </span>
           <span className="ml-auto text-[11px] font-bold text-brand">{progress}%</span>
         </div>
@@ -149,7 +154,7 @@ export function QuoteWizard() {
                 <p className="mt-1 text-sm text-ink/60">Tap the service closest to your job.</p>
                 <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
                   {SERVICES.map((slug) => {
-                    const image = serviceImage(slug, "card");
+                    const image = serviceImage(slug, "picker");
                     const active = service === slug;
                     return (
                       <button
@@ -313,7 +318,7 @@ export function QuoteWizard() {
             <button
               type="button"
               onClick={back}
-              disabled={step === 0}
+              disabled={step === startStep}
               aria-label="Previous step"
               className="inline-flex h-11 items-center gap-2 rounded-full border border-line px-4 text-sm font-semibold text-navy transition hover:border-brand hover:text-brand disabled:opacity-40"
             >

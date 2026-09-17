@@ -1,3 +1,4 @@
+import { getReviews } from "./reviews";
 import { site, siteUrl } from "./site";
 
 export function businessNode() {
@@ -11,9 +12,25 @@ export function businessNode() {
     areaServed: { "@type": "AdministrativeArea", name: "Orange County, CA" },
     address: {
       "@type": "PostalAddress",
+      streetAddress: "191 Pinestone",
       addressLocality: site.city,
       addressRegion: site.region,
+      postalCode: "92604",
       addressCountry: "US",
+    },
+    // Real numbers pulled from Google Places at build time (content/reviews.json).
+    ...aggregateRating(),
+  };
+}
+
+function aggregateRating() {
+  const r = getReviews();
+  if (!r) return {}; // not fetched yet — omit rather than claim numbers
+  return {
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: String(r.rating),
+      reviewCount: String(r.totalRatings),
     },
   };
 }

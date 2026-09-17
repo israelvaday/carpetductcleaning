@@ -50,11 +50,22 @@ function add(src, width) {
 for (const a of map.assets || []) add(a.src, a.w || 1200);
 for (const g of map.gallery || []) add(g.src, g.w || 800);
 for (const s of map.services || []) {
-  add(s.src, 1440); // hero
-  add(s.src, 720); // card (-sm)
+  if (s.hero) add(s.hero, 1440); // hub hero
+  for (const role of ["card", "picker"]) {
+    if (s[role]) {
+      add(s[role], 720); // full-size fallback -> {key}.webp
+      add(s[role], 480); // card variant -> {key}-sm.webp
+    }
+  }
+  for (const src of s.steps || []) add(src, 1200); // process wizard panels
 }
-for (const pool of Object.values(map.cityPool || {})) for (const src of pool) add(src, 1200);
-for (const src of Object.values(map.cityExact || {})) add(src, 1200);
+for (const src of Object.values(map.cityExact || {})) add(src, 1600);
+for (const src of Object.values(map.cityCard || {})) {
+  add(src, 720);
+  add(src, 480); // -sm card variant
+}
+for (const srcs of Object.values(map.cityJobs || {})) for (const src of srcs) add(src, 800);
+for (const src of Object.values(map.posts || {})) add(src, 1200);
 
 let written = 0;
 let skipped = 0;

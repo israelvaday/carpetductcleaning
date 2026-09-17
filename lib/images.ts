@@ -1,4 +1,3 @@
-import urlMap from "@/audit/next-url-map.json";
 import map from "@/content/image-map.json";
 import photoTags from "@/content/photo-tags.json";
 
@@ -25,18 +24,19 @@ function srcToKey(src: string): string {
 }
 
 // Alt text indexed by media src. Manifest entries first, then the vision tags
-// (which carry an alt for every tagged photo, including pool-only ones).
+// (which carry an alt for every tagged photo).
 const altBySrc = new Map<string, string>();
 for (const a of map.assets) altBySrc.set(a.src, a.alt);
 for (const g of map.gallery) altBySrc.set(g.src, g.alt);
-for (const s of map.services) altBySrc.set(s.src, s.alt);
+for (const s of map.services) {
+  altBySrc.set(s.hero, s.alt);
+  if (s.alt) {
+    for (const src of [s.card, s.picker]) if (src && !altBySrc.has(src)) altBySrc.set(src, s.alt);
+  }
+}
 for (const [src, t] of Object.entries(photoTags as Record<string, { alt?: string }>)) {
   if (t?.alt && !altBySrc.has(src)) altBySrc.set(src, t.alt);
 }
-
-// Named assets (logo, hero-home, map, ...) are looked up by their manifest key.
-const assetByKey = new Map(map.assets.map((a) => [a.key, a]));
-const serviceBySlug = new Map(map.services.map((s) => [s.slug, s]));
 
 function fromSrc(src: string, size: "full" | "sm" = "full"): Img {
   const key = srcToKey(src);
@@ -44,69 +44,77 @@ function fromSrc(src: string, size: "full" | "sm" = "full"): Img {
   return { src: asset(`/images/${file}`), alt: altBySrc.get(src) ?? "" };
 }
 
+// Named assets (logo, hero-home, truck, van, process steps, ...).
+const assetByKey = new Map(map.assets.map((a) => [a.key, a]));
+
 export function img(key: string, alt?: string): Img {
   const assetEntry = assetByKey.get(key);
   if (assetEntry) return { src: fromSrc(assetEntry.src).src, alt: alt ?? assetEntry.alt };
-  // Already a public path key with no manifest entry (shouldn't happen often).
   return { src: asset(`/images/${key}.webp`), alt: alt ?? "" };
 }
 
-export function serviceImage(slug: string, size: "hero" | "card" = "hero"): Img {
+type ServiceEntry = {
+  slug: string;
+  hero: string;
+  card: string | null;
+  picker: string | null;
+  steps: string[];
+  alt: string;
+};
+const serviceBySlug = new Map((map.services as unknown as ServiceEntry[]).map((s) => [s.slug, s]));
+
+export type ServiceImageRole = "hero" | "card" | "picker";
+
+// Each role returns a DIFFERENT photo — a service's hub hero, homepage card,
+// related-services card, and quote-picker tile never share an image.
+export function serviceImage(slug: string, role: ServiceImageRole = "hero"): Img {
   const svc = serviceBySlug.get(slug);
   if (!svc) return img("hero-home");
-  return fromSrc(svc.src, size === "card" ? "sm" : "full");
+  // picker falls back to card (both render on the homepage), never to hero —
+  // the hero belongs to the service hub page alone.
+  const src = svc[role] || svc.card || svc.hero;
+  return fromSrc(src, role === "hero" ? "full" : "sm");
 }
 
-// Round-robin through the pool by the city's position in the URL map, so no
-// photo repeats until every option has been used once.
-const cityOrder = new Map<string, number>();
-const perService = new Map<string, number>();
-for (const page of urlMap.cityPages) {
-  const [, service, city] = page.route.split("/");
-  const n = perService.get(service) ?? 0;
-  cityOrder.set(`${service}/${city}`, n);
-  perService.set(service, n + 1);
+// The four process-wizard panels on a service hub — unique to that service.
+export function serviceSteps(slug: string): Img[] {
+  const svc = serviceBySlug.get(slug);
+  if (!svc || !svc.steps?.length) return [];
+  return svc.steps.map((s) => fromSrc(s));
 }
 
+// Unique hero per city — no two city pages share a photo.
 const cityExact = map.cityExact as Record<string, string>;
-const cityPool = map.cityPool as Record<string, string[]>;
+const cityCardMap = (map as unknown as { cityCard: Record<string, string> }).cityCard || {};
 
 export function cityImage(service: string, city: string): Img {
-  const key = `${service}/${city}`;
-  const exact = cityExact[key];
-  if (exact) {
-    // cityExact values may be a named asset key or a raw src.
-    const assetEntry = assetByKey.get(exact);
-    return assetEntry ? fromSrc(assetEntry.src) : fromSrc(exact);
-  }
-  const pool = cityPool[service];
-  if (pool?.length) return fromSrc(pool[(cityOrder.get(key) ?? 0) % pool.length]);
-  return serviceImage(service);
+  const exact = cityExact[`${service}/${city}`];
+  if (exact) return fromSrc(exact);
+  return serviceImage(service, "hero");
+}
+
+// The city's tile on /locations — a different photo from the city page hero.
+export function cityCardImage(service: string, city: string): Img {
+  const src = cityCardMap[`${service}/${city}`];
+  if (src) return fromSrc(src, "sm");
+  return serviceImage(service, "card");
+}
+
+// Unique per-city job photos for the "Jobs near you" strip.
+const cityJobsMap = map.cityJobs as Record<string, string[]>;
+
+export function cityJobs(service: string, city: string): Img[] {
+  const srcs = cityJobsMap[`${service}/${city}`] || [];
+  return srcs.map((s) => fromSrc(s));
+}
+
+// Unique image per blog post.
+const postSrcs = map.posts as Record<string, string>;
+
+export function postImage(slug: string): Img {
+  const src = postSrcs[slug];
+  if (src) return fromSrc(src);
+  return img("hero-home");
 }
 
 export const gallery: Img[] = map.gallery.map((g) => fromSrc(g.src));
-
-const POST_RULES: [RegExp, string][] = [
-  [/dryer|lint/i, "dryer-vent-cleaning"],
-  [/duct|vent|air.quality|allerg|hvac/i, "air-duct-cleaning"],
-  [/water|flood|restoration/i, "water-damage-restoration"],
-  [/oriental|persian|wool/i, "oriental-rug-cleaning"],
-  [/rug/i, "area-rug-cleaning"],
-  [/upholster|sofa|couch|mattress|fabric/i, "upholstery-cleaning"],
-  [/hardwood|wood.floor/i, "hardwood-floor-cleaning"],
-  [/tile|grout/i, "tile-and-grout-cleaning"],
-  [/vinyl/i, "vinyl-floor-cleaning"],
-  [/marble|stone|travertine/i, "natural-stone-cleaning"],
-  [/pet|odor/i, "pet-stain-odor"],
-  [/curtain|drape/i, "drape-cleaning"],
-  [/outdoor|patio|furniture/i, "outdoor-furniture-cleaning"],
-  [/car|rv|vehicle/i, "car-seat-cleaning"],
-  [/commercial|office|hotel/i, "commercial-carpet-cleaning"],
-  [/protector|stain/i, "carpet-cleaning"],
-];
-
-export function postImage(slug: string, title = ""): Img {
-  const hay = `${slug} ${title}`;
-  for (const [re, svc] of POST_RULES) if (re.test(hay)) return serviceImage(svc);
-  return serviceImage("carpet-cleaning");
-}

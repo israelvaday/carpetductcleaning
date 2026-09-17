@@ -5,9 +5,10 @@ import { ArrowRight } from "lucide-react";
 import { ImageHero } from "@/components/blocks";
 import { Cta } from "@/components/cta";
 import { JsonLd } from "@/components/json-ld";
+import { MapEmbed } from "@/components/map-embed";
 import { Section, SectionHead } from "@/components/ui";
 import { cityEntries, serviceSlugs } from "@/lib/content";
-import { cityImage, img } from "@/lib/images";
+import { cityCardImage, img } from "@/lib/images";
 import { breadcrumbs } from "@/lib/schema";
 import { SERVICE_GROUPS } from "@/lib/services";
 import { site } from "@/lib/site";
@@ -39,7 +40,7 @@ export default function LocationsPage() {
       />
 
       <ImageHero
-        image={img("map")}
+        image={img("truck")}
         breadcrumb={[{ name: "Home", href: "/" }, { name: "Service areas" }]}
         eyebrow="Orange County, CA"
         title="Service areas across Orange County"
@@ -47,8 +48,21 @@ export default function LocationsPage() {
         bullets={["One city, one service, one URL", `Same-day openings`, `Since ${site.foundingYear}`]}
       />
 
+      <Section tone="light">
+        <div className="grid items-center gap-10 lg:grid-cols-2">
+          <div>
+            <SectionHead
+              eyebrow="Where we work"
+              title="Our truck is in your neighborhood most days"
+              body={`From the coast to the inland foothills, ${site.name} runs daily routes across ${site.area}. Find your city below — every page is written for that city, with real pricing and the next open slot.`}
+            />
+          </div>
+          <MapEmbed query="Orange County, CA" title="Carpet & Duct Cleaning service area — Orange County, CA" height="h-72" />
+        </div>
+      </Section>
+
       {[...groups.entries()].map(([service, cities], index) => (
-        <Section key={service} tone={index % 2 === 0 ? "light" : "sand"}>
+        <Section key={service} tone={index % 2 === 0 ? "sand" : "light"}>
           <div className="flex flex-wrap items-end justify-between gap-4">
             <SectionHead eyebrow="Cities" title={`${titleCase(service)} by city`} />
             <Link href={`/${service}/`} className="inline-flex items-center gap-2 font-semibold text-brand">
@@ -58,7 +72,7 @@ export default function LocationsPage() {
           </div>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {cities.map((c) => {
-              const image = cityImage(service, c.city);
+              const image = cityCardImage(service, c.city);
               return (
                 <Link
                   key={c.route}

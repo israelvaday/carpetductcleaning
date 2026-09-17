@@ -14631,5 +14631,2271 @@
   ],
   "w": 335,
   "h": 512
+ },
+ "bh/img-007.webp": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Close-up view inside a dirty air duct, showing accumulated dust and debris.",
+  "caption": "Inside a dusty air duct",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 512,
+  "h": 384
+ },
+ "bh/img-003.webp": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Close-up of wires inside a dusty air duct.",
+  "caption": "Wires inside a dirty air duct.",
+  "best_for": [
+   "process"
+  ],
+  "w": 512,
+  "h": 384
+ },
+ "bh/img-001.webp": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "A clogged air duct filled with dust and debris.",
+  "caption": "Severely clogged air duct with accumulated dust.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-004.webp": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Close-up view inside a dusty air duct with wires.",
+  "caption": "Inside a dusty air duct.",
+  "best_for": [
+   "process",
+   "blog"
+  ],
+  "w": 512,
+  "h": 384
+ },
+ "bh/img-008.webp": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "View inside a dusty air duct with wooden and concrete walls.",
+  "caption": "Inside a dirty air duct.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 512,
+  "h": 384
+ },
+ "bh/img-006.webp": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Interior of a dirty air duct with visible dust and debris",
+  "caption": "Dirty air duct interior",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-005.webp": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "A clogged air duct filled with a large amount of dirt and debris.",
+  "caption": "Heavily clogged air duct.",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-002.webp": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Interior view of a wooden air duct with a concrete floor.",
+  "caption": "Inside a wooden air duct.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-009.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "Inside of a dirty air duct filled with debris and dust.",
+  "caption": "Severely clogged air duct with accumulated dirt.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-010.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside view of a wooden air duct with a flexible metal pipe.",
+  "caption": "Inside view of a wooden air duct.",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-011.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "View inside a dusty air duct with wooden walls.",
+  "caption": "Dust accumulation inside an air duct.",
+  "best_for": [
+   "process",
+   "blog"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-015.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "Close-up view inside a dusty air duct with visible debris on the surfaces.",
+  "caption": "Dust and debris inside an air duct.",
+  "best_for": [
+   "process",
+   "blog"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-012.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Interior view of a clean air duct with wooden framing.",
+  "caption": "Inside an air duct.",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-016.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside view of a dirty air duct with visible dust and debris.",
+  "caption": "Dirty air duct interior.",
+  "best_for": [
+   "process",
+   "blog"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-013.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "Close-up view inside a dirty air duct with visible dust and debris.",
+  "caption": "Dirty air duct interior",
+  "best_for": [
+   "process",
+   "blog"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-017.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside of a dirty air duct with debris on the floor.",
+  "caption": "Dirty air duct interior.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-018.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside of a clean air duct, showing the metallic interior extending into darkness.",
+  "caption": "Inside a clean air duct.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-019.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "A dusty air duct with cobwebs and debris, indicating a need for cleaning.",
+  "caption": "Dirty air duct interior.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-020.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "home",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "Inside view of a wooden air duct, showing the passage leading into darkness.",
+  "caption": "Inside a wooden air duct.",
+  "best_for": [
+   "process",
+   "blog"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-021.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "Close-up view inside a dirty air duct with thick dust buildup",
+  "caption": "Heavily soiled air duct interior",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-026.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "View inside a dark air duct with galvanized metal and wood paneling.",
+  "caption": "Inside an air duct",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-025.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Close-up view inside a dirty air duct with visible dust and debris.",
+  "caption": "Inside a very dirty air duct.",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-022.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "Inside view of a dirty air duct with a dark opening.",
+  "caption": "View inside a dirty air duct.",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-023.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Dust and debris accumulated in an air duct.",
+  "caption": "Dirty air duct with debris.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-024.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "Interior view of a wooden air duct with a concrete floor below.",
+  "caption": "Inside a wooden air duct.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-028.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Interior of a dark, empty air duct.",
+  "caption": "Inside a clean air duct.",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-027.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "A pile of dirt and debris accumulated inside an air duct.",
+  "caption": "Heavily soiled air duct interior.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-032.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "View inside a dark air duct with visible dust and debris.",
+  "caption": "Inside of a dirty air duct.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-033.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "Inside of a dirty air duct with visible dust and debris.",
+  "caption": "Dirty air duct interior",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-029.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "Inside of a dirty air duct with debris and dust accumulated",
+  "caption": "A dirty air duct filled with debris",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-030.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "home",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "Inside of a dirty air duct with visible dust and grime on the walls and floor.",
+  "caption": "Dirty air duct interior.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-034.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "home",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "Inside view of a dark air duct with some debris visible",
+  "caption": "Inside of a dirty air duct",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-035.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "View inside a dusty air duct, showing accumulated dirt and debris.",
+  "caption": "Dusty air duct interior",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-036.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "home",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside view of a dusty air duct, showing the dark interior.",
+  "caption": "Inside a dusty air duct.",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-038.webp": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "View inside a narrow air duct with wooden beams on the sides.",
+  "caption": "Inside an air duct.",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-037.webp": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Close-up view inside a dusty air duct with wooden framing.",
+  "caption": "Dusty air duct interior.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-039.webp": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Close-up view inside a dusty air duct, showing rough textured walls leading into darkness.",
+  "caption": "Inside a dirty air duct",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 512,
+  "h": 384
+ },
+ "bh/img-040.webp": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "View inside a dark air duct with wooden and metallic walls.",
+  "caption": "Inside an air duct",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 512,
+  "h": 384
+ },
+ "bh/img-041.webp": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside of a dirty air duct filled with debris and dust.",
+  "caption": "Dirty air duct filled with debris.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-043.webp": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "square",
+  "alt": "Close-up view inside a dusty air duct, showing accumulated debris.",
+  "caption": "Inside a dirty air duct",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 512,
+  "h": 384
+ },
+ "bh/img-042.webp": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "home",
+  "has_people": false,
+  "has_text": true,
+  "text_content": "SOFIT",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside view of a dirty air duct with wooden beams above.",
+  "caption": "Dirty air duct interior.",
+  "best_for": [
+   "process",
+   "blog"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-031.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "home",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "View inside a dark air duct with visible dust and debris.",
+  "caption": "Inside of a dirty air duct.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-045.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "A very dirty air duct filled with debris and dust.",
+  "caption": "Heavily soiled air duct.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-044.webp": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "square",
+  "alt": "Inside view of a dirty air duct with visible dust and debris.",
+  "caption": "Inside a dirty air duct.",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 512,
+  "h": 384
+ },
+ "bh/img-047.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Close-up view inside a dirty air duct with debris and dust accumulated on the metal surface.",
+  "caption": "Dirty air duct interior with accumulated dust and debris.",
+  "best_for": [
+   "process",
+   "blog"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-050.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside of a dusty air duct with light at the far end.",
+  "caption": "Dusty air duct interior.",
+  "best_for": [
+   "process",
+   "blog"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-051.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Close-up view inside a dirty air duct filled with dust and debris.",
+  "caption": "Dirty air duct interior",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-048.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "Interior view of a clean metal air duct system with wooden beams above.",
+  "caption": "Inside an air duct system.",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-049.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Close-up view inside a dirty air duct with visible dust and debris.",
+  "caption": "Inside a dirty air duct",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-052.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "View inside a dusty air duct with some debris visible.",
+  "caption": "Inside a dirty air duct",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-014.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside view of a dusty air duct with wooden framing.",
+  "caption": "Dusty air duct interior.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-053.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside of a dusty and dirty air duct with cobwebs and debris.",
+  "caption": "Dirty air duct interior",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-055.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": true,
+  "text_content": "SOFT FOIL HAMMOND F 262",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside of a dirty air duct with debris and a small green object on the floor.",
+  "caption": "Dirty air duct interior.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-054.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside of a dirty air duct with visible stains on the bottom.",
+  "caption": "Dirty air duct interior.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-056.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": true,
+  "text_content": "GRAM SOFT FOR HAMMOND B 261",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Interior view of a clean air duct with visible text on the side.",
+  "caption": "Inside a clean air duct.",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-058.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "square",
+  "alt": "Inside view of a dirty air duct with visible dust and debris.",
+  "caption": "Dirty air duct interior",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-057.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "Debris and dirt accumulated inside an air duct.",
+  "caption": "Debris inside an air duct.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-061.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside of a dirty air duct with dust and debris visible",
+  "caption": "Dirty air duct interior",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-063.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside of a dirty air duct filled with debris and dust.",
+  "caption": "Severely clogged air duct with accumulated dirt.",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-060.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "square",
+  "alt": "View inside a dirty air duct with visible dust and debris.",
+  "caption": "Inside a dusty air duct",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-064.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "View inside a dusty air duct, showing the metallic interior and accumulated debris on the floor.",
+  "caption": "Inside a dusty air duct",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-065.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "Inside of a dirty air duct with debris and dust accumulated.",
+  "caption": "Dirty air duct interior before cleaning.",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-066.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Interior of a dark, empty air duct with concrete walls.",
+  "caption": "Inside a dusty air duct.",
+  "best_for": [
+   "process",
+   "blog"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-067.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "A dirty air duct with debris on the floor.",
+  "caption": "Dirty air duct interior.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-068.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside view of a dark air duct with visible dust and debris.",
+  "caption": "Inside of a dusty air duct.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-070.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "home",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "View inside a dark air duct.",
+  "caption": "Inside a dusty air duct.",
+  "best_for": [
+   "process",
+   "blog"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-069.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Close-up view inside a dusty air duct, showing accumulated debris.",
+  "caption": "Inside a dirty air duct",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-071.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside of a dirty air duct with debris on the floor.",
+  "caption": "Dirty air duct interior",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-072.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside view of a clean air duct system.",
+  "caption": "Clean air duct interior.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-073.webp": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Close-up of a dusty air duct with debris and cobwebs",
+  "caption": "Dust and debris accumulated inside an air duct",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-074.webp": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "View inside an air duct with wooden beams and metal supports.",
+  "caption": "Inside view of an air duct.",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-075.webp": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "Close-up view inside a dirty air duct with visible dust and debris.",
+  "caption": "Inside a dirty air duct",
+  "best_for": [
+   "process",
+   "blog"
+  ],
+  "w": 512,
+  "h": 384
+ },
+ "bh/img-059.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "Inside view of a dark, empty air duct with concrete walls.",
+  "caption": "Inside of an air duct.",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-076.webp": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside view of a clean air duct with a curved metal piece visible.",
+  "caption": "Clean air duct interior.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 512,
+  "h": 384
+ },
+ "bh/img-077.webp": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Close-up view inside a dusty air duct with visible debris.",
+  "caption": "Inside a dirty air duct",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-078.webp": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "View inside a dusty air duct with light visible at the end.",
+  "caption": "Inside a dirty air duct.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-080.webp": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside view of a dusty air duct with wooden beams.",
+  "caption": "Dusty air duct interior.",
+  "best_for": [
+   "process",
+   "blog"
+  ],
+  "w": 512,
+  "h": 384
+ },
+ "bh/img-079.webp": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside view of a dirty air duct with visible dust and debris.",
+  "caption": "Dirty air duct interior",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 512,
+  "h": 384
+ },
+ "bh/img-081.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "square",
+  "alt": "Close-up view inside a dusty air duct showing buildup on the interior walls.",
+  "caption": "Dust buildup inside an air duct.",
+  "best_for": [
+   "gallery",
+   "process",
+   "blog"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-082.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": true,
+  "text_content": "CS/B",
+  "quality": "medium",
+  "orientation": "square",
+  "alt": "Inside view of a dirty air duct with visible dust and debris.",
+  "caption": "Dirty air duct interior",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-084.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "Inside view of a dark, empty air duct with galvanized metal walls and wooden supports.",
+  "caption": "Inside view of an air duct",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-083.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "Close-up view inside a dirty air duct with dust and debris accumulated on the surfaces.",
+  "caption": "Dirty air duct interior",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-085.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Close-up view inside a dirty air duct with debris on the walls and floor.",
+  "caption": "Dirty air duct interior",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-062.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "View inside a dusty air duct.",
+  "caption": "Inside a dusty air duct.",
+  "best_for": [
+   "process",
+   "blog"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-088.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "View inside a dusty air duct, showing the dark interior and surrounding materials.",
+  "caption": "Inside a dusty air duct",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-087.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Close-up view inside a dusty air duct with visible debris.",
+  "caption": "Inside a dirty air duct.",
+  "best_for": [
+   "process",
+   "blog"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-086.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside view of a dusty air duct with wooden walls.",
+  "caption": "Inside a dusty air duct.",
+  "best_for": [
+   "process",
+   "blog"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-089.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": true,
+  "text_content": "SOF",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "Dust and cobwebs filling an air duct, indicating a need for cleaning.",
+  "caption": "Dirty air duct with cobwebs and debris.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-091.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "low",
+  "orientation": "landscape",
+  "alt": "A dark, dusty air duct with visible dust and debris on wooden beams.",
+  "caption": "Dirty air duct interior",
+  "best_for": [
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-092.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside of a dirty air duct with visible rust and debris.",
+  "caption": "A dirty air duct interior.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-093.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": true,
+  "text_content": "M",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "Inside of a very dirty air duct filled with dust and debris.",
+  "caption": "Heavily soiled air duct interior.",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-090.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": true,
+  "text_content": "SOF",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside view of a dusty air duct with wooden framing.",
+  "caption": "A look inside a dusty air duct.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-095.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Close-up view inside a dirty air duct filled with dust and debris.",
+  "caption": "Heavily soiled air duct interior.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-094.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": true,
+  "text_content": "M3",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "Inside view of a clean air duct with markings.",
+  "caption": "Clean air duct interior.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-096.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside view of a dirty air duct with visible dust and grime.",
+  "caption": "Dirty air duct interior",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-098.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Interior view of a dark, empty air duct.",
+  "caption": "Inside an air duct",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-097.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "A very dirty air duct filled with debris and dust.",
+  "caption": "Heavily soiled air duct interior.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-100.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "Inside view of a dirty air duct with visible dust and grime.",
+  "caption": "Dirty air duct interior.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-099.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "Close-up view of a dirty, square air duct filled with debris and dust.",
+  "caption": "A dirty air duct before cleaning.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-102.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "low",
+  "orientation": "portrait",
+  "alt": "Inside of a dark air duct with dust buildup.",
+  "caption": "Inside of a dusty air duct.",
+  "best_for": [
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-101.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "Close-up view inside a dirty air duct with accumulated dust and debris.",
+  "caption": "Inside a dirty air duct",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-103.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "portrait",
+  "alt": "Inside view of a dirty air duct with debris on the walls and floor.",
+  "caption": "Dirty air duct interior.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-105.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Close-up view inside a dusty air duct.",
+  "caption": "Dust buildup inside an air duct.",
+  "best_for": [
+   "process",
+   "blog"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-104.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside view of a dirty air duct with visible dust and debris.",
+  "caption": "Inside a dusty air duct",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-106.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Interior view of a dark, dusty air duct.",
+  "caption": "Inside a dusty air duct.",
+  "best_for": [
+   "process",
+   "gallery"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-107.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside of a dirty air duct with debris on the floor.",
+  "caption": "Dirty air duct interior.",
+  "best_for": [
+   "gallery",
+   "process"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-046.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside view of a dusty air duct with a flexible metal hose.",
+  "caption": "Inside a dirty air duct.",
+  "best_for": [
+   "process",
+   "blog"
+  ],
+  "w": 384,
+  "h": 512
+ },
+ "bh/img-108.jpg": {
+  "ok": true,
+  "kind": "work",
+  "services": [
+   "air-duct-cleaning"
+  ],
+  "setting": "unknown",
+  "has_people": false,
+  "has_text": false,
+  "text_content": "",
+  "quality": "medium",
+  "orientation": "landscape",
+  "alt": "Inside view of a dark air duct with visible dust and debris.",
+  "caption": "Inside of a dirty air duct.",
+  "best_for": [
+   "process",
+   "blog"
+  ],
+  "w": 384,
+  "h": 512
  }
 }

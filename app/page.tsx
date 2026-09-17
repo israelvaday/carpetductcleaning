@@ -7,8 +7,10 @@ import { Cta } from "@/components/cta";
 import { FaqList } from "@/components/faq-list";
 import { HomeHero } from "@/components/hero";
 import { JsonLd } from "@/components/json-ld";
+import { MapEmbed } from "@/components/map-embed";
 import { QuoteWizard } from "@/components/quote-wizard";
 import { Reveal } from "@/components/fx";
+import { Reviews } from "@/components/reviews";
 import { Section, SectionHead } from "@/components/ui";
 import { cityEntries, getUtility } from "@/lib/content";
 import { asset, img } from "@/lib/images";
@@ -80,6 +82,8 @@ export default function HomePage() {
       </Section>
 
       <WhyUs items={PROOF_POINTS} />
+
+      <Reviews />
 
       <Process tone="light" />
 
@@ -188,15 +192,12 @@ export default function HomePage() {
             </Reveal>
             <Reveal delay={0.1}>
               <Stats />
-              <div className="relative mt-6 aspect-4/3 overflow-hidden rounded-2xl shadow-card">
-                <Image
-                  src={asset("/images/map.webp")}
-                  alt="Orange County service area map"
-                  fill
-                  sizes="(min-width: 1024px) 24rem, 100vw"
-                  className="object-cover"
-                />
-              </div>
+              <MapEmbed
+                query="Irvine, CA"
+                title="Carpet & Duct Cleaning service area — Irvine and Orange County, CA"
+                className="mt-6"
+                height="h-64"
+              />
               <p className="mt-3 text-sm text-ink/60">
                 Based in {titleCase(site.city.toLowerCase())}. Crews cover {site.area} daily.
               </p>

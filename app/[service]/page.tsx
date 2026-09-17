@@ -2,16 +2,18 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
-import { CityCards, ImageHero, Process, ServiceGrid } from "@/components/blocks";
+import { CityCards, ImageHero, Process } from "@/components/blocks";
 import { Cta } from "@/components/cta";
 import { FaqList } from "@/components/faq-list";
 import { JsonLd } from "@/components/json-ld";
 import { CallButton, CheckList, QuoteButton, Section, SectionHead } from "@/components/ui";
 import { getServiceDoc, serviceSlugs } from "@/lib/content";
-import { serviceImage } from "@/lib/images";
+import { serviceImage, serviceSteps } from "@/lib/images";
 import { breadcrumbs, faqLd } from "@/lib/schema";
 import { PROOF_POINTS, serviceBlurb } from "@/lib/services";
 import { site } from "@/lib/site";
+import { buildServiceSteps } from "@/lib/process-steps";
+import { titleCase } from "@/lib/utils";
 
 export function generateStaticParams() {
   return serviceSlugs().map((service) => ({ service }));
@@ -99,7 +101,7 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
         </div>
       </Section>
 
-      <Process />
+      <Process steps={buildServiceSteps(doc.slug, serviceSteps(doc.slug))} />
 
       <CityCards
         service={doc.slug}
@@ -112,7 +114,25 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
 
       <Section tone="light">
         <SectionHead eyebrow="Other services" title="Often booked together" />
-        <ServiceGrid slugs={related} />
+        {/* Text cards: a service's photos live on its own hub and the homepage
+            grid only — never repeated on every other service page. */}
+        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {related.map((s) => (
+            <li key={s}>
+              <Link
+                href={`/${s}/`}
+                className="group flex h-full flex-col rounded-2xl border border-line bg-white p-5 shadow-card transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-lift"
+              >
+                <span className="font-semibold text-navy group-hover:text-brand">{titleCase(s)}</span>
+                <span className="mt-2 flex-1 text-sm leading-relaxed text-ink/65">{serviceBlurb(s, titleCase(s))}</span>
+                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand">
+                  View service
+                  <ArrowRight className="size-4 transition group-hover:translate-x-0.5" />
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
         <div className="mt-8">
           <Link href="/locations/" className="inline-flex items-center gap-2 font-semibold text-brand">
             Browse every service

@@ -3,45 +3,52 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { CalendarCheck, ChevronLeft, ChevronRight, ClipboardCheck, Sparkles, Wind } from "lucide-react";
-import { asset } from "@/lib/images";
+import { img } from "@/lib/images";
 import { cn } from "@/lib/utils";
+
+const ICONS = {
+  book: CalendarCheck,
+  inspect: ClipboardCheck,
+  clean: Sparkles,
+  dry: Wind,
+} as const;
 
 export type ProcessStep = {
   title: string;
   body: string;
-  image: string; // key under /images
+  image: string; // full src path, already basePath-prefixed
   alt: string;
-  Icon: typeof CalendarCheck;
+  icon: keyof typeof ICONS; // string, so steps can cross the server/client boundary
 };
 
 const DEFAULT_STEPS: ProcessStep[] = [
   {
     title: "Book your slot",
     body: "Call or send the quote form with your address and roughly how much area is involved. We give a price range on the phone and lock the next opening — often same or next day.",
-    image: "process-book",
-    alt: "Booking a carpet cleaning appointment on a phone",
-    Icon: CalendarCheck,
+    image: img("process-book").src,
+    alt: "Cleaning technician greeting a homeowner at the front door",
+    icon: "book",
   },
   {
     title: "Walkthrough & quote",
     body: "We walk the job with you, test the fibers or check the ductwork, and hand you an itemized price before anything starts. No surprises after we set up.",
-    image: "process-inspect",
-    alt: "Technician inspecting carpet and quoting the job on-site",
-    Icon: ClipboardCheck,
+    image: img("process-inspect").src,
+    alt: "Technician checking carpet with a moisture meter before quoting",
+    icon: "inspect",
   },
   {
     title: "Protect & deep clean",
     body: "Corners and doorways get protected, then we clean with truck-mounted hot-water extraction or HEPA duct equipment and EPA Safer Choice solutions.",
-    image: "process-clean",
-    alt: "Truck-mounted hot-water extraction cleaning a carpet",
-    Icon: Sparkles,
+    image: img("process-clean").src,
+    alt: "Hot-water extraction wand leaving a clean stripe on carpet",
+    icon: "clean",
   },
   {
     title: "Dry & walk through",
     body: "Air movers speed up drying, then we walk the finished work with you before we pack up. You sign off only when it looks right.",
-    image: "process-dry",
-    alt: "Clean, fresh carpet drying after professional cleaning",
-    Icon: Wind,
+    image: img("process-dry").src,
+    alt: "Air mover drying a freshly cleaned carpet",
+    icon: "dry",
   },
 ];
 
@@ -73,6 +80,7 @@ export function ProcessWizard({ steps = DEFAULT_STEPS }: { steps?: ProcessStep[]
         <ol className="space-y-3">
           {steps.map((s, i) => {
             const isActive = i === active;
+            const StepIcon = ICONS[s.icon];
             return (
               <li key={s.title}>
                 <button
@@ -95,7 +103,7 @@ export function ProcessWizard({ steps = DEFAULT_STEPS }: { steps?: ProcessStep[]
                       isActive ? "bg-brand text-white" : "bg-brand-50 text-brand-dark group-hover:bg-brand/15",
                     )}
                   >
-                    <s.Icon className="size-5" />
+                    <StepIcon className="size-5" />
                   </span>
                   <span className="min-w-0">
                     <span className="flex items-baseline gap-2">
@@ -169,7 +177,7 @@ export function ProcessWizard({ steps = DEFAULT_STEPS }: { steps?: ProcessStep[]
               )}
             >
               <Image
-                src={asset(`/images/${s.image}.webp`)}
+                src={s.image}
                 alt={s.alt}
                 fill
                 sizes="(min-width: 1024px) 40rem, 100vw"
@@ -180,7 +188,10 @@ export function ProcessWizard({ steps = DEFAULT_STEPS }: { steps?: ProcessStep[]
           ))}
           <div className="absolute bottom-0 left-0 right-0 flex items-center gap-3 p-5">
             <span className="flex size-10 items-center justify-center rounded-xl bg-white/95 text-brand shadow-card">
-              <step.Icon className="size-5" />
+              {(() => {
+                const ActiveIcon = ICONS[step.icon];
+                return <ActiveIcon className="size-5" />;
+              })()}
             </span>
             <div>
               <p className="text-xs font-bold uppercase tracking-wider text-white/70">Step {active + 1}</p>

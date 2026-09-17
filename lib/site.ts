@@ -11,6 +11,7 @@ export const site = {
   email: "info@carpetductcleaning.com",
   jobs: "10,000+",
   rating: "4.9",
+  reviewCount: "350",
 } as const;
 
 export function siteUrl() {
