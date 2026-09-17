@@ -1,19 +1,43 @@
+import Image from "next/image";
+import { CallButton, QuoteButton, TrustRow } from "@/components/ui";
 import { site } from "@/lib/site";
 
-export function Cta({ title = "Need service in Orange County?" }: { title?: string }) {
+export function Cta({
+  title = "Book a cleaning in Orange County",
+  body = "Same-day and next-day openings. IICRC technicians, itemized quotes on-site, and products that are safe for kids and pets.",
+}: {
+  title?: string;
+  body?: string;
+}) {
   return (
-    <section className="mt-14 rounded-2xl bg-navy px-6 py-10 text-white">
-      <h2 className="text-2xl font-semibold">{title}</h2>
-      <p className="mt-2 max-w-xl text-white/75">
-        Same-day and next-day openings. IICRC technicians. Upfront quotes. Google Guaranteed.
-      </p>
-      <div className="mt-5 flex flex-wrap gap-3">
-        <a href={site.phoneHref} className="rounded-full bg-teal px-5 py-2.5 font-semibold">
-          Call {site.phone}
-        </a>
-        <a href="/contact/" className="rounded-full border border-white/30 px-5 py-2.5">
-          Request a quote
-        </a>
+    <section className="bg-white py-16 md:py-20">
+      <div className="container-page">
+        <div className="grid overflow-hidden rounded-3xl bg-navy text-white shadow-lift lg:grid-cols-2">
+          <div className="p-8 md:p-12">
+            <p className="eyebrow text-brand-50">Ready when you are</p>
+            <h2 className="mt-3 text-3xl font-semibold md:text-4xl">{title}</h2>
+            <p className="mt-4 text-lg leading-relaxed text-white/75">{body}</p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <CallButton />
+              <QuoteButton dark />
+            </div>
+            <p className="mt-6 text-sm text-white/60">
+              Call {site.phone} · Serving {site.city} and {site.area} since {site.foundingYear}
+            </p>
+            <div className="mt-6">
+              <TrustRow dark />
+            </div>
+          </div>
+          <div className="relative min-h-64 lg:min-h-full">
+            <Image
+              src="/images/truck-mount.webp"
+              alt="Truck-mounted extraction hose running into an Orange County home"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

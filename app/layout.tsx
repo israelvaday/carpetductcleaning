@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | Carpet & Duct Cleaning",
   },
   description:
-    "Google Guaranteed carpet cleaning and air duct cleaning in Irvine and Orange County. IICRC certified. Call (949) 992-3299.",
+    "Google Guaranteed carpet cleaning and air duct cleaning in Irvine and Orange County. IICRC-certified crews, upfront quotes. Call (949) 992-3299.",
   robots: { index: true, follow: true },
 };
 
@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen antialiased">
         <JsonLd data={businessNode()} />
         <Header />
-        <main className="mx-auto max-w-6xl px-4 py-10">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

@@ -1,18 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy: #0f2744;
-  --color-teal: #0f766e;
-  --color-sand: #f4f1ea;
-  --font-sans: ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+  --color-ink: #0a1526;
+  --color-navy: #0d2745;
+  --color-navy-700: #14395f;
+  --color-brand: #0e7f7a;
+  --color-brand-dark: #0a615d;
+  --color-brand-50: #e9f5f4;
+  --color-gold: #eda528;
+  --color-sand: #f8f6f1;
+  --color-line: #e4ded4;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --shadow-card: 0 1px 2px rgb(13 39 69 / 0.06), 0 12px 28px -12px rgb(13 39 69 / 0.18);
+  --shadow-lift: 0 2px 4px rgb(13 39 69 / 0.08), 0 24px 48px -20px rgb(13 39 69 / 0.28);
 }
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   font-family: var(--font-sans);
-  color: var(--color-navy);
-  background: var(--color-sand);
+  color: var(--color-ink);
+  background: #fff;
+  font-synthesis-weight: none;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Arrow on the service dropdown, and close it on outside click via blur. */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+@utility container-page {
+  margin-inline: auto;
+  max-width: 76rem;
+  padding-inline: 1.25rem;
+}
+
+@utility eyebrow {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-brand);
+}
+
+@utility prose-body {
+  & p {
+    margin-top: 1rem;
+    line-height: 1.75;
+    color: color-mix(in srgb, var(--color-ink) 78%, white);
+  }
+  & p:first-child {
+    margin-top: 0;
+  }
 }

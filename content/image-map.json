@@ -1,0 +1,426 @@
+{
+  "note": "Curated photos from the WordPress backup. `src` is relative to media/webp/. Build writes /public/images/{key}.webp plus a -sm variant for svc-* keys.",
+  "assets": [
+    {
+      "key": "logo",
+      "src": "2025/08/logo_02.webp",
+      "w": 640,
+      "alt": "Carpet And Duct Cleaning logo"
+    },
+    {
+      "key": "hero-home",
+      "src": "2025/08/66325db79e9398cb87c2e9dd_hero-home-royal-carpet.webp",
+      "w": 1800,
+      "alt": "Freshly cleaned carpet in an Orange County living room"
+    },
+    {
+      "key": "van",
+      "src": "2026/02/carpet-and-duct-cleaning-van.webp",
+      "w": 1200,
+      "alt": "Carpet And Duct Cleaning service van in Irvine, CA"
+    },
+    {
+      "key": "tech",
+      "src": "2025/11/Technician-carefully-treating-a-carpet-stain-using-professional-tools.webp",
+      "w": 1200,
+      "alt": "Technician treating a carpet stain with professional tools"
+    },
+    {
+      "key": "truck-mount",
+      "src": "2025/11/Truck-mounted-extraction-hose-connected-to-a-home-illustrating-professional-grade-cleaning-power.webp",
+      "w": 1200,
+      "alt": "Truck-mounted extraction hose running into an Orange County home"
+    },
+    {
+      "key": "carpet-family",
+      "src": "2025/08/happy-family-relaxing-in-a-clean-living-room.webp",
+      "w": 1200,
+      "alt": "Family relaxing on a freshly cleaned carpet"
+    },
+    {
+      "key": "carpet-stains",
+      "src": "2025/09/stained-vs.-cleaned-carpet.webp",
+      "w": 1200,
+      "alt": "Carpet before and after professional stain removal"
+    },
+    {
+      "key": "carpet-room",
+      "src": "2026/03/bright-bedroom-with-freshly-cleaned-carpet.webp",
+      "w": 1200,
+      "alt": "Bright bedroom with freshly cleaned carpet"
+    },
+    {
+      "key": "carpet-protect",
+      "src": "2025/10/applying-stain-protection-spray-on-clean-carpet.webp",
+      "w": 1200,
+      "alt": "Technician applying carpet protector to clean carpet fibers"
+    },
+    {
+      "key": "duct-dirty-clean",
+      "src": "2025/08/dirty-vs.-clean-air-ducts.webp",
+      "w": 1200,
+      "alt": "Air duct before and after HEPA cleaning"
+    },
+    {
+      "key": "duct-gear",
+      "src": "2026/03/professional-duct-cleaning-equipment.webp",
+      "w": 1200,
+      "alt": "Professional air duct cleaning equipment"
+    },
+    {
+      "key": "bbb",
+      "src": "2025/08/bbb-logo.webp",
+      "w": 400,
+      "alt": "BBB Accredited Business A+ rating"
+    },
+    {
+      "key": "google",
+      "src": "2025/08/1680966838337.webp",
+      "w": 400,
+      "alt": "Google Guaranteed badge"
+    },
+    {
+      "key": "map",
+      "src": "2025/08/map_img.webp",
+      "w": 1000,
+      "alt": "Orange County service area map"
+    },
+    {
+      "key": "city-yorba-linda",
+      "src": "2026/05/freshly-cleaned-carpet-inside-a-modern-Yorba-Linda-living-room.webp",
+      "w": 1200,
+      "alt": "Freshly cleaned carpet in a Yorba Linda living room"
+    },
+    {
+      "key": "city-tustin-duct",
+      "src": "2026/07/cleaning-residential-air-ducts-in-a-Tustin-home.webp",
+      "w": 1200,
+      "alt": "Air duct cleaning in a Tustin, CA home"
+    },
+    {
+      "key": "carpet-1",
+      "src": "2025/09/Cleaned-Carpet.webp",
+      "w": 1200,
+      "alt": "Freshly cleaned patterned carpet in a living room"
+    },
+    {
+      "key": "carpet-2",
+      "src": "2025/09/Cleaned-carpet-2.webp",
+      "w": 1200,
+      "alt": "Cleaned commercial-grade carpet"
+    },
+    {
+      "key": "carpet-3",
+      "src": "2025/08/professional-carpet-cleaning-6f2c73cd.webp",
+      "w": 1200,
+      "alt": "Stair carpet cleaned with a professional machine"
+    },
+    {
+      "key": "carpet-4",
+      "src": "2025/12/family-relaxing-on-a-freshly-cleaned-carpet.webp",
+      "w": 1200,
+      "alt": "Family and dog relaxing on a freshly cleaned carpet"
+    },
+    {
+      "key": "carpet-5",
+      "src": "2025/09/Carpet-Cleaning-Indoor-Cleaning.webp",
+      "w": 1200,
+      "alt": "Empty room with newly cleaned wall-to-wall carpet"
+    },
+    {
+      "key": "carpet-6",
+      "src": "2025/09/Carpet-cleaning-method.webp",
+      "w": 1200,
+      "alt": "Hot-water extraction wand cleaning carpet"
+    },
+    {
+      "key": "carpet-7",
+      "src": "2025/10/carpet-cleaning-technician-.webp",
+      "w": 1200,
+      "alt": "Technician showing a homeowner a treated carpet stain"
+    },
+    {
+      "key": "carpet-8",
+      "src": "2025/11/Drying-setup.webp",
+      "w": 1200,
+      "alt": "Air mover drying setup after carpet cleaning"
+    },
+    {
+      "key": "carpet-9",
+      "src": "2025/09/Carpet-after-stain-removal.webp",
+      "w": 1200,
+      "alt": "Carpet after professional stain removal"
+    },
+    {
+      "key": "duct-1",
+      "src": "2025/09/Air-duct.webp",
+      "w": 1200,
+      "alt": "Clean supply vent after air duct service"
+    },
+    {
+      "key": "duct-2",
+      "src": "2025/09/Air-vent-1.webp",
+      "w": 1200,
+      "alt": "Technician removing a vent cover to clean the duct"
+    },
+    {
+      "key": "duct-3",
+      "src": "2025/08/Cleaning-the-duct.webp",
+      "w": 1200,
+      "alt": "Inside of a duct run being cleaned"
+    },
+    {
+      "key": "duct-4",
+      "src": "2025/08/HEPA-vacuum-on-duct-system.webp",
+      "w": 1200,
+      "alt": "HEPA vacuum connected to a commercial duct system"
+    },
+    {
+      "key": "duct-5",
+      "src": "2026/05/Clean-HVAC-vents-after-duct-sanitizing.webp",
+      "w": 1200,
+      "alt": "HVAC duct interior after sanitizing"
+    },
+    {
+      "key": "duct-6",
+      "src": "2025/09/Cleaning-Ducts.webp",
+      "w": 1200,
+      "alt": "Wall register cleaned during duct service"
+    },
+    {
+      "key": "duct-7",
+      "src": "2026/03/clean-home-interior-with-air-vents.webp",
+      "w": 1200,
+      "alt": "Ceiling vent in a clean home interior"
+    }
+  ],
+  "services": [
+    {
+      "slug": "carpet-cleaning",
+      "src": "2026/05/professional-eco-friendly-carpet-cleaning-technician-removing-stains.webp",
+      "alt": "Technician removing carpet stains with eco-friendly extraction in Orange County"
+    },
+    {
+      "slug": "air-duct-cleaning",
+      "src": "2026/03/technician-cleaning-HVAC-air-ducts-with-professional-vacuum-equipment.webp",
+      "alt": "Technician cleaning HVAC air ducts with professional vacuum equipment"
+    },
+    {
+      "slug": "dryer-vent-cleaning",
+      "src": "2026/04/professional-dryer-vent-cleaning.webp",
+      "alt": "Technician clearing a clogged dryer vent line"
+    },
+    {
+      "slug": "water-damage-restoration",
+      "src": "2025/08/Water-Mitigation-scaled-1.webp",
+      "alt": "Water mitigation crew extracting water from a flooded home"
+    },
+    {
+      "slug": "area-rug-cleaning",
+      "src": "2026/04/washing-a-rug.webp",
+      "alt": "Area rug being washed in a controlled cleaning facility"
+    },
+    {
+      "slug": "oriental-rug-cleaning",
+      "src": "2025/09/deep-cleaning-a-Persian-rug.webp",
+      "alt": "Deep cleaning a Persian rug by hand"
+    },
+    {
+      "slug": "rug-pickup",
+      "src": "2025/08/rug-cleaning-pick-up-and-drop-off.webp",
+      "alt": "Rug pickup and drop-off service in Orange County"
+    },
+    {
+      "slug": "upholstery-cleaning",
+      "src": "2026/08/technician-inspecting-upholstery-fabric-before-professional-treatment.webp",
+      "alt": "Technician inspecting upholstery fabric before cleaning"
+    },
+    {
+      "slug": "couch-cleaning",
+      "src": "2026/04/fresh-clean-couch-in-a-bright-living-space.webp",
+      "alt": "Freshly cleaned couch in a bright living room"
+    },
+    {
+      "slug": "leather-furniture-cleaning",
+      "src": "2025/08/technician-inspecting-sofa-with-customer.webp",
+      "alt": "Technician reviewing furniture condition with a customer"
+    },
+    {
+      "slug": "microfiber-couch-cleaning",
+      "src": "2025/08/how-to-clean-a-microfiber-couch-2022-step-3.webp",
+      "alt": "Cleaning a microfiber couch cushion"
+    },
+    {
+      "slug": "hardwood-floor-cleaning",
+      "src": "2026/03/polished-hardwood-floor-in-a-modern-living-room.webp",
+      "alt": "Polished hardwood floor in a modern living room"
+    },
+    {
+      "slug": "tile-and-grout-cleaning",
+      "src": "2025/10/tile-and-grout-cleaning.webp",
+      "alt": "Tile and grout cleaning restoring grout lines"
+    },
+    {
+      "slug": "vinyl-floor-cleaning",
+      "src": "2025/09/Floor-cleaning.webp",
+      "alt": "Machine cleaning a vinyl plank floor"
+    },
+    {
+      "slug": "natural-stone-cleaning",
+      "src": "2026/06/Professional-marble-floor-polishing-service-in-Tustin-home.webp",
+      "alt": "Marble floor polishing in an Orange County home"
+    },
+    {
+      "slug": "pet-stain-odor",
+      "src": "2025/11/A-clean-fresh-living-room-setting-showing-a-happy-pet-on-a-spotless-carpet.webp",
+      "alt": "Pet resting on a spotless carpet after odor treatment"
+    },
+    {
+      "slug": "commercial-carpet-cleaning",
+      "src": "2026/04/professional-cleaning-team-in-commercial-space.webp",
+      "alt": "Commercial cleaning team working in an office space"
+    },
+    {
+      "slug": "commercial-air-duct-cleaning",
+      "src": "2026/05/Professional-HVAC-duct-sanitizing-service.webp",
+      "alt": "Commercial HVAC duct sanitizing service"
+    },
+    {
+      "slug": "commercial",
+      "src": "2026/04/clean-fresh-office-lobby.webp",
+      "alt": "Clean office lobby after commercial cleaning"
+    },
+    {
+      "slug": "car-seat-cleaning",
+      "src": "2025/09/Car-Cleaning.webp",
+      "alt": "Car interior upholstery and seat cleaning"
+    },
+    {
+      "slug": "drape-cleaning",
+      "src": "2026/02/drape-and-curtain-cleaning.webp",
+      "alt": "Drape and curtain cleaning in a living room"
+    },
+    {
+      "slug": "outdoor-furniture-cleaning",
+      "src": "2025/08/technician-scrubbing-patio-sofa.webp",
+      "alt": "Technician scrubbing patio furniture cushions"
+    },
+    {
+      "slug": "encapsulation-carpet-cleaning",
+      "src": "2025/11/Technician-using-professional-carpet-extraction-machine-with-fast-drying-setup.webp",
+      "alt": "Low-moisture encapsulation carpet cleaning with fast drying"
+    },
+    {
+      "slug": "emergency-cleaning",
+      "src": "2026/02/Water-damage-extraction-under-process.webp",
+      "alt": "Emergency water extraction in progress"
+    },
+    {
+      "slug": "floor-cleaning",
+      "src": "2026/07/cleaned-floor-close-up.webp",
+      "alt": "Close-up of a professionally cleaned hard floor"
+    }
+  ],
+  "gallery": [
+    {
+      "key": "job-01",
+      "src": "2025/10/IMG_1175.webp",
+      "w": 800,
+      "alt": "Carpet cleaning job in an Orange County home"
+    },
+    {
+      "key": "job-02",
+      "src": "2025/10/IMG_1324.webp",
+      "w": 800,
+      "alt": "Truck-mounted extraction on a residential carpet"
+    },
+    {
+      "key": "job-03",
+      "src": "2025/10/IMG_1595.webp",
+      "w": 800,
+      "alt": "Oriental rug cleaned and returned to a living room"
+    },
+    {
+      "key": "job-04",
+      "src": "2025/10/IMG_1613.webp",
+      "w": 800,
+      "alt": "Bedroom carpet cleaned in an Orange County home"
+    },
+    {
+      "key": "job-05",
+      "src": "2025/10/IMG_2426.webp",
+      "w": 800,
+      "alt": "Car interior upholstery cleaning by our Irvine crew"
+    },
+    {
+      "key": "job-06",
+      "src": "2025/09/IMG_2137.webp",
+      "w": 800,
+      "alt": "Hand-cleaned area rug ready for delivery"
+    },
+    {
+      "key": "job-07",
+      "src": "2025/09/71977656474__5322A204-D125-469E-BB22-39CE3B077808.webp",
+      "w": 800,
+      "alt": "Commercial carpet cleaned in an Orange County retail store"
+    },
+    {
+      "key": "job-08",
+      "src": "2025/10/Up-holstry.webp",
+      "w": 800,
+      "alt": "Sofa and ottoman upholstery cleaning"
+    },
+    {
+      "key": "job-09",
+      "src": "2026/01/IMG_6469.webp",
+      "w": 800,
+      "alt": "Navy sectional cleaned in a customer living room"
+    },
+    {
+      "key": "job-10",
+      "src": "2025/10/PHOTO-2023-07-25-04-47-20.webp",
+      "w": 800,
+      "alt": "Patio furniture cushions cleaned outdoors"
+    }
+  ],
+  "cityExact": {
+    "carpet-cleaning/yorba-linda": "city-yorba-linda",
+    "air-duct-cleaning/tustin": "city-tustin-duct"
+  },
+  "cityPool": {
+    "carpet-cleaning": [
+      "svc-carpet-cleaning",
+      "carpet-room",
+      "carpet-stains",
+      "carpet-family",
+      "carpet-protect",
+      "truck-mount",
+      "carpet-1",
+      "carpet-2",
+      "carpet-3",
+      "carpet-4",
+      "carpet-5",
+      "carpet-6",
+      "carpet-7",
+      "carpet-8",
+      "carpet-9"
+    ],
+    "air-duct-cleaning": [
+      "svc-air-duct-cleaning",
+      "duct-dirty-clean",
+      "duct-gear",
+      "city-tustin-duct",
+      "duct-1",
+      "duct-2",
+      "duct-3",
+      "duct-4",
+      "duct-5",
+      "duct-6",
+      "duct-7"
+    ],
+    "hardwood-floor-cleaning": [
+      "svc-hardwood-floor-cleaning",
+      "svc-floor-cleaning"
+    ]
+  }
+}

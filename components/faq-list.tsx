@@ -1,16 +1,33 @@
-export function FaqList({ items }: { items: { q: string; a: string }[] }) {
+import { ChevronDown } from "lucide-react";
+import { Section, SectionHead } from "@/components/ui";
+
+export function FaqList({
+  items,
+  title = "Common questions",
+  eyebrow = "FAQ",
+}: {
+  items: { q: string; a: string }[];
+  title?: string;
+  eyebrow?: string;
+}) {
   if (!items.length) return null;
   return (
-    <section className="mt-12">
-      <h2 className="text-2xl font-semibold text-navy">Common questions</h2>
-      <div className="mt-4 divide-y divide-navy/10 rounded-xl border border-navy/10 bg-white">
+    <Section tone="light">
+      <SectionHead eyebrow={eyebrow} title={title} />
+      <div className="mt-8 grid gap-3">
         {items.map((f) => (
-          <details key={f.q} className="px-4 py-3">
-            <summary className="cursor-pointer font-medium text-navy">{f.q}</summary>
-            <p className="mt-2 text-sm leading-relaxed text-navy/70">{f.a}</p>
+          <details
+            key={f.q}
+            className="group rounded-2xl border border-line bg-white px-5 py-4 shadow-card open:shadow-lift"
+          >
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-navy">
+              {f.q}
+              <ChevronDown className="size-5 shrink-0 text-brand transition group-open:rotate-180" />
+            </summary>
+            <p className="mt-3 leading-relaxed text-ink/70">{f.a}</p>
           </details>
         ))}
       </div>
-    </section>
+    </Section>
   );
 }

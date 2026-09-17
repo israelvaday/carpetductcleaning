@@ -1,8 +1,9 @@
 import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import urlMap from "@/audit/next-url-map.json";
-import { titleCase } from "./utils";
-import { cityIntro, cleanParagraphs, extractFaqs } from "./text";
+import { metaTitle, titleCase } from "./utils";
+import { cityIntro, cleanParagraphs, composeMeta, extractFaqs } from "./text";
+import { cityDetail, serviceBlurb } from "./services";
 
 export type WpPage = {
   title: string;
@@ -75,8 +76,15 @@ export function getServiceDoc(slug: string) {
     slug,
     name,
     h1: `${name} in Orange County`,
-    title: `${name} in Orange County, CA | Carpet & Duct Cleaning`,
-    description: `Professional ${name.toLowerCase()} in Irvine and Orange County. Google Guaranteed. Call (949) 992-3299.`,
+    title: metaTitle(`${name} in Orange County, CA`),
+    description: composeMeta(
+      [`${name} in Irvine and across Orange County.`, "IICRC-certified technicians, Google Guaranteed."],
+      [
+        "Same-day openings and upfront quotes. Call (949) 992-3299.",
+        "Upfront quotes. Call (949) 992-3299.",
+        "Call (949) 992-3299.",
+      ],
+    ),
     paragraphs: paras,
     faqs: extractFaqs(page?.text || ""),
     cities: cityEntries().filter((c) => c.service === slug),
@@ -99,16 +107,28 @@ export function getCityDoc(service: string, city: string) {
           `If you need air duct cleaning in ${cityName}, that lives on its own page so Google and customers are not sent to the wrong service.`,
         ]
       : [];
+  const body = [intro, ...extra, ...sourceParas.filter((p) => !/expert boat|yacht cleaning|leather couch cleaning in/i.test(p))];
+  if (body.length < 4) {
+    body.push(...cityDetail(serviceName, cityName, serviceBlurb(service, serviceName)));
+  }
+
   return {
     service,
     city,
     serviceName,
     cityName,
     h1: `${serviceName} in ${cityName}, CA`,
-    title: `${serviceName} in ${cityName}, CA | Carpet & Duct Cleaning`,
-    description: `${serviceName} in ${cityName}, CA. IICRC technicians, same-day openings. Call (949) 992-3299.`,
+    title: metaTitle(`${serviceName} in ${cityName}, CA`),
+    description: composeMeta(
+      [`${serviceName} in ${cityName}, CA.`, "IICRC-certified technicians, Google Guaranteed, upfront on-site quotes."],
+      [
+        "Same-day and next-day openings. Call (949) 992-3299.",
+        "Same-day openings. Call (949) 992-3299.",
+        "Call (949) 992-3299.",
+      ],
+    ),
     rewrite: entry.rewrite,
-    paragraphs: [intro, ...extra, ...sourceParas.filter((p) => !/expert boat|yacht cleaning|leather couch cleaning in/i.test(p))],
+    paragraphs: body,
     faqs: extractFaqs(page?.text || ""),
   };
 }
@@ -145,7 +165,14 @@ export function blogTitle(post: WpPage) {
   };
   if (overrides[slug]) return overrides[slug];
   const t = (post.seo?.title || post.title || "").replace(/&amp;/g, "&");
-  return t.replace(/#1\s*/i, "").slice(0, 70);
+  // The audit flagged superlative stacks, so they come out of titles too.
+  return t
+    .replace(/#\s?1\s*/gi, "")
+    .replace(/\s*\|\s*[^|]*\b(trusted|best|top[- ]rated|5[- ]star)\b[^|]*$/i, "")
+    .replace(/\b(best|top[- ]rated|trusted|premium)\s+/gi, "")
+    .replace(/\s{2,}/g, " ")
+    .trim()
+    .slice(0, 70);
 }
 
 export function allIndexRoutes() {

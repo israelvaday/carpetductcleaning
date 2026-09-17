@@ -1,11 +1,22 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { ImageHero } from "@/components/blocks";
+import { Cta } from "@/components/cta";
+import { JsonLd } from "@/components/json-ld";
+import { Section, SectionHead } from "@/components/ui";
 import { cityEntries, serviceSlugs } from "@/lib/content";
+import { cityImage, img } from "@/lib/images";
+import { breadcrumbs } from "@/lib/schema";
+import { SERVICE_GROUPS } from "@/lib/services";
+import { site } from "@/lib/site";
 import { titleCase } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Service areas",
-  description: "Carpet and air duct cleaning across Irvine and Orange County. City pages with matching service URLs.",
+  title: { absolute: "Service Areas in Orange County, CA | Carpet & Duct" },
+  description:
+    "Carpet, rug, upholstery, and air duct cleaning across Irvine and Orange County, CA. Find your city and the exact service page you need.",
   alternates: { canonical: "/locations/" },
 };
 
@@ -17,42 +28,89 @@ export default function LocationsPage() {
     list.push(c);
     groups.set(c.service, list);
   }
+
   return (
-    <article>
-      <h1 className="text-4xl font-semibold">Locations</h1>
-      <p className="mt-3 max-w-2xl text-navy/70">
-        One city, one service, one URL. We do not use vague /cleaner-in-* pages. Cities without unique copy are listed
-        on the service hubs until we write them.
-      </p>
-      {[...groups.entries()].map(([service, cities]) => (
-        <section key={service} className="mt-10">
-          <h2 className="text-xl font-semibold">
-            <Link href={`/${service}/`} className="hover:text-teal">
-              {titleCase(service)}
+    <>
+      <JsonLd
+        data={breadcrumbs([
+          { name: "Home", href: "/" },
+          { name: "Service areas", href: "/locations/" },
+        ])}
+      />
+
+      <ImageHero
+        image={img("map")}
+        breadcrumb={[{ name: "Home", href: "/" }, { name: "Service areas" }]}
+        eyebrow="Orange County, CA"
+        title="Service areas across Orange County"
+        body={`Based in ${site.city}, our crews cover ${site.area} daily. Every city page matches one service, so you always land on the page you searched for.`}
+        bullets={["One city, one service, one URL", `Same-day openings`, `Since ${site.foundingYear}`]}
+      />
+
+      {[...groups.entries()].map(([service, cities], index) => (
+        <Section key={service} tone={index % 2 === 0 ? "light" : "sand"}>
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <SectionHead eyebrow="Cities" title={`${titleCase(service)} by city`} />
+            <Link href={`/${service}/`} className="inline-flex items-center gap-2 font-semibold text-brand">
+              {titleCase(service)} hub
+              <ArrowRight className="size-4" />
             </Link>
-          </h2>
-          <ul className="mt-3 grid gap-2 sm:grid-cols-2 md:grid-cols-3">
-            {cities.map((c) => (
-              <li key={c.route}>
-                <Link href={`${c.route}/`} className="rounded-lg border border-navy/10 bg-white px-3 py-2 block hover:border-teal">
-                  {titleCase(c.city)}
+          </div>
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {cities.map((c) => {
+              const image = cityImage(service, c.city);
+              return (
+                <Link
+                  key={c.route}
+                  href={`${c.route}/`}
+                  className="group relative overflow-hidden rounded-2xl shadow-card"
+                >
+                  <div className="relative aspect-4/3">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      sizes="(min-width: 1024px) 18rem, (min-width: 640px) 45vw, 100vw"
+                      className="object-cover transition duration-500 group-hover:scale-105"
+                    />
+                    <span className="absolute inset-0 bg-linear-to-t from-navy/90 via-navy/25 to-transparent" />
+                  </div>
+                  <span className="absolute bottom-0 left-0 right-0 flex items-center justify-between p-4 text-white">
+                    <span className="font-semibold">{titleCase(c.city)}</span>
+                    <ArrowRight className="size-4 transition group-hover:translate-x-0.5" />
+                  </span>
                 </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
+              );
+            })}
+          </div>
+        </Section>
       ))}
-      <p className="mt-10 text-sm text-navy/60">
-        All service hubs:{" "}
-        {serviceSlugs().map((s, i) => (
-          <span key={s}>
-            {i ? " · " : ""}
-            <Link href={`/${s}/`} className="underline">
-              {titleCase(s)}
-            </Link>
-          </span>
-        ))}
-      </p>
-    </article>
+
+      <Section tone="light">
+        <SectionHead
+          eyebrow="Full service list"
+          title="Every service we offer"
+          body={`${serviceSlugs().length} service hubs, each with its own page and pricing conversation.`}
+        />
+        <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {SERVICE_GROUPS.map((group) => (
+            <div key={group.title} className="rounded-2xl border border-line bg-sand p-6">
+              <p className="eyebrow">{group.title}</p>
+              <ul className="mt-3 space-y-2">
+                {group.slugs.map((slug) => (
+                  <li key={slug}>
+                    <Link href={`/${slug}/`} className="font-medium text-navy hover:text-brand">
+                      {titleCase(slug)}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Cta title="Not sure your city is covered?" body={`Call ${site.phone} and we will tell you the next open slot in your area.`} />
+    </>
   );
 }

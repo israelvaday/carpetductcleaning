@@ -2,6 +2,7 @@ raw/
 node_modules/
 .next/
 out/
+.deploy/
 *.log
 media/webp/
 .cursor/

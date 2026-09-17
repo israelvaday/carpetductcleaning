@@ -5,6 +5,21 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+// Audit target is a 50-60 char title, so the brand suffix is only added when
+// it fits, and long headlines get trimmed on a word boundary instead.
+const TITLE_SUFFIXES = [" | Carpet & Duct Cleaning", " | Carpet & Duct", " | Irvine, CA"];
+
+export function metaTitle(base: string) {
+  const clean = base.replace(/\s+/g, " ").trim();
+  for (const suffix of TITLE_SUFFIXES) {
+    if (clean.length + suffix.length <= 60) return clean + suffix;
+  }
+  if (clean.length <= 60) return clean;
+  const cut = clean.slice(0, 60);
+  const space = cut.lastIndexOf(" ");
+  return space > 40 ? cut.slice(0, space) : cut;
+}
+
 export function titleCase(slug: string) {
   const special: Record<string, string> = {
     "anaheim-hills": "Anaheim Hills",
