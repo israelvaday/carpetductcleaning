@@ -95,6 +95,75 @@ export function cityDetail(serviceName: string, cityName: string, blurb: string)
   ];
 }
 
+// The WordPress city pages covered every service in one document, so an
+// unfiltered extraction drops duct and water-damage questions onto a carpet
+// page. Match on the vocabulary each service actually uses.
+const SERVICE_TOPICS: Record<string, RegExp> = {
+  "carpet-cleaning": /carpet/i,
+  "encapsulation-carpet-cleaning": /encapsulat|low.moisture/i,
+  "pet-stain-odor": /pet stain|odou?r|urine|accident/i,
+  "hardwood-floor-cleaning": /hardwood|wood floor/i,
+  "tile-and-grout-cleaning": /tile|grout/i,
+  "vinyl-floor-cleaning": /vinyl|\blvp\b|linoleum/i,
+  "natural-stone-cleaning": /marble|travertine|granite|natural stone|limestone/i,
+  "floor-cleaning": /hard floor|floor cleaning/i,
+  "air-duct-cleaning": /air duct|ductwork|\bducts?\b|\bhvac\b|air quality/i,
+  "dryer-vent-cleaning": /dryer vent|\blint\b/i,
+  "commercial-air-duct-cleaning": /commercial.{0,30}duct|duct.{0,30}commercial/i,
+  "area-rug-cleaning": /area rug|\brugs?\b/i,
+  "oriental-rug-cleaning": /oriental|persian|silk rug|wool rug/i,
+  "rug-pickup": /pick ?up|drop ?off/i,
+  "upholstery-cleaning": /upholster|sofa|couch|cushion|fabric/i,
+  "couch-cleaning": /couch|sectional|sofa/i,
+  "leather-furniture-cleaning": /leather/i,
+  "microfiber-couch-cleaning": /microfib/i,
+  "drape-cleaning": /drape|curtain/i,
+  "outdoor-furniture-cleaning": /outdoor|patio/i,
+  "car-seat-cleaning": /car seat|vehicle|\brv\b|\bauto\b/i,
+  commercial: /commercial|office|property manager|retail/i,
+  "commercial-carpet-cleaning": /commercial.{0,30}carpet|carpet.{0,30}commercial/i,
+  "water-damage-restoration": /water damage|flood|\bleak|restoration|moisture/i,
+  "emergency-cleaning": /emergency|sewage|overflow|burst/i,
+};
+
+// Keep a question when it is about this service or is service-neutral, and drop
+// it when it clearly belongs to a different service.
+export function onTopicFaqs<T extends { q: string; a: string }>(slug: string, faqs: T[]) {
+  const own = SERVICE_TOPICS[slug];
+  const others = Object.entries(SERVICE_TOPICS)
+    .filter(([s]) => s !== slug)
+    .map(([, re]) => re);
+  return faqs.filter((f) => {
+    const text = `${f.q} ${f.a}`;
+    if (own?.test(text)) return true;
+    return !others.some((re) => re.test(text));
+  });
+}
+
+// Used when filtering leaves a page with too few questions. Nothing here claims
+// anything that is not true in every city we serve.
+export function cityFaqs(serviceName: string, cityName: string, blurb: string) {
+  const name = serviceName.toLowerCase();
+  return [
+    {
+      q: `How much does ${name} cost in ${cityName}?`,
+      a: `Price depends on the area covered and how soiled it is, so we quote on-site before any work starts. Call (949) 992-3299 with your ${cityName} address and rough square footage and we will give you a range on the phone.`,
+    },
+    {
+      q: `How soon can you get to a job in ${cityName}?`,
+      a: `We hold same-day and next-day openings for ${cityName} and the rest of Orange County. The earlier in the day you call, the better the chance of a same-day slot.`,
+    },
+    {
+      q: `What does your ${name} process involve?`,
+      a: `${blurb} We inspect and quote first, protect corners and doorways, clean with commercial equipment and EPA Safer Choice products, then walk the finished work with you before we pack up.`,
+    },
+    {
+      q: `Are your technicians certified and insured?`,
+      a: `Yes. Our technicians are IICRC-certified and we are Google Guaranteed with a BBB A+ rating. We have worked across Irvine and Orange County since 2013.`,
+    },
+  ];
+}
+
 export const PROOF_POINTS = [
   "IICRC-certified technicians",
   "Google Guaranteed and BBB A+",

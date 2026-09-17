@@ -3,7 +3,7 @@ import { join } from "node:path";
 import urlMap from "@/audit/next-url-map.json";
 import { metaTitle, titleCase } from "./utils";
 import { cityIntro, cleanParagraphs, composeMeta, extractFaqs } from "./text";
-import { cityDetail, serviceBlurb } from "./services";
+import { cityDetail, cityFaqs, onTopicFaqs, serviceBlurb } from "./services";
 
 export type WpPage = {
   title: string;
@@ -86,7 +86,7 @@ export function getServiceDoc(slug: string) {
       ],
     ),
     paragraphs: paras,
-    faqs: extractFaqs(page?.text || ""),
+    faqs: topUpFaqs(onTopicFaqs(slug, extractFaqs(page?.text || "")), name, "Orange County", slug),
     cities: cityEntries().filter((c) => c.service === slug),
   };
 }
@@ -129,8 +129,27 @@ export function getCityDoc(service: string, city: string) {
     ),
     rewrite: entry.rewrite,
     paragraphs: body,
-    faqs: extractFaqs(page?.text || ""),
+    faqs: topUpFaqs(onTopicFaqs(service, extractFaqs(page?.text || "")), serviceName, cityName, service),
   };
+}
+
+// Filtering off-topic questions can leave a page with one or none, so fall back
+// to the service-and-city set without duplicating a question we already have.
+function topUpFaqs(
+  faqs: { q: string; a: string }[],
+  serviceName: string,
+  place: string,
+  slug: string,
+  min = 3,
+) {
+  if (faqs.length >= min) return faqs;
+  const seen = new Set(faqs.map((f) => f.q.toLowerCase().replace(/\W+/g, "")));
+  for (const f of cityFaqs(serviceName, place, serviceBlurb(slug, serviceName))) {
+    if (faqs.length >= min + 1) break;
+    if (seen.has(f.q.toLowerCase().replace(/\W+/g, ""))) continue;
+    faqs.push(f);
+  }
+  return faqs;
 }
 
 export function getUtility(slug: "home" | "about-us" | "contact" | "locations") {
