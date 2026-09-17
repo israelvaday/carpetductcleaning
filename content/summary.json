@@ -1,0 +1,38 @@
+{
+  "site": {
+    "name": "Carpet And Duct Cleaning",
+    "tagline": "Irvine's Google Guaranteed Carpet & Air Duct Cleaning Company",
+    "url": "https://carpetductcleaning.com",
+    "phone": "(949) 992-3299"
+  },
+  "counts": {
+    "pages": 62,
+    "posts": 44,
+    "sitemapUrls": 106,
+    "pagesByKind": {
+      "utility": 4,
+      "location": 31,
+      "service": 27
+    },
+    "attachmentsInLibrary": 179,
+    "photosConverted": 1643,
+    "photosWithOcr": 1407,
+    "photosUsedOnPages": 29
+  },
+  "gaps": {
+    "missingPublishedHomeRow": "Home page ID 61 was missing from wp_posts; recovered from 581 revisions + Elementor meta.",
+    "missingServiceAreaPage": "Rank Math sends /locations/* to /service-area/ but no published service-area page exists. /locations/ does.",
+    "thinPages": [],
+    "missingSeo": 75
+  },
+  "nextjs": {
+    "content": "content/pages|posts/*.json",
+    "media": "media/webp + content/media.json",
+    "redirects": "content/redirects.json",
+    "sitemap": "content/sitemap.xml"
+  },
+  "mediaBytes": {
+    "in": 377925480,
+    "out": 133074840
+  }
+}

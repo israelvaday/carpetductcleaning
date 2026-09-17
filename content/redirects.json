@@ -1,0 +1,1225 @@
+{
+  "note": "Suggested Next.js 301 map from the backup only. Permalinks are the live public URLs. Rank Math rules are existing redirects already on the old site.",
+  "permalinks": [
+    {
+      "from": "/",
+      "to": "/",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "utility"
+    },
+    {
+      "from": "/about-us/",
+      "to": "/about-us",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "utility"
+    },
+    {
+      "from": "/air-duct-cleaning/",
+      "to": "/air-duct-cleaning",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/air-duct-cleaning-aliso-viejo/",
+      "to": "/air-duct-cleaning-aliso-viejo",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/area-rug-cleaning/",
+      "to": "/area-rug-cleaning",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/blogs/",
+      "to": "/blogs",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "utility"
+    },
+    {
+      "from": "/car-seat-cleaning/",
+      "to": "/car-seat-cleaning",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/carpet-cleaning/",
+      "to": "/carpet-cleaning",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/carpet-cleaning-in-anaheim/",
+      "to": "/carpet-cleaning-in-anaheim",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/carpet-cleaning-in-costa-mesa/",
+      "to": "/carpet-cleaning-in-costa-mesa",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/carpet-cleaning-coto-de-caza/",
+      "to": "/carpet-cleaning-coto-de-caza",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/carpet-cleaning-dove-canyon/",
+      "to": "/carpet-cleaning-dove-canyon",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/carpet-cleaning-east-irvine/",
+      "to": "/carpet-cleaning-east-irvine",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/carpet-cleaning-in-stanton/",
+      "to": "/carpet-cleaning-in-stanton",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/cleaner-in-anaheim-hills/",
+      "to": "/cleaner-in-anaheim-hills",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/cleaner-in-buena-park/",
+      "to": "/cleaner-in-buena-park",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/cleaner-in-corona-del-mar/",
+      "to": "/cleaner-in-corona-del-mar",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/cleaner-in-dana-point/",
+      "to": "/cleaner-in-dana-point",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/cleaner-in-foothill-ranch/",
+      "to": "/cleaner-in-foothill-ranch",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/cleaner-in-fountain-valley/",
+      "to": "/cleaner-in-fountain-valley",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/cleaner-in-fullerton/",
+      "to": "/cleaner-in-fullerton",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/cleaner-in-garden-grove/",
+      "to": "/cleaner-in-garden-grove",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/cleaner-in-huntington-beach/",
+      "to": "/cleaner-in-huntington-beach",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/cleaner-in-irvine/",
+      "to": "/cleaner-in-irvine",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/cleaner-in-ladera-ranch/",
+      "to": "/cleaner-in-ladera-ranch",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/cleaner-in-laguna-beach/",
+      "to": "/cleaner-in-laguna-beach",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/cleaner-in-laguna-hills/",
+      "to": "/cleaner-in-laguna-hills",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/cleaner-in-santa-ana/",
+      "to": "/cleaner-in-santa-ana",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/cleaner-in-seal-beach/",
+      "to": "/cleaner-in-seal-beach",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/cleaner-in-trabuco-canyon/",
+      "to": "/cleaner-in-trabuco-canyon",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/cleaner-in-tustin/",
+      "to": "/cleaner-in-tustin",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/cleaner-in-tustin-ranch/",
+      "to": "/cleaner-in-tustin-ranch",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/cleaner-in-westminster/",
+      "to": "/cleaner-in-westminster",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/cleaner-in-woodbridge/",
+      "to": "/cleaner-in-woodbridge",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/cleaner-in-yorba-linda/",
+      "to": "/cleaner-in-yorba-linda",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/commercial-air-duct-cleaning/",
+      "to": "/commercial-air-duct-cleaning",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/commercial-carpet-cleaning/",
+      "to": "/commercial-carpet-cleaning",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/commercial-cleaning-services/",
+      "to": "/commercial-cleaning-services",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/contact/",
+      "to": "/contact",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "utility"
+    },
+    {
+      "from": "/couch-sectional-cleaning/",
+      "to": "/couch-sectional-cleaning",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/drapes-curtain-cleaning/",
+      "to": "/drapes-curtain-cleaning",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/dryer-vent-cleaning/",
+      "to": "/dryer-vent-cleaning",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/emergency-cleaning-services/",
+      "to": "/emergency-cleaning-services",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/encapsulation-carpet-cleaning/",
+      "to": "/encapsulation-carpet-cleaning",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/floor-cleaning/",
+      "to": "/floor-cleaning",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/furniture-upholstery-cleaning/",
+      "to": "/furniture-upholstery-cleaning",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/hardwood-floor-cleaning/",
+      "to": "/hardwood-floor-cleaning",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/hardwood-floor-cleaning-aliso-viejo/",
+      "to": "/hardwood-floor-cleaning-aliso-viejo",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/indoor-air-quality-services/",
+      "to": "/indoor-air-quality-services",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/leather-furniture-cleaning/",
+      "to": "/leather-furniture-cleaning",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/locations/",
+      "to": "/locations",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/microfiber-couch-cleaning/",
+      "to": "/microfiber-couch-cleaning",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/natural-stone-cleaning/",
+      "to": "/natural-stone-cleaning",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/oriental-rug-cleaning/",
+      "to": "/oriental-rug-cleaning",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/outdoor-cleaning-services/",
+      "to": "/outdoor-cleaning-services",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/outdoor-furniture-cushion-cleaning/",
+      "to": "/outdoor-furniture-cushion-cleaning",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/pet-stain-odor-treatment/",
+      "to": "/pet-stain-odor-treatment",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/residential-carpet-cleaning-aliso-viejo/",
+      "to": "/residential-carpet-cleaning-aliso-viejo",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "location"
+    },
+    {
+      "from": "/rug-pickup-drop-off/",
+      "to": "/rug-pickup-drop-off",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/tile-and-grout-cleaning-3/",
+      "to": "/tile-and-grout-cleaning-3",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/vinyl-floor-cleaning/",
+      "to": "/vinyl-floor-cleaning",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/water-damage-restoration/",
+      "to": "/water-damage-restoration",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "service"
+    },
+    {
+      "from": "/6-rug-cleaning-secrets-that-save-you-money/",
+      "to": "/blog/6-rug-cleaning-secrets-that-save-you-money",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/7-easy-carpet-hacks-to-remove-pet-hair/",
+      "to": "/blog/7-easy-carpet-hacks-to-remove-pet-hair",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/carpet-care-tips-irvine/",
+      "to": "/blog/carpet-care-tips-irvine",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/7-powerful-tips-cleaning-outdoor-furniture/",
+      "to": "/blog/7-powerful-tips-cleaning-outdoor-furniture",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/air-duct-and-vent-cleaning-in-irvine/",
+      "to": "/blog/air-duct-and-vent-cleaning-in-irvine",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/air-duct-cleaning-does-it-help-allergies/",
+      "to": "/blog/air-duct-cleaning-does-it-help-allergies",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/best-carpet-cleaning-method-irvine/",
+      "to": "/blog/best-carpet-cleaning-method-irvine",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/best-carpet-cleaning-services-aliso-viejo/",
+      "to": "/blog/best-carpet-cleaning-services-aliso-viejo",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/carpet-duct-cleaning-irvine-guide/",
+      "to": "/blog/carpet-duct-cleaning-irvine-guide",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/delicate-carpet-cleaning-service/",
+      "to": "/blog/delicate-carpet-cleaning-service",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/corona-area-rug-cleaning-and-restoration/",
+      "to": "/blog/corona-area-rug-cleaning-and-restoration",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/air-duct-cleaning-irvine-guide/",
+      "to": "/blog/air-duct-cleaning-irvine-guide",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/car-rv-cleaning-keep-your-ride-fresh/",
+      "to": "/blog/car-rv-cleaning-keep-your-ride-fresh",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/curtain-cleaning-tips-for-lasting-elegance/",
+      "to": "/blog/curtain-cleaning-tips-for-lasting-elegance",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/expert-guide-removing-common-carpet-stains/",
+      "to": "/blog/expert-guide-removing-common-carpet-stains",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/quality-hardwood-floor-cleaning-buena-park/",
+      "to": "/blog/quality-hardwood-floor-cleaning-buena-park",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/how-often-should-you-clean-air-ducts/",
+      "to": "/blog/how-often-should-you-clean-air-ducts",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/pro-cleaning-extends-the-life-of-your-rugs/",
+      "to": "/blog/pro-cleaning-extends-the-life-of-your-rugs",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/improved-air-quality-duct-cleaning-tustin/",
+      "to": "/blog/improved-air-quality-duct-cleaning-tustin",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/dryer-vent-cleaning-irvine-ca/",
+      "to": "/blog/dryer-vent-cleaning-irvine-ca",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/is-your-air-duct-dirty-key-signs-to-watch/",
+      "to": "/blog/is-your-air-duct-dirty-key-signs-to-watch",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/carpet-cleaning-lake-forest-stain-removal/",
+      "to": "/blog/carpet-cleaning-lake-forest-stain-removal",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/carpet-cleaning-lake-forest-ca/",
+      "to": "/blog/carpet-cleaning-lake-forest-ca",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/carpet-cleaning-air-quality-lake-forest-ca/",
+      "to": "/blog/carpet-cleaning-air-quality-lake-forest-ca",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/lake-forest-water-restoration-near-me/",
+      "to": "/blog/lake-forest-water-restoration-near-me",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/local-vinyl-floor-cleaning-in-tustin/",
+      "to": "/blog/local-vinyl-floor-cleaning-in-tustin",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/premium-sofa-and-couch-cleaning-yorba-linda/",
+      "to": "/blog/premium-sofa-and-couch-cleaning-yorba-linda",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/professional-air-duct-cleaning-anaheim-ca/",
+      "to": "/blog/professional-air-duct-cleaning-anaheim-ca",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/professional-mattress-cleaning-in-tustin/",
+      "to": "/blog/professional-mattress-cleaning-in-tustin",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/reliable-dryer-vent-cleaning-corona-del-mar/",
+      "to": "/blog/reliable-dryer-vent-cleaning-corona-del-mar",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/residential-fabric-and-upholstery-protector/",
+      "to": "/blog/residential-fabric-and-upholstery-protector",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/revitalize-your-home-spring-cleaning/",
+      "to": "/blog/revitalize-your-home-spring-cleaning",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/carpet-and-duct-cleaning-orange-county-summer/",
+      "to": "/blog/carpet-and-duct-cleaning-orange-county-summer",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/carpet-cleaning-benefits-for-pet-owners/",
+      "to": "/blog/carpet-cleaning-benefits-for-pet-owners",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/importance-of-fast-water-damage-restoration/",
+      "to": "/blog/importance-of-fast-water-damage-restoration",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/top-rated-upholstery-cleaning-anaheim-hills/",
+      "to": "/blog/top-rated-upholstery-cleaning-anaheim-hills",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/top-tile-grout-cleaning-service-lake-forest/",
+      "to": "/blog/top-tile-grout-cleaning-service-lake-forest",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/air-duct-cleaning-tustin-ca/",
+      "to": "/blog/air-duct-cleaning-tustin-ca",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/tustin-oriental-rug-care-you-need-to-know/",
+      "to": "/blog/tustin-oriental-rug-care-you-need-to-know",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/water-damage-restoration-in-irvine-ca/",
+      "to": "/blog/water-damage-restoration-in-irvine-ca",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/oriental-rug-cleaning-vital-for-longevity/",
+      "to": "/blog/oriental-rug-cleaning-vital-for-longevity",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/pro-upholstery-cleaning-extends-life/",
+      "to": "/blog/pro-upholstery-cleaning-extends-life",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/regular-cleaning-essential-for-health-home/",
+      "to": "/blog/regular-cleaning-essential-for-health-home",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    },
+    {
+      "from": "/your-home-needs-carpet-protector-treatments/",
+      "to": "/blog/your-home-needs-carpet-protector-treatments",
+      "status": 301,
+      "source": "current-permalink",
+      "kind": "blog"
+    }
+  ],
+  "rankMath": [
+    {
+      "from": "/products/15899136737.htm",
+      "to": "https://carpetductcleaning.com/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 44
+    },
+    {
+      "from": "/products/43299129991.htm",
+      "to": "https://carpetductcleaning.com/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 44
+    },
+    {
+      "from": "/products/2959978641.htm",
+      "to": "https://carpetductcleaning.com/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 44
+    },
+    {
+      "from": "/products/26499115393.htm",
+      "to": "https://carpetductcleaning.com/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 44
+    },
+    {
+      "from": "/products/29599197351.htm",
+      "to": "https://carpetductcleaning.com/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 44
+    },
+    {
+      "from": "/home-live/super-carpet-cleaner-services",
+      "to": "https://carpetductcleaning.com/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 44
+    },
+    {
+      "from": "/cleaning-services-that-will-transform",
+      "to": "https://carpetductcleaning.com/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 44
+    },
+    {
+      "from": "/car-rv-cleaning-essential-tips-for",
+      "to": "https://carpetductcleaning.com/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 44
+    },
+    {
+      "from": "^/products/.*$",
+      "to": "https://carpetductcleaning.com/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 44
+    },
+    {
+      "from": "^/services/.*$",
+      "to": "https://carpetductcleaning.com/services/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 0
+    },
+    {
+      "from": "^/zozo/.*$",
+      "to": "https://carpetductcleaning.com/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 0
+    },
+    {
+      "from": "^/feature/.*$",
+      "to": "https://carpetductcleaning.com/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 0
+    },
+    {
+      "from": "^/search/.*$",
+      "to": "https://carpetductcleaning.com/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 0
+    },
+    {
+      "from": "^/locations/.*$",
+      "to": "https://carpetductcleaning.com/service-area/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 0
+    },
+    {
+      "from": "^/20[0-9]{2}/.*$",
+      "to": "https://carpetductcleaning.com/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 0
+    },
+    {
+      "from": "^/[0-9]+$",
+      "to": "https://carpetductcleaning.com/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 0
+    },
+    {
+      "from": "^/articles.*$",
+      "to": "https://carpetductcleaning.com/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 0
+    },
+    {
+      "from": "/carpet-and-duct-cleaning-is-essential",
+      "to": "https://carpetductcleaning.com/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 0
+    },
+    {
+      "from": "/avsoft.html",
+      "to": "https://carpetductcleaning.com/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 0
+    },
+    {
+      "from": "/alarming-sign-you-need-air-duct-cleaning",
+      "to": "https://carpetductcleaning.com/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 0
+    },
+    {
+      "from": "/impact-of-californias-climate-on-carpet-maintenance-insights-for-orange-county/",
+      "to": "https://carpetductcleaning.com/carpet-cleaning/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 28
+    },
+    {
+      "from": "/why-regular-carpet-and-duct-cleaning-is-essential-for-orange-county-homes/",
+      "to": "https://carpetductcleaning.com/carpet-cleaning/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 55
+    },
+    {
+      "from": "/water-damage-restoration-in-orange-county-protecting-homes-and-businesses/",
+      "to": "https://carpetductcleaning.com/water-damage-restoration/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 19
+    },
+    {
+      "from": "/importance-of-water-damage-restoration-protect-your-home-and-health/",
+      "to": "https://carpetductcleaning.com/water-damage-restoration/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 37
+    },
+    {
+      "from": "/eco-friendly-carpet-cleaning-methods-in-california-a-sustainable-approach-for-your-home/",
+      "to": "https://carpetductcleaning.com/carpet-cleaning/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 43
+    },
+    {
+      "from": "/how-carpet-cleaning-improves-indoor-air-quality/",
+      "to": "https://carpetductcleaning.com/carpet-cleaning/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 75
+    },
+    {
+      "from": "/about",
+      "to": "https://carpetductcleaning.com/about-us/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 141
+    },
+    {
+      "from": "/articles",
+      "to": "https://carpetductcleaning.com/blogs/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 15
+    },
+    {
+      "from": "/called",
+      "to": "https://carpetductcleaning.com/contact/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 2
+    },
+    {
+      "from": "/services",
+      "to": "https://carpetductcleaning.com/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 172
+    },
+    {
+      "from": "/services/carpet-cleaning",
+      "to": "https://carpetductcleaning.com/carpet-cleaning/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 41
+    },
+    {
+      "from": "/services/curtain-cleaning-in-irvine",
+      "to": "https://carpetductcleaning.com/drapes-curtain-cleaning/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 19
+    },
+    {
+      "from": "/the-importance-of-oriental-rug-cleaning-preserving-beauty-and-longevity/",
+      "to": "https://carpetductcleaning.com/oriental-rug-cleaning/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 37
+    },
+    {
+      "from": "/services/oriental-rug-cleaning-in-irvine/",
+      "to": "https://carpetductcleaning.com/oriental-rug-cleaning/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 37
+    },
+    {
+      "from": "/services/car-cleaning-services",
+      "to": "https://carpetductcleaning.com/car-seat-cleaning/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 1
+    },
+    {
+      "from": "/locations/carpet-and-air-duct-cleaning-in-irvine",
+      "to": "https://carpetductcleaning.com/cleaner-in-irvine/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 8
+    },
+    {
+      "from": "/locations/carpet-and-duct-cleaning-in-huntington-beach",
+      "to": "https://carpetductcleaning.com/cleaner-in-huntington-beach/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 17
+    },
+    {
+      "from": "/locations/carpet-and-duct-cleaning-services-in-costa-mesa",
+      "to": "https://carpetductcleaning.com/cleaner-in-costa-mesa/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 18
+    },
+    {
+      "from": "/locations/specialized-cleaning-services",
+      "to": "https://carpetductcleaning.com/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 17
+    },
+    {
+      "from": "/locations/top-carpet-and-duct-cleaning",
+      "to": "https://carpetductcleaning.com/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 101
+    },
+    {
+      "from": "/locations/foothill-ranch-2",
+      "to": "https://carpetductcleaning.com/cleaner-in-foothill-ranch/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 4
+    },
+    {
+      "from": "/locations/carpet-cleaning-ladera-ranch",
+      "to": "https://carpetductcleaning.com/cleaner-in-ladera-ranch/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 4
+    },
+    {
+      "from": "/locations/carpet-duct-cleaning-tustin",
+      "to": "https://carpetductcleaning.com/cleaner-in-tustin/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 6
+    },
+    {
+      "from": "/recruit",
+      "to": "https://carpetductcleaning.com/contact/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 1
+    },
+    {
+      "from": "/area-rug-cleaning-in-orange-county-preserving-beauty-and-health-in-your-home/",
+      "to": "https://carpetductcleaning.com/area-rug-cleaning/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 3
+    },
+    {
+      "from": "/reasons-dryer-vent-cleaning-saves-lives",
+      "to": "https://carpetductcleaning.com/dryer-vent-cleaning/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 14
+    },
+    {
+      "from": "/dryer-vent-cleaning-in-irvine-orange-county-la-county-enhance-safety-and-efficiency/",
+      "to": "https://carpetductcleaning.com/dryer-vent-cleaning/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 14
+    },
+    {
+      "from": "/services/upholstery-cleaning-in-irvine/upholstery-cleaning-2-2",
+      "to": "https://carpetductcleaning.com/furniture-upholstery-cleaning/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 4
+    },
+    {
+      "from": "/revitalize-your-living-space-upholstery-cleaning-tips-and-tricks/",
+      "to": "https://carpetductcleaning.com/furniture-upholstery-cleaning/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 4
+    },
+    {
+      "from": "/common-carpet-stains-and-the-best-professional-removal-techniques-2/",
+      "to": "https://carpetductcleaning.com/carpet-cleaning/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 9
+    },
+    {
+      "from": "/water-damage-restoration-in-orange-county-protecting-homes-and-businesses/",
+      "to": "https://carpetductcleaning.com/carpet-cleaning/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 9
+    },
+    {
+      "from": "/importance-of-water-damage-restoration-protect-your-home-and-health/",
+      "to": "https://carpetductcleaning.com/carpet-cleaning/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 9
+    },
+    {
+      "from": "/why-regular-carpet-protector-treatments-are-a-must-for-every-home/",
+      "to": "https://carpetductcleaning.com/carpet-cleaning/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 9
+    },
+    {
+      "from": "/upholstery-cleaning-in-irvine-orange-county-la-county-restore-comfort-and-freshness/",
+      "to": "https://carpetductcleaning.com/upholstery-cleaning/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 58
+    },
+    {
+      "from": "/7-powerful-cleaning-tips-for-outdoor-furniture-cleaning/",
+      "to": "https://carpetductcleaning.com/upholstery-cleaning/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 58
+    },
+    {
+      "from": "/outdoor-furniture-cleaning-in-irvine-orange-county-la-county/",
+      "to": "https://carpetductcleaning.com/upholstery-cleaning/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 58
+    },
+    {
+      "from": "/how-professional-rug-cleaning-services-extend-the-life-of-your-favorite-rugs/",
+      "to": "https://carpetductcleaning.com/area-rug-cleaning/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 8
+    },
+    {
+      "from": "/premium-sofa-and-couch-cleaning-yorba-linda-2/",
+      "to": "https://carpetductcleaning.com/premium-sofa-and-couch-cleaning-yorba-linda/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 14
+    },
+    {
+      "from": "/outdoor-furniture-cleaning-in-irvine-orange-county-la-county/",
+      "to": "https://carpetductcleaning.com/outdoor-cleaning-services/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 0
+    },
+    {
+      "from": "/duct-cleaning",
+      "to": "https://carpetductcleaning.com/air-duct-cleaning/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 0
+    },
+    {
+      "from": "/cleaner-in-stanton/",
+      "to": "https://carpetductcleaning.com/carpet-cleaning-stanton/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 64
+    },
+    {
+      "from": "/carpet-cleaning-stanton/",
+      "to": "https://carpetductcleaning.com/carpet-cleaning-in-stanton/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 60
+    },
+    {
+      "from": "/cleaner-in-anaheim/",
+      "to": "https://carpetductcleaning.com/carpet-cleaning-in-anaheim/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 125
+    },
+    {
+      "from": "/cleaner-in-north-irvine/",
+      "to": "https://carpetductcleaning.com/carpet-cleaning-in-north-irvine/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 62
+    },
+    {
+      "from": "/cleaner-in-dove-canyon/",
+      "to": "https://carpetductcleaning.com/carpet-cleaning-dove-canyon/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 140
+    },
+    {
+      "from": "/cleaner-in-east-irvine",
+      "to": "https://carpetductcleaning.com/carpet-cleaning-east-irvine/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 89
+    },
+    {
+      "from": "/tile-grout-cleaning",
+      "to": "https://carpetductcleaning.com/tile-and-grout-cleaning-3/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 44
+    },
+    {
+      "from": "/furniture-upholstery-cleaning/-tustin-ca",
+      "to": "https://carpetductcleaning.com/upholstery-cleaning-tustin-ca/",
+      "status": 301,
+      "source": "rank-math",
+      "hits": 17
+    }
+  ]
+}
