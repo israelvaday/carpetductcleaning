@@ -16,7 +16,7 @@
  *
  * Usage: node scripts/build-image-map.mjs
  */
-import { readFileSync, writeFileSync, readdirSync } from "node:fs";
+import { readFileSync, writeFileSync, readdirSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -67,6 +67,57 @@ const bySrc = new Map(candidates.map((c) => [c.src, c]));
 const qualityScore = (c) => (c.quality === "high" ? 2 : 1);
 const isLandscape = (c) => c.orientation === "landscape" || (c.w && c.h && c.w >= c.h);
 
+// Some hub slugs never appear in the vision tags (the tagger used plainer
+// names). Map each hub to the tag services that are visually correct for it,
+// so e.g. encapsulation-carpet-cleaning can match carpet-tagged photos.
+const SERVICE_ALIASES = {
+  "encapsulation-carpet-cleaning": ["carpet-cleaning"],
+  "rug-pickup": ["area-rug-cleaning", "oriental-rug-cleaning"],
+  "microfiber-couch-cleaning": ["couch-cleaning", "upholstery-cleaning"],
+  "commercial-air-duct-cleaning": ["air-duct-cleaning"],
+  commercial: ["commercial-carpet-cleaning", "carpet-cleaning"],
+  "emergency-cleaning": ["water-damage-restoration", "carpet-cleaning"],
+  "floor-cleaning": ["hardwood-floor-cleaning", "vinyl-floor-cleaning", "tile-and-grout-cleaning"],
+  "couch-sectional-cleaning": ["couch-cleaning", "upholstery-cleaning"],
+  "drape-curtain-cleaning": ["drape-cleaning", "upholstery-cleaning"],
+};
+
+// When a service's own pool runs dry, borrow from visually adjacent services
+// (soft furnishings look right on a carpet page; hard floors on a wood page)
+// instead of grabbing a random mismatched photo like ducts or travertine.
+const RELATED_SERVICES = {
+  "carpet-cleaning": ["area-rug-cleaning", "upholstery-cleaning", "couch-cleaning"],
+  "air-duct-cleaning": ["dryer-vent-cleaning"],
+  "dryer-vent-cleaning": ["air-duct-cleaning"],
+  "area-rug-cleaning": ["oriental-rug-cleaning", "carpet-cleaning"],
+  "oriental-rug-cleaning": ["area-rug-cleaning", "carpet-cleaning"],
+  "upholstery-cleaning": ["couch-cleaning", "carpet-cleaning", "leather-furniture-cleaning"],
+  "couch-cleaning": ["upholstery-cleaning", "carpet-cleaning"],
+  "leather-furniture-cleaning": ["upholstery-cleaning", "couch-cleaning"],
+  "hardwood-floor-cleaning": ["vinyl-floor-cleaning", "tile-and-grout-cleaning", "natural-stone-cleaning"],
+  "vinyl-floor-cleaning": ["hardwood-floor-cleaning", "tile-and-grout-cleaning"],
+  "tile-and-grout-cleaning": ["natural-stone-cleaning", "hardwood-floor-cleaning", "vinyl-floor-cleaning"],
+  "natural-stone-cleaning": ["tile-and-grout-cleaning", "hardwood-floor-cleaning"],
+  "water-damage-restoration": ["carpet-cleaning"],
+  "pet-stain-odor": ["carpet-cleaning", "upholstery-cleaning"],
+  "outdoor-furniture-cleaning": ["upholstery-cleaning"],
+  "car-seat-cleaning": ["upholstery-cleaning", "couch-cleaning"],
+  "drape-cleaning": ["upholstery-cleaning"],
+  "commercial-carpet-cleaning": ["carpet-cleaning"],
+};
+
+function matchServices(service) {
+  if (!service) return [];
+  return [service, ...(SERVICE_ALIASES[service] || [])];
+}
+
+function relatedServices(service) {
+  if (!service) return [];
+  const direct = RELATED_SERVICES[service] || [];
+  const viaAlias = (SERVICE_ALIASES[service] || []).flatMap((a) => RELATED_SERVICES[a] || []);
+  return [...new Set([...direct, ...viaAlias])];
+}
+
 // One global used-set across the whole manifest — the hard rule. Keyed by the
 // output filename so duplicate uploads (name.webp vs name.png.webp) collide.
 const used = new Set();
@@ -74,7 +125,8 @@ const used = new Set();
 function scoreFor(c, { service, wantLandscape = true, wantPeople = null, kinds = null }) {
   let s = qualityScore(c) * 10;
   if (service) {
-    if (c.services.includes(service)) s += 100;
+    if (matchServices(service).some((m) => c.services.includes(m))) s += 100;
+    else if (relatedServices(service).some((r) => c.services.includes(r))) s += 35;
     else if (c.services.length) s -= 60;
   }
   if (wantLandscape) s += isLandscape(c) ? 8 : -6;
@@ -85,9 +137,10 @@ function scoreFor(c, { service, wantLandscape = true, wantPeople = null, kinds =
 }
 
 function pick({ service = null, wantLandscape = true, wantPeople = null, kinds = null, requireMatch = false }) {
+  const match = matchServices(service);
   const pool = candidates
     .filter((c) => !used.has(c.key))
-    .filter((c) => !requireMatch || !service || c.services.includes(service))
+    .filter((c) => !requireMatch || !service || match.some((m) => c.services.includes(m)))
     .map((c) => ({ c, s: scoreFor(c, { service, wantLandscape, wantPeople, kinds }) }))
     .sort((a, b) => b.s - a.s);
   const chosen = pool[0]?.c || null;
@@ -173,19 +226,18 @@ for (const slug of serviceSlugs) {
   });
 }
 
-// --- Cities: unique hero + card + 2 unique job photos each -------------------
-// hero = the city page hero, card = the city's tile on /locations, jobs = the
-// "recent work" strip on the city page. All four are unique per city.
+// --- Cities: unique hero + 2 unique job photos each ---------------------------
+// hero = the city page hero, jobs = the "recent work" strip on the city page.
+// The /locations tile is NOT a work photo — it is a generated city landmark
+// (see cityLandmarks below), so the work pool only has to cover the pages
+// where the work itself is the subject.
 const cityExact = {};
-const cityCard = {};
 const cityJobs = {};
 for (const page of URL_MAP.cityPages) {
   const [, service, city] = page.route.split("/");
   const key = `${service}/${city}`;
   const hero = pick({ service, wantLandscape: true, kinds: ["work", "result", "equipment"] });
   if (hero) cityExact[key] = hero.src;
-  const card = pick({ service, wantLandscape: true, kinds: ["work", "result", "equipment"] });
-  if (card) cityCard[key] = card.src;
   const jobs = [];
   for (let i = 0; i < 2; i++) {
     const p = pick({ service, wantLandscape: false, kinds: ["work", "result", "equipment"] });
@@ -193,6 +245,21 @@ for (const page of URL_MAP.cityPages) {
     jobs.push(p.src);
   }
   if (jobs.length) cityJobs[key] = jobs;
+}
+
+// --- City landmarks: one generated photo per city for the /locations grid ----
+// Produced by scripts/generate-city-photos.mjs into media/generated/. Keyed by
+// city slug only — a city looks the same no matter which service you need.
+const cityLandmarks = {};
+{
+  const titleCase = (s) => s.split("-").map((w) => w[0].toUpperCase() + w.slice(1)).join(" ");
+  const cities = [...new Set(URL_MAP.cityPages.map((p) => p.route.split("/")[2]))];
+  for (const city of cities) {
+    const src = `generated/city-${city}.png`;
+    if (existsSync(join(ROOT, "media/generated", `city-${city}.png`))) {
+      cityLandmarks[city] = { src, alt: `${titleCase(city)}, California` };
+    }
+  }
 }
 
 // --- Blog posts: unique image each, matched by topic ------------------------
@@ -220,7 +287,7 @@ const postSlugs = readdirSync(join(ROOT, "content/posts"))
   .map((f) => f.replace(/\.json$/, ""));
 const posts = {};
 for (const slug of postSlugs) {
-  let svc = "carpet-cleaning";
+  let svc = null; // no topic match → generic pick, don't drain the carpet pool
   for (const [re, s] of POST_RULES) if (re.test(slug)) { svc = s; break; }
   const p = pick({ service: svc, wantLandscape: true, kinds: ["work", "result", "equipment"] });
   if (p) posts[slug] = p.src;
@@ -240,7 +307,7 @@ const out = {
   assets,
   services,
   cityExact,
-  cityCard,
+  cityLandmarks,
   cityJobs,
   posts,
   gallery,
@@ -251,6 +318,6 @@ writeFileSync(join(ROOT, "content/image-map.json"), JSON.stringify(out, null, 2)
 const missing = services.filter((s) => !s.hero || !s.card || s.steps.length < 4);
 console.log(`assets: ${assets.length}`);
 console.log(`services: ${services.length} (${missing.length} with unfilled roles${missing.length ? ": " + missing.map((s) => s.slug).join(", ") : ""})`);
-console.log(`cityExact: ${Object.keys(cityExact).length}/${URL_MAP.cityPages.length}, cityCard: ${Object.keys(cityCard).length}, cityJobs: ${Object.keys(cityJobs).length}`);
+console.log(`cityExact: ${Object.keys(cityExact).length}/${URL_MAP.cityPages.length}, cityLandmarks: ${Object.keys(cityLandmarks).length}, cityJobs: ${Object.keys(cityJobs).length}`);
 console.log(`posts: ${Object.keys(posts).length}/${postSlugs.length}, gallery: ${gallery.length}`);
 console.log(`unique photos assigned: ${used.size}`);

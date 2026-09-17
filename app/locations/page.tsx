@@ -8,7 +8,7 @@ import { JsonLd } from "@/components/json-ld";
 import { MapEmbed } from "@/components/map-embed";
 import { Section, SectionHead } from "@/components/ui";
 import { cityEntries, serviceSlugs } from "@/lib/content";
-import { cityCardImage, img } from "@/lib/images";
+import { cityLandmark, img } from "@/lib/images";
 import { breadcrumbs } from "@/lib/schema";
 import { SERVICE_GROUPS } from "@/lib/services";
 import { site } from "@/lib/site";
@@ -23,12 +23,10 @@ export const metadata: Metadata = {
 
 export default function LocationsPage() {
   const all = cityEntries();
-  const groups = new Map<string, typeof all>();
-  for (const c of all) {
-    const list = groups.get(c.service) || [];
-    list.push(c);
-    groups.set(c.service, list);
-  }
+  // One tile per city. Every city in the map has a carpet page, so the
+  // landmark grid links there; city pages for other services get chips below.
+  const carpetCities = all.filter((c) => c.service === "carpet-cleaning");
+  const otherCityPages = all.filter((c) => c.service !== "carpet-cleaning");
 
   return (
     <>
@@ -61,44 +59,63 @@ export default function LocationsPage() {
         </div>
       </Section>
 
-      {[...groups.entries()].map(([service, cities], index) => (
-        <Section key={service} tone={index % 2 === 0 ? "sand" : "light"}>
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <SectionHead eyebrow="Cities" title={`${titleCase(service)} by city`} />
-            <Link href={`/${service}/`} className="inline-flex items-center gap-2 font-semibold text-brand">
-              {titleCase(service)} hub
-              <ArrowRight className="size-4" />
-            </Link>
-          </div>
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {cities.map((c) => {
-              const image = cityCardImage(service, c.city);
-              return (
+      <Section tone="sand">
+        <SectionHead
+          eyebrow="Find your city"
+          title="Every neighborhood, its own page"
+          body="Pick your city — each page is written for that area, with local pricing and the next open slot."
+        />
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {carpetCities.map((c) => {
+            const image = cityLandmark(c.city);
+            return (
+              <Link
+                key={c.route}
+                href={`${c.route}/`}
+                className="group relative overflow-hidden rounded-2xl shadow-card"
+              >
+                <div className="relative aspect-4/3">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    sizes="(min-width: 1024px) 18rem, (min-width: 640px) 45vw, 100vw"
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                  />
+                  <span className="absolute inset-0 bg-linear-to-t from-navy/90 via-navy/25 to-transparent" />
+                </div>
+                <span className="absolute bottom-0 left-0 right-0 flex items-center justify-between p-4 text-white">
+                  <span className="font-semibold">{titleCase(c.city)}</span>
+                  <ArrowRight className="size-4 transition group-hover:translate-x-0.5" />
+                </span>
+              </Link>
+            );
+          })}
+        </div>
+      </Section>
+
+      {otherCityPages.length > 0 && (
+        <Section tone="light">
+          <SectionHead
+            eyebrow="More by city"
+            title="Air duct and hardwood pages by city"
+            body="Dedicated city pages for services beyond carpet cleaning."
+          />
+          <ul className="mt-8 flex flex-wrap gap-2.5">
+            {otherCityPages.map((c) => (
+              <li key={c.route}>
                 <Link
-                  key={c.route}
                   href={`${c.route}/`}
-                  className="group relative overflow-hidden rounded-2xl shadow-card"
+                  className="group inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-2.5 text-sm font-medium text-navy shadow-sm transition hover:-translate-y-0.5 hover:border-brand hover:text-brand hover:shadow-card"
                 >
-                  <div className="relative aspect-4/3">
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      fill
-                      sizes="(min-width: 1024px) 18rem, (min-width: 640px) 45vw, 100vw"
-                      className="object-cover transition duration-500 group-hover:scale-105"
-                    />
-                    <span className="absolute inset-0 bg-linear-to-t from-navy/90 via-navy/25 to-transparent" />
-                  </div>
-                  <span className="absolute bottom-0 left-0 right-0 flex items-center justify-between p-4 text-white">
-                    <span className="font-semibold">{titleCase(c.city)}</span>
-                    <ArrowRight className="size-4 transition group-hover:translate-x-0.5" />
-                  </span>
+                  {titleCase(c.service)} in {titleCase(c.city)}
+                  <ArrowRight className="size-3.5 text-brand transition group-hover:translate-x-0.5" />
                 </Link>
-              );
-            })}
-          </div>
+              </li>
+            ))}
+          </ul>
         </Section>
-      ))}
+      )}
 
       <Section tone="light">
         <SectionHead

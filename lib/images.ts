@@ -85,7 +85,6 @@ export function serviceSteps(slug: string): Img[] {
 
 // Unique hero per city — no two city pages share a photo.
 const cityExact = map.cityExact as Record<string, string>;
-const cityCardMap = (map as unknown as { cityCard: Record<string, string> }).cityCard || {};
 
 export function cityImage(service: string, city: string): Img {
   const exact = cityExact[`${service}/${city}`];
@@ -93,11 +92,15 @@ export function cityImage(service: string, city: string): Img {
   return serviceImage(service, "hero");
 }
 
-// The city's tile on /locations — a different photo from the city page hero.
-export function cityCardImage(service: string, city: string): Img {
-  const src = cityCardMap[`${service}/${city}`];
-  if (src) return fromSrc(src, "sm");
-  return serviceImage(service, "card");
+// The city's tile on /locations — a generated landmark photo of that city,
+// keyed by city alone (a city looks the same for every service).
+const cityLandmarks = (map as unknown as { cityLandmarks: Record<string, { src: string; alt: string }> })
+  .cityLandmarks || {};
+
+export function cityLandmark(city: string): Img {
+  const entry = cityLandmarks[city];
+  if (entry) return { ...fromSrc(entry.src, "sm"), alt: entry.alt };
+  return img("truck");
 }
 
 // Unique per-city job photos for the "Jobs near you" strip.

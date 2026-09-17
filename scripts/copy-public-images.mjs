@@ -60,9 +60,9 @@ for (const s of map.services || []) {
   for (const src of s.steps || []) add(src, 1200); // process wizard panels
 }
 for (const src of Object.values(map.cityExact || {})) add(src, 1600);
-for (const src of Object.values(map.cityCard || {})) {
-  add(src, 720);
-  add(src, 480); // -sm card variant
+for (const entry of Object.values(map.cityLandmarks || {})) {
+  add(entry.src, 720);
+  add(entry.src, 480); // -sm card variant
 }
 for (const srcs of Object.values(map.cityJobs || {})) for (const src of srcs) add(src, 800);
 for (const src of Object.values(map.posts || {})) add(src, 1200);
