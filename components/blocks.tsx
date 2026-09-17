@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Breadcrumb, CallButton, CheckList, QuoteButton, RatingPill, Section, SectionHead } from "@/components/ui";
-import { cityImage, gallery, serviceImage, type Img } from "@/lib/images";
+import { asset, cityImage, gallery, serviceImage, type Img } from "@/lib/images";
 import { PROCESS_STEPS, serviceBlurb } from "@/lib/services";
 import { site } from "@/lib/site";
 import { cn, titleCase } from "@/lib/utils";
@@ -193,7 +193,7 @@ export function WhyUs({ items }: { items: string[] }) {
         <div className="grid gap-4 sm:grid-cols-2">
           <div className="relative aspect-4/5 overflow-hidden rounded-2xl shadow-card">
             <Image
-              src="/images/tech.webp"
+              src={asset("/images/tech.webp")}
               alt="Technician treating a carpet stain with professional tools"
               fill
               sizes="(min-width: 1024px) 24rem, 45vw"
@@ -203,7 +203,7 @@ export function WhyUs({ items }: { items: string[] }) {
           <div className="grid gap-4">
             <div className="relative aspect-4/3 overflow-hidden rounded-2xl shadow-card">
               <Image
-                src="/images/van.webp"
+                src={asset("/images/van.webp")}
                 alt="Carpet And Duct Cleaning service van in Irvine, CA"
                 fill
                 sizes="(min-width: 1024px) 24rem, 45vw"
@@ -212,7 +212,7 @@ export function WhyUs({ items }: { items: string[] }) {
             </div>
             <div className="relative aspect-4/3 overflow-hidden rounded-2xl shadow-card">
               <Image
-                src="/images/carpet-family.webp"
+                src={asset("/images/carpet-family.webp")}
                 alt="Family relaxing on a freshly cleaned carpet"
                 fill
                 sizes="(min-width: 1024px) 24rem, 45vw"

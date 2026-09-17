@@ -5,7 +5,7 @@ import { Clock, MapPin, Phone } from "lucide-react";
 import { ImageHero } from "@/components/blocks";
 import { JsonLd } from "@/components/json-ld";
 import { CheckList, Section, SectionHead, TrustRow } from "@/components/ui";
-import { img } from "@/lib/images";
+import { asset, img } from "@/lib/images";
 import { breadcrumbs } from "@/lib/schema";
 import { PROOF_POINTS } from "@/lib/services";
 import { site, siteUrl } from "@/lib/site";
@@ -79,7 +79,7 @@ export default function ContactPage() {
             </div>
             <div className="relative mt-8 aspect-16/9 overflow-hidden rounded-2xl shadow-card">
               <Image
-                src="/images/map.webp"
+                src={asset("/images/map.webp")}
                 alt="Orange County service area map"
                 fill
                 sizes="(min-width: 1024px) 30rem, 100vw"

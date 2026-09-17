@@ -12,14 +12,22 @@ const serviceKeys = new Set(map.services.map((s) => s.slug));
 const cityExact = map.cityExact as Record<string, string>;
 const cityPool = map.cityPool as Record<string, string[]>;
 
+// basePath is applied to next/link and the _next bundle, but not to image
+// sources, so every file under /public has to be prefixed by hand.
+const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+export function asset(path: string): string {
+  return `${base}${path}`;
+}
+
 export function img(key: string, alt?: string): Img {
-  return { src: `/images/${key}.webp`, alt: alt ?? alts.get(key) ?? "" };
+  return { src: asset(`/images/${key}.webp`), alt: alt ?? alts.get(key) ?? "" };
 }
 
 export function serviceImage(slug: string, size: "hero" | "card" = "hero"): Img {
   if (!serviceKeys.has(slug)) return img("hero-home");
   const key = `svc-${slug}`;
-  const src = size === "card" ? `/images/${key}-sm.webp` : `/images/${key}.webp`;
+  const src = asset(size === "card" ? `/images/${key}-sm.webp` : `/images/${key}.webp`);
   return { src, alt: alts.get(key) ?? "" };
 }
 

@@ -8,6 +8,7 @@ import { FaqList } from "@/components/faq-list";
 import { JsonLd } from "@/components/json-ld";
 import { CallButton, QuoteButton, RatingPill, Section, SectionHead, TrustRow } from "@/components/ui";
 import { cityEntries, getUtility } from "@/lib/content";
+import { asset } from "@/lib/images";
 import { breadcrumbs, faqLd } from "@/lib/schema";
 import { PROOF_POINTS } from "@/lib/services";
 import { moneyServices, site } from "@/lib/site";
@@ -82,7 +83,7 @@ export default function HomePage() {
           <div className="relative">
             <div className="relative aspect-4/3 overflow-hidden rounded-3xl shadow-lift">
               <Image
-                src="/images/hero-home.webp"
+                src={asset("/images/hero-home.webp")}
                 alt="Technician deep cleaning a carpet in an Orange County home"
                 fill
                 priority
@@ -146,7 +147,7 @@ export default function HomePage() {
           <div className="grid gap-4 sm:grid-cols-2">
             <Link href="/carpet-cleaning/" className="group relative aspect-4/3 overflow-hidden rounded-2xl">
               <Image
-                src="/images/carpet-stains.webp"
+                src={asset("/images/carpet-stains.webp")}
                 alt="Carpet before and after professional stain removal"
                 fill
                 sizes="(min-width: 640px) 20rem, 100vw"
@@ -157,7 +158,7 @@ export default function HomePage() {
             </Link>
             <Link href="/air-duct-cleaning/" className="group relative aspect-4/3 overflow-hidden rounded-2xl">
               <Image
-                src="/images/duct-dirty-clean.webp"
+                src={asset("/images/duct-dirty-clean.webp")}
                 alt="Air duct before and after HEPA cleaning"
                 fill
                 sizes="(min-width: 640px) 20rem, 100vw"
@@ -199,7 +200,7 @@ export default function HomePage() {
               <Stats />
               <div className="relative mt-6 aspect-4/3 overflow-hidden rounded-2xl shadow-card">
                 <Image
-                  src="/images/map.webp"
+                  src={asset("/images/map.webp")}
                   alt="Orange County service area map"
                   fill
                   sizes="(min-width: 1024px) 24rem, 100vw"

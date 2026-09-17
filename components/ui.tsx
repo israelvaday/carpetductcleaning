@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Phone, Star } from "lucide-react";
+import { asset } from "@/lib/images";
 import { cn } from "@/lib/utils";
 import { site } from "@/lib/site";
 
@@ -115,14 +116,14 @@ export function TrustRow({ dark = false }: { dark?: boolean }) {
   return (
     <div className={cn("flex flex-wrap items-center gap-x-6 gap-y-4", dark ? "text-white/70" : "text-ink/60")}>
       <Image
-        src="/images/google.webp"
+        src={asset("/images/google.webp")}
         alt="Google Guaranteed badge"
         width={140}
         height={54}
         className="h-9 w-auto object-contain"
       />
       <Image
-        src="/images/bbb.webp"
+        src={asset("/images/bbb.webp")}
         alt="BBB Accredited Business A+ rating"
         width={140}
         height={56}

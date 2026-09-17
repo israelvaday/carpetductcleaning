@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { CallButton, QuoteButton, TrustRow } from "@/components/ui";
+import { asset } from "@/lib/images";
 import { site } from "@/lib/site";
 
 export function Cta({
@@ -30,7 +31,7 @@ export function Cta({
           </div>
           <div className="relative min-h-64 lg:min-h-full">
             <Image
-              src="/images/truck-mount.webp"
+              src={asset("/images/truck-mount.webp")}
               alt="Truck-mounted extraction hose running into an Orange County home"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"

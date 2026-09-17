@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ChevronDown, Menu, Phone } from "lucide-react";
 import { site } from "@/lib/site";
 import { SERVICE_GROUPS } from "@/lib/services";
-import { serviceImage } from "@/lib/images";
+import { asset, serviceImage } from "@/lib/images";
 import { titleCase } from "@/lib/utils";
 
 const featured = ["carpet-cleaning", "air-duct-cleaning", "upholstery-cleaning", "water-damage-restoration"];
@@ -19,7 +19,7 @@ function Logo() {
   return (
     <Link href="/" className="flex items-center gap-3" aria-label={`${site.name} home`}>
       <Image
-        src="/images/logo.webp"
+        src={asset("/images/logo.webp")}
         alt={`${site.name} logo`}
         width={220}
         height={47}

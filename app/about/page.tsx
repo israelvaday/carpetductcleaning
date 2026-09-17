@@ -5,7 +5,7 @@ import { Cta } from "@/components/cta";
 import { JsonLd } from "@/components/json-ld";
 import { CheckList, Section, SectionHead, TrustRow } from "@/components/ui";
 import { getUtility } from "@/lib/content";
-import { img } from "@/lib/images";
+import { asset, img } from "@/lib/images";
 import { breadcrumbs } from "@/lib/schema";
 import { PROOF_POINTS } from "@/lib/services";
 import { site, siteUrl } from "@/lib/site";
@@ -81,7 +81,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 gap-4">
             <div className="relative aspect-3/4 overflow-hidden rounded-2xl shadow-card">
               <Image
-                src="/images/tech.webp"
+                src={asset("/images/tech.webp")}
                 alt="Technician treating a carpet stain with professional tools"
                 fill
                 sizes="(min-width: 1024px) 20rem, 45vw"
@@ -90,7 +90,7 @@ export default function AboutPage() {
             </div>
             <div className="relative mt-8 aspect-3/4 overflow-hidden rounded-2xl shadow-card">
               <Image
-                src="/images/truck-mount.webp"
+                src={asset("/images/truck-mount.webp")}
                 alt="Truck-mounted extraction hose running into an Orange County home"
                 fill
                 sizes="(min-width: 1024px) 20rem, 45vw"

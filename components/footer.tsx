@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Phone } from "lucide-react";
 import { cityEntries } from "@/lib/content";
+import { asset } from "@/lib/images";
 import { SERVICE_GROUPS } from "@/lib/services";
 import { site } from "@/lib/site";
 import { titleCase } from "@/lib/utils";
@@ -14,7 +15,7 @@ export function Footer() {
     <footer className="bg-navy text-white">
       <div className="container-page grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-5">
         <div className="lg:col-span-2">
-          <Image src="/images/logo.webp" alt={`${site.name} logo`} width={220} height={47} className="h-9 w-auto" />
+          <Image src={asset("/images/logo.webp")} alt={`${site.name} logo`} width={220} height={47} className="h-9 w-auto" />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/70">
             {site.name} has cleaned carpets, rugs, upholstery, and air ducts across Irvine and Orange County since{" "}
             {site.foundingYear}. IICRC-certified technicians, Google Guaranteed, BBB A+.
@@ -29,14 +30,14 @@ export function Footer() {
           </p>
           <div className="mt-5 flex items-center gap-4">
             <Image
-              src="/images/google.webp"
+              src={asset("/images/google.webp")}
               alt="Google Guaranteed badge"
               width={130}
               height={50}
               className="h-8 w-auto object-contain"
             />
             <Image
-              src="/images/bbb.webp"
+              src={asset("/images/bbb.webp")}
               alt="BBB Accredited Business A+ rating"
               width={130}
               height={52}
