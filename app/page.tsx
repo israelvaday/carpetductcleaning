@@ -5,10 +5,13 @@ import { ArrowRight } from "lucide-react";
 import { CityCards, Gallery, Process, ServiceGrid, Stats, WhyUs } from "@/components/blocks";
 import { Cta } from "@/components/cta";
 import { FaqList } from "@/components/faq-list";
+import { HomeHero } from "@/components/hero";
 import { JsonLd } from "@/components/json-ld";
-import { CallButton, QuoteButton, RatingPill, Section, SectionHead, TrustRow } from "@/components/ui";
+import { QuoteWizard } from "@/components/quote-wizard";
+import { Reveal } from "@/components/fx";
+import { Section, SectionHead } from "@/components/ui";
 import { cityEntries, getUtility } from "@/lib/content";
-import { asset } from "@/lib/images";
+import { asset, img } from "@/lib/images";
 import { breadcrumbs, faqLd } from "@/lib/schema";
 import { PROOF_POINTS } from "@/lib/services";
 import { moneyServices, site } from "@/lib/site";
@@ -57,82 +60,59 @@ export default function HomePage() {
         ].filter(Boolean) as Record<string, unknown>[]}
       />
 
-      <section className="relative overflow-hidden bg-sand">
-        <div className="container-page grid items-center gap-12 py-14 lg:grid-cols-2 lg:py-20">
-          <div>
-            <p className="eyebrow">
-              {site.city} · {site.area} · Since {site.foundingYear}
-            </p>
-            <h1 className="mt-3 text-4xl font-semibold leading-tight text-navy md:text-5xl lg:text-6xl">
-              Carpet cleaning in Irvine, CA
-            </h1>
-            <p className="mt-5 text-lg leading-relaxed text-ink/75">
-              {paras[0] ||
-                "Google Guaranteed carpet and air duct cleaning. Truck-mounted hot-water extraction, HEPA duct cleaning, and IICRC-certified technicians across Orange County."}
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <CallButton />
-              <QuoteButton />
-            </div>
-            <div className="mt-8 flex flex-col items-start gap-5">
-              <RatingPill />
-              <TrustRow />
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="relative aspect-4/3 overflow-hidden rounded-3xl shadow-lift">
-              <Image
-                src={asset("/images/hero-home.webp")}
-                alt="Technician deep cleaning a carpet in an Orange County home"
-                fill
-                priority
-                sizes="(min-width: 1024px) 40rem, 100vw"
-                className="object-cover"
-              />
-            </div>
-            <div className="mt-4 grid grid-cols-3 gap-4 lg:absolute lg:-bottom-8 lg:-left-10 lg:mt-0 lg:w-52 lg:grid-cols-1 lg:gap-0 lg:rounded-2xl lg:bg-white lg:p-5 lg:shadow-lift">
-              <div className="rounded-xl bg-white p-3 text-center shadow-card lg:bg-transparent lg:p-0 lg:text-left lg:shadow-none">
-                <p className="text-xl font-semibold text-navy lg:text-2xl">{site.jobs}</p>
-                <p className="text-xs text-ink/60">jobs completed</p>
-              </div>
-              <div className="rounded-xl bg-white p-3 text-center shadow-card lg:mt-4 lg:border-t lg:border-line lg:bg-transparent lg:p-0 lg:pt-4 lg:text-left lg:shadow-none">
-                <p className="text-xl font-semibold text-navy lg:text-2xl">{site.rating} ★</p>
-                <p className="text-xs text-ink/60">Google rating</p>
-              </div>
-              <div className="rounded-xl bg-white p-3 text-center shadow-card lg:mt-4 lg:border-t lg:border-line lg:bg-transparent lg:p-0 lg:pt-4 lg:text-left lg:shadow-none">
-                <p className="text-xl font-semibold text-navy lg:text-2xl">Same day</p>
-                <p className="text-xs text-ink/60">openings available</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HomeHero image={img("hero-home")} />
 
       <Section tone="light" className="lg:pt-24">
-        <SectionHead
-          eyebrow="What we clean"
-          title="Every service has its own page and its own crew"
-          body="Carpet, ducts, rugs, upholstery, and hard floors. Pick the service you need and we will quote it on-site."
-        />
+        <Reveal>
+          <SectionHead
+            eyebrow="What we clean"
+            title="Every service has its own page and its own crew"
+            body="Carpet, ducts, rugs, upholstery, and hard floors. Pick the service you need and we will quote it on-site."
+          />
+        </Reveal>
         <ServiceGrid slugs={moneyServices.map((s) => s.href.replaceAll("/", ""))} priorityCount={4} />
-        <div className="mt-8">
+        <Reveal className="mt-8">
           <Link href="/locations/" className="inline-flex items-center gap-2 font-semibold text-brand">
             See all services and service areas
             <ArrowRight className="size-4" />
           </Link>
-        </div>
+        </Reveal>
       </Section>
 
       <WhyUs items={PROOF_POINTS} />
 
       <Process tone="light" />
 
+      {/* Interactive quote wizard */}
+      <Section tone="navy">
+        <div className="grid items-start gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <Reveal>
+            <SectionHead
+              tone="navy"
+              eyebrow="Get a price in minutes"
+              title="Answer five quick questions"
+              body="Tell us the service, the property, and the timing. We come back with an itemized price range and the next open slot — no obligation."
+            />
+            <ul className="mt-8 space-y-3 text-white/85">
+              {["Itemized quote before any work starts", "Same-day and next-day openings", "Safe for kids, pets, and allergies"].map((b) => (
+                <li key={b} className="flex items-start gap-3">
+                  <span className="mt-1 flex size-5 shrink-0 items-center justify-center rounded-full bg-gold text-xs font-bold text-navy">✓</span>
+                  {b}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <QuoteWizard />
+          </Reveal>
+        </div>
+      </Section>
+
       <Gallery />
 
       <Section tone="navy">
         <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_1fr]">
-          <div>
+          <Reveal>
             <SectionHead
               tone="navy"
               eyebrow="Carpet and air quality together"
@@ -140,11 +120,21 @@ export default function HomePage() {
               body="Most Orange County homes need both. Booking carpet and duct cleaning together means one crew, one trip, and one itemized quote."
             />
             <div className="mt-8 flex flex-wrap gap-3">
-              <CallButton />
-              <QuoteButton dark />
+              <Link
+                href="/carpet-cleaning/"
+                className="inline-flex h-12 items-center gap-2 rounded-full bg-gold px-6 text-sm font-bold uppercase tracking-wide text-navy transition hover:bg-gold-dark"
+              >
+                Carpet cleaning
+              </Link>
+              <Link
+                href="/air-duct-cleaning/"
+                className="inline-flex h-12 items-center gap-2 rounded-full border border-white/30 bg-white/10 px-6 text-sm font-bold uppercase tracking-wide text-white transition hover:border-gold/60 hover:text-gold"
+              >
+                Air duct cleaning
+              </Link>
             </div>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2">
+          </Reveal>
+          <Reveal delay={0.15} className="grid gap-4 sm:grid-cols-2">
             <Link href="/carpet-cleaning/" className="group relative aspect-4/3 overflow-hidden rounded-2xl">
               <Image
                 src={asset("/images/carpet-stains.webp")}
@@ -158,7 +148,7 @@ export default function HomePage() {
             </Link>
             <Link href="/air-duct-cleaning/" className="group relative aspect-4/3 overflow-hidden rounded-2xl">
               <Image
-                src={asset("/images/duct-dirty-clean.webp")}
+                src={asset("/images/duct-work.webp")}
                 alt="Air duct before and after HEPA cleaning"
                 fill
                 sizes="(min-width: 640px) 20rem, 100vw"
@@ -167,7 +157,7 @@ export default function HomePage() {
               <span className="absolute inset-0 bg-linear-to-t from-navy/90 to-transparent" />
               <span className="absolute bottom-4 left-4 font-semibold text-white">Air Duct Cleaning</span>
             </Link>
-          </div>
+          </Reveal>
         </div>
       </Section>
 
@@ -181,7 +171,7 @@ export default function HomePage() {
       {paras.length > 1 ? (
         <Section tone="light">
           <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <div>
+            <Reveal>
               <SectionHead eyebrow="About the company" title={`${site.name} in ${site.city}`} />
               <div className="prose-body mt-6 max-w-2xl">
                 {paras.slice(1).map((p) => (
@@ -195,8 +185,8 @@ export default function HomePage() {
                 More about our crew
                 <ArrowRight className="size-4" />
               </Link>
-            </div>
-            <div>
+            </Reveal>
+            <Reveal delay={0.1}>
               <Stats />
               <div className="relative mt-6 aspect-4/3 overflow-hidden rounded-2xl shadow-card">
                 <Image
@@ -210,7 +200,7 @@ export default function HomePage() {
               <p className="mt-3 text-sm text-ink/60">
                 Based in {titleCase(site.city.toLowerCase())}. Crews cover {site.area} daily.
               </p>
-            </div>
+            </Reveal>
           </div>
         </Section>
       ) : null}

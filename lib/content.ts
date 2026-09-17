@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import urlMap from "@/audit/next-url-map.json";
 import { metaTitle, titleCase } from "./utils";
@@ -26,6 +26,43 @@ function loadPage(slug: string): WpPage | null {
     return null;
   }
 }
+
+// AI-generated copy lives in content/generated/*.json and is merged over the
+// raw WordPress dump. Missing keys fall back to the WP-derived content.
+type GenService = {
+  tagline?: string;
+  description?: string;
+  paragraphs?: string[];
+  bullets?: string[];
+  keywords?: string[];
+};
+type GenCity = {
+  intro?: string;
+  localAngle?: string;
+  paragraphs?: string[];
+  faqs?: { q: string; a: string }[];
+  keywords?: string[];
+};
+type GenPost = {
+  title?: string;
+  excerpt?: string;
+  category?: string;
+  readMinutes?: number;
+  heroAlt?: string;
+};
+
+function loadGenerated<T>(name: string): Record<string, T> {
+  const p = join(ROOT, "content/generated", name);
+  if (!existsSync(p)) return {};
+  try {
+    return JSON.parse(readFileSync(p, "utf8")) as Record<string, T>;
+  } catch {
+    return {};
+  }
+}
+const GEN_SERVICES = loadGenerated<GenService>("services.json");
+const GEN_CITIES = loadGenerated<GenCity>("cities.json");
+const GEN_POSTS = loadGenerated<GenPost>("blog.json");
 
 const HUB_SOURCE: Record<string, string> = {
   "carpet-cleaning": "carpet-cleaning",
@@ -71,10 +108,14 @@ export function getServiceDoc(slug: string) {
   if (!source) return null;
   const page = loadPage(source);
   const name = titleCase(slug);
-  const paras = cleanParagraphs(page?.text || "", 12);
+  const gen = GEN_SERVICES[slug];
+  // Prefer AI paragraphs; fall back to the cleaned WP dump.
+  const paras = gen?.paragraphs?.length ? gen.paragraphs : cleanParagraphs(page?.text || "", 12);
   return {
     slug,
     name,
+    tagline: gen?.tagline,
+    bullets: gen?.bullets,
     h1: `${name} in Orange County`,
     title: metaTitle(`${name} in Orange County, CA`),
     description: composeMeta(
@@ -97,19 +138,33 @@ export function getCityDoc(service: string, city: string) {
   const serviceName = titleCase(service);
   const cityName = titleCase(city);
   const page = entry.source ? loadPage(entry.source) : null;
-  const rewriteHard = entry.rewrite === "required" || entry.rewrite === "new-write";
-  const sourceParas = cleanParagraphs(page?.text || "", rewriteHard ? 8 : 12);
-  const intro = cityIntro(serviceName, cityName);
-  const extra =
-    entry.rewrite === "new-write"
-      ? [
-          `${cityName} homes pick up beach sand, salt air, and everyday soil that settles into carpet fibers. Our truck-mounted hot-water extraction lifts that soil without leaving a sticky residue.`,
-          `If you need air duct cleaning in ${cityName}, that lives on its own page so Google and customers are not sent to the wrong service.`,
-        ]
-      : [];
-  const body = [intro, ...extra, ...sourceParas.filter((p) => !/expert boat|yacht cleaning|leather couch cleaning in/i.test(p))];
-  if (body.length < 4) {
-    body.push(...cityDetail(serviceName, cityName, serviceBlurb(service, serviceName)));
+  const gen = GEN_CITIES[`${service}/${city}`];
+
+  // Prefer unique AI copy (intro + local angle + paragraphs + FAQs). Fall back
+  // to the cleaned WP dump only when no generated copy exists for the page.
+  let body: string[];
+  let faqs: { q: string; a: string }[];
+  if (gen?.paragraphs?.length) {
+    body = [gen.intro, gen.localAngle, ...gen.paragraphs].filter(Boolean) as string[];
+    faqs = gen.faqs?.length
+      ? gen.faqs
+      : topUpFaqs(onTopicFaqs(service, extractFaqs(page?.text || "")), serviceName, cityName, service);
+  } else {
+    const rewriteHard = entry.rewrite === "required" || entry.rewrite === "new-write";
+    const sourceParas = cleanParagraphs(page?.text || "", rewriteHard ? 8 : 12);
+    const intro = cityIntro(serviceName, cityName);
+    const extra =
+      entry.rewrite === "new-write"
+        ? [
+            `${cityName} homes pick up beach sand, salt air, and everyday soil that settles into carpet fibers. Our truck-mounted hot-water extraction lifts that soil without leaving a sticky residue.`,
+            `If you need air duct cleaning in ${cityName}, that lives on its own page so Google and customers are not sent to the wrong service.`,
+          ]
+        : [];
+    body = [intro, ...extra, ...sourceParas.filter((p) => !/expert boat|yacht cleaning|leather couch cleaning in/i.test(p))];
+    if (body.length < 4) {
+      body.push(...cityDetail(serviceName, cityName, serviceBlurb(service, serviceName)));
+    }
+    faqs = topUpFaqs(onTopicFaqs(service, extractFaqs(page?.text || "")), serviceName, cityName, service);
   }
 
   return {
@@ -117,6 +172,7 @@ export function getCityDoc(service: string, city: string) {
     city,
     serviceName,
     cityName,
+    localAngle: gen?.localAngle,
     h1: `${serviceName} in ${cityName}, CA`,
     title: metaTitle(`${serviceName} in ${cityName}, CA`),
     description: composeMeta(
@@ -129,7 +185,7 @@ export function getCityDoc(service: string, city: string) {
     ),
     rewrite: entry.rewrite,
     paragraphs: body,
-    faqs: topUpFaqs(onTopicFaqs(service, extractFaqs(page?.text || "")), serviceName, cityName, service),
+    faqs,
   };
 }
 
@@ -172,8 +228,14 @@ export function getPost(slug: string) {
   }
 }
 
+export function blogMeta(post: WpPage) {
+  return GEN_POSTS[post.slug];
+}
+
 export function blogTitle(post: WpPage) {
   const slug = post.slug;
+  const gen = GEN_POSTS[slug];
+  if (gen?.title) return gen.title;
   const overrides: Record<string, string> = {
     "air-duct-cleaning-tustin-ca": "Air Duct Cleaning in Tustin, CA",
     "carpet-cleaning-air-quality-lake-forest-ca": "Carpet Cleaning and Air Quality in Lake Forest, CA",

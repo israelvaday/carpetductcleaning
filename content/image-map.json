@@ -1,5 +1,6 @@
 {
-  "note": "Curated photos from the WordPress backup. `src` is relative to media/webp/. Build writes /public/images/{key}.webp plus a -sm variant for svc-* keys.",
+  "note": "Curated brand/hero/service picks preserved; city pools, gallery, and gaps auto-filled from content/photo-tags.json. src is relative to media/webp/.",
+  "generatedAt": "2026-09-17T17:32:02.958Z",
   "assets": [
     {
       "key": "logo",
@@ -9,9 +10,9 @@
     },
     {
       "key": "hero-home",
-      "src": "2025/08/66325db79e9398cb87c2e9dd_hero-home-royal-carpet.webp",
-      "w": 1800,
-      "alt": "Freshly cleaned carpet in an Orange County living room"
+      "src": "generated/hero-home.png",
+      "w": 1600,
+      "alt": "Bright Orange County living room with freshly cleaned carpet and professional cleaning equipment"
     },
     {
       "key": "van",
@@ -192,38 +193,74 @@
       "src": "2026/03/clean-home-interior-with-air-vents.webp",
       "w": 1200,
       "alt": "Ceiling vent in a clean home interior"
+    },
+    {
+      "key": "hero-about",
+      "src": "2025/08/11.webp",
+      "w": 1600,
+      "alt": "A smiling man with a beard and short, curly hair wears a denim shirt."
+    },
+    {
+      "key": "duct-work",
+      "src": "2025/08/HVAC-doesnt-have-to-overwork.webp",
+      "w": 1600,
+      "alt": "Split image showing a dirty air duct before and a clean air duct after cleaning."
+    },
+    {
+      "key": "process-book",
+      "src": "generated/process-book.png",
+      "w": 1200,
+      "alt": "Cleaning technician greeting a homeowner at the front door of an Orange County home"
+    },
+    {
+      "key": "process-inspect",
+      "src": "generated/process-inspect.png",
+      "w": 1200,
+      "alt": "Technician using a moisture meter on carpet before cleaning"
+    },
+    {
+      "key": "process-clean",
+      "src": "generated/process-clean.png",
+      "w": 1200,
+      "alt": "Hot-water extraction wand leaving a clean stripe on carpet"
+    },
+    {
+      "key": "process-dry",
+      "src": "generated/process-dry.png",
+      "w": 1200,
+      "alt": "Air mover drying a freshly cleaned carpet in a bright living room"
     }
   ],
   "services": [
     {
       "slug": "carpet-cleaning",
-      "src": "2026/05/professional-eco-friendly-carpet-cleaning-technician-removing-stains.webp",
-      "alt": "Technician removing carpet stains with eco-friendly extraction in Orange County"
+      "src": "2025/08/60f59cd96abb888eedddac3e_commercial-carpet-cleaning.webp",
+      "alt": "A woman uses a carpet cleaning machine in a modern office space."
     },
     {
       "slug": "air-duct-cleaning",
-      "src": "2026/03/technician-cleaning-HVAC-air-ducts-with-professional-vacuum-equipment.webp",
-      "alt": "Technician cleaning HVAC air ducts with professional vacuum equipment"
+      "src": "2025/08/dirty-vs.-clean-air-ducts.png.webp",
+      "alt": "Split image showing a dirty air duct before and a clean air duct after cleaning."
     },
     {
       "slug": "dryer-vent-cleaning",
-      "src": "2026/04/professional-dryer-vent-cleaning.webp",
-      "alt": "Technician clearing a clogged dryer vent line"
+      "src": "2025/08/technician-performing-airflow-test.png.webp",
+      "alt": "Technician uses a meter to check airflow from a dryer vent connected to a fan and hose."
     },
     {
       "slug": "water-damage-restoration",
-      "src": "2025/08/Water-Mitigation-scaled-1.webp",
-      "alt": "Water mitigation crew extracting water from a flooded home"
+      "src": "2025/08/before-and-after-wall-and-floor-restoration-after-water-damage.png.webp",
+      "alt": "Split image showing a room before and after water damage restoration, from dirty and flooded to clean and bright."
     },
     {
       "slug": "area-rug-cleaning",
-      "src": "2026/04/washing-a-rug.webp",
-      "alt": "Area rug being washed in a controlled cleaning facility"
+      "src": "2025/08/Gemini_Generated_Image_c9o6goc9o6goc9o6-1-1-scaled.jpg.webp",
+      "alt": "A cat rests on a couch with colorful pillows and a yellow blanket."
     },
     {
       "slug": "oriental-rug-cleaning",
-      "src": "2025/09/deep-cleaning-a-Persian-rug.webp",
-      "alt": "Deep cleaning a Persian rug by hand"
+      "src": "2025/08/Why-You-Need-to-Clean-Your-Oriental-Rugs-1024x681-1.jpg.webp",
+      "alt": "A man in work boots and uniform cleans a large, ornate rug with a specialized cleaning tool."
     },
     {
       "slug": "rug-pickup",
@@ -232,18 +269,18 @@
     },
     {
       "slug": "upholstery-cleaning",
-      "src": "2026/08/technician-inspecting-upholstery-fabric-before-professional-treatment.webp",
-      "alt": "Technician inspecting upholstery fabric before cleaning"
+      "src": "2025/08/Gemini_Generated_Image_c9o6goc9o6goc9o6-1-1.webp",
+      "alt": "A fluffy cat rests on a couch with colorful pillows and a yellow throw blanket."
     },
     {
       "slug": "couch-cleaning",
-      "src": "2026/04/fresh-clean-couch-in-a-bright-living-space.webp",
-      "alt": "Freshly cleaned couch in a bright living room"
+      "src": "2025/08/Gemini_Generated_Image_c9o6goc9o6goc9o6-1-scaled.jpg.webp",
+      "alt": "A cat rests on a couch with decorative pillows and a throw blanket, next to a potted plant and a floor lamp."
     },
     {
       "slug": "leather-furniture-cleaning",
-      "src": "2025/08/technician-inspecting-sofa-with-customer.webp",
-      "alt": "Technician reviewing furniture condition with a customer"
+      "src": "2025/09/Professional-Upholstery-Protection-1.webp",
+      "alt": "A person in blue overalls and pink gloves cleans a dark gray couch with a cleaning machine."
     },
     {
       "slug": "microfiber-couch-cleaning",
@@ -252,28 +289,28 @@
     },
     {
       "slug": "hardwood-floor-cleaning",
-      "src": "2026/03/polished-hardwood-floor-in-a-modern-living-room.webp",
-      "alt": "Polished hardwood floor in a modern living room"
+      "src": "2025/08/cleaning-natural-stone-tiles-800x500-1.webp",
+      "alt": "Pressure washer cleaning a tiled patio next to a swimming pool."
     },
     {
       "slug": "tile-and-grout-cleaning",
-      "src": "2025/10/tile-and-grout-cleaning.webp",
-      "alt": "Tile and grout cleaning restoring grout lines"
+      "src": "2025/08/How-to-Keep-Hardwood-Floors-Clean-and-Dust-Free-1024x683-1-1.jpg.webp",
+      "alt": "Floor cleaning machine scrubbing a wooden floor with soap suds."
     },
     {
       "slug": "vinyl-floor-cleaning",
-      "src": "2025/09/Floor-cleaning.webp",
-      "alt": "Machine cleaning a vinyl plank floor"
+      "src": "2025/08/How-to-Keep-Hardwood-Floors-Clean-and-Dust-Free-1024x683-1-1.webp",
+      "alt": "Floor cleaning machine scrubbing a wooden floor with soap and water."
     },
     {
       "slug": "natural-stone-cleaning",
-      "src": "2026/06/Professional-marble-floor-polishing-service-in-Tustin-home.webp",
-      "alt": "Marble floor polishing in an Orange County home"
+      "src": "2025/10/A-sparkling-marble-floor-in-a-modern-home-interior.webp",
+      "alt": "Clean, polished marble floors in a modern living room with a sofa and large windows."
     },
     {
       "slug": "pet-stain-odor",
-      "src": "2025/11/A-clean-fresh-living-room-setting-showing-a-happy-pet-on-a-spotless-carpet.webp",
-      "alt": "Pet resting on a spotless carpet after odor treatment"
+      "src": "2025/08/imgi_10_pet-on-couch-banner-desktop.jpg.webp",
+      "alt": "Golden retriever dog relaxing on a clean grey couch with yellow and patterned pillows."
     },
     {
       "slug": "commercial-carpet-cleaning",
@@ -292,18 +329,18 @@
     },
     {
       "slug": "car-seat-cleaning",
-      "src": "2025/09/Car-Cleaning.webp",
-      "alt": "Car interior upholstery and seat cleaning"
+      "src": "2025/09/How-to-Clean-Your-Cars-Interior-like-a-Pro-D-18-05-1024x640-1.jpg.webp",
+      "alt": "Person vacuuming a car seat with a red vacuum cleaner nozzle."
     },
     {
       "slug": "drape-cleaning",
-      "src": "2026/02/drape-and-curtain-cleaning.webp",
-      "alt": "Drape and curtain cleaning in a living room"
+      "src": "2025/08/How-to-Clean-Curtains-and-Drapes.webp",
+      "alt": "A person steaming teal curtains in a home setting."
     },
     {
       "slug": "outdoor-furniture-cleaning",
-      "src": "2025/08/technician-scrubbing-patio-sofa.webp",
-      "alt": "Technician scrubbing patio furniture cushions"
+      "src": "2025/08/cleanoutdoorcushions-2048px-0678-2x1-1.webp",
+      "alt": "Cordless vacuum cleaner resting on an outdoor white couch next to a potted plant."
     },
     {
       "slug": "encapsulation-carpet-cleaning",
@@ -324,63 +361,75 @@
   "gallery": [
     {
       "key": "job-01",
-      "src": "2025/10/IMG_1175.webp",
+      "src": "2025/08/5-1-1.webp",
       "w": 800,
-      "alt": "Carpet cleaning job in an Orange County home"
+      "alt": "A person in blue uniform cleans a carpet with a professional cleaning machine."
     },
     {
       "key": "job-02",
-      "src": "2025/10/IMG_1324.webp",
+      "src": "2025/08/661505527c3fac42a06cf88f_5ff81bc5d58a656a39773b42_image-1-1.jpeg.webp",
       "w": 800,
-      "alt": "Truck-mounted extraction on a residential carpet"
+      "alt": "Close-up of a carpet cleaner vacuuming a dirty carpet, showing a clean line."
     },
     {
       "key": "job-03",
-      "src": "2025/10/IMG_1595.webp",
+      "src": "2025/08/AdobeStock_218970417-scaled.jpeg.webp",
       "w": 800,
-      "alt": "Oriental rug cleaned and returned to a living room"
+      "alt": "A floor buffer machine cleans a carpeted floor with a tiled pattern."
     },
     {
       "key": "job-04",
-      "src": "2025/10/IMG_1613.webp",
+      "src": "2025/08/AdobeStock_218970417.webp",
       "w": 800,
-      "alt": "Bedroom carpet cleaned in an Orange County home"
+      "alt": "A floor buffer cleans a carpet with water and cleaning solution."
     },
     {
       "key": "job-05",
-      "src": "2025/10/IMG_2426.webp",
+      "src": "2025/08/Air-duct-cleaning-1024x587-1024x585-1.jpg.webp",
       "w": 800,
-      "alt": "Car interior upholstery cleaning by our Irvine crew"
+      "alt": "Technician working on air ducts in a commercial ceiling."
     },
     {
       "key": "job-06",
-      "src": "2025/09/IMG_2137.webp",
+      "src": "2025/08/Air-duct-cleaning-1024x587-1024x585-1.webp",
       "w": 800,
-      "alt": "Hand-cleaned area rug ready for delivery"
+      "alt": "Technician working on air ducts in a drop ceiling"
     },
     {
       "key": "job-07",
-      "src": "2025/09/71977656474__5322A204-D125-469E-BB22-39CE3B077808.webp",
+      "src": "2025/08/air-duct-cleaning.jpg.webp",
       "w": 800,
-      "alt": "Commercial carpet cleaned in an Orange County retail store"
+      "alt": "Man cleaning an air vent filter with a yellow tool"
     },
     {
       "key": "job-08",
-      "src": "2025/10/Up-holstry.webp",
+      "src": "2025/08/air-duct-cleaning.webp",
       "w": 800,
-      "alt": "Sofa and ottoman upholstery cleaning"
+      "alt": "Man cleaning an air duct filter in a ceiling"
     },
     {
       "key": "job-09",
-      "src": "2026/01/IMG_6469.webp",
+      "src": "2025/08/before-and-after-wall-and-floor-restoration-after-water-damage.webp",
       "w": 800,
-      "alt": "Navy sectional cleaned in a customer living room"
+      "alt": "Split image showing a room before and after water damage restoration, with the left side showing severe water and mold d"
     },
     {
       "key": "job-10",
-      "src": "2025/10/PHOTO-2023-07-25-04-47-20.webp",
+      "src": "2025/08/Cleaning-Air-Ducts-478089373_2122x1415-2.webp",
       "w": 800,
-      "alt": "Patio furniture cushions cleaned outdoors"
+      "alt": "Technician cleaning an air duct with a brush attachment on a hose."
+    },
+    {
+      "key": "job-11",
+      "src": "2025/08/Cleaning-Air-Ducts-478089373_2122x1415-1.webp",
+      "w": 800,
+      "alt": "Man cleaning an air duct with a brush tool."
+    },
+    {
+      "key": "job-12",
+      "src": "2025/08/Downloader.la_-668539540feb1.webp",
+      "w": 800,
+      "alt": "Hand cleaning a brown leather couch with a yellow cloth."
     }
   ],
   "cityExact": {
@@ -389,38 +438,53 @@
   },
   "cityPool": {
     "carpet-cleaning": [
-      "svc-carpet-cleaning",
-      "carpet-room",
-      "carpet-stains",
-      "carpet-family",
-      "carpet-protect",
-      "truck-mount",
-      "carpet-1",
-      "carpet-2",
-      "carpet-3",
-      "carpet-4",
-      "carpet-5",
-      "carpet-6",
-      "carpet-7",
-      "carpet-8",
-      "carpet-9"
+      "2025/08/661505527c3fac42a06cf88f_5ff81bc5d58a656a39773b42_image-1-1.webp",
+      "2025/08/Carpet-Steam-Cleaning-beside-textile-rinse-1024x683-1.webp",
+      "2025/08/Carpet-Steam-Cleaning-beside-textile-rinse-1024x683-1-1.webp",
+      "2025/08/carpet-cleaning-services-1024x683-1.webp",
+      "2025/08/carpet-cleaning-services-1024x683-1.jpg.webp",
+      "2025/08/do_I_need_to_vacuum_before_carpet_cleaning-1.webp",
+      "2025/08/do_I_need_to_vacuum_before_carpet_cleaning-1.png.webp",
+      "2025/08/Gemini_Generated_Image_73ea8c73ea8c73ea.jpg.webp",
+      "2025/08/Gemini_Generated_Image_73ea8c73ea8c73ea.webp",
+      "2025/08/Gemini_Generated_Image_xdprpsxdprpsxdpr-scaled.jpg.webp",
+      "2025/08/Gemini_Generated_Image_xdprpsxdprpsxdpr.webp",
+      "2025/08/handsome-young-african-worker-of-cleaning-service.jpg.webp",
+      "2025/08/handsome-young-african-worker-of-cleaning-service.webp",
+      "2025/08/Happy-family-enjoying-fresh-AIR.webp",
+      "2025/08/happy-family-relaxing-in-a-clean-living-room.png.webp",
+      "2025/08/profesisonal-carpet-cleaning-in-hotels-768x513-1.webp",
+      "2025/08/profesisonal-carpet-cleaning-in-hotels-768x513-1.jpg.webp",
+      "2025/08/profesisonal-carpet-cleaning-in-hotels-768x513-2.webp",
+      "2025/08/upscalemedia-transformed.webp",
+      "2025/08/upscalemedia-transformed.jpeg.webp",
+      "2025/08/water-restoration-1.webp",
+      "2025/09/How-to-remove-red-wine-from-carpet-1.webp",
+      "2025/09/image-16.webp",
+      "2025/09/image-16.png.webp",
+      "2025/09/image-18.webp",
+      "2025/09/image-18.png.webp",
+      "2025/09/Mother-and-child.webp",
+      "2025/09/TBCC-142-X3.jpg.webp",
+      "2025/09/TBCC-142-X3.webp",
+      "2025/11/A-clean-fresh-living-room-setting-showing-a-happy-pet-on-a-spotless-carpet.png.webp",
+      "2025/11/A-living-room-with-large-energy-efficient-windows-overlooking-a-sunny-backyard.png.webp",
+      "2025/11/A-living-room-with-large-energy-efficient-windows-overlooking-a-sunny-backyard.webp"
     ],
     "air-duct-cleaning": [
-      "svc-air-duct-cleaning",
-      "duct-dirty-clean",
-      "duct-gear",
-      "city-tustin-duct",
-      "duct-1",
-      "duct-2",
-      "duct-3",
-      "duct-4",
-      "duct-5",
-      "duct-6",
-      "duct-7"
+      "2025/08/ezgif.com-optiwebp.webp",
+      "2025/08/HEPA-vacuum-on-duct-system.png.webp",
+      "2025/08/see-the-difference-for-yourself.webp",
+      "2025/08/technician-vacuuming-a-dryer-vent.png.webp",
+      "2025/11/Cleaning-compant-truck.webp",
+      "2025/11/Truck-mounted-extraction-hose-connected-to-a-home-illustrating-professional-grade-cleaning-power.png.webp"
     ],
     "hardwood-floor-cleaning": [
-      "svc-hardwood-floor-cleaning",
-      "svc-floor-cleaning"
+      "2025/11/kitchen-1940174-scaled-1.jpg.webp",
+      "2025/11/interior-2685521-scaled-1.webp",
+      "2026/03/before-and-after-hardwood-cleaning-i.webp",
+      "2025/08/cleaning-natural-stone-tiles-800x500-1.png.webp",
+      "2025/08/Guide-to-Cleaning-Tile-and-Grout.jpg.webp"
     ]
   }
 }

@@ -87,8 +87,12 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
                 <QuoteButton className="w-full" />
               </div>
               <p className="mt-4 text-sm text-ink/60">
-                {site.city} and {site.area}. Ask about booking {doc.name.toLowerCase()} with air duct cleaning in the
-                same visit.
+                {site.city} and {site.area}.{" "}
+                {doc.slug === "air-duct-cleaning"
+                  ? "Ask about pairing duct work with carpet cleaning in the same visit."
+                  : doc.slug === "carpet-cleaning"
+                    ? "Ask about pairing carpet cleaning with air duct cleaning in the same visit."
+                    : `Ask about pairing ${doc.name.toLowerCase()} with carpet or duct cleaning in the same visit.`}
               </p>
             </div>
           </aside>

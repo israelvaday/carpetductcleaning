@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { ProcessWizard } from "@/components/process-wizard";
+import { Reveal } from "@/components/fx";
 import { Breadcrumb, CallButton, CheckList, QuoteButton, RatingPill, Section, SectionHead } from "@/components/ui";
 import { asset, cityImage, gallery, serviceImage, type Img } from "@/lib/images";
-import { PROCESS_STEPS, serviceBlurb } from "@/lib/services";
+import { serviceBlurb } from "@/lib/services";
 import { site } from "@/lib/site";
 import { cn, titleCase } from "@/lib/utils";
 
@@ -96,7 +98,9 @@ export function ServiceGrid({ slugs, priorityCount = 0 }: { slugs: string[]; pri
   return (
     <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
       {slugs.map((slug, i) => (
-        <ServiceCard key={slug} slug={slug} priority={i < priorityCount} />
+        <Reveal key={slug} delay={Math.min(i, 7) * 0.06}>
+          <ServiceCard slug={slug} priority={i < priorityCount} />
+        </Reveal>
       ))}
     </div>
   );
@@ -129,22 +133,16 @@ export function Stats({ tone = "navy" }: { tone?: "navy" | "sand" }) {
 export function Process({ tone = "sand" }: { tone?: "light" | "sand" }) {
   return (
     <Section tone={tone}>
-      <SectionHead
-        eyebrow="How it works"
-        title="Three steps, no surprises"
-        body="Every job runs the same way whether it is one room or a whole building."
-      />
-      <ol className="mt-10 grid gap-6 md:grid-cols-3">
-        {PROCESS_STEPS.map((step, i) => (
-          <li key={step.title} className="rounded-2xl border border-line bg-white p-6 shadow-card">
-            <span className="flex size-10 items-center justify-center rounded-full bg-brand text-lg font-semibold text-white">
-              {i + 1}
-            </span>
-            <h3 className="mt-4 text-lg font-semibold text-navy">{step.title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-ink/70">{step.body}</p>
-          </li>
-        ))}
-      </ol>
+      <Reveal>
+        <SectionHead
+          eyebrow="How it works"
+          title="From first call to final walkthrough"
+          body="Every job runs the same four steps whether it is one room or a whole building. Tap a step to see it."
+        />
+      </Reveal>
+      <Reveal delay={0.1} className="mt-12">
+        <ProcessWizard />
+      </Reveal>
     </Section>
   );
 }
@@ -158,16 +156,18 @@ export function Gallery({ limit = 8 }: { limit?: number }) {
         body="Photos from our own crews — carpet, rugs, upholstery, tile, and duct work."
       />
       <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
-        {gallery.slice(0, limit).map((photo) => (
-          <div key={photo.src} className="relative aspect-square overflow-hidden rounded-xl">
-            <Image
-              src={photo.src}
-              alt={photo.alt}
-              fill
-              sizes="(min-width: 768px) 22vw, 45vw"
-              className="object-cover transition duration-500 hover:scale-105"
-            />
-          </div>
+        {gallery.slice(0, limit).map((photo, i) => (
+          <Reveal key={photo.src} delay={Math.min(i, 7) * 0.05}>
+            <div className="relative aspect-square overflow-hidden rounded-xl shadow-card">
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                fill
+                sizes="(min-width: 768px) 22vw, 45vw"
+                className="object-cover transition duration-500 hover:scale-105"
+              />
+            </div>
+          </Reveal>
         ))}
       </div>
     </Section>

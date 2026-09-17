@@ -6,7 +6,7 @@ import { ImageHero } from "@/components/blocks";
 import { Cta } from "@/components/cta";
 import { JsonLd } from "@/components/json-ld";
 import { Section } from "@/components/ui";
-import { blogTitle, getPosts } from "@/lib/content";
+import { blogMeta, blogTitle, getPosts } from "@/lib/content";
 import { img, postImage } from "@/lib/images";
 import { breadcrumbs } from "@/lib/schema";
 import { cleanParagraphs } from "@/lib/text";
@@ -41,8 +41,9 @@ export default function BlogIndex() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {posts.map((p, i) => {
             const title = blogTitle(p);
+            const gen = blogMeta(p);
             const image = postImage(p.slug, title);
-            const excerpt = cleanParagraphs(p.text || "", 1)[0]?.slice(0, 140);
+            const excerpt = gen?.excerpt || cleanParagraphs(p.text || "", 1)[0]?.slice(0, 140);
             return (
               <Link
                 key={p.slug}

@@ -20,7 +20,7 @@ export function Section({
     navy: "bg-navy text-white",
   };
   return (
-    <section className={cn("py-16 md:py-20", tones[tone], className)}>
+    <section className={cn("py-16 md:py-24", tones[tone], className)}>
       <div className="container-page">{children}</div>
     </section>
   );
@@ -42,11 +42,11 @@ export function SectionHead({
   return (
     <div className={cn("max-w-2xl", align === "center" && "mx-auto text-center")}>
       {eyebrow ? (
-        <p className={cn("eyebrow", tone === "navy" && "text-brand-50/80")}>{eyebrow}</p>
+        <p className={cn("eyebrow", tone === "navy" && "text-gold")}>{eyebrow}</p>
       ) : null}
       <h2
         className={cn(
-          "mt-2 text-3xl font-semibold md:text-4xl",
+          "mt-3 text-3xl font-bold tracking-tight md:text-4xl lg:text-[2.6rem] lg:leading-[1.1]",
           tone === "navy" ? "text-white" : "text-navy",
         )}
       >
@@ -66,7 +66,7 @@ export function CallButton({ className, label }: { className?: string; label?: s
     <a
       href={site.phoneHref}
       className={cn(
-        "inline-flex items-center justify-center gap-2 rounded-full bg-brand px-6 py-3 font-semibold text-white transition hover:bg-brand-dark",
+        "inline-flex h-12 items-center justify-center gap-2 rounded-full bg-gold px-6 text-sm font-bold uppercase tracking-wide text-navy shadow-glow transition hover:bg-gold-dark active:scale-[0.98]",
         className,
       )}
     >
@@ -81,10 +81,10 @@ export function QuoteButton({ className, dark = false }: { className?: string; d
     <Link
       href="/contact/"
       className={cn(
-        "inline-flex items-center justify-center gap-2 rounded-full border px-6 py-3 font-semibold transition",
+        "inline-flex h-12 items-center justify-center gap-2 rounded-full border px-6 text-sm font-bold uppercase tracking-wide transition active:scale-[0.98]",
         dark
-          ? "border-white/30 text-white hover:bg-white/10"
-          : "border-navy/20 text-navy hover:border-navy/50",
+          ? "border-white/30 bg-white/10 text-white backdrop-blur hover:border-gold/60 hover:text-gold"
+          : "border-navy/25 text-navy hover:border-brand hover:text-brand",
         className,
       )}
     >
@@ -98,8 +98,8 @@ export function RatingPill({ dark = false }: { dark?: boolean }) {
   return (
     <div
       className={cn(
-        "inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-sm font-medium",
-        dark ? "bg-white/10 text-white" : "bg-brand-50 text-brand-dark",
+        "inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-sm font-semibold",
+        dark ? "bg-white/10 text-white ring-1 ring-white/15" : "bg-brand-50 text-brand-dark",
       )}
     >
       <span className="flex" aria-hidden>

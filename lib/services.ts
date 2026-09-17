@@ -126,8 +126,12 @@ const SERVICE_TOPICS: Record<string, RegExp> = {
   "emergency-cleaning": /emergency|sewage|overflow|burst/i,
 };
 
+// Drop questions that read like marketing CTAs or lean on the superlatives the
+// audit told us to remove.
+const BAD_FAQ = /#\s?1\b|most trusted|best\s+\w+\s+(company|service|cleaning)|top[- ]rated|5[- ]star|provides best|why choose us/i;
+
 // Keep a question when it is about this service or is service-neutral, and drop
-// it when it clearly belongs to a different service.
+// it when it clearly belongs to a different service or reads like an ad.
 export function onTopicFaqs<T extends { q: string; a: string }>(slug: string, faqs: T[]) {
   const own = SERVICE_TOPICS[slug];
   const others = Object.entries(SERVICE_TOPICS)
@@ -135,6 +139,7 @@ export function onTopicFaqs<T extends { q: string; a: string }>(slug: string, fa
     .map(([, re]) => re);
   return faqs.filter((f) => {
     const text = `${f.q} ${f.a}`;
+    if (BAD_FAQ.test(text)) return false;
     if (own?.test(text)) return true;
     return !others.some((re) => re.test(text));
   });
