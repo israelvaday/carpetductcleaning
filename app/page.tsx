@@ -112,7 +112,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Gallery />
+      <Gallery compare />
 
       <Section tone="navy">
         <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_1fr]">

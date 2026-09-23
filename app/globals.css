@@ -117,6 +117,14 @@ summary::-webkit-details-marker {
   }
 }
 
+/* Hidden-scrollbar horizontal tracks (reviews slider). */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 /* Scroll-reveal primitives (driven by components/fx.tsx IntersectionObserver). */
 .reveal {
   opacity: 0;

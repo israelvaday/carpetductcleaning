@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { BeforeAfterSlider, type BeforeAfterPair } from "@/components/before-after-slider";
 import { ProcessWizard, type ProcessStep } from "@/components/process-wizard";
 import { Reveal } from "@/components/fx";
 import { Breadcrumb, CallButton, CheckList, QuoteButton, RatingPill, Section, SectionHead } from "@/components/ui";
+import beforeAfterJson from "@/content/before-after.json";
 import { asset, gallery, serviceImage, type Img } from "@/lib/images";
 import { serviceBlurb } from "@/lib/services";
 import { site } from "@/lib/site";
@@ -147,28 +149,60 @@ export function Process({ tone = "sand", steps }: { tone?: "light" | "sand"; ste
   );
 }
 
-export function Gallery({ limit = 8, offset = 0 }: { limit?: number; offset?: number }) {
+const beforeAfter: BeforeAfterPair[] = (beforeAfterJson as BeforeAfterPair[]).map((pair) => ({
+  ...pair,
+  before: asset(pair.before),
+  after: asset(pair.after),
+}));
+
+export function Gallery({
+  limit = 8,
+  offset = 0,
+  compare = false,
+}: {
+  limit?: number;
+  offset?: number;
+  compare?: boolean;
+}) {
   return (
     <Section>
-      <SectionHead
-        eyebrow="Recent work"
-        title="Real jobs from Orange County homes"
-        body="Photos from our own crews — carpet, rugs, upholstery, tile, and duct work."
-      />
-      <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
-        {gallery.slice(offset, offset + limit).map((photo, i) => (
-          <Reveal key={photo.src} delay={Math.min(i, 7) * 0.05}>
-            <div className="relative aspect-square overflow-hidden rounded-xl shadow-card">
-              <Image
-                src={photo.src}
-                alt={photo.alt}
-                fill
-                sizes="(min-width: 768px) 22vw, 45vw"
-                className="object-cover transition duration-500 hover:scale-105"
-              />
-            </div>
-          </Reveal>
-        ))}
+      {compare ? (
+        <>
+          <SectionHead
+            eyebrow="Before and after"
+            title="Vents and ducts, before and after cleaning"
+            body="Drag the handle on each photo — or focus it and use the arrow keys — to compare the vent before cleaning and after."
+          />
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {beforeAfter.map((pair, i) => (
+              <Reveal key={pair.after} delay={Math.min(i, 7) * 0.05}>
+                <BeforeAfterSlider pair={pair} priority={i < 3} />
+              </Reveal>
+            ))}
+          </div>
+        </>
+      ) : null}
+      <div className={compare ? "mt-16" : undefined}>
+        <SectionHead
+          eyebrow="Recent work"
+          title="Real jobs from Orange County homes"
+          body="Photos from our own crews — carpet, rugs, upholstery, tile, and duct work."
+        />
+        <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
+          {gallery.slice(offset, offset + limit).map((photo, i) => (
+            <Reveal key={photo.src} delay={Math.min(i, 7) * 0.05}>
+              <div className="relative aspect-square overflow-hidden rounded-xl shadow-card">
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  sizes="(min-width: 768px) 22vw, 45vw"
+                  className="object-cover transition duration-500 hover:scale-105"
+                />
+              </div>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </Section>
   );

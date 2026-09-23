@@ -1,0 +1,142 @@
+[
+  {
+    "before": "/images/ba-round-supply-duct-before.webp",
+    "after": "/images/ba-round-supply-duct-after.webp",
+    "width": 896,
+    "height": 1200,
+    "alt": "Round galvanized supply air duct"
+  },
+  {
+    "before": "/images/ba-rectangular-trunk-line-before.webp",
+    "after": "/images/ba-rectangular-trunk-line-after.webp",
+    "width": 1200,
+    "height": 896,
+    "alt": "Rectangular sheet-metal trunk line"
+  },
+  {
+    "before": "/images/ba-floor-register-boot-before.webp",
+    "after": "/images/ba-floor-register-boot-after.webp",
+    "width": 896,
+    "height": 1200,
+    "alt": "Floor supply register with the cover off"
+  },
+  {
+    "before": "/images/ba-return-air-grille-before.webp",
+    "after": "/images/ba-return-air-grille-after.webp",
+    "width": 896,
+    "height": 1200,
+    "alt": "Wall return air grille"
+  },
+  {
+    "before": "/images/ba-furnace-blower-wheel-before.webp",
+    "after": "/images/ba-furnace-blower-wheel-after.webp",
+    "width": 1200,
+    "height": 896,
+    "alt": "Furnace blower wheel"
+  },
+  {
+    "before": "/images/ba-evaporator-coil-before.webp",
+    "after": "/images/ba-evaporator-coil-after.webp",
+    "width": 896,
+    "height": 1200,
+    "alt": "Evaporator coil"
+  },
+  {
+    "before": "/images/ba-dryer-vent-hood-before.webp",
+    "after": "/images/ba-dryer-vent-hood-after.webp",
+    "width": 1200,
+    "height": 896,
+    "alt": "Exterior dryer vent hood"
+  },
+  {
+    "before": "/images/ba-dryer-duct-interior-before.webp",
+    "after": "/images/ba-dryer-duct-interior-after.webp",
+    "width": 896,
+    "height": 1200,
+    "alt": "Dryer vent duct interior"
+  },
+  {
+    "before": "/images/ba-ceiling-diffuser-before.webp",
+    "after": "/images/ba-ceiling-diffuser-after.webp",
+    "width": 896,
+    "height": 1200,
+    "alt": "Ceiling supply air diffuser"
+  },
+  {
+    "before": "/images/ba-main-return-drop-before.webp",
+    "after": "/images/ba-main-return-drop-after.webp",
+    "width": 1200,
+    "height": 896,
+    "alt": "Main return air drop"
+  },
+  {
+    "before": "/images/ba-flex-duct-interior-before.webp",
+    "after": "/images/ba-flex-duct-interior-after.webp",
+    "width": 896,
+    "height": 1200,
+    "alt": "Flexible air duct interior"
+  },
+  {
+    "before": "/images/ba-supply-plenum-before.webp",
+    "after": "/images/ba-supply-plenum-after.webp",
+    "width": 1200,
+    "height": 896,
+    "alt": "Supply plenum"
+  },
+  {
+    "before": "/images/ba-wall-supply-register-before.webp",
+    "after": "/images/ba-wall-supply-register-after.webp",
+    "width": 896,
+    "height": 1200,
+    "alt": "Wall supply register"
+  },
+  {
+    "before": "/images/ba-bathroom-exhaust-fan-before.webp",
+    "after": "/images/ba-bathroom-exhaust-fan-after.webp",
+    "width": 896,
+    "height": 1200,
+    "alt": "Bathroom exhaust fan grille"
+  },
+  {
+    "before": "/images/ba-cold-air-return-cavity-before.webp",
+    "after": "/images/ba-cold-air-return-cavity-after.webp",
+    "width": 896,
+    "height": 1200,
+    "alt": "Cold air return with the grille removed"
+  },
+  {
+    "before": "/images/ba-branch-duct-boot-before.webp",
+    "after": "/images/ba-branch-duct-boot-after.webp",
+    "width": 896,
+    "height": 1200,
+    "alt": "Branch duct boot"
+  },
+  {
+    "before": "/images/ba-commercial-ceiling-diffuser-before.webp",
+    "after": "/images/ba-commercial-ceiling-diffuser-after.webp",
+    "width": 1200,
+    "height": 896,
+    "alt": "Commercial ceiling diffuser"
+  },
+  {
+    "before": "/images/ba-furnace-burner-compartment-before.webp",
+    "after": "/images/ba-furnace-burner-compartment-after.webp",
+    "width": 1200,
+    "height": 896,
+    "alt": "Furnace burner compartment"
+  },
+  {
+    "before": "/images/ba-panned-joist-return-before.webp",
+    "after": "/images/ba-panned-joist-return-after.webp",
+    "width": 1200,
+    "height": 896,
+    "alt": "Panned joist return"
+  },
+  {
+    "before": "/images/ba-ac-condenser-coil-before.webp",
+    "after": "/images/ba-ac-condenser-coil-after.webp",
+    "width": 896,
+    "height": 1200,
+    "alt": "Outdoor condenser coil"
+  }
+]
