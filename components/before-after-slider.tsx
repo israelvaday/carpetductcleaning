@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useCallback, useRef, useState } from "react";
-import { ChevronsLeftRight } from "lucide-react";
+import { ChevronDown, ChevronsLeftRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export type BeforeAfterPair = {
@@ -69,8 +69,8 @@ export function BeforeAfterSlider({
         onPointerUp={stop}
         onPointerCancel={stop}
         onKeyDown={onKeyDown}
-        style={{ aspectRatio: `${pair.width} / ${pair.height}` }}
         className={cn(
+          "aspect-4/3",
           "group relative w-full cursor-ew-resize touch-none select-none overflow-hidden rounded-2xl bg-sand shadow-card outline-none focus-visible:ring-2 focus-visible:ring-gold",
           dragging && "cursor-grabbing",
         )}
@@ -114,7 +114,38 @@ export function BeforeAfterSlider({
           After
         </span>
       </div>
-      <figcaption className="mt-2 text-sm text-ink/70">{pair.alt}</figcaption>
+      <figcaption className="mt-2 line-clamp-2 min-h-10 text-sm text-ink/70">{pair.alt}</figcaption>
     </figure>
+  );
+}
+
+const INITIAL_COUNT = 6;
+
+export function BeforeAfterGallery({ pairs }: { pairs: BeforeAfterPair[] }) {
+  const [open, setOpen] = useState(false);
+  const visible = open ? pairs : pairs.slice(0, INITIAL_COUNT);
+  const hidden = pairs.length - INITIAL_COUNT;
+
+  return (
+    <>
+      <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {visible.map((pair, i) => (
+          <BeforeAfterSlider key={pair.after} pair={pair} priority={i < 3} />
+        ))}
+      </div>
+      {hidden > 0 ? (
+        <div className="mt-8 flex justify-center">
+          <button
+            type="button"
+            aria-expanded={open}
+            onClick={() => setOpen((value) => !value)}
+            className="inline-flex h-12 items-center gap-2 rounded-full border border-navy/25 px-6 text-sm font-bold uppercase tracking-wide text-navy transition hover:border-brand hover:text-brand"
+          >
+            {open ? "Show fewer photos" : `Show ${hidden} more photos`}
+            <ChevronDown className={cn("size-4 transition", open && "rotate-180")} />
+          </button>
+        </div>
+      ) : null}
+    </>
   );
 }

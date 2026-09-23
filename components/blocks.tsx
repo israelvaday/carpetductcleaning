@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { BeforeAfterSlider, type BeforeAfterPair } from "@/components/before-after-slider";
+import { BeforeAfterGallery, type BeforeAfterPair } from "@/components/before-after-slider";
 import { ProcessWizard, type ProcessStep } from "@/components/process-wizard";
 import { Reveal } from "@/components/fx";
 import { Breadcrumb, CallButton, CheckList, QuoteButton, RatingPill, Section, SectionHead } from "@/components/ui";
@@ -173,13 +173,7 @@ export function Gallery({
             title="Vents and ducts, before and after cleaning"
             body="Drag the handle on each photo — or focus it and use the arrow keys — to compare the vent before cleaning and after."
           />
-          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {beforeAfter.map((pair, i) => (
-              <Reveal key={pair.after} delay={Math.min(i, 7) * 0.05}>
-                <BeforeAfterSlider pair={pair} priority={i < 3} />
-              </Reveal>
-            ))}
-          </div>
+          <BeforeAfterGallery pairs={beforeAfter} />
         </>
       ) : null}
       <div className={compare ? "mt-16" : undefined}>

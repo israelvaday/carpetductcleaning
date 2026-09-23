@@ -48,7 +48,7 @@ export function Reviews() {
         </div>
       </div>
 
-      {data && data.reviews.length > 0 ? <ReviewsCarousel reviews={data.reviews} /> : null}
+      {data && data.reviews.length > 0 ? <ReviewsCarousel reviews={data.reviews.slice(0, 30)} /> : null}
 
       <div className="mt-8">
         <a

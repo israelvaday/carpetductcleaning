@@ -113,19 +113,33 @@ export function ReviewsCarousel({ reviews }: { reviews: Review[] }) {
         >
           <ChevronLeft className="size-5" />
         </button>
-        <div className="flex items-center gap-2">
-          {reviews.map((_, i) => (
-            <button
-              key={i}
-              type="button"
-              onClick={() => scrollTo(i)}
-              aria-label={`Go to review ${i + 1}`}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                i === active ? "w-6 bg-brand" : "w-2 bg-line hover:bg-brand/50"
-              }`}
-            />
-          ))}
-        </div>
+        {count <= 10 ? (
+          <div className="flex items-center gap-2">
+            {reviews.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                onClick={() => scrollTo(i)}
+                aria-label={`Go to review ${i + 1}`}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  i === active ? "w-6 bg-brand" : "w-2 bg-line hover:bg-brand/50"
+                }`}
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="flex items-center gap-3">
+            <div className="h-1.5 w-40 overflow-hidden rounded-full bg-line">
+              <div
+                className="h-full rounded-full bg-brand transition-all duration-500"
+                style={{ width: `${((active + 1) / count) * 100}%` }}
+              />
+            </div>
+            <span className="text-xs font-medium text-ink/50">
+              {active + 1} / {count}
+            </span>
+          </div>
+        )}
         <button
           type="button"
           onClick={() => step(1)}
