@@ -48,7 +48,7 @@ export function Reviews() {
         </div>
       </div>
 
-      {data ? (
+      {data && data.reviews.length > 0 ? (
         <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {data.reviews.slice(0, 6).map((r, i) => (
             <Reveal key={`${r.author}-${r.publishedAt}`} delay={Math.min(i, 5) * 0.06}>

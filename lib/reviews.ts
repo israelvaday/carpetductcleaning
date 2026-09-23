@@ -22,12 +22,14 @@ export type ReviewsData = {
 
 // Loaded at build time; null until scripts/fetch-reviews.mjs has run with a
 // GOOGLE_PLACES_API_KEY. Every deploy re-fetches, so the numbers stay live.
+// The rating/count are real even when review texts are unavailable (Google
+// only serves review text to billing-enabled projects), so gate on rating.
 export function getReviews(): ReviewsData | null {
   try {
     const p = join(process.cwd(), "content/reviews.json");
     if (!existsSync(p)) return null;
     const data = JSON.parse(readFileSync(p, "utf8")) as ReviewsData;
-    if (!data.reviews?.length) return null;
+    if (!data.rating || !data.totalRatings) return null;
     return data;
   } catch {
     return null;

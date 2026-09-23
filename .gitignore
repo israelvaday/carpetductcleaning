@@ -7,3 +7,5 @@ out/
 media/webp/
 .cursor/
 *.pdf
+
+.env.local
