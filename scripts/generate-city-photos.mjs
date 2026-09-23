@@ -15,8 +15,13 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const OUT = join(ROOT, "media/generated");
 mkdirSync(OUT, { recursive: true });
 
+const args = process.argv.slice(2);
+const force = args.includes("--force");
+const model = args.includes("--model") ? args[args.indexOf("--model") + 1] : "openai/gpt-image-2.5-flare";
+
 const STYLE =
-  "photorealistic, natural daylight, shot on a full-frame camera, crisp detail, no text, no signs with words, no watermark, no logo, no people looking at the camera";
+  "photographed on a full-frame camera with a 35mm lens, true-to-life colors, natural light, crisp detail, " +
+  "no text, no signs with words, no watermark, no logo, no people looking at the camera";
 
 // One distinctive, recognizable scene per city. Avoid brand names and any
 // signage — the model garbles text.
@@ -51,7 +56,7 @@ const CITY_SCENES = {
   "yorba-linda": "Suburban hills with white horse-trail fencing in Yorba Linda, California",
 };
 
-const test = process.argv.includes("--test");
+const test = args.includes("--test");
 
 loadEnvLocal();
 const key = getKey();
@@ -59,13 +64,14 @@ if (!key) throw new Error("OPENROUTER_API_KEY missing");
 
 const entries = Object.entries(CITY_SCENES);
 const todo = (test ? entries.slice(0, 1) : entries).filter(
-  ([slug]) => !existsSync(join(OUT, `city-${slug}.png`))
+  ([slug]) => force || !existsSync(join(OUT, `city-${slug}.png`))
 );
-console.log(`generating ${todo.length} city photos...`);
+console.log(`generating ${todo.length} city photos with ${model}...`);
 let done = 0;
 for (const [slug, scene] of todo) {
   try {
     const buf = await generateImage(key, `${scene}. ${STYLE}`, {
+      model,
       aspect_ratio: "4:3",
       resolution: "1K",
       output_format: "png",

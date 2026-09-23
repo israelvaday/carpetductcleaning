@@ -48,14 +48,19 @@ loadEnvLocal();
 const key = getKey();
 if (!key) throw new Error("OPENROUTER_API_KEY missing");
 
+const args = process.argv.slice(2);
+const model = args.includes("--model") ? args[args.indexOf("--model") + 1] : "openai/gpt-image-2.5-flare";
+const only = args.includes("--only") ? args[args.indexOf("--only") + 1].split(",") : null;
+
 for (const s of SHOTS) {
   const file = join(OUT, `${s.key}.jpg`);
-  if (existsSync(file)) {
-    console.log(`skip ${s.key} (exists)`);
+  if (only ? !only.includes(s.key) : existsSync(file)) {
+    console.log(`skip ${s.key}`);
     continue;
   }
   try {
     const png = await generateImage(key, s.prompt, {
+      model,
       aspect_ratio: "4:3",
       resolution: "2K",
       output_format: "png",
