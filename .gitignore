@@ -9,3 +9,4 @@ media/webp/
 *.pdf
 
 .env.local
+gbp-posts/
