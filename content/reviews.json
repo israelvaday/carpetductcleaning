@@ -5,6 +5,42 @@
   "rating": 4.9,
   "totalRatings": 309,
   "mapsUrl": "https://maps.google.com/?cid=17628681850478476219&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
-  "fetchedAt": "2026-09-23T12:26:41.144Z",
-  "reviews": []
+  "fetchedAt": "2026-09-23T12:38:04.669Z",
+  "reviews": [
+    {
+      "author": "adi “Giovanni” benharosh",
+      "rating": 5,
+      "text": "Great tile and grout cleaning service!\nThe grout had a lot of buildup and discoloration, and they did an amazing job getting it clean again.\nThe whole floor looks noticeably brighter and refreshed. Very happy with the results!",
+      "when": "a month ago",
+      "publishedAt": "2026-08-18T04:17:58.083218864Z"
+    },
+    {
+      "author": "Мария Кулешова",
+      "rating": 5,
+      "text": "Excellent carpet cleaning service! The carpet looks fresh, clean, and noticeably brighter. They removed the stains and took their time to clean everything thoroughly. Very professional, reliable, and easy to communicate with. I’m very happy with the results and would definitely use them again.",
+      "when": "a month ago",
+      "publishedAt": "2026-08-04T20:56:30.140992429Z"
+    },
+    {
+      "author": "Mari Bel",
+      "rating": 5,
+      "text": "Joseph did an outstanding job cleaning my sofa, completely transforming it and making it look brand new again. His attention to detail was incredible, and he managed to remove tough stains that I thought would never come out. The quality of his work was truly exceptional, and he was professional, efficient, and thorough throughout the entire process. I am beyond satisfied with the results and will absolutely be using this service again in the future.",
+      "when": "a month ago",
+      "publishedAt": "2026-07-28T20:06:08.798889898Z"
+    },
+    {
+      "author": "Bar Shvartsbord",
+      "rating": 5,
+      "text": "Great air duct alerting service! The technician was very professional and thorough now the air feels noticeably cleaner and fresher and its much easier to breathe.  Highly recommended.",
+      "when": "2 months ago",
+      "publishedAt": "2026-07-24T19:53:46.224156101Z"
+    },
+    {
+      "author": "Naman Zia Ebrahimi",
+      "rating": 5,
+      "text": "Great prompt service for cleaning my drier vent. Same day service with a very fair price. Professional and friendly.",
+      "when": "4 months ago",
+      "publishedAt": "2026-05-03T20:27:14.237471155Z"
+    }
+  ]
 }
