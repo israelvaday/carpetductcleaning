@@ -12,7 +12,7 @@ import { breadcrumbs } from "@/lib/schema";
 import { cleanParagraphs } from "@/lib/text";
 
 export const metadata: Metadata = {
-  title: { absolute: "Cleaning Tips and Guides | Carpet & Duct Cleaning" },
+  title: { absolute: "Carpet, Rug and Air Duct Care Tips | Carpet & Duct Cleaning" },
   description:
     "Carpet, rug, upholstery, and air duct advice from the Orange County crew that has cleaned homes here since 2013. Questions? Call (949) 992-3299.",
   alternates: { canonical: "/blog/" },

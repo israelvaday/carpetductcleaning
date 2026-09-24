@@ -17,7 +17,7 @@ import { titleCase } from "@/lib/utils";
 export const metadata: Metadata = {
   title: { absolute: "Service Areas in Orange County, CA | Carpet & Duct" },
   description:
-    "Carpet, rug, upholstery, and air duct cleaning across Irvine and Orange County, CA. Find your city and the exact service page you need.",
+    "Carpet, rug, upholstery, and air duct cleaning across Irvine and Orange County, CA. Find your city and open the exact service page your home needs.",
   alternates: { canonical: "/locations/" },
 };
 

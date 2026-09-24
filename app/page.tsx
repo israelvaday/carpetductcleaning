@@ -40,7 +40,7 @@ const HOME_FAQS = [
 ];
 
 export const metadata: Metadata = {
-  title: { absolute: "Carpet Cleaning in Irvine, CA | Air Duct Cleaning" },
+  title: { absolute: "Carpet Cleaning in Irvine, CA | Air Duct & Rug Cleaning" },
   description:
     "Google Guaranteed carpet cleaning and air duct cleaning in Irvine since 2013. IICRC-certified crews, same-day openings. Call (949) 992-3299.",
   alternates: { canonical: "/" },

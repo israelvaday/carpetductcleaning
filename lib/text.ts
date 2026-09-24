@@ -120,6 +120,9 @@ export function composeMeta(required: string[], optional: string[] = [], min = 1
     const stop = Math.max(cut.lastIndexOf(". "), cut.lastIndexOf(" "));
     out = stop > min ? cut.slice(0, stop + 1).trim() : cut.trim();
   }
+  if (out.length >= min) return out;
+  const fits = optional.map((part) => `${out} ${part}`).filter((s) => s.length >= min && s.length <= max);
+  if (fits.length) return fits.reduce((a, b) => (b.length > a.length ? b : a));
   for (const part of optional) {
     if (out.length >= min) break;
     const next = `${out} ${part}`;

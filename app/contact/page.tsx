@@ -1,19 +1,18 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 import { Clock, MapPin, Phone } from "lucide-react";
 import { ImageHero } from "@/components/blocks";
+import { ContactForm } from "@/components/contact-form";
 import { JsonLd } from "@/components/json-ld";
 import { MapEmbed } from "@/components/map-embed";
 import { CheckList, Section, SectionHead, TrustRow } from "@/components/ui";
-import { asset, img } from "@/lib/images";
+import { img } from "@/lib/images";
 import { breadcrumbs } from "@/lib/schema";
 import { PROOF_POINTS } from "@/lib/services";
 import { site, siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: { absolute: "Contact Carpet & Duct Cleaning | Quotes in Irvine" },
-  description: `Call ${site.phone} or request a free quote for carpet, rug, upholstery, and air duct cleaning in Irvine and across Orange County, CA.`,
+  title: { absolute: "Contact Carpet & Duct Cleaning | Free Quotes in Irvine" },
+  description: `Call ${site.phone} or request a free, no-obligation quote for carpet, rug, upholstery, and air duct cleaning in Irvine and across Orange County, CA.`,
   alternates: { canonical: "/contact/" },
 };
 
@@ -92,59 +91,11 @@ export default function ContactPage() {
               Tell us the service, the city, and roughly how big the job is. We will come back with a price range and
               the next open slot.
             </p>
-            <form className="mt-6 space-y-4" action={`mailto:${site.email}`} method="get">
-              <input name="subject" type="hidden" value="Quote request" />
-              <label className="block text-sm font-semibold text-navy">
-                Name
-                <input
-                  required
-                  name="name"
-                  className="mt-1.5 w-full rounded-xl border border-line bg-sand px-4 py-3 font-normal text-ink outline-none focus:border-brand"
-                />
-              </label>
-              <label className="block text-sm font-semibold text-navy">
-                Phone or email
-                <input
-                  required
-                  name="contact"
-                  className="mt-1.5 w-full rounded-xl border border-line bg-sand px-4 py-3 font-normal text-ink outline-none focus:border-brand"
-                />
-              </label>
-              <label className="block text-sm font-semibold text-navy">
-                What do you need cleaned?
-                <textarea
-                  required
-                  name="body"
-                  rows={4}
-                  className="mt-1.5 w-full rounded-xl border border-line bg-sand px-4 py-3 font-normal text-ink outline-none focus:border-brand"
-                />
-              </label>
-              <button
-                className="w-full rounded-full bg-brand px-6 py-3 font-semibold text-white transition hover:bg-brand-dark"
-                type="submit"
-              >
-                Send quote request
-              </button>
-            </form>
+            <ContactForm />
             <div className="mt-6 border-t border-line pt-6">
               <p className="eyebrow">Every job includes</p>
               <CheckList items={PROOF_POINTS} />
             </div>
-            <p className="mt-6 text-xs leading-relaxed text-ink/55">
-              By submitting you agree to our{" "}
-              <Link className="underline" href="/privacy-policy/">
-                Privacy Policy
-              </Link>
-              ,{" "}
-              <Link className="underline" href="/terms/">
-                Terms
-              </Link>
-              , and{" "}
-              <Link className="underline" href="/sms-terms/">
-                SMS terms
-              </Link>
-              .
-            </p>
           </div>
         </div>
       </Section>

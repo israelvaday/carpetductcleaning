@@ -9,12 +9,12 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
   title: {
-    default: "Carpet Cleaning in Irvine, CA | Air Duct Cleaning",
+    default: "Carpet Cleaning in Irvine, CA | Air Duct & Rug Cleaning",
     template: "%s | Carpet & Duct Cleaning",
   },
   description:
     "Google Guaranteed carpet cleaning and air duct cleaning in Irvine and Orange County. IICRC-certified crews, upfront quotes. Call (949) 992-3299.",
-  robots: { index: true, follow: true },
+  robots: process.env.GITHUB_PAGES === "true" ? { index: false, follow: false } : { index: true, follow: true },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -5,7 +5,8 @@ import Image from "next/image";
 import {
   ArrowLeft, ArrowRight, Building2, Calendar, CalendarClock, Check, Home, Phone, Send, Sparkles, Zap,
 } from "lucide-react";
-import { asset, serviceImage } from "@/lib/images";
+import { ConsentNote } from "@/components/legal";
+import { serviceImage } from "@/lib/images";
 import { site } from "@/lib/site";
 import { cn, titleCase } from "@/lib/utils";
 
@@ -53,6 +54,7 @@ export function QuoteWizard({ defaultService = "" }: { defaultService?: string }
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [city, setCity] = useState("");
+  const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
   const firstRender = useRef(true);
@@ -98,7 +100,7 @@ export function QuoteWizard({ defaultService = "" }: { defaultService?: string }
     const urg = URGENCIES.find((u) => u.key === urgency)?.label || urgency;
     const subject = encodeURIComponent(`Quote request — ${svc} in ${city}`);
     const body = encodeURIComponent(
-      `Name: ${name}\nPhone: ${phone}\nCity: ${city}\nService: ${svc}\nProperty: ${prop}\nTiming: ${urg}\n\nDetails:\n${message || "—"}`,
+      `Name: ${name}\nPhone: ${phone}\nEmail: ${email || "—"}\nCity: ${city}\nService: ${svc}\nProperty: ${prop}\nTiming: ${urg}\n\nDetails:\n${message || "—"}`,
     );
     window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`;
     setSent(true);
@@ -162,7 +164,7 @@ export function QuoteWizard({ defaultService = "" }: { defaultService?: string }
                         type="button"
                         onClick={() => {
                           setService(slug);
-                          setTimeout(next, 180);
+                          setStep(1);
                         }}
                         className={cn(
                           "group relative overflow-hidden rounded-2xl border text-left transition focus:outline-none",
@@ -207,7 +209,7 @@ export function QuoteWizard({ defaultService = "" }: { defaultService?: string }
                         type="button"
                         onClick={() => {
                           setProperty(p.key);
-                          setTimeout(next, 180);
+                          setStep(2);
                         }}
                         className={cn(
                           "flex flex-col items-start gap-3 rounded-2xl border p-4 text-left transition focus:outline-none",
@@ -246,7 +248,7 @@ export function QuoteWizard({ defaultService = "" }: { defaultService?: string }
                         type="button"
                         onClick={() => {
                           setUrgency(u.key);
-                          setTimeout(next, 180);
+                          setStep(3);
                         }}
                         className={cn(
                           "flex items-start gap-3 rounded-2xl border p-4 text-left transition focus:outline-none",
@@ -297,7 +299,7 @@ export function QuoteWizard({ defaultService = "" }: { defaultService?: string }
                   <Field label="Name" value={name} onChange={setName} required />
                   <Field label="Phone" value={phone} onChange={setPhone} required type="tel" />
                   <Field label="City" value={city} onChange={setCity} required placeholder="Irvine" />
-                  <Field label="Email (optional)" value="" onChange={() => {}} type="email" />
+                  <Field label="Email (optional)" value={email} onChange={setEmail} type="email" />
                 </div>
                 <div className="mt-6 rounded-2xl border border-line bg-sand p-4">
                   <p className="text-[11px] font-bold uppercase tracking-wider text-brand">Summary</p>
@@ -308,6 +310,7 @@ export function QuoteWizard({ defaultService = "" }: { defaultService?: string }
                     <li><span className="text-ink/50">City:</span> {city || "—"}</li>
                   </ul>
                 </div>
+                <ConsentNote className="mt-4" />
               </>
             )}
           </div>

@@ -122,6 +122,8 @@ export function getServiceDoc(slug: string) {
       [`${name} in Irvine and across Orange County.`, "IICRC-certified technicians, Google Guaranteed."],
       [
         "Same-day openings and upfront quotes. Call (949) 992-3299.",
+        "Same-day openings, upfront quotes. Call (949) 992-3299.",
+        "Upfront, on-site quotes. Call (949) 992-3299.",
         "Upfront quotes. Call (949) 992-3299.",
         "Call (949) 992-3299.",
       ],
