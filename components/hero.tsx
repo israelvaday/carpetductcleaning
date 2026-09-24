@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, MapPin, ShieldCheck, Star, Phone } from "lucide-react";
-import { asset, type Img } from "@/lib/images";
+import { type Img } from "@/lib/images";
 import { site } from "@/lib/site";
 import { Reveal } from "@/components/fx";
 
@@ -13,25 +13,26 @@ const HERO_STATS = [
 ] as const;
 
 /**
- * Full-bleed dark hero with a photo background, gradient scrim, proof panel,
- * and a stat bar. Used on the homepage.
+ * Split hero: the photo sits in the open on top (mobile) or the right (desktop).
+ * Copy stays on navy so the image is not washed out.
  */
 export function HomeHero({ image }: { image: Img }) {
   return (
-    <section className="relative overflow-hidden bg-navy text-white">
-      <Image
-        src={image.src}
-        alt={image.alt}
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover opacity-45 saturate-[1.05]"
-      />
-      <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy/85 to-brand/30" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(20,161,154,0.20),transparent_46%)]" />
+    <section className="bg-navy text-white">
+      <div className="grid lg:min-h-[88vh] lg:grid-cols-2">
+        <div className="relative min-h-[58vw] sm:min-h-[420px] lg:order-2 lg:min-h-full">
+          <Image
+            src={image.src}
+            alt={image.alt}
+            fill
+            priority
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover"
+          />
+        </div>
 
-      <div className="container-page relative flex flex-col justify-end pb-10 pt-24 md:min-h-[88vh] md:pb-16 md:pt-32">
-        <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
+        <div className="flex flex-col justify-end px-5 py-10 sm:px-8 lg:order-1 lg:px-12 lg:py-16 xl:pl-16">
+        <div className="grid gap-10">
           <Reveal>
             <div className="inline-flex max-w-full flex-wrap items-center gap-2 rounded-full border border-brand-light/30 bg-brand/15 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-brand-50">
               <MapPin className="size-3.5 shrink-0" />
@@ -108,6 +109,7 @@ export function HomeHero({ image }: { image: Img }) {
             ))}
           </div>
         </Reveal>
+        </div>
       </div>
     </section>
   );
