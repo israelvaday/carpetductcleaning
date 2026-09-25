@@ -310,6 +310,13 @@ const postSlugs = readdirSync(join(ROOT, "content/posts"))
   .map((f) => f.replace(/\.json$/, ""));
 const posts = {};
 for (const slug of postSlugs) {
+  const generated = `blog-${slug}.png`;
+  if (existsSync(join(ROOT, "media/generated", generated))) {
+    const src = `generated/${generated}`;
+    used.add(srcToKey(src));
+    posts[slug] = src;
+    continue;
+  }
   let svc = null; // no topic match → generic pick, don't drain the carpet pool
   for (const [re, s] of POST_RULES) if (re.test(slug)) { svc = s; break; }
   const p = pick({ service: svc, wantLandscape: true, kinds: ["work", "result", "equipment"] });

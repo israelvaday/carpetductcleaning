@@ -116,7 +116,11 @@ const postSrcs = map.posts as Record<string, string>;
 
 export function postImage(slug: string): Img {
   const src = postSrcs[slug];
-  if (src) return fromSrc(src);
+  if (src) {
+    const photo = fromSrc(src);
+    if (!photo.alt) photo.alt = slug.replaceAll("-", " ");
+    return photo;
+  }
   return img("hero-home");
 }
 
