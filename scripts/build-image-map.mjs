@@ -269,9 +269,18 @@ const cityLandmarks = {};
   const titleCase = (s) => s.split("-").map((w) => w[0].toUpperCase() + w.slice(1)).join(" ");
   const cities = [...new Set(URL_MAP.cityPages.map((p) => p.route.split("/")[2]))];
   for (const city of cities) {
-    const src = `generated/city-${city}.png`;
-    if (existsSync(join(ROOT, "media/generated", `city-${city}.png`))) {
-      cityLandmarks[city] = { src, alt: `${titleCase(city)}, California` };
+    const serviceFile = `city-service-${city}.png`;
+    const landmarkFile = `city-${city}.png`;
+    const file = existsSync(join(ROOT, "media/generated", serviceFile)) ? serviceFile : landmarkFile;
+    const src = `generated/${file}`;
+    if (existsSync(join(ROOT, "media/generated", file))) {
+      const name = titleCase(city);
+      cityLandmarks[city] = {
+        src,
+        alt: file.startsWith("city-service")
+          ? `Carpet cleaning inside a ${name}, California home`
+          : `${name}, California`,
+      };
     }
   }
 }

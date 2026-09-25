@@ -63,8 +63,8 @@ export default function LocationsPage() {
       <Section tone="sand">
         <SectionHead
           eyebrow="Find your city"
-          title="Every neighborhood, its own page"
-          body="Pick your city — each page is written for that area, with local pricing and the next open slot."
+          title="Carpet cleaning in your city"
+          body="Each tile is a carpet cleaning job in that city. Open it for pricing and the next open slot."
         />
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {carpetCities.map((c) => {
@@ -85,9 +85,12 @@ export default function LocationsPage() {
                   />
                   <span className="absolute inset-0 bg-linear-to-t from-navy/90 via-navy/25 to-transparent" />
                 </PhotoFrame>
-                <span className="absolute bottom-0 left-0 right-0 flex items-center justify-between p-4 text-white">
-                  <span className="font-semibold">{titleCase(c.city)}</span>
-                  <ArrowRight className="size-4 transition group-hover:translate-x-0.5" />
+                <span className="absolute bottom-0 left-0 right-0 flex items-end justify-between gap-2 p-4 text-white">
+                  <span>
+                    <span className="block text-[11px] font-semibold uppercase tracking-wider text-white/80">Carpet cleaning</span>
+                    <span className="block font-semibold">{titleCase(c.city)}</span>
+                  </span>
+                  <ArrowRight className="mb-0.5 size-4 shrink-0 transition group-hover:translate-x-0.5" />
                 </span>
               </Link>
             );

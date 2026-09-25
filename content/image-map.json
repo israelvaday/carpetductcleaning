@@ -1,6 +1,6 @@
 {
   "note": "HARD RULE: every slot gets a unique photo (global used-set). src is relative to media/webp/.",
-  "generatedAt": "2026-09-24T20:51:59.795Z",
+  "generatedAt": "2026-09-25T02:33:08.426Z",
   "assets": [
     {
       "key": "logo",
@@ -479,116 +479,116 @@
   },
   "cityLandmarks": {
     "anaheim": {
-      "src": "generated/city-anaheim.png",
-      "alt": "Anaheim, California"
+      "src": "generated/city-service-anaheim.png",
+      "alt": "Carpet cleaning inside a Anaheim, California home"
     },
     "costa-mesa": {
-      "src": "generated/city-costa-mesa.png",
-      "alt": "Costa Mesa, California"
+      "src": "generated/city-service-costa-mesa.png",
+      "alt": "Carpet cleaning inside a Costa Mesa, California home"
     },
     "stanton": {
-      "src": "generated/city-stanton.png",
-      "alt": "Stanton, California"
+      "src": "generated/city-service-stanton.png",
+      "alt": "Carpet cleaning inside a Stanton, California home"
     },
     "coto-de-caza": {
-      "src": "generated/city-coto-de-caza.png",
-      "alt": "Coto De Caza, California"
+      "src": "generated/city-service-coto-de-caza.png",
+      "alt": "Carpet cleaning inside a Coto De Caza, California home"
     },
     "dove-canyon": {
-      "src": "generated/city-dove-canyon.png",
-      "alt": "Dove Canyon, California"
+      "src": "generated/city-service-dove-canyon.png",
+      "alt": "Carpet cleaning inside a Dove Canyon, California home"
     },
     "east-irvine": {
-      "src": "generated/city-east-irvine.png",
-      "alt": "East Irvine, California"
+      "src": "generated/city-service-east-irvine.png",
+      "alt": "Carpet cleaning inside a East Irvine, California home"
     },
     "aliso-viejo": {
-      "src": "generated/city-aliso-viejo.png",
-      "alt": "Aliso Viejo, California"
+      "src": "generated/city-service-aliso-viejo.png",
+      "alt": "Carpet cleaning inside a Aliso Viejo, California home"
     },
     "anaheim-hills": {
-      "src": "generated/city-anaheim-hills.png",
-      "alt": "Anaheim Hills, California"
+      "src": "generated/city-service-anaheim-hills.png",
+      "alt": "Carpet cleaning inside a Anaheim Hills, California home"
     },
     "buena-park": {
-      "src": "generated/city-buena-park.png",
-      "alt": "Buena Park, California"
+      "src": "generated/city-service-buena-park.png",
+      "alt": "Carpet cleaning inside a Buena Park, California home"
     },
     "corona-del-mar": {
-      "src": "generated/city-corona-del-mar.png",
-      "alt": "Corona Del Mar, California"
+      "src": "generated/city-service-corona-del-mar.png",
+      "alt": "Carpet cleaning inside a Corona Del Mar, California home"
     },
     "dana-point": {
-      "src": "generated/city-dana-point.png",
-      "alt": "Dana Point, California"
+      "src": "generated/city-service-dana-point.png",
+      "alt": "Carpet cleaning inside a Dana Point, California home"
     },
     "foothill-ranch": {
-      "src": "generated/city-foothill-ranch.png",
-      "alt": "Foothill Ranch, California"
+      "src": "generated/city-service-foothill-ranch.png",
+      "alt": "Carpet cleaning inside a Foothill Ranch, California home"
     },
     "fountain-valley": {
-      "src": "generated/city-fountain-valley.png",
-      "alt": "Fountain Valley, California"
+      "src": "generated/city-service-fountain-valley.png",
+      "alt": "Carpet cleaning inside a Fountain Valley, California home"
     },
     "fullerton": {
-      "src": "generated/city-fullerton.png",
-      "alt": "Fullerton, California"
+      "src": "generated/city-service-fullerton.png",
+      "alt": "Carpet cleaning inside a Fullerton, California home"
     },
     "garden-grove": {
-      "src": "generated/city-garden-grove.png",
-      "alt": "Garden Grove, California"
+      "src": "generated/city-service-garden-grove.png",
+      "alt": "Carpet cleaning inside a Garden Grove, California home"
     },
     "huntington-beach": {
-      "src": "generated/city-huntington-beach.png",
-      "alt": "Huntington Beach, California"
+      "src": "generated/city-service-huntington-beach.png",
+      "alt": "Carpet cleaning inside a Huntington Beach, California home"
     },
     "irvine": {
-      "src": "generated/city-irvine.png",
-      "alt": "Irvine, California"
+      "src": "generated/city-service-irvine.png",
+      "alt": "Carpet cleaning inside a Irvine, California home"
     },
     "ladera-ranch": {
-      "src": "generated/city-ladera-ranch.png",
-      "alt": "Ladera Ranch, California"
+      "src": "generated/city-service-ladera-ranch.png",
+      "alt": "Carpet cleaning inside a Ladera Ranch, California home"
     },
     "laguna-beach": {
-      "src": "generated/city-laguna-beach.png",
-      "alt": "Laguna Beach, California"
+      "src": "generated/city-service-laguna-beach.png",
+      "alt": "Carpet cleaning inside a Laguna Beach, California home"
     },
     "laguna-hills": {
-      "src": "generated/city-laguna-hills.png",
-      "alt": "Laguna Hills, California"
+      "src": "generated/city-service-laguna-hills.png",
+      "alt": "Carpet cleaning inside a Laguna Hills, California home"
     },
     "santa-ana": {
-      "src": "generated/city-santa-ana.png",
-      "alt": "Santa Ana, California"
+      "src": "generated/city-service-santa-ana.png",
+      "alt": "Carpet cleaning inside a Santa Ana, California home"
     },
     "seal-beach": {
-      "src": "generated/city-seal-beach.png",
-      "alt": "Seal Beach, California"
+      "src": "generated/city-service-seal-beach.png",
+      "alt": "Carpet cleaning inside a Seal Beach, California home"
     },
     "trabuco-canyon": {
-      "src": "generated/city-trabuco-canyon.png",
-      "alt": "Trabuco Canyon, California"
+      "src": "generated/city-service-trabuco-canyon.png",
+      "alt": "Carpet cleaning inside a Trabuco Canyon, California home"
     },
     "tustin": {
-      "src": "generated/city-tustin.png",
-      "alt": "Tustin, California"
+      "src": "generated/city-service-tustin.png",
+      "alt": "Carpet cleaning inside a Tustin, California home"
     },
     "tustin-ranch": {
-      "src": "generated/city-tustin-ranch.png",
-      "alt": "Tustin Ranch, California"
+      "src": "generated/city-service-tustin-ranch.png",
+      "alt": "Carpet cleaning inside a Tustin Ranch, California home"
     },
     "westminster": {
-      "src": "generated/city-westminster.png",
-      "alt": "Westminster, California"
+      "src": "generated/city-service-westminster.png",
+      "alt": "Carpet cleaning inside a Westminster, California home"
     },
     "woodbridge": {
-      "src": "generated/city-woodbridge.png",
-      "alt": "Woodbridge, California"
+      "src": "generated/city-service-woodbridge.png",
+      "alt": "Carpet cleaning inside a Woodbridge, California home"
     },
     "yorba-linda": {
-      "src": "generated/city-yorba-linda.png",
-      "alt": "Yorba Linda, California"
+      "src": "generated/city-service-yorba-linda.png",
+      "alt": "Carpet cleaning inside a Yorba Linda, California home"
     }
   },
   "cityJobs": {

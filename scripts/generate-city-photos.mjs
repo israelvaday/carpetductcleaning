@@ -57,29 +57,34 @@ const CITY_SCENES = {
 };
 
 const test = args.includes("--test");
+const jobs = args.includes("--jobs");
 
 loadEnvLocal();
 const key = getKey();
 if (!key) throw new Error("OPENROUTER_API_KEY missing");
 
 const entries = Object.entries(CITY_SCENES);
+const fileFor = (slug) => (jobs ? `city-service-${slug}.png` : `city-${slug}.png`);
 const todo = (test ? entries.slice(0, 1) : entries).filter(
-  ([slug]) => force || !existsSync(join(OUT, `city-${slug}.png`))
+  ([slug]) => force || !existsSync(join(OUT, fileFor(slug)))
 );
-console.log(`generating ${todo.length} city photos with ${model}...`);
+console.log(`generating ${todo.length} ${jobs ? "service-in-city" : "city"} photos with ${model}...`);
 let done = 0;
 for (const [slug, scene] of todo) {
+  const prompt = jobs
+    ? `Foreground: a carpet cleaning technician in a plain navy polo using a stainless hot-water extraction wand on beige wall-to-wall carpet inside a home. The cleaning work is the subject. Background, seen through a large window: ${scene}. ${STYLE}`
+    : `${scene}. ${STYLE}`;
   try {
-    const buf = await generateImage(key, `${scene}. ${STYLE}`, {
+    const buf = await generateImage(key, prompt, {
       model,
       aspect_ratio: "4:3",
       resolution: "1K",
       output_format: "png",
       quality: "high",
     });
-    writeFileSync(join(OUT, `city-${slug}.png`), buf);
+    writeFileSync(join(OUT, fileFor(slug)), buf);
     done++;
-    console.log(`[${done}/${todo.length}] city-${slug}.png (${(buf.length / 1024).toFixed(0)} KB)`);
+    console.log(`[${done}/${todo.length}] ${fileFor(slug)} (${(buf.length / 1024).toFixed(0)} KB)`);
   } catch (e) {
     console.log(`FAILED city-${slug}: ${e.message}`);
   }
