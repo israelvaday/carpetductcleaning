@@ -9,6 +9,7 @@ import { MapEmbed } from "@/components/map-embed";
 import { Section, SectionHead } from "@/components/ui";
 import { cityEntries, serviceSlugs } from "@/lib/content";
 import { cityLandmark, img } from "@/lib/images";
+import { PhotoFrame } from "@/components/photo";
 import { breadcrumbs } from "@/lib/schema";
 import { SERVICE_GROUPS } from "@/lib/services";
 import { site } from "@/lib/site";
@@ -74,7 +75,7 @@ export default function LocationsPage() {
                 href={`${c.route}/`}
                 className="group relative overflow-hidden rounded-2xl shadow-card"
               >
-                <div className="relative aspect-4/3">
+                <PhotoFrame ratio="photo">
                   <Image
                     src={image.src}
                     alt={image.alt}
@@ -83,7 +84,7 @@ export default function LocationsPage() {
                     className="object-cover transition duration-500 group-hover:scale-105"
                   />
                   <span className="absolute inset-0 bg-linear-to-t from-navy/90 via-navy/25 to-transparent" />
-                </div>
+                </PhotoFrame>
                 <span className="absolute bottom-0 left-0 right-0 flex items-center justify-between p-4 text-white">
                   <span className="font-semibold">{titleCase(c.city)}</span>
                   <ArrowRight className="size-4 transition group-hover:translate-x-0.5" />

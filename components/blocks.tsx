@@ -7,6 +7,7 @@ import { Reveal } from "@/components/fx";
 import { Breadcrumb, CallButton, CheckList, QuoteButton, RatingPill, Section, SectionHead } from "@/components/ui";
 import beforeAfterJson from "@/content/before-after.json";
 import { asset, gallery, serviceImage, type Img } from "@/lib/images";
+import { PhotoFrame } from "@/components/photo";
 import { serviceBlurb } from "@/lib/services";
 import { site } from "@/lib/site";
 import { cn, titleCase } from "@/lib/utils";
@@ -27,39 +28,42 @@ export function ImageHero({
   bullets?: string[];
 }) {
   return (
-    <section className="relative isolate overflow-hidden bg-navy text-white">
-      <Image
-        src={image.src}
-        alt={image.alt}
-        fill
-        priority
-        sizes="100vw"
-        className="-z-10 object-cover"
-      />
-      <div className="absolute inset-0 -z-10 bg-linear-to-r from-navy via-navy/80 to-navy/25" />
-      <div className="container-page py-14 md:py-20">
-        {breadcrumb ? (
-          <div className="mb-6">
-            <Breadcrumb items={breadcrumb} tone="dark" />
+    <section className="bg-navy text-white">
+      <div className="grid items-center lg:grid-cols-2">
+        <PhotoFrame ratio="video" className="order-first lg:order-2">
+          <Image
+            src={image.src}
+            alt={image.alt}
+            fill
+            priority
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover"
+          />
+        </PhotoFrame>
+        <div className="px-5 py-10 sm:px-8 lg:px-12 lg:py-14">
+          {breadcrumb ? (
+            <div className="mb-6">
+              <Breadcrumb items={breadcrumb} tone="dark" />
+            </div>
+          ) : null}
+          {eyebrow ? <p className="eyebrow text-brand-50">{eyebrow}</p> : null}
+          <h1 className="mt-3 max-w-xl text-4xl font-semibold leading-[1.08] md:text-5xl">{title}</h1>
+          {body ? <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/80">{body}</p> : null}
+          {bullets?.length ? (
+            <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-white/80">
+              {bullets.map((b) => (
+                <li key={b} className="flex items-center gap-2">
+                  <span className="size-1.5 rounded-full bg-brand-50" aria-hidden />
+                  {b}
+                </li>
+              ))}
+            </ul>
+          ) : null}
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <CallButton />
+            <QuoteButton dark />
+            <RatingPill dark />
           </div>
-        ) : null}
-        {eyebrow ? <p className="eyebrow text-brand-50">{eyebrow}</p> : null}
-        <h1 className="mt-3 max-w-3xl text-4xl font-semibold leading-tight md:text-5xl">{title}</h1>
-        {body ? <p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/80">{body}</p> : null}
-        {bullets?.length ? (
-          <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-white/80">
-            {bullets.map((b) => (
-              <li key={b} className="flex items-center gap-2">
-                <span className="size-1.5 rounded-full bg-brand-50" aria-hidden />
-                {b}
-              </li>
-            ))}
-          </ul>
-        ) : null}
-        <div className="mt-8 flex flex-wrap items-center gap-3">
-          <CallButton />
-          <QuoteButton dark />
-          <RatingPill dark />
         </div>
       </div>
     </section>
@@ -74,7 +78,7 @@ export function ServiceCard({ slug, priority = false }: { slug: string; priority
       href={`/${slug}/`}
       className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-white shadow-card transition hover:-translate-y-0.5 hover:shadow-lift"
     >
-      <div className="relative aspect-16/10 overflow-hidden">
+      <PhotoFrame ratio="photo">
         <Image
           src={image.src}
           alt={image.alt}
@@ -83,7 +87,7 @@ export function ServiceCard({ slug, priority = false }: { slug: string; priority
           sizes="(min-width: 1024px) 24rem, (min-width: 640px) 50vw, 100vw"
           className="object-cover transition duration-500 group-hover:scale-105"
         />
-      </div>
+      </PhotoFrame>
       <div className="flex flex-1 flex-col p-5">
         <h3 className="text-lg font-semibold text-navy">{name}</h3>
         <p className="mt-2 flex-1 text-sm leading-relaxed text-ink/70">{serviceBlurb(slug, name)}</p>
@@ -185,7 +189,7 @@ export function Gallery({
         <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
           {gallery.slice(offset, offset + limit).map((photo, i) => (
             <Reveal key={photo.src} delay={Math.min(i, 7) * 0.05}>
-              <div className="relative aspect-square overflow-hidden rounded-xl shadow-card">
+              <PhotoFrame ratio="photo" rounded="card" className="rounded-xl shadow-card">
                 <Image
                   src={photo.src}
                   alt={photo.alt}
@@ -193,7 +197,7 @@ export function Gallery({
                   sizes="(min-width: 768px) 22vw, 45vw"
                   className="object-cover transition duration-500 hover:scale-105"
                 />
-              </div>
+              </PhotoFrame>
             </Reveal>
           ))}
         </div>
@@ -219,7 +223,7 @@ export function WhyUs({ items }: { items: string[] }) {
           </div>
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
-          <div className="relative aspect-4/5 overflow-hidden rounded-2xl shadow-card">
+          <PhotoFrame ratio="photo" rounded="card" className="shadow-card sm:col-span-2">
             <Image
               src={asset("/images/tech.webp")}
               alt="Technician treating a carpet stain with professional tools"
@@ -227,9 +231,8 @@ export function WhyUs({ items }: { items: string[] }) {
               sizes="(min-width: 1024px) 24rem, 45vw"
               className="object-cover"
             />
-          </div>
-          <div className="grid gap-4">
-            <div className="relative aspect-4/3 overflow-hidden rounded-2xl shadow-card">
+          </PhotoFrame>
+          <PhotoFrame ratio="photo" rounded="card" className="shadow-card">
               <Image
                 src={asset("/images/van.webp")}
                 alt="Carpet And Duct Cleaning service van in Irvine, CA"
@@ -237,8 +240,8 @@ export function WhyUs({ items }: { items: string[] }) {
                 sizes="(min-width: 1024px) 24rem, 45vw"
                 className="object-cover"
               />
-            </div>
-            <div className="relative aspect-4/3 overflow-hidden rounded-2xl shadow-card">
+          </PhotoFrame>
+          <PhotoFrame ratio="photo" rounded="card" className="shadow-card">
               <Image
                 src={asset("/images/carpet-family.webp")}
                 alt="Family relaxing on a freshly cleaned carpet"
@@ -246,8 +249,7 @@ export function WhyUs({ items }: { items: string[] }) {
                 sizes="(min-width: 1024px) 24rem, 45vw"
                 className="object-cover"
               />
-            </div>
-          </div>
+          </PhotoFrame>
         </div>
       </div>
     </Section>

@@ -8,6 +8,8 @@ export const site = {
   city: "Irvine",
   region: "CA",
   area: "Orange County",
+  street: "191 Pinestone",
+  postalCode: "92604",
   email: "info@carpetductcleaning.com",
   jobs: "10,000+",
   rating: "4.9",

@@ -22,7 +22,7 @@ export function Section({
     navy: "bg-navy text-white",
   };
   return (
-    <section id={id} className={cn("py-16 md:py-24", tones[tone], className)}>
+    <section id={id} className={cn("py-14 md:py-20", tones[tone], className)}>
       <div className="container-page">{children}</div>
     </section>
   );
@@ -48,7 +48,7 @@ export function SectionHead({
       ) : null}
       <h2
         className={cn(
-          "mt-3 text-3xl font-bold tracking-tight md:text-4xl lg:text-[2.6rem] lg:leading-[1.1]",
+          "mt-3 text-3xl font-semibold tracking-tight md:text-4xl lg:text-[2.5rem] lg:leading-[1.12]",
           tone === "navy" ? "text-white" : "text-navy",
         )}
       >

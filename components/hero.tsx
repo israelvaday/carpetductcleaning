@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, MapPin, ShieldCheck, Star, Phone } from "lucide-react";
 import { type Img } from "@/lib/images";
+import { PhotoFrame } from "@/components/photo";
 import { site } from "@/lib/site";
 import { Reveal } from "@/components/fx";
 
@@ -19,8 +20,8 @@ const HERO_STATS = [
 export function HomeHero({ image }: { image: Img }) {
   return (
     <section className="bg-navy text-white">
-      <div className="grid lg:min-h-[88vh] lg:grid-cols-2">
-        <div className="relative min-h-[58vw] sm:min-h-[420px] lg:order-2 lg:min-h-full">
+      <div className="grid items-center lg:grid-cols-2">
+        <PhotoFrame ratio="video" className="order-first lg:order-2">
           <Image
             src={image.src}
             alt={image.alt}
@@ -29,7 +30,7 @@ export function HomeHero({ image }: { image: Img }) {
             sizes="(min-width: 1024px) 50vw, 100vw"
             className="object-cover"
           />
-        </div>
+        </PhotoFrame>
 
         <div className="flex flex-col justify-end px-5 py-10 sm:px-8 lg:order-1 lg:px-12 lg:py-16 xl:pl-16">
         <div className="grid gap-10">
@@ -39,7 +40,7 @@ export function HomeHero({ image }: { image: Img }) {
               <span>{site.city} · {site.area} · Since {site.foundingYear}</span>
             </div>
 
-            <h1 className="mt-5 max-w-3xl text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="mt-5 max-w-3xl text-4xl font-semibold leading-[1.08] tracking-tight text-white sm:text-5xl">
               Carpet &amp; air duct cleaning that Orange County trusts.
             </h1>
 

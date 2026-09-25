@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { CalendarCheck, ChevronLeft, ChevronRight, ClipboardCheck, Sparkles, Wind } from "lucide-react";
 import { img } from "@/lib/images";
+import { PhotoFrame } from "@/components/photo";
 import { cn } from "@/lib/utils";
 
 const ICONS = {
@@ -167,7 +168,7 @@ export function ProcessWizard({ steps = DEFAULT_STEPS }: { steps?: ProcessStep[]
 
       {/* Image panel */}
       <div className="relative">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-lift">
+        <PhotoFrame ratio="photo" rounded="panel" className="shadow-lift">
           {steps.map((s, i) => (
             <div
               key={s.image}
@@ -198,7 +199,7 @@ export function ProcessWizard({ steps = DEFAULT_STEPS }: { steps?: ProcessStep[]
               <p className="font-semibold text-white">{step.title}</p>
             </div>
           </div>
-        </div>
+        </PhotoFrame>
       </div>
     </div>
   );

@@ -12,10 +12,10 @@ export function businessNode() {
     areaServed: { "@type": "AdministrativeArea", name: "Orange County, CA" },
     address: {
       "@type": "PostalAddress",
-      streetAddress: "191 Pinestone",
+      streetAddress: site.street,
       addressLocality: site.city,
       addressRegion: site.region,
-      postalCode: "92604",
+      postalCode: site.postalCode,
       addressCountry: "US",
     },
     // Real numbers pulled from Google Places at build time (content/reviews.json).
