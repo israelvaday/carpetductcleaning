@@ -1,6 +1,6 @@
 {
   "note": "HARD RULE: every slot gets a unique photo (global used-set). src is relative to media/webp/.",
-  "generatedAt": "2026-09-23T17:19:42.162Z",
+  "generatedAt": "2026-09-24T20:51:59.795Z",
   "assets": [
     {
       "key": "logo",
@@ -120,241 +120,293 @@
   "services": [
     {
       "slug": "carpet-cleaning",
-      "hero": "2025/08/60f59cd96abb888eedddac3e_commercial-carpet-cleaning.webp",
-      "card": "2025/08/661505527c3fac42a06cf88f_5ff81bc5d58a656a39773b42_image-1-1.webp",
-      "picker": "2025/08/66325db79e9398cb87c2e9dd_hero-home-royal-carpet.webp",
+      "hero": "generated/svc-carpet-cleaning-hero.png",
+      "card": "generated/svc-carpet-cleaning-card.png",
+      "picker": "2025/08/60f59cd96abb888eedddac3e_commercial-carpet-cleaning.webp",
       "steps": [
+        "2025/08/661505527c3fac42a06cf88f_5ff81bc5d58a656a39773b42_image-1-1.webp",
+        "2025/08/66325db79e9398cb87c2e9dd_hero-home-royal-carpet.webp",
         "2025/08/Carpet-Steam-Cleaning-beside-textile-rinse-1024x683-1.webp",
-        "2025/08/Carpet-Steam-Cleaning-beside-textile-rinse-1024x683-1-1.webp",
-        "2025/08/carpet-cleaning-services-1024x683-1.webp",
-        "2025/08/do_I_need_to_vacuum_before_carpet_cleaning-1.webp"
+        "2025/08/Carpet-Steam-Cleaning-beside-textile-rinse-1024x683-1-1.webp"
       ],
-      "alt": "A woman uses a carpet cleaning machine in a modern office space."
+      "alt": "Professional carpet cleaning in Orange County"
     },
     {
       "slug": "air-duct-cleaning",
-      "hero": "2025/08/dirty-vs.-clean-air-ducts.png.webp",
-      "card": "2025/08/ezgif.com-optiwebp.webp",
-      "picker": "2025/08/HEPA-vacuum-on-duct-system.webp",
+      "hero": "generated/svc-air-duct-cleaning-hero.png",
+      "card": "generated/svc-air-duct-cleaning-card.png",
+      "picker": "2025/08/dirty-vs.-clean-air-ducts.png.webp",
       "steps": [
+        "2025/08/ezgif.com-optiwebp.webp",
+        "2025/08/HEPA-vacuum-on-duct-system.webp",
         "2025/08/see-the-difference-for-yourself.webp",
-        "2025/08/Air-duct-cleaning-1024x587-1024x585-1.jpg.webp",
-        "2025/08/air-duct-cleaning.jpg.webp",
-        "2025/08/Cleaning-Air-Ducts-478089373_2122x1415-2.webp"
+        "2025/08/Air-duct-cleaning-1024x587-1024x585-1.jpg.webp"
       ],
-      "alt": "Split image showing a dirty air duct before and a clean air duct after cleaning."
+      "alt": "Professional air duct cleaning in Orange County"
     },
     {
       "slug": "dryer-vent-cleaning",
-      "hero": "2025/08/technician-performing-airflow-test.png.webp",
-      "card": "2025/08/Reconnect-the-dryer-and-confirm-proper-airflow.webp",
-      "picker": "2025/09/Air-vent-2.webp",
+      "hero": "generated/svc-dryer-vent-cleaning-hero.png",
+      "card": "generated/svc-dryer-vent-cleaning-card.png",
+      "picker": "2025/08/technician-performing-airflow-test.png.webp",
       "steps": [
+        "2025/08/Reconnect-the-dryer-and-confirm-proper-airflow.webp",
+        "2025/09/Air-vent-2.webp",
         "2025/09/Signs-that-Dryer-Vent-needs-Cleaning.webp",
-        "2025/09/The-Importance-of-Dryer-Vent-Cleaning.webp",
-        "2026/04/clogged-dryer-vent.webp",
-        "2026/06/Professional-dryer-vent-lint-removal-service-in-Tustin-home.webp"
+        "2025/09/The-Importance-of-Dryer-Vent-Cleaning.webp"
       ],
-      "alt": "Technician uses a meter to check airflow from a dryer vent connected to a fan and hose."
+      "alt": "Professional dryer vent cleaning in Orange County"
     },
     {
       "slug": "water-damage-restoration",
-      "hero": "2025/08/before-and-after-wall-and-floor-restoration-after-water-damage.png.webp",
-      "card": "2025/08/GettyImages-879657240-scaled-1.jpg.webp",
-      "picker": "2025/08/restore-your-property.webp",
+      "hero": "generated/svc-water-damage-restoration-hero.png",
+      "card": "generated/svc-water-damage-restoration-card.png",
+      "picker": "2025/08/before-and-after-wall-and-floor-restoration-after-water-damage.png.webp",
       "steps": [
+        "2025/08/GettyImages-879657240-scaled-1.jpg.webp",
+        "2025/08/restore-your-property.webp",
         "2025/08/Water-Mitigation-scaled-1.webp",
-        "2025/08/Water-Mitigation-scaled-2.jpeg.webp",
-        "2025/08/water-restoration-1.jpeg.webp",
-        "2026/08/Professional-water-extraction-equipment-used-in-a-Lake-Forest-home.webp"
+        "2025/08/Water-Mitigation-scaled-2.jpeg.webp"
       ],
-      "alt": "Split image showing a room before and after water damage restoration, from dirty and flooded to clean and bright."
+      "alt": "Professional water damage restoration in Orange County"
     },
     {
       "slug": "area-rug-cleaning",
-      "hero": "2025/08/Gemini_Generated_Image_c9o6goc9o6goc9o6-1-1-scaled.jpg.webp",
-      "card": "2025/08/Gemini_Generated_Image_c9o6goc9o6goc9o6-1-scaled.jpg.webp",
-      "picker": "2025/08/Gemini_Generated_Image_c9o6goc9o6goc9o6-scaled-e1754950283217.jpg.webp",
+      "hero": "generated/svc-area-rug-cleaning-hero.png",
+      "card": "generated/svc-area-rug-cleaning-card.png",
+      "picker": "2025/08/Gemini_Generated_Image_c9o6goc9o6goc9o6-1-1-scaled.jpg.webp",
       "steps": [
+        "2025/08/Gemini_Generated_Image_c9o6goc9o6goc9o6-1-scaled.jpg.webp",
+        "2025/08/Gemini_Generated_Image_c9o6goc9o6goc9o6-scaled-e1754950283217.jpg.webp",
         "2025/08/Gemini_Generated_Image_pw3mw5pw3mw5pw3m-1.webp",
-        "2025/08/Gemini_Generated_Image_nkp17snkp17snkp1.webp",
-        "2025/08/Happy-family-enjoying-fresh-AIR.webp",
-        "2025/08/Gemini_Generated_Image_pw3mw5pw3mw5pw3m-1-scaled.jpg.webp"
+        "2025/08/Gemini_Generated_Image_nkp17snkp17snkp1.webp"
       ],
-      "alt": "A cat rests on a couch with colorful pillows and a yellow blanket."
+      "alt": "Professional area rug cleaning in Orange County"
     },
     {
       "slug": "oriental-rug-cleaning",
-      "hero": "2025/08/Why-You-Need-to-Clean-Your-Oriental-Rugs-1024x681-1.jpg.webp",
-      "card": "2025/09/rug-in-automated-wash-tub.png.webp",
+      "hero": "generated/svc-oriental-rug-cleaning-hero.png",
+      "card": "2025/08/Why-You-Need-to-Clean-Your-Oriental-Rugs-1024x681-1.jpg.webp",
       "picker": null,
       "steps": [
+        "2025/09/rug-in-automated-wash-tub.png.webp",
         "2025/09/wool-rugs-509779-scaled.jpg.webp",
         "2025/09/wool-rugs-509779.webp",
-        "2025/11/IMG_1628.webp",
-        "2025/09/deep-cleaning-a-Persian-rug.png.webp"
+        "2025/11/IMG_1628.webp"
       ],
-      "alt": "A man in work boots and uniform cleans a large, ornate rug with a specialized cleaning tool."
+      "alt": "Professional oriental rug cleaning in Orange County"
     },
     {
       "slug": "rug-pickup",
-      "hero": "2025/09/image-18.webp",
-      "card": "2025/10/Up-holstry-scaled.jpg.webp",
+      "hero": "generated/svc-rug-pickup-hero.png",
+      "card": "2025/08/Happy-family-enjoying-fresh-AIR.webp",
       "picker": null,
       "steps": [
-        "2025/11/A-clean-fresh-living-room-setting-showing-a-happy-pet-on-a-spotless-carpet.png.webp",
-        "2025/11/A-living-room-with-large-energy-efficient-windows-overlooking-a-sunny-backyard.png.webp",
-        "2025/11/interior-2685521-scaled-1.jpg.webp",
-        "2025/12/81Rysqi-lfL._AC_SL1500_.webp"
+        "2025/08/Gemini_Generated_Image_pw3mw5pw3mw5pw3m-1-scaled.jpg.webp",
+        "2025/09/image-18.webp",
+        "2025/10/Up-holstry-scaled.jpg.webp",
+        "2025/11/A-clean-fresh-living-room-setting-showing-a-happy-pet-on-a-spotless-carpet.png.webp"
       ],
-      "alt": "Mother and baby playing on a clean, fluffy carpet in a living room."
+      "alt": "Professional rug pickup in Orange County"
     },
     {
       "slug": "upholstery-cleaning",
-      "hero": "2025/08/Gemini_Generated_Image_c9o6goc9o6goc9o6-1-1.webp",
-      "card": "2025/08/Gemini_Generated_Image_c9o6goc9o6goc9o6.webp",
-      "picker": "2025/08/handsome-young-african-worker-of-cleaning-service.jpg.webp",
+      "hero": "generated/svc-upholstery-cleaning-hero.png",
+      "card": "generated/svc-upholstery-cleaning-card.png",
+      "picker": "2025/08/Gemini_Generated_Image_c9o6goc9o6goc9o6-1-1.webp",
       "steps": [
+        "2025/08/Gemini_Generated_Image_c9o6goc9o6goc9o6.webp",
+        "2025/08/handsome-young-african-worker-of-cleaning-service.jpg.webp",
         "2025/08/imgi_10_pet-on-couch-banner-desktop.jpg.webp",
-        "2025/09/Professional-Upholstery-Protection-1.webp",
-        "2026/07/Oriental-rug-in-a-Tustin-home.webp",
-        "2025/08/Downloader.la_-668539540feb1.webp"
+        "2025/09/Professional-Upholstery-Protection-1.webp"
       ],
-      "alt": "A fluffy cat rests on a couch with colorful pillows and a yellow throw blanket."
+      "alt": "Professional upholstery cleaning in Orange County"
     },
     {
       "slug": "couch-cleaning",
-      "hero": "2025/08/fresh-furniture.webp",
-      "card": "2025/08/Gemini_Generated_Image_c9o6goc9o6goc9o6-1.webp",
+      "hero": "generated/svc-couch-cleaning-hero.png",
+      "card": "2025/11/interior-2685521-scaled-1.jpg.webp",
       "picker": null,
       "steps": [
-        "2025/08/how-to-clean-a-microfiber-couch-2022-step-3.jpg.webp",
-        "2025/08/Mobile_1000x600_Upholstery-3.webp",
-        "2025/08/Mobile_1000x600_Upholstery-2.webp",
-        "2025/08/technician-inspecting-sofa-with-customer.webp"
+        "2025/08/Downloader.la_-668539540feb1.webp",
+        "2025/08/fresh-furniture.webp",
+        "2025/08/Gemini_Generated_Image_c9o6goc9o6goc9o6-1.webp",
+        "2025/08/how-to-clean-a-microfiber-couch-2022-step-3.jpg.webp"
       ],
-      "alt": "A cleaning technician inspects a couch cushion with a magnifying glass while a woman watches."
+      "alt": "Professional couch cleaning in Orange County"
     },
     {
       "slug": "leather-furniture-cleaning",
-      "hero": "2025/09/gettyimages-1276643694-67ae0ab69c16f.webp",
-      "card": "2025/09/image-2.png.webp",
+      "hero": "generated/svc-leather-furniture-cleaning-hero.png",
+      "card": "2025/08/Mobile_1000x600_Upholstery-3.webp",
       "picker": null,
       "steps": [
-        "2025/08/fabric-swatches-microfiber-cotton-leather.webp",
-        "2025/08/Cleaning-a-sofa.webp",
-        "2025/08/imgi_50_AC9h4nobMC5PNAdxDpzk3sax_N9zeqUxof0MebIRToTDIRLKILnY16fxl4E-Yhhf3h6cD7CkButav1eHuuM2ve_6EcLdWBIYceUXsetijUw9Lpa0khCv4zfkx5pgROVe4g4zApKOxSts387-k-no.jpg.webp",
-        "2025/09/20181120_image-website-upholstery.webp"
+        "2025/08/Mobile_1000x600_Upholstery-2.webp",
+        "2025/08/technician-inspecting-sofa-with-customer.webp",
+        "2025/09/gettyimages-1276643694-67ae0ab69c16f.webp",
+        "2025/09/image-2.png.webp"
       ],
-      "alt": "Professional cleaning of a tufted sofa with a steam cleaner."
+      "alt": "Professional leather furniture cleaning in Orange County"
     },
     {
       "slug": "microfiber-couch-cleaning",
-      "hero": "2025/08/cleanoutdoorcushions-2048px-0678-2x1-1.webp",
-      "card": "2025/08/technician-scrubbing-patio-sofa-with-eco-friendly-cleaning-solution.png.webp",
+      "hero": "generated/svc-microfiber-couch-cleaning-hero.png",
+      "card": "2025/11/A-living-room-with-large-energy-efficient-windows-overlooking-a-sunny-backyard.png.webp",
       "picker": null,
       "steps": [
-        "2025/09/istockphoto-1746831268-1024x1024-1.jpg.webp",
-        "2026/07/Deep-extraction-mattress-cleaning-process-in-a-Tustin-bedroom.webp",
-        "2025/12/expertise-and-solutions-needed-to-keep-your-window-treatments-in-top-condition.webp",
-        "2025/08/imgi_53_AC9h4nry2CM1LirVSudgf2jZW94UHsBUJRWwcpqBBDSBs295pOQZqGFtGNw9q_2W9ItAKB2grxt6muHuBCBbqPwFLRuFEFAD5WTeIc6niphh6luSW0AJkDwLATOodDHHKiDTer_Z0qORPws508-k-no.jpg.webp"
+        "2026/07/Oriental-rug-in-a-Tustin-home.webp",
+        "2025/08/cleanoutdoorcushions-2048px-0678-2x1-1.webp",
+        "2025/08/technician-scrubbing-patio-sofa-with-eco-friendly-cleaning-solution.png.webp",
+        "2025/09/istockphoto-1746831268-1024x1024-1.jpg.webp"
       ],
-      "alt": "Cordless vacuum cleaner resting on an outdoor white couch next to a potted plant."
+      "alt": "Professional microfiber couch cleaning in Orange County"
     },
     {
       "slug": "hardwood-floor-cleaning",
-      "hero": "2025/08/How-to-Keep-Hardwood-Floors-Clean-and-Dust-Free-1024x683-1-1.jpg.webp",
-      "card": "2025/11/kitchen-1940174-scaled-1.jpg.webp",
-      "picker": "2026/03/before-and-after-hardwood-cleaning-i.webp",
+      "hero": "generated/svc-hardwood-floor-cleaning-hero.png",
+      "card": "generated/svc-hardwood-floor-cleaning-card.png",
+      "picker": "2025/08/How-to-Keep-Hardwood-Floors-Clean-and-Dust-Free-1024x683-1-1.jpg.webp",
       "steps": [
+        "2025/11/kitchen-1940174-scaled-1.jpg.webp",
+        "2026/03/before-and-after-hardwood-cleaning-i.webp",
         "2026/03/polished-hardwood-floor-in-a-modern-living-room.webp",
-        "2026/07/cleaned-floor-close-up.webp",
-        "2025/08/cleaning-natural-stone-tiles-800x500-1.png.webp",
-        "2025/08/Guide-to-Cleaning-Tile-and-Grout.jpg.webp"
+        "2026/07/cleaned-floor-close-up.webp"
       ],
-      "alt": "Floor cleaning machine scrubbing a wooden floor with soap suds."
+      "alt": "Professional hardwood floor cleaning in Orange County"
     },
     {
       "slug": "tile-and-grout-cleaning",
-      "hero": "2025/10/tile-and-grout-cleaning.png.webp",
-      "card": "2026/08/technician-working-on-heavily-discolored-grout-1.webp",
-      "picker": "2025/08/How-to-Keep-Hardwood-Floors-Clean-and-Dust-Free-1024x683-1.jpg.webp",
+      "hero": "generated/svc-tile-and-grout-cleaning-hero.png",
+      "card": "2025/10/tile-and-grout-cleaning.png.webp",
+      "picker": "2026/08/technician-working-on-heavily-discolored-grout-1.webp",
       "steps": [
+        "2025/08/Guide-to-Cleaning-Tile-and-Grout.jpg.webp",
+        "2025/08/How-to-Keep-Hardwood-Floors-Clean-and-Dust-Free-1024x683-1.jpg.webp",
         "2025/08/istockphoto-168614931-612x612-1.jpg.webp",
-        "2025/08/Untitled-design-16.webp",
-        "2025/09/ston_1_1024x460.webp",
-        "2026/08/technician-working-on-heavily-discolored-grout.webp"
+        "2025/08/Untitled-design-16.webp"
       ],
-      "alt": "Before and after of dirty tile floor being cleaned to a sparkling white finish."
+      "alt": "Professional tile and grout cleaning in Orange County"
     },
     {
       "slug": "vinyl-floor-cleaning",
-      "hero": "2026/02/hardwood-floor-cleaning.webp",
-      "card": "2025/09/image-20.png.webp",
+      "hero": "generated/svc-vinyl-floor-cleaning-hero.png",
+      "card": "2025/09/ston_1_1024x460.webp",
       "picker": null,
       "steps": [
+        "2026/02/hardwood-floor-cleaning.webp",
+        "2025/09/image-20.png.webp",
         "2025/09/thai-people-cleaning-black-granite-600nw-296228564.webp",
-        "2025/11/IMG_6254-scaled-1.jpg.webp",
-        "2026/06/Professional-marble-floor-polishing-service-in-Tustin-home.webp",
-        "2025/09/woman-vacumming-hardwood-floors-house.jpg.webp"
+        "2025/11/IMG_6254-scaled-1.jpg.webp"
       ],
-      "alt": "A floor cleaning machine scrubs a wooden floor with soap and water."
+      "alt": "Professional vinyl floor cleaning in Orange County"
     },
     {
       "slug": "natural-stone-cleaning",
-      "hero": "2025/10/A-sparkling-marble-floor-in-a-modern-home-interior.webp",
-      "card": "2025/08/keith-misner-h0Vxgz5tyXA-unsplash-scaled-1.webp",
+      "hero": "generated/svc-natural-stone-cleaning-hero.png",
+      "card": "2025/10/A-sparkling-marble-floor-in-a-modern-home-interior.webp",
       "picker": null,
       "steps": [
-        "2025/09/Cleaning-Travertine-Tiles.jpg.webp",
-        "2025/09/Floor-cleaning.webp",
-        "2025/09/Kids-playing.webp",
-        "2026/03/63d210a5ba26db22d1b9b472_Tile-and-Grout-Cleaning-in-San-Antonio.webp"
+        "2026/06/Professional-marble-floor-polishing-service-in-Tustin-home.webp",
+        "2025/08/cleaning-natural-stone-tiles-800x500-1.png.webp",
+        "2025/09/woman-vacumming-hardwood-floors-house.jpg.webp",
+        "2026/08/technician-working-on-heavily-discolored-grout.webp"
       ],
-      "alt": "Clean, polished marble floors in a modern living room with a sofa and large windows."
+      "alt": "Professional natural stone cleaning in Orange County"
     },
     {
       "slug": "pet-stain-odor",
-      "hero": "2025/09/How-to-remove-red-wine-from-carpet-1.webp",
-      "card": "2025/09/how-to-remove-blood-stains-from-your-carpet.webp",
+      "hero": "generated/svc-pet-stain-odor-hero.png",
+      "card": "2025/09/How-to-remove-red-wine-from-carpet-1.webp",
       "picker": null,
       "steps": [
+        "2025/09/how-to-remove-blood-stains-from-your-carpet.webp",
         "2025/09/CoffeeStainOnCarpet-1024x683-1.webp",
         "2025/11/Close-up-of-a-UV-light-being-used-to-detect-hidden-pet-urine-spots-on-carpet-fibers.webp",
-        "2025/08/Mobile_1000x600_PURT.webp",
-        "2025/09/Mobile_1000x600_PURT-1.webp"
+        "2025/08/Mobile_1000x600_PURT.webp"
       ],
-      "alt": "A spilled glass of red wine staining a white carpet."
+      "alt": "Professional pet stain odor in Orange County"
     },
     {
       "slug": "commercial-carpet-cleaning",
-      "hero": "2025/08/Gemini_Generated_Image_73ea8c73ea8c73ea.jpg.webp",
-      "card": "2025/08/Gemini_Generated_Image_xdprpsxdprpsxdpr-scaled.jpg.webp",
-      "picker": "2025/08/Gemini_Generated_Image_xdprpsxdprpsxdpr.webp",
+      "hero": "generated/svc-commercial-carpet-cleaning-hero.png",
+      "card": "generated/svc-commercial-carpet-cleaning-card.png",
+      "picker": "2025/08/carpet-cleaning-services-1024x683-1.webp",
       "steps": [
-        "2025/08/profesisonal-carpet-cleaning-in-hotels-768x513-1.webp",
-        "2025/08/upscalemedia-transformed.webp",
-        "2025/09/image-16.webp",
-        "2025/09/Mother-and-child.webp"
+        "2025/08/do_I_need_to_vacuum_before_carpet_cleaning-1.webp",
+        "2025/08/Gemini_Generated_Image_73ea8c73ea8c73ea.jpg.webp",
+        "2025/08/Gemini_Generated_Image_xdprpsxdprpsxdpr-scaled.jpg.webp",
+        "2025/08/Gemini_Generated_Image_xdprpsxdprpsxdpr.webp"
       ],
-      "alt": "Clean, light-colored carpet in a living room with sunlight streaming through a large window."
+      "alt": "Professional commercial carpet cleaning in Orange County"
     },
     {
       "slug": "commercial-air-duct-cleaning",
-      "hero": "2025/08/Cleaning-Air-Ducts-478089373_2122x1415-1.webp",
-      "card": "2025/08/hvac-system-installation.jpg.webp",
+      "hero": "generated/svc-commercial-air-duct-cleaning-hero.png",
+      "card": "2025/08/air-duct-cleaning.jpg.webp",
       "picker": null,
       "steps": [
-        "2025/08/technician-vacuuming-a-dryer-vent.webp",
-        "2025/09/Air-vent-4.webp",
-        "2025/09/image-17.png.webp",
-        "2025/08/Cleaning-the-duct.webp"
+        "2025/08/Cleaning-Air-Ducts-478089373_2122x1415-2.webp",
+        "2025/08/Cleaning-Air-Ducts-478089373_2122x1415-1.webp",
+        "2025/08/hvac-system-installation.jpg.webp",
+        "2025/08/technician-vacuuming-a-dryer-vent.webp"
       ],
-      "alt": "Man cleaning an air duct with a brush tool."
+      "alt": "Professional commercial air duct cleaning in Orange County"
     },
     {
       "slug": "commercial",
-      "hero": "2025/09/TBCC-142-X3.jpg.webp",
+      "hero": "generated/svc-commercial-hero.png",
+      "card": "2025/08/profesisonal-carpet-cleaning-in-hotels-768x513-1.webp",
+      "picker": null,
+      "steps": [
+        "2025/08/upscalemedia-transformed.webp",
+        "2025/09/image-16.webp",
+        "2025/09/Mother-and-child.webp",
+        "2025/09/TBCC-142-X3.jpg.webp"
+      ],
+      "alt": "Professional commercial in Orange County"
+    },
+    {
+      "slug": "car-seat-cleaning",
+      "hero": "generated/svc-car-seat-cleaning-hero.png",
+      "card": "2025/09/How-to-Clean-Your-Cars-Interior-like-a-Pro-D-18-05-1024x640-1.jpg.webp",
+      "picker": null,
+      "steps": [
+        "2025/09/Car-Cleaning.webp",
+        "2025/10/IMG_2426-scaled.jpg.webp",
+        "2025/10/IMG_2426.webp",
+        "2026/07/Deep-extraction-mattress-cleaning-process-in-a-Tustin-bedroom.webp"
+      ],
+      "alt": "Professional car seat cleaning in Orange County"
+    },
+    {
+      "slug": "drape-cleaning",
+      "hero": "generated/svc-drape-cleaning-hero.png",
+      "card": "2025/08/How-to-Clean-Curtains-and-Drapes.webp",
+      "picker": null,
+      "steps": [
+        "2025/08/fabric-swatches-microfiber-cotton-leather.webp",
+        "2025/12/expertise-and-solutions-needed-to-keep-your-window-treatments-in-top-condition.webp",
+        "2025/08/Cleaning-a-sofa.webp",
+        "2025/08/imgi_50_AC9h4nobMC5PNAdxDpzk3sax_N9zeqUxof0MebIRToTDIRLKILnY16fxl4E-Yhhf3h6cD7CkButav1eHuuM2ve_6EcLdWBIYceUXsetijUw9Lpa0khCv4zfkx5pgROVe4g4zApKOxSts387-k-no.jpg.webp"
+      ],
+      "alt": "Professional drape cleaning in Orange County"
+    },
+    {
+      "slug": "outdoor-furniture-cleaning",
+      "hero": "generated/svc-outdoor-furniture-cleaning-hero.png",
+      "card": "2025/08/technician-scrubbing-patio-sofa.webp",
+      "picker": null,
+      "steps": [
+        "2025/10/PHOTO-2023-07-25-04-47-20.webp",
+        "2025/12/Outdoor-Furniture-Cleaning-Maintaining-Your-Outdoor-Spaces.webp",
+        "2025/12/The-Importance-of-Professional-Outdoor-Furniture-Cleaning.webp",
+        "2025/08/imgi_53_AC9h4nry2CM1LirVSudgf2jZW94UHsBUJRWwcpqBBDSBs295pOQZqGFtGNw9q_2W9ItAKB2grxt6muHuBCBbqPwFLRuFEFAD5WTeIc6niphh6luSW0AJkDwLATOodDHHKiDTer_Z0qORPws508-k-no.jpg.webp"
+      ],
+      "alt": "Professional outdoor furniture cleaning in Orange County"
+    },
+    {
+      "slug": "encapsulation-carpet-cleaning",
+      "hero": "generated/svc-encapsulation-carpet-cleaning-hero.png",
       "card": "2025/11/Drying-setup.webp",
       "picker": null,
       "steps": [
@@ -363,119 +415,67 @@
         "2026/02/grey-carpet.webp",
         "elementor/thumbs/IMG_1175-scaled-rnr6254fkhybhvpgjjfjhg9y1ejossqiznviaa9oy0.webp"
       ],
-      "alt": "Person cleaning a carpet with a professional cleaning machine."
-    },
-    {
-      "slug": "car-seat-cleaning",
-      "hero": "2025/09/How-to-Clean-Your-Cars-Interior-like-a-Pro-D-18-05-1024x640-1.jpg.webp",
-      "card": "2025/09/Car-Cleaning.webp",
-      "picker": null,
-      "steps": [
-        "2025/10/IMG_2426-scaled.jpg.webp",
-        "2025/10/IMG_2426.webp",
-        "2025/10/PHOTO-2023-07-25-03-53-48.jpg.webp",
-        "2025/10/Up-holstry.webp"
-      ],
-      "alt": "Person vacuuming a car seat with a red vacuum cleaner nozzle."
-    },
-    {
-      "slug": "drape-cleaning",
-      "hero": "2025/08/How-to-Clean-Curtains-and-Drapes.webp",
-      "card": "2025/12/Maintaining-Upholstery-in-Orange-County-Homes.webp",
-      "picker": null,
-      "steps": [
-        "2025/12/The-Importance-of-Professional-Outdoor-Furniture-Cleaning.webp",
-        "2026/01/IMG_6469-scaled.jpg.webp",
-        "2026/01/IMG_6469.webp",
-        "2026/02/curtain-cleaning-enhances-both-comfort-and-aesthetics.webp"
-      ],
-      "alt": "A person steaming teal curtains in a home setting."
-    },
-    {
-      "slug": "outdoor-furniture-cleaning",
-      "hero": "2025/08/technician-scrubbing-patio-sofa.webp",
-      "card": "2025/10/PHOTO-2023-07-25-04-47-20.webp",
-      "picker": null,
-      "steps": [
-        "2025/12/Outdoor-Furniture-Cleaning-Maintaining-Your-Outdoor-Spaces.webp",
-        "2026/02/drape-and-curtain-cleaning.webp",
-        "2026/02/upholstery.webp",
-        "2026/02/grey-sofa.webp"
-      ],
-      "alt": "A person in blue overalls cleans outdoor furniture cushions with a long-handled brush and soapy water."
-    },
-    {
-      "slug": "encapsulation-carpet-cleaning",
-      "hero": "2025/08/5-1-1.webp",
-      "card": "2025/08/AdobeStock_218970417-scaled.jpeg.webp",
-      "picker": null,
-      "steps": [
-        "2025/08/AdobeStock_218970417.webp",
-        "2025/08/istockphoto-462483006-640x640-1.jpg.webp",
-        "2025/08/profesisonal-carpet-cleaning-in-hotels-768x513-2.jpg.webp",
-        "2025/08/professional-carpet-cleaning-6f2c73cd.webp"
-      ],
-      "alt": "A person in blue uniform cleans a carpet with a professional cleaning machine."
+      "alt": "Professional encapsulation carpet cleaning in Orange County"
     },
     {
       "slug": "emergency-cleaning",
-      "hero": "2025/09/Carpet-Cleaning-3.webp",
-      "card": "2025/09/image-15.webp",
+      "hero": "generated/svc-emergency-cleaning-hero.png",
+      "card": "2025/08/water-restoration-1.jpeg.webp",
       "picker": null,
       "steps": [
-        "2025/09/The-Ultimate-Carpet-Cleaning-Methods.png.webp",
-        "2026/05/freshly-cleaned-carpet-inside-a-modern-Yorba-Linda-living-room.webp",
-        "elementor/thumbs/IMG_1175-scaled-rdnai2qkcgv7xeo6capa3fyuehfzver5m7vcnt22a8.webp",
-        "2025/09/7-Expert-Carpet-Care-Tips-in-Irvine.webp"
+        "2026/08/Professional-water-extraction-equipment-used-in-a-Lake-Forest-home.webp",
+        "2025/08/5-1-1.webp",
+        "2025/08/AdobeStock_218970417-scaled.jpeg.webp",
+        "2025/08/AdobeStock_218970417.webp"
       ],
-      "alt": "Vacuum cleaner head cleaning a teal carpet."
+      "alt": "Professional emergency cleaning in Orange County"
     },
     {
       "slug": "floor-cleaning",
-      "hero": "2025/11/Interior-Paint-3.webp",
-      "card": "2025/08/Vent-cleaning-outside.webp",
+      "hero": "generated/svc-floor-cleaning-hero.png",
+      "card": "2025/08/keith-misner-h0Vxgz5tyXA-unsplash-scaled-1.webp",
       "picker": null,
       "steps": [
-        "2025/09/Wooden-Furniture-Gentle-Care-for-Natural-Beauty.webp",
-        "2025/08/enjoying-a-clean-outdoor-living-space.webp",
-        "2025/08/Happy-Family.webp",
-        "2025/08/02.webp"
+        "2025/09/Cleaning-Travertine-Tiles.jpg.webp",
+        "2025/09/Floor-cleaning.webp",
+        "2025/09/Kids-playing.webp",
+        "2026/03/63d210a5ba26db22d1b9b472_Tile-and-Grout-Cleaning-in-San-Antonio.webp"
       ],
-      "alt": "Modern kitchen with white cabinets, granite countertops, and a stainless steel range hood."
+      "alt": "Professional floor cleaning in Orange County"
     }
   ],
   "cityExact": {
-    "carpet-cleaning/anaheim": "2025/09/71977656474__5322A204-D125-469E-BB22-39CE3B077808.webp",
-    "carpet-cleaning/costa-mesa": "2025/09/Carpet-Cleaner.webp",
-    "carpet-cleaning/stanton": "2025/09/Carpet-cleaning-2.webp",
-    "carpet-cleaning/coto-de-caza": "2025/09/Carpet-cleaning-method.webp",
-    "carpet-cleaning/dove-canyon": "2025/09/Cleaned-Carpet.webp",
-    "carpet-cleaning/east-irvine": "2025/09/image-4.webp",
-    "carpet-cleaning/aliso-viejo": "2025/10/IMG_1175-scaled.jpg.webp",
-    "carpet-cleaning/anaheim-hills": "2025/10/IMG_1613-scaled.jpg.webp",
-    "carpet-cleaning/buena-park": "2025/12/Benefits-of-Eco-Friendly-Carpet-Cleaning.webp",
-    "carpet-cleaning/corona-del-mar": "2026/02/cleaned-camel-colour-carpet.webp",
-    "carpet-cleaning/dana-point": "2026/03/DIY-Carpet-cleaning-mess.webp",
-    "carpet-cleaning/foothill-ranch": "2026/04/professional-cleaning-team-in-commercial-space.webp",
-    "carpet-cleaning/fountain-valley": "elementor/thumbs/IMG_1175-scaled-rdnai2qe96x1vdvi9qdfj1r17sdukmok78xhwsny4o.webp",
-    "carpet-cleaning/fullerton": "elementor/thumbs/IMG_1613-scaled-rdnaolq1pruqhwe65jy5ueg9q47m0ylgfk0vvyzix4.webp",
-    "carpet-cleaning/garden-grove": "elementor/thumbs/IMG_1613-scaled-rdnaolq45hflpwpmzdoi2k4zssmvch0w75786rxyzc.webp",
-    "carpet-cleaning/huntington-beach": "2025/10/technicians-inspecting-a-rug-in-a-cleaning-facility.webp",
-    "carpet-cleaning/irvine": "2025/08/rug-cleaning-pick-up-and-drop-off.png.webp",
-    "carpet-cleaning/ladera-ranch": "2025/09/Carpet-under-work.webp",
-    "carpet-cleaning/laguna-beach": "2025/09/Carpets-and-Indoor-Air-Quality.webp",
-    "carpet-cleaning/laguna-hills": "2025/09/image-5.png.webp",
-    "carpet-cleaning/santa-ana": "2025/09/kilim-rugs-kelim-rugs-collection-1_1024x591.webp",
-    "carpet-cleaning/seal-beach": "2025/10/area-rug.webp",
-    "carpet-cleaning/trabuco-canyon": "2025/12/Area-Rug-Cleaning-Keeping-Your-Floors-Fresh.webp",
-    "carpet-cleaning/tustin": "2025/12/Impact-of-Oriental-Rug-Cleaning-on-Orange-County-Cities.webp",
-    "carpet-cleaning/tustin-ranch": "2026/03/modern-sofa-with-fresh-fabric-texture.webp",
-    "carpet-cleaning/westminster": "2026/04/fresh-clean-couch-in-a-bright-living-space.webp",
-    "carpet-cleaning/woodbridge": "2026/04/stained-sofa-in-a-modern-living-room.webp",
-    "carpet-cleaning/yorba-linda": "2026/08/technician-inspecting-upholstery-fabric-before-professional-treatment.webp",
-    "air-duct-cleaning/aliso-viejo": "2025/08/Dirty-filter.webp",
-    "air-duct-cleaning/huntington-beach": "2025/09/Air-vent.webp",
-    "hardwood-floor-cleaning/aliso-viejo": "2025/09/image-6.png.webp"
+    "carpet-cleaning/anaheim": "2025/08/istockphoto-462483006-640x640-1.jpg.webp",
+    "carpet-cleaning/costa-mesa": "2025/09/Carpet-Cleaning-3.webp",
+    "carpet-cleaning/stanton": "2026/05/freshly-cleaned-carpet-inside-a-modern-Yorba-Linda-living-room.webp",
+    "carpet-cleaning/coto-de-caza": "elementor/thumbs/IMG_1175-scaled-rdnai2qkcgv7xeo6capa3fyuehfzver5m7vcnt22a8.webp",
+    "carpet-cleaning/dove-canyon": "2025/09/Carpet-Cleaner.webp",
+    "carpet-cleaning/east-irvine": "2025/09/Carpet-cleaning-2.webp",
+    "carpet-cleaning/aliso-viejo": "2025/09/Carpet-cleaning-method.webp",
+    "carpet-cleaning/anaheim-hills": "2025/09/Cleaned-Carpet.webp",
+    "carpet-cleaning/buena-park": "2025/09/image-4.webp",
+    "carpet-cleaning/corona-del-mar": "2025/10/IMG_1175.webp",
+    "carpet-cleaning/dana-point": "2025/10/IMG_1324.webp",
+    "carpet-cleaning/foothill-ranch": "2025/11/UV-light.webp",
+    "carpet-cleaning/fountain-valley": "2025/12/Impact-of-Seasonal-Changes-on-Carpet-Maintenance.webp",
+    "carpet-cleaning/fullerton": "2026/02/drape-and-curtain-cleaning.webp",
+    "carpet-cleaning/garden-grove": "2026/03/DIY-Carpet-cleaning-mess.webp",
+    "carpet-cleaning/huntington-beach": "2026/04/professional-cleaning-team-in-commercial-space.webp",
+    "carpet-cleaning/irvine": "elementor/thumbs/IMG_1175-scaled-rdnai2qe96x1vdvi9qdfj1r17sdukmok78xhwsny4o.webp",
+    "carpet-cleaning/ladera-ranch": "elementor/thumbs/IMG_1613-scaled-rdnaolq1pruqhwe65jy5ueg9q47m0ylgfk0vvyzix4.webp",
+    "carpet-cleaning/laguna-beach": "elementor/thumbs/IMG_1613-scaled-rdnaolq45hflpwpmzdoi2k4zssmvch0w75786rxyzc.webp",
+    "carpet-cleaning/laguna-hills": "2025/12/81Rysqi-lfL._AC_SL1500_.webp",
+    "carpet-cleaning/santa-ana": "2025/08/Cleaning-101-How-to-Clean-an-Area-Rug-787x519-1-2.jpg.webp",
+    "carpet-cleaning/seal-beach": "2025/08/Rug-Washing-5.webp",
+    "carpet-cleaning/trabuco-canyon": "2025/09/Carpet-under-work.webp",
+    "carpet-cleaning/tustin": "2025/09/Carpets-and-Indoor-Air-Quality.webp",
+    "carpet-cleaning/tustin-ranch": "2025/09/image-5.png.webp",
+    "carpet-cleaning/westminster": "2025/09/kilim-rugs-kelim-rugs-collection-1_1024x591.webp",
+    "carpet-cleaning/woodbridge": "2025/10/area-rug.webp",
+    "carpet-cleaning/yorba-linda": "2025/10/PHOTO-2023-07-25-03-53-48.jpg.webp",
+    "air-duct-cleaning/aliso-viejo": "2025/09/Air-vent-4.webp",
+    "air-duct-cleaning/huntington-beach": "2025/08/Dirty-filter.webp",
+    "hardwood-floor-cleaning/aliso-viejo": "2025/11/Interior-Paint-3.webp"
   },
   "cityLandmarks": {
     "anaheim": {
@@ -593,272 +593,272 @@
   },
   "cityJobs": {
     "carpet-cleaning/anaheim": [
+      "2025/08/profesisonal-carpet-cleaning-in-hotels-768x513-2.jpg.webp",
+      "2025/08/professional-carpet-cleaning-6f2c73cd.webp"
+    ],
+    "carpet-cleaning/costa-mesa": [
+      "2025/09/image-15.webp",
+      "2025/09/The-Ultimate-Carpet-Cleaning-Methods.png.webp"
+    ],
+    "carpet-cleaning/stanton": [
+      "2025/09/7-Expert-Carpet-Care-Tips-in-Irvine.webp",
+      "2025/09/71977656474__5322A204-D125-469E-BB22-39CE3B077808.webp"
+    ],
+    "carpet-cleaning/coto-de-caza": [
       "2025/09/71977656474__5322A204-D125-469E-BB22-39CE3B077808-scaled.jpg.webp",
       "2025/09/Carpet-after-stain-removal.webp"
     ],
-    "carpet-cleaning/costa-mesa": [
+    "carpet-cleaning/dove-canyon": [
       "2025/09/Carpet-Cleaning-1.webp",
       "2025/09/Carpet-cleaning-2-1.webp"
     ],
-    "carpet-cleaning/stanton": [
+    "carpet-cleaning/east-irvine": [
       "2025/09/Carpet-cleaning-2-2.webp",
       "2025/09/Carpet-Cleaning-Indoor-Cleaning.webp"
     ],
-    "carpet-cleaning/coto-de-caza": [
+    "carpet-cleaning/aliso-viejo": [
       "2025/09/Carpet-Cleaning.webp",
       "2025/09/Carpet-Cleaning-Tips.webp"
     ],
-    "carpet-cleaning/dove-canyon": [
+    "carpet-cleaning/anaheim-hills": [
       "2025/09/Cleaned-carpet-2.webp",
       "2025/09/image-1.png.webp"
     ],
-    "carpet-cleaning/east-irvine": [
-      "2025/09/Rug-Cleaning.webp",
-      "2025/10/IMG_1175.webp"
-    ],
-    "carpet-cleaning/aliso-viejo": [
-      "2025/10/IMG_1324-scaled.jpg.webp",
-      "2025/10/IMG_1324.webp"
-    ],
-    "carpet-cleaning/anaheim-hills": [
-      "2025/10/IMG_1613.webp",
-      "2025/11/UV-light.webp"
-    ],
     "carpet-cleaning/buena-park": [
-      "2025/12/How-to-Choose-an-Eco-Friendly-Carpet-Cleaning-Service.webp",
-      "2025/12/Impact-of-Seasonal-Changes-on-Carpet-Maintenance.webp"
+      "2025/09/Mobile_1000x600_PURT-1.webp",
+      "2025/09/Rug-Cleaning.webp"
     ],
     "carpet-cleaning/corona-del-mar": [
+      "2025/10/IMG_1175-scaled.jpg.webp",
+      "2025/10/IMG_1324-scaled.jpg.webp"
+    ],
+    "carpet-cleaning/dana-point": [
+      "2025/10/IMG_1613-scaled.jpg.webp",
+      "2025/10/IMG_1613.webp"
+    ],
+    "carpet-cleaning/foothill-ranch": [
+      "2025/12/Benefits-of-Eco-Friendly-Carpet-Cleaning.webp",
+      "2025/12/How-to-Choose-an-Eco-Friendly-Carpet-Cleaning-Service.webp"
+    ],
+    "carpet-cleaning/fountain-valley": [
+      "2026/02/cleaned-camel-colour-carpet.webp",
+      "2026/02/curtain-cleaning-enhances-both-comfort-and-aesthetics.webp"
+    ],
+    "carpet-cleaning/fullerton": [
       "2026/02/Water-damage-can-happen-fastthat-mold.webp",
       "2026/03/carpet-with-visible-stains-before-professional-cleaning.webp"
     ],
-    "carpet-cleaning/dana-point": [
+    "carpet-cleaning/garden-grove": [
       "2026/03/technician-performing.webp",
       "2026/04/clean-fresh-office-lobby.webp"
     ],
-    "carpet-cleaning/foothill-ranch": [
+    "carpet-cleaning/huntington-beach": [
       "2026/05/professional-eco-friendly-carpet-cleaning-technician-removing-stains.webp",
       "elementor/thumbs/IMG_1175-scaled-rdnai2qbthc6ndk1fwn3aw2b53yl9494fnr5lzpi2g.webp"
     ],
-    "carpet-cleaning/fountain-valley": [
+    "carpet-cleaning/irvine": [
       "elementor/thumbs/IMG_1175-scaled-rdnai2qhwracpecpigyxvaa4bt0qjwbpump0d03m80.webp",
       "elementor/thumbs/IMG_1175-scaled-rdnai2qfh1phhe18on8ln4le94lh8dwa31io27565s.webp"
     ],
-    "carpet-cleaning/fullerton": [
+    "carpet-cleaning/ladera-ranch": [
       "elementor/thumbs/IMG_1613-scaled-rdnaolq2xmn63wjwkgtbyhamrgf8opt6bcm21dgqy8.webp",
       "elementor/thumbs/IMG_1613-scaled-rnr5frks3c40q2dama3fqoe9zj1r7y4a4pdk5jxb3k.webp"
     ],
-    "carpet-cleaning/garden-grove": [
-      "2025/09/IMG_2137.webp",
-      "2025/09/persian-rug-repair.jpg.webp"
+    "carpet-cleaning/laguna-beach": [
+      "2025/09/deep-cleaning-a-Persian-rug.png.webp",
+      "2025/09/IMG_2137.webp"
     ],
-    "carpet-cleaning/huntington-beach": [
+    "carpet-cleaning/laguna-hills": [
+      "2025/09/persian-rug-repair.jpg.webp",
+      "2025/10/technicians-inspecting-a-rug-in-a-cleaning-facility.webp"
+    ],
+    "carpet-cleaning/santa-ana": [
       "2026/06/carpet-protector-spray-pexels.jpg.webp",
-      "2025/08/Cleaning-101-How-to-Clean-an-Area-Rug-787x519-1-2.jpg.webp"
+      "2025/08/rug-cleaning-pick-up-and-drop-off.png.webp"
     ],
-    "carpet-cleaning/irvine": [
-      "2025/08/Rug-Washing-5.webp",
+    "carpet-cleaning/seal-beach": [
+      "2025/09/20181120_image-website-upholstery.webp",
       "2025/09/Carpet-under-work-1.webp"
     ],
-    "carpet-cleaning/ladera-ranch": [
+    "carpet-cleaning/trabuco-canyon": [
       "2025/09/Carpets-and-Indoor-Air-Quality-1.webp",
       "2025/09/Carpets-and-Indoor-Air-Quality-2.webp"
     ],
-    "carpet-cleaning/laguna-beach": [
+    "carpet-cleaning/tustin": [
       "2025/09/Cleaning-Area-Rug.webp",
       "2025/09/image-10.png.webp"
     ],
-    "carpet-cleaning/laguna-hills": [
+    "carpet-cleaning/tustin-ranch": [
       "2025/09/image-8.png.webp",
       "2025/09/image.png.webp"
     ],
-    "carpet-cleaning/santa-ana": [
+    "carpet-cleaning/westminster": [
       "2025/09/PHOTO-2023-07-25-03-56-41.webp",
       "2025/10/area-rug-scaled.jpg.webp"
     ],
-    "carpet-cleaning/seal-beach": [
+    "carpet-cleaning/woodbridge": [
       "2025/10/IMG_1595-scaled.jpg.webp",
       "2025/10/IMG_1595.webp"
     ],
-    "carpet-cleaning/trabuco-canyon": [
+    "carpet-cleaning/yorba-linda": [
       "2025/10/IMG_2068-scaled.jpg.webp",
       "2025/10/IMG_2068.webp"
     ],
-    "carpet-cleaning/tustin": [
-      "2025/12/solutions-needed-to-keep-your-area-rugs-in-top-condition.webp",
-      "2025/12/The-Area-Rug-Cleaning-Process.webp"
-    ],
-    "carpet-cleaning/tustin-ranch": [
-      "2026/01/area-rug-cleaning-service-by-carpet-and-duct.webp",
-      "2026/03/upholstery-fabric-texture-showing-clean-fibers.webp"
-    ],
-    "carpet-cleaning/westminster": [
-      "2026/04/restored-rug-placed-in-a-living-room.webp",
-      "2026/04/technician-washing-a-rug-in-a-controlled-environment.webp"
-    ],
-    "carpet-cleaning/woodbridge": [
-      "2026/05/Cleaned-Sectionals-in-home.webp",
-      "2026/05/Sofas-need-cleaning.webp"
-    ],
-    "carpet-cleaning/yorba-linda": [
-      "2025/08/07.jpg.webp",
-      "2025/08/30.webp"
-    ],
     "air-duct-cleaning/aliso-viejo": [
+      "2025/09/image-17.png.webp",
+      "2025/08/Cleaning-the-duct.webp"
+    ],
+    "air-duct-cleaning/huntington-beach": [
       "2025/09/Air-duct.webp",
       "2025/09/Air-vent-3.webp"
     ],
-    "air-duct-cleaning/huntington-beach": [
-      "2025/09/Air-vent-1.webp",
-      "2025/09/Cleaning-Ducts.webp"
-    ],
     "hardwood-floor-cleaning/aliso-viejo": [
-      "2025/08/63501f71983c50987a6248ed_DSC09865.webp",
-      "2025/09/018bdae5-2ee5-4c9e-92cc-6ba197d4b2d3_DSC03080-01.webp"
+      "2025/08/Vent-cleaning-outside.webp",
+      "2025/09/Wooden-Furniture-Gentle-Care-for-Natural-Beauty.webp"
     ]
   },
   "posts": {
-    "6-rug-cleaning-secrets-that-save-you-money": "2025/09/4thImage_1224678e-0358-47d1-9f57-d843bd3784a9.webp",
-    "7-easy-carpet-hacks-to-remove-pet-hair": "2025/09/image-11.webp",
-    "7-powerful-tips-cleaning-outdoor-furniture": "2026/06/carpet-protector-spray-application.webp",
-    "air-duct-and-vent-cleaning-in-irvine": "2025/09/image-19.webp",
-    "air-duct-cleaning-does-it-help-allergies": "2025/09/image-3.png.webp",
-    "air-duct-cleaning-irvine-guide": "2025/09/image-21.webp",
-    "air-duct-cleaning-tustin-ca": "2026/02/clean-polished-vent-cover-installed.webp",
-    "best-carpet-cleaning-method-irvine": "2026/06/carpet-protector-spray-service.webp",
-    "best-carpet-cleaning-services-aliso-viejo": "2025/08/upholstery-fabrics-with-care-and-precision.webp",
-    "car-rv-cleaning-keep-your-ride-fresh": "2025/09/can-on-carpet-1.webp",
-    "carpet-and-duct-cleaning-orange-county-summer": "2026/02/dusty-air-vent-before-cleaning.webp",
-    "carpet-care-tips-irvine": "2025/09/image-7.png.webp",
-    "carpet-cleaning-air-quality-lake-forest-ca": "2026/03/technician-cleaning-HVAC-air-ducts-with-professional-vacuum-equipment.webp",
-    "carpet-cleaning-benefits-for-pet-owners": "2025/09/image-9.webp",
-    "carpet-cleaning-lake-forest-ca": "2025/09/sleeping-cat.webp",
-    "carpet-cleaning-lake-forest-stain-removal": "2025/09/sleeping-cat-1.webp",
-    "carpet-duct-cleaning-irvine-guide": "2026/04/professional-dryer-vent-cleaning.webp",
-    "corona-area-rug-cleaning-and-restoration": "2026/05/Clean-HVAC-vents-after-duct-sanitizing.webp",
-    "curtain-cleaning-tips-for-lasting-elegance": "2026/05/Professional-HVAC-duct-sanitizing-service.webp",
-    "delicate-carpet-cleaning-service": "2026/07/cleaning-residential-air-ducts-in-a-Tustin-home.webp",
-    "dryer-vent-cleaning-irvine-ca": "bh/img-007.webp",
-    "expert-guide-removing-common-carpet-stains": "bh/img-003.webp",
-    "how-often-should-you-clean-air-ducts": "bh/img-001.webp",
-    "importance-of-fast-water-damage-restoration": "bh/img-004.webp",
-    "improved-air-quality-duct-cleaning-tustin": "bh/img-008.webp",
-    "is-your-air-duct-dirty-key-signs-to-watch": "bh/img-006.webp",
-    "lake-forest-water-restoration-near-me": "bh/img-005.webp",
-    "local-vinyl-floor-cleaning-in-tustin": "bh/img-002.webp",
-    "oriental-rug-cleaning-vital-for-longevity": "bh/img-010.jpg",
-    "premium-sofa-and-couch-cleaning-yorba-linda": "bh/img-011.jpg",
-    "pro-cleaning-extends-the-life-of-your-rugs": "bh/img-012.jpg",
-    "pro-upholstery-cleaning-extends-life": "bh/img-016.jpg",
-    "professional-air-duct-cleaning-anaheim-ca": "bh/img-017.jpg",
-    "professional-mattress-cleaning-in-tustin": "bh/img-018.jpg",
-    "quality-hardwood-floor-cleaning-buena-park": "bh/img-019.jpg",
-    "regular-cleaning-essential-for-health-home": "bh/img-026.jpg",
-    "reliable-dryer-vent-cleaning-corona-del-mar": "bh/img-025.jpg",
-    "residential-fabric-and-upholstery-protector": "bh/img-023.jpg",
-    "revitalize-your-home-spring-cleaning": "bh/img-028.jpg",
-    "top-rated-upholstery-cleaning-anaheim-hills": "bh/img-027.jpg",
-    "top-tile-grout-cleaning-service-lake-forest": "bh/img-032.jpg",
-    "tustin-oriental-rug-care-you-need-to-know": "bh/img-035.jpg",
-    "water-damage-restoration-in-irvine-ca": "bh/img-036.jpg",
-    "your-home-needs-carpet-protector-treatments": "bh/img-038.webp"
+    "6-rug-cleaning-secrets-that-save-you-money": "2025/10/Up-holstry.webp",
+    "7-easy-carpet-hacks-to-remove-pet-hair": "2025/12/Maintaining-Upholstery-in-Orange-County-Homes.webp",
+    "7-powerful-tips-cleaning-outdoor-furniture": "2026/01/IMG_6469-scaled.jpg.webp",
+    "air-duct-and-vent-cleaning-in-irvine": "2025/09/Air-vent.webp",
+    "air-duct-cleaning-does-it-help-allergies": "2025/09/Air-vent-1.webp",
+    "air-duct-cleaning-irvine-guide": "2025/09/Cleaning-Ducts.webp",
+    "air-duct-cleaning-tustin-ca": "2025/09/image-19.webp",
+    "best-carpet-cleaning-method-irvine": "2026/01/IMG_6469.webp",
+    "best-carpet-cleaning-services-aliso-viejo": "2026/02/upholstery.webp",
+    "car-rv-cleaning-keep-your-ride-fresh": "2026/02/grey-sofa.webp",
+    "carpet-and-duct-cleaning-orange-county-summer": "2025/09/image-3.png.webp",
+    "carpet-care-tips-irvine": "2026/03/modern-sofa-with-fresh-fabric-texture.webp",
+    "carpet-cleaning-air-quality-lake-forest-ca": "2025/09/image-21.webp",
+    "carpet-cleaning-benefits-for-pet-owners": "2026/03/upholstery-fabric-texture-showing-clean-fibers.webp",
+    "carpet-cleaning-lake-forest-ca": "2026/04/fresh-clean-couch-in-a-bright-living-space.webp",
+    "carpet-cleaning-lake-forest-stain-removal": "2026/04/stained-sofa-in-a-modern-living-room.webp",
+    "carpet-duct-cleaning-irvine-guide": "2026/02/clean-polished-vent-cover-installed.webp",
+    "corona-area-rug-cleaning-and-restoration": "2025/08/enjoying-a-clean-outdoor-living-space.webp",
+    "curtain-cleaning-tips-for-lasting-elegance": "2026/05/Cleaned-Sectionals-in-home.webp",
+    "delicate-carpet-cleaning-service": "2026/05/Sofas-need-cleaning.webp",
+    "dryer-vent-cleaning-irvine-ca": "2026/04/clogged-dryer-vent.webp",
+    "expert-guide-removing-common-carpet-stains": "2026/08/technician-inspecting-upholstery-fabric-before-professional-treatment.webp",
+    "how-often-should-you-clean-air-ducts": "2026/02/dusty-air-vent-before-cleaning.webp",
+    "importance-of-fast-water-damage-restoration": "2025/08/Happy-Family.webp",
+    "improved-air-quality-duct-cleaning-tustin": "2026/03/technician-cleaning-HVAC-air-ducts-with-professional-vacuum-equipment.webp",
+    "is-your-air-duct-dirty-key-signs-to-watch": "2026/04/professional-dryer-vent-cleaning.webp",
+    "lake-forest-water-restoration-near-me": "2025/08/02.webp",
+    "local-vinyl-floor-cleaning-in-tustin": "2025/08/07.jpg.webp",
+    "oriental-rug-cleaning-vital-for-longevity": "2025/12/Area-Rug-Cleaning-Keeping-Your-Floors-Fresh.webp",
+    "premium-sofa-and-couch-cleaning-yorba-linda": "2025/08/30.webp",
+    "pro-cleaning-extends-the-life-of-your-rugs": "2025/12/Impact-of-Oriental-Rug-Cleaning-on-Orange-County-Cities.webp",
+    "pro-upholstery-cleaning-extends-life": "2025/09/image-6.png.webp",
+    "professional-air-duct-cleaning-anaheim-ca": "2026/05/Clean-HVAC-vents-after-duct-sanitizing.webp",
+    "professional-mattress-cleaning-in-tustin": "2025/08/63501f71983c50987a6248ed_DSC09865.webp",
+    "quality-hardwood-floor-cleaning-buena-park": "2025/09/018bdae5-2ee5-4c9e-92cc-6ba197d4b2d3_DSC03080-01.webp",
+    "regular-cleaning-essential-for-health-home": "2025/09/4thImage_1224678e-0358-47d1-9f57-d843bd3784a9.webp",
+    "reliable-dryer-vent-cleaning-corona-del-mar": "2026/06/Professional-dryer-vent-lint-removal-service-in-Tustin-home.webp",
+    "residential-fabric-and-upholstery-protector": "2025/09/image-11.webp",
+    "revitalize-your-home-spring-cleaning": "2025/12/solutions-needed-to-keep-your-area-rugs-in-top-condition.webp",
+    "top-rated-upholstery-cleaning-anaheim-hills": "2026/06/carpet-protector-spray-application.webp",
+    "top-tile-grout-cleaning-service-lake-forest": "2026/06/carpet-protector-spray-service.webp",
+    "tustin-oriental-rug-care-you-need-to-know": "2025/12/The-Area-Rug-Cleaning-Process.webp",
+    "water-damage-restoration-in-irvine-ca": "2025/08/upholstery-fabrics-with-care-and-precision.webp",
+    "your-home-needs-carpet-protector-treatments": "2025/09/can-on-carpet-1.webp"
   },
   "gallery": [
     {
       "key": "job-01",
+      "src": "2026/01/area-rug-cleaning-service-by-carpet-and-duct.webp",
+      "w": 800,
+      "alt": "Person vacuuming an ornate area rug with blue shoe covers and a vacuum hose."
+    },
+    {
+      "key": "job-02",
+      "src": "2026/04/restored-rug-placed-in-a-living-room.webp",
+      "w": 800,
+      "alt": "A modern red, black, and gray area rug in a living room with a fireplace and sofa."
+    },
+    {
+      "key": "job-03",
+      "src": "2026/04/technician-washing-a-rug-in-a-controlled-environment.webp",
+      "w": 800,
+      "alt": "A person cleans an oriental rug with a vacuum attachment and a blue hose nearby."
+    },
+    {
+      "key": "job-04",
+      "src": "2026/05/Professional-HVAC-duct-sanitizing-service.webp",
+      "w": 800,
+      "alt": "Red hose inserted into a floor vent for air duct cleaning."
+    },
+    {
+      "key": "job-05",
+      "src": "2026/07/cleaning-residential-air-ducts-in-a-Tustin-home.webp",
+      "w": 800,
+      "alt": "Close-up of a dirty air duct opening with visible dust and grime."
+    },
+    {
+      "key": "job-06",
+      "src": "bh/img-007.webp",
+      "w": 800,
+      "alt": "Close-up view inside a dirty air duct, showing accumulated dust and debris."
+    },
+    {
+      "key": "job-07",
+      "src": "bh/img-003.webp",
+      "w": 800,
+      "alt": "Close-up of wires inside a dusty air duct."
+    },
+    {
+      "key": "job-08",
+      "src": "bh/img-001.webp",
+      "w": 800,
+      "alt": "A clogged air duct filled with dust and debris."
+    },
+    {
+      "key": "job-09",
+      "src": "bh/img-004.webp",
+      "w": 800,
+      "alt": "Close-up view inside a dusty air duct with wires."
+    },
+    {
+      "key": "job-10",
+      "src": "bh/img-008.webp",
+      "w": 800,
+      "alt": "View inside a dusty air duct with wooden and concrete walls."
+    },
+    {
+      "key": "job-11",
+      "src": "bh/img-006.webp",
+      "w": 800,
+      "alt": "Interior of a dirty air duct with visible dust and debris"
+    },
+    {
+      "key": "job-12",
+      "src": "bh/img-005.webp",
+      "w": 800,
+      "alt": "A clogged air duct filled with a large amount of dirt and debris."
+    },
+    {
+      "key": "job-13",
+      "src": "bh/img-002.webp",
+      "w": 800,
+      "alt": "Interior view of a wooden air duct with a concrete floor."
+    },
+    {
+      "key": "job-14",
       "src": "bh/img-009.jpg",
       "w": 800,
       "alt": "Inside of a dirty air duct filled with debris and dust."
     },
     {
-      "key": "job-02",
-      "src": "bh/img-015.jpg",
-      "w": 800,
-      "alt": "Close-up view inside a dusty air duct with visible debris on the surfaces."
-    },
-    {
-      "key": "job-03",
-      "src": "bh/img-013.jpg",
-      "w": 800,
-      "alt": "Close-up view inside a dirty air duct with visible dust and debris."
-    },
-    {
-      "key": "job-04",
-      "src": "bh/img-020.jpg",
-      "w": 800,
-      "alt": "Inside view of a wooden air duct, showing the passage leading into darkness."
-    },
-    {
-      "key": "job-05",
-      "src": "bh/img-021.jpg",
-      "w": 800,
-      "alt": "Close-up view inside a dirty air duct with thick dust buildup"
-    },
-    {
-      "key": "job-06",
-      "src": "bh/img-022.jpg",
-      "w": 800,
-      "alt": "Inside view of a dirty air duct with a dark opening."
-    },
-    {
-      "key": "job-07",
-      "src": "bh/img-024.jpg",
-      "w": 800,
-      "alt": "Interior view of a wooden air duct with a concrete floor below."
-    },
-    {
-      "key": "job-08",
-      "src": "bh/img-033.jpg",
-      "w": 800,
-      "alt": "Inside of a dirty air duct with visible dust and debris."
-    },
-    {
-      "key": "job-09",
-      "src": "bh/img-029.jpg",
-      "w": 800,
-      "alt": "Inside of a dirty air duct with debris and dust accumulated"
-    },
-    {
-      "key": "job-10",
-      "src": "bh/img-030.jpg",
-      "w": 800,
-      "alt": "Inside of a dirty air duct with visible dust and grime on the walls and floor."
-    },
-    {
-      "key": "job-11",
-      "src": "bh/img-034.jpg",
-      "w": 800,
-      "alt": "Inside view of a dark air duct with some debris visible"
-    },
-    {
-      "key": "job-12",
-      "src": "bh/img-037.webp",
-      "w": 800,
-      "alt": "Close-up view inside a dusty air duct with wooden framing."
-    },
-    {
-      "key": "job-13",
-      "src": "bh/img-039.webp",
-      "w": 800,
-      "alt": "Close-up view inside a dusty air duct, showing rough textured walls leading into darkness."
-    },
-    {
-      "key": "job-14",
-      "src": "bh/img-040.webp",
-      "w": 800,
-      "alt": "View inside a dark air duct with wooden and metallic walls."
-    },
-    {
       "key": "job-15",
-      "src": "bh/img-041.webp",
+      "src": "bh/img-010.jpg",
       "w": 800,
-      "alt": "Inside of a dirty air duct filled with debris and dust."
+      "alt": "Inside view of a wooden air duct with a flexible metal pipe."
     },
     {
       "key": "job-16",
-      "src": "bh/img-043.webp",
+      "src": "bh/img-011.jpg",
       "w": 800,
-      "alt": "Close-up view inside a dusty air duct, showing accumulated debris."
+      "alt": "View inside a dusty air duct with wooden walls."
     }
   ]
 }

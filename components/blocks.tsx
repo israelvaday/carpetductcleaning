@@ -36,7 +36,7 @@ export function ImageHero({
         sizes="100vw"
         className="-z-10 object-cover"
       />
-      <div className="absolute inset-0 -z-10 bg-linear-to-r from-navy via-navy/90 to-navy/50" />
+      <div className="absolute inset-0 -z-10 bg-linear-to-r from-navy via-navy/80 to-navy/25" />
       <div className="container-page py-14 md:py-20">
         {breadcrumb ? (
           <div className="mb-6">

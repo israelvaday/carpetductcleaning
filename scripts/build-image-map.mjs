@@ -203,9 +203,23 @@ const MONEY_SERVICES = new Set([
 ]);
 const serviceSlugs = URL_MAP.serviceHubs.map((h) => h.route.replace(/^\//, ""));
 const services = [];
+function generatedShot(slug, role) {
+  const name = `svc-${slug}-${role}.png`;
+  if (!existsSync(join(ROOT, "media/generated", name))) return null;
+  const src = `generated/${name}`;
+  used.add(srcToKey(src));
+  return src;
+}
+
 for (const slug of serviceSlugs) {
-  const hero = pick({ service: slug, wantLandscape: true, kinds: ["work", "equipment", "result"] });
-  const card = pick({ service: slug, wantLandscape: true, kinds: ["work", "result", "equipment"] });
+  const heroSrc = generatedShot(slug, "hero");
+  const cardSrc = generatedShot(slug, "card");
+  const hero = heroSrc
+    ? { src: heroSrc, alt: `Professional ${slug.replaceAll("-", " ")} in Orange County` }
+    : pick({ service: slug, wantLandscape: true, kinds: ["work", "equipment", "result"] });
+  const card = cardSrc
+    ? { src: cardSrc, alt: hero.alt }
+    : pick({ service: slug, wantLandscape: true, kinds: ["work", "result", "equipment"] });
   const picker = MONEY_SERVICES.has(slug)
     ? pick({ service: slug, wantLandscape: true, kinds: ["work", "result", "equipment"] })
     : null;
