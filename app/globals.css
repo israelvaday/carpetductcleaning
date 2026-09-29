@@ -198,6 +198,17 @@ summary::-webkit-details-marker {
   }
 }
 
+/* Process wizard, phone: the photo follows the step that is playing. */
+@media (max-width: 1023px) {
+  .process-step,
+  .process-photo {
+    order: var(--step-order);
+  }
+  .process-controls {
+    order: 99;
+  }
+}
+
 /* Process wizard: each stage slides in, then the photo eases forward. */
 @keyframes process-enter-next {
   from {

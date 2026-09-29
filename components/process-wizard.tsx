@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import Image from "next/image";
 import { CalendarCheck, ChevronLeft, ChevronRight, ClipboardCheck, Sparkles, Wind } from "lucide-react";
 import { img } from "@/lib/images";
@@ -110,9 +110,49 @@ export function ProcessWizard({ steps = DEFAULT_STEPS }: { steps?: ProcessStep[]
   const ActiveIcon = ICONS[step.icon];
   const played = reduce ? 1 : progress;
 
+  const photo = (
+    <PhotoFrame ratio="photo" rounded="panel" className="aspect-video shadow-lift lg:aspect-4/3">
+      {steps.map((s, i) => (
+        <div
+          key={s.title}
+          className={cn(
+            "absolute inset-0 transition-opacity duration-700",
+            i === active ? "z-10 opacity-100" : "pointer-events-none z-0 opacity-0",
+            i === active && !reduce && (dir > 0 ? "process-enter-next" : "process-enter-prev"),
+          )}
+        >
+          <Image
+            src={s.image}
+            alt={s.alt}
+            fill
+            sizes="(min-width: 1024px) 40rem, 100vw"
+            className="object-cover"
+            style={{
+              transform: !reduce && i === active ? `scale(${1 + progress * 0.08})` : "scale(1)",
+              transition: i === active ? "none" : "transform 700ms ease",
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />
+        </div>
+      ))}
+      <div className="absolute inset-x-0 top-0 z-20 h-1 bg-white/25" aria-hidden>
+        <div className="h-full bg-gold" style={{ width: `${played * 100}%` }} />
+      </div>
+      <div key={step.title} className="process-caption absolute bottom-0 left-0 right-0 z-20 flex items-center gap-3 p-5">
+        <span className="flex size-10 items-center justify-center rounded-xl bg-white/95 text-brand shadow-card">
+          <ActiveIcon className="size-5" />
+        </span>
+        <div>
+          <p className="text-xs font-bold uppercase tracking-wider text-white/70">Step {active + 1}</p>
+          <p className="font-semibold text-white">{step.title}</p>
+        </div>
+      </div>
+    </PhotoFrame>
+  );
+
   return (
     <div
-      className="grid items-center gap-8 lg:grid-cols-[1fr_1.1fr] lg:gap-12"
+      className="flex flex-col gap-3 lg:grid lg:grid-cols-[1fr_1.1fr] lg:items-center lg:gap-12"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -120,14 +160,14 @@ export function ProcessWizard({ steps = DEFAULT_STEPS }: { steps?: ProcessStep[]
         {`Step ${active + 1} of ${steps.length}: ${step.title}`}
       </p>
 
-      <div>
-        <ol className="space-y-3">
+      <div className="contents lg:block">
+        <ol className="contents lg:block lg:space-y-3">
           {steps.map((s, i) => {
             const isActive = i === active;
             const StepIcon = ICONS[s.icon];
             const fill = i < active ? 100 : isActive ? played * 100 : 0;
             return (
-              <li key={s.title}>
+              <li key={s.title} className="process-step" style={{ "--step-order": i } as CSSProperties}>
                 <button
                   type="button"
                   onClick={() => go(i)}
@@ -175,7 +215,7 @@ export function ProcessWizard({ steps = DEFAULT_STEPS }: { steps?: ProcessStep[]
           })}
         </ol>
 
-        <div className="mt-6 flex items-center gap-4">
+        <div className="process-controls mt-3 flex items-center gap-4 lg:mt-6">
           <div className="flex gap-2">
             <button
               type="button"
@@ -213,44 +253,8 @@ export function ProcessWizard({ steps = DEFAULT_STEPS }: { steps?: ProcessStep[]
         </div>
       </div>
 
-      <div className="relative">
-        <PhotoFrame ratio="photo" rounded="panel" className="shadow-lift">
-          {steps.map((s, i) => (
-            <div
-              key={s.title}
-              className={cn(
-                "absolute inset-0 transition-opacity duration-700",
-                i === active ? "z-10 opacity-100" : "pointer-events-none z-0 opacity-0",
-                i === active && !reduce && (dir > 0 ? "process-enter-next" : "process-enter-prev"),
-              )}
-            >
-              <Image
-                src={s.image}
-                alt={s.alt}
-                fill
-                sizes="(min-width: 1024px) 40rem, 100vw"
-                className="object-cover"
-                style={{
-                  transform: !reduce && i === active ? `scale(${1 + progress * 0.08})` : "scale(1)",
-                  transition: i === active ? "none" : "transform 700ms ease",
-                }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />
-            </div>
-          ))}
-          <div className="absolute inset-x-0 top-0 z-20 h-1 bg-white/25" aria-hidden>
-            <div className="h-full bg-gold" style={{ width: `${played * 100}%` }} />
-          </div>
-          <div key={step.title} className="process-caption absolute bottom-0 left-0 right-0 z-20 flex items-center gap-3 p-5">
-            <span className="flex size-10 items-center justify-center rounded-xl bg-white/95 text-brand shadow-card">
-              <ActiveIcon className="size-5" />
-            </span>
-            <div>
-              <p className="text-xs font-bold uppercase tracking-wider text-white/70">Step {active + 1}</p>
-              <p className="font-semibold text-white">{step.title}</p>
-            </div>
-          </div>
-        </PhotoFrame>
+      <div className="process-photo" style={{ "--step-order": active } as CSSProperties}>
+        {photo}
       </div>
     </div>
   );

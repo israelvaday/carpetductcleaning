@@ -65,13 +65,11 @@ const serviceBySlug = new Map((map.services as unknown as ServiceEntry[]).map((s
 
 export type ServiceImageRole = "hero" | "card" | "picker";
 
-// Each role returns a DIFFERENT photo — a service's hub hero, homepage card,
-// related-services card, and quote-picker tile never share an image.
+// Quote tiles reuse the generated category photo (usually the homepage card)
+// so each guided-quote option shows that service, not a repeated stock shot.
 export function serviceImage(slug: string, role: ServiceImageRole = "hero"): Img {
   const svc = serviceBySlug.get(slug);
   if (!svc) return img("hero-home");
-  // picker falls back to card (both render on the homepage), never to hero —
-  // the hero belongs to the service hub page alone.
   const src = svc[role] || svc.card || svc.hero;
   return fromSrc(src, role === "hero" ? "full" : "sm");
 }

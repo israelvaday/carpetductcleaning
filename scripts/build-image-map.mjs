@@ -1,10 +1,11 @@
 /**
  * Build content/image-map.json from the vision tags in content/photo-tags.json.
  *
- * HARD RULE: no photo appears in two places. Every slot — service hero, service
- * card, related-services card, quote-picker tile, city hero, city job photos,
- * blog post image, gallery entry — gets its own unique photo, enforced by one
- * global used-set.
+ * HARD RULE: no photo appears in two places, except the guided-quote tile,
+ * which reuses that service's generated category photo so the option matches
+ * the service. Every other slot — service hero, service card, city hero, city
+ * job photos, blog post image, gallery entry — gets its own unique photo,
+ * enforced by one global used-set.
  *
  * Schema:
  *   assets:   [{ key, src, w, alt }]              brand/heroes/process/truck
@@ -204,10 +205,11 @@ for (const [, src] of CURATED_GALLERY) used.add(srcToKey(src));
 
 // --- Services: unique photo per role ----------------------------------------
 // hero = hub page, card = homepage grid, steps = 4 process-wizard panels on
-// the hub. picker = quote-wizard tile, but only for the 8 money services the
-// homepage wizard shows (the library can't sustain a picker for all 25).
-// Must match SERVICES in components/quote-wizard.tsx exactly — any service the
-// wizard can render needs its own picker photo or it falls back to the hero.
+// the hub. picker = quote-wizard tile for the services the homepage wizard
+// shows. The tagged library repeats the same sofa and swaps residential and
+// commercial carpet, so the quote tile uses that service's generated category
+// photo (card, or the hero when there is no card) instead of a stock pick.
+// Must match QUOTE_SERVICES in lib/quote-services.ts.
 const MONEY_SERVICES = new Set([
   "carpet-cleaning",
   "air-duct-cleaning",
@@ -238,8 +240,9 @@ for (const slug of serviceSlugs) {
   const card = cardSrc
     ? { src: cardSrc, alt: hero.alt }
     : pick({ service: slug, wantLandscape: true, kinds: ["work", "result", "equipment"] });
-  const picker = MONEY_SERVICES.has(slug)
-    ? pick({ service: slug, wantLandscape: true, kinds: ["work", "result", "equipment"] })
+  const pickerSrc = MONEY_SERVICES.has(slug) ? cardSrc || heroSrc : null;
+  const picker = pickerSrc
+    ? { src: pickerSrc, alt: `Professional ${slug.replaceAll("-", " ")} in Orange County` }
     : null;
   const steps = [];
   for (let i = 0; i < 4; i++) {

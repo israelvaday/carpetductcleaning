@@ -122,7 +122,7 @@
       "slug": "carpet-cleaning",
       "hero": "generated/svc-carpet-cleaning-hero.png",
       "card": "generated/svc-carpet-cleaning-card.png",
-      "picker": "2025/08/60f59cd96abb888eedddac3e_commercial-carpet-cleaning.webp",
+      "picker": "generated/svc-carpet-cleaning-card.png",
       "steps": [
         "2025/08/661505527c3fac42a06cf88f_5ff81bc5d58a656a39773b42_image-1-1.webp",
         "2025/08/66325db79e9398cb87c2e9dd_hero-home-royal-carpet.webp",
@@ -135,7 +135,7 @@
       "slug": "air-duct-cleaning",
       "hero": "generated/svc-air-duct-cleaning-hero.png",
       "card": "generated/svc-air-duct-cleaning-card.png",
-      "picker": "2025/08/dirty-vs.-clean-air-ducts.png.webp",
+      "picker": "generated/svc-air-duct-cleaning-card.png",
       "steps": [
         "2025/08/ezgif.com-optiwebp.webp",
         "2025/08/HEPA-vacuum-on-duct-system.webp",
@@ -148,7 +148,7 @@
       "slug": "dryer-vent-cleaning",
       "hero": "generated/svc-dryer-vent-cleaning-hero.png",
       "card": "generated/svc-dryer-vent-cleaning-card.png",
-      "picker": "2025/08/technician-performing-airflow-test.png.webp",
+      "picker": "generated/svc-dryer-vent-cleaning-card.png",
       "steps": [
         "2025/08/Reconnect-the-dryer-and-confirm-proper-airflow.webp",
         "2025/09/Air-vent-2.webp",
@@ -161,7 +161,7 @@
       "slug": "water-damage-restoration",
       "hero": "generated/svc-water-damage-restoration-hero.png",
       "card": "generated/svc-water-damage-restoration-card.png",
-      "picker": "2025/08/before-and-after-wall-and-floor-restoration-after-water-damage.png.webp",
+      "picker": "generated/svc-water-damage-restoration-card.png",
       "steps": [
         "2025/08/GettyImages-879657240-scaled-1.jpg.webp",
         "2025/08/restore-your-property.webp",
@@ -174,7 +174,7 @@
       "slug": "area-rug-cleaning",
       "hero": "generated/svc-area-rug-cleaning-hero.png",
       "card": "generated/svc-area-rug-cleaning-card.png",
-      "picker": "2025/08/Gemini_Generated_Image_c9o6goc9o6goc9o6-1-1-scaled.jpg.webp",
+      "picker": "generated/svc-area-rug-cleaning-card.png",
       "steps": [
         "2025/08/Gemini_Generated_Image_c9o6goc9o6goc9o6-1-scaled.jpg.webp",
         "2025/08/Gemini_Generated_Image_c9o6goc9o6goc9o6-scaled-e1754950283217.jpg.webp",
@@ -213,7 +213,7 @@
       "slug": "upholstery-cleaning",
       "hero": "generated/svc-upholstery-cleaning-hero.png",
       "card": "generated/svc-upholstery-cleaning-card.png",
-      "picker": "2025/08/Gemini_Generated_Image_c9o6goc9o6goc9o6-1-1.webp",
+      "picker": "generated/svc-upholstery-cleaning-card.png",
       "steps": [
         "2025/08/Gemini_Generated_Image_c9o6goc9o6goc9o6.webp",
         "2025/08/handsome-young-african-worker-of-cleaning-service.jpg.webp",
@@ -265,7 +265,7 @@
       "slug": "hardwood-floor-cleaning",
       "hero": "generated/svc-hardwood-floor-cleaning-hero.png",
       "card": "generated/svc-hardwood-floor-cleaning-card.png",
-      "picker": "2025/08/How-to-Keep-Hardwood-Floors-Clean-and-Dust-Free-1024x683-1-1.jpg.webp",
+      "picker": "generated/svc-hardwood-floor-cleaning-card.png",
       "steps": [
         "2025/11/kitchen-1940174-scaled-1.jpg.webp",
         "2026/03/before-and-after-hardwood-cleaning-i.webp",
@@ -278,7 +278,7 @@
       "slug": "tile-and-grout-cleaning",
       "hero": "generated/svc-tile-and-grout-cleaning-hero.png",
       "card": "2025/10/tile-and-grout-cleaning.png.webp",
-      "picker": "2026/08/technician-working-on-heavily-discolored-grout-1.webp",
+      "picker": "generated/svc-tile-and-grout-cleaning-hero.png",
       "steps": [
         "2025/08/Guide-to-Cleaning-Tile-and-Grout.jpg.webp",
         "2025/08/How-to-Keep-Hardwood-Floors-Clean-and-Dust-Free-1024x683-1.jpg.webp",
@@ -330,7 +330,7 @@
       "slug": "commercial-carpet-cleaning",
       "hero": "generated/svc-commercial-carpet-cleaning-hero.png",
       "card": "generated/svc-commercial-carpet-cleaning-card.png",
-      "picker": "2025/08/carpet-cleaning-services-1024x683-1.webp",
+      "picker": "generated/svc-commercial-carpet-cleaning-card.png",
       "steps": [
         "2025/08/do_I_need_to_vacuum_before_carpet_cleaning-1.webp",
         "2025/08/Gemini_Generated_Image_73ea8c73ea8c73ea.jpg.webp",
