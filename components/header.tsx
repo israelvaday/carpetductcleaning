@@ -127,11 +127,17 @@ export function Header() {
         <div className="flex items-center gap-2">
           <a
             href={site.phoneHref}
-            className="inline-flex items-center gap-2 rounded-full bg-brand px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-dark"
+            aria-label={`Call ${site.phone}`}
+            className="inline-flex size-10 items-center justify-center rounded-full text-gold ring-1 ring-gold/70 transition hover:bg-gold hover:text-navy lg:hidden"
           >
             <Phone className="size-4" />
-            <span className="hidden sm:inline">{site.phone}</span>
-            <span className="sm:hidden">Call</span>
+          </a>
+          <a
+            href={site.phoneHref}
+            className="hidden items-center gap-2 rounded-full bg-brand px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-dark lg:inline-flex"
+          >
+            <Phone className="size-4" />
+            {site.phone}
           </a>
 
           <Dialog.Root open={mobileOpen} onOpenChange={setMobileOpen}>

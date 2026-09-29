@@ -29,6 +29,14 @@ for (const group of [...map.serviceHubs, ...map.cityPages, ...map.utility]) {
 }
 
 const pairs = [];
+const redirectPack = JSON.parse(readFileSync(new URL("../content/redirects.json", import.meta.url), "utf8"));
+for (const rule of redirectPack.permalinks || redirectPack.redirects || []) {
+  if (rule.kind !== "blog" || rule.status !== 301 || !rule.from || !rule.to) continue;
+  const fromNorm = norm(rule.from);
+  const to = `${norm(rule.to)}/`;
+  if (fromNorm === "/" || fromNorm === norm(to) || reserved.has(fromNorm)) continue;
+  pairs.push({ from: fromNorm, to });
+}
 for (const group of [...map.serviceHubs, ...map.cityPages, ...map.utility]) {
   for (const from of group.from || []) {
     if (!from || from.startsWith("^")) continue;

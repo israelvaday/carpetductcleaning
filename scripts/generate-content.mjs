@@ -156,12 +156,13 @@ async function genBlog(key) {
   const { readdirSync } = await import("node:fs");
   const posts = readdirSync(dir).filter((f) => f.endsWith(".json")).map((f) => f.replace(/\.json$/, ""));
   const existing = loadOut("blog.json");
-  const todo = posts.filter((s) => FORCE || !existing[s]);
+  // Posts with hand-written sections stay. Location landing copy cannibalizes the city pages.
+  const todo = posts.filter((s) => !existing[s]?.sections?.length && (FORCE || !existing[s]));
   if (!todo.length) return console.log("blog: up to date");
   console.log(`blog: generating metadata for ${todo.length} posts`);
 
   const system = `You write SEO blog metadata for ${BIZ}. ${FACTS}
-Return strict JSON keyed by slug. Each: { "title": "compelling post title, no superlatives", "excerpt": "1-2 sentence hook", "category": "Carpet|Air Duct|Rugs|Upholstery|Floors|Water Damage|Tips", "readMinutes": 5-8, "heroAlt": "accessible hero image alt" }. Keep the slug's topic.`;
+Return strict JSON keyed by slug. Each: { "title": "50-60 characters, one service keyword, no city name, no superlatives", "excerpt": "140-155 characters", "category": "Carpet|Air Duct|Rugs|Upholstery|Floors|Water Damage|Tips", "readMinutes": 4-7, "heroAlt": "accessible hero image alt, no city name" }. Target the service keyword in the slug. Do not write a city landing title.`;
   for (let i = 0; i < todo.length; i += 8) {
     const batch = todo.slice(i, i + 8);
     try {

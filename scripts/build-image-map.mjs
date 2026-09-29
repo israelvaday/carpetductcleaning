@@ -178,6 +178,24 @@ const CURATED_ASSETS = [
 const assets = CURATED_ASSETS.map(([key, src, w, alt]) => ({ key, src, w, alt }));
 for (const a of assets) used.add(srcToKey(a.src));
 
+// Real crew phone photos only. Reserved up front so a rebuild cannot refill
+// the "Real jobs" gallery with stock or generated leftovers.
+const CURATED_GALLERY = [
+  ["job-01", "2025/10/IMG_1175.webp", "Living room carpet with cleaning lines in an Orange County home"],
+  ["job-02", "2025/10/IMG_1595.webp", "Oriental rug cleaned and laid in a living room"],
+  ["job-03", "2025/10/Up-holstry.webp", "Sectional sofa cleaned in a customer living room"],
+  ["job-04", "2025/09/IMG_1243.webp", "Ceiling air vent after duct cleaning"],
+  ["job-05", "2025/10/IMG_1324.webp", "Bedroom carpet with wand marks from hot-water extraction"],
+  ["job-06", "2025/09/PHOTO-2023-07-25-03-56-41.webp", "Area rug cleaned and returned to a hardwood floor"],
+  ["job-07", "2025/10/IMG_2068.webp", "Tufted chair during upholstery cleaning"],
+  ["job-08", "2026/01/IMG_6469.webp", "Navy sectional cleaned in a customer living room"],
+  ["job-09", "2025/09/71977656474__5322A204-D125-469E-BB22-39CE3B077808.webp", "Commercial carpet cleaned in an Orange County store"],
+  ["job-10", "2025/10/PHOTO-2023-07-25-03-53-48.webp", "Sectional with cushions pulled for upholstery cleaning"],
+  ["job-11", "2025/10/PHOTO-2023-07-25-04-47-20.webp", "Outdoor sofa cushions cleaned on a patio"],
+  ["job-12", "2025/10/IMG_1613.webp", "Bedroom carpet cleaned in an Orange County home"],
+];
+for (const [, src] of CURATED_GALLERY) used.add(srcToKey(src));
+
 // about-crew: a second people/work photo, unique to /about.
 {
   const p = pick({ service: null, wantPeople: true, kinds: ["team", "work"], requireMatch: false });
@@ -323,13 +341,8 @@ for (const slug of postSlugs) {
   if (p) posts[slug] = p.src;
 }
 
-// --- Gallery: 16 unique mixed shots (home and about take disjoint halves) ----
-const gallery = [];
-for (let i = 0; i < 16; i++) {
-  const p = pick({ service: null, wantLandscape: false, kinds: ["work", "result", "equipment"], requireMatch: false });
-  if (!p) break;
-  gallery.push({ key: `job-${String(i + 1).padStart(2, "0")}`, src: p.src, w: 800, alt: p.alt });
-}
+// --- Gallery: real crew photos only (home takes the first 8, about the rest) ---
+const gallery = CURATED_GALLERY.map(([key, src, alt]) => ({ key, src, w: 800, alt }));
 
 const out = {
   note: "HARD RULE: every slot gets a unique photo (global used-set). src is relative to media/webp/.",

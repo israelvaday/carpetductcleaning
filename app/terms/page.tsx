@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal";
+import { pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: { absolute: "Terms of Service | Carpet & Duct Cleaning Irvine CA" },
+export const metadata: Metadata = pageMeta({
+  title: "Terms of Service | Carpet & Duct Cleaning Irvine CA",
   description:
     "Service terms for Carpet & Duct Cleaning in Irvine, CA: how quotes are confirmed on site, scheduling, payment, stain expectations, and property care.",
-  alternates: { canonical: "/terms/" },
-};
+  path: "/terms/",
+});
 
 export default function TermsPage() {
   return (

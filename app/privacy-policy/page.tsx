@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal";
+import { pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: { absolute: "Privacy Policy | Carpet & Duct Cleaning Irvine, CA" },
+export const metadata: Metadata = pageMeta({
+  title: "Privacy Policy | Carpet & Duct Cleaning Irvine, CA",
   description:
     "How Carpet & Duct Cleaning in Irvine, CA collects, uses, and protects the name, phone, email, and address you share when you request a cleaning quote.",
-  alternates: { canonical: "/privacy-policy/" },
-};
+  path: "/privacy-policy/",
+});
 
 export default function PrivacyPage() {
   return (

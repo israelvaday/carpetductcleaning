@@ -7,20 +7,10 @@ import {
 } from "lucide-react";
 import { ConsentNote } from "@/components/legal";
 import { serviceImage } from "@/lib/images";
+import { deliverLead, type DeliveryChannel } from "@/lib/leads/deliver";
+import { QUOTE_SERVICES } from "@/lib/quote-services";
 import { site } from "@/lib/site";
 import { cn, titleCase } from "@/lib/utils";
-
-const SERVICES = [
-  "carpet-cleaning",
-  "air-duct-cleaning",
-  "upholstery-cleaning",
-  "area-rug-cleaning",
-  "tile-and-grout-cleaning",
-  "hardwood-floor-cleaning",
-  "water-damage-restoration",
-  "dryer-vent-cleaning",
-  "commercial-carpet-cleaning",
-] as const;
 
 type PropertyKey = "home" | "business" | "multifamily" | "other";
 type Urgency = "asap" | "this-week" | "this-month" | "planning";
@@ -41,11 +31,20 @@ const URGENCIES: { key: Urgency; label: string; sub: string; Icon: typeof Zap }[
 
 const STEP_LABELS = ["Service", "Property", "Timing", "Details", "Contact"] as const;
 
-export function QuoteWizard({ defaultService = "" }: { defaultService?: string }) {
-  // When the page already knows the service (city/service pages), skip the
-  // picker step — the visitor starts at "property" and the picker photos never
-  // render on those pages (no image repeats site-wide).
-  const startStep = defaultService ? 1 : 0;
+export function QuoteWizard({
+  defaultService = "",
+  embedded = false,
+  unframed = false,
+}: {
+  defaultService?: string;
+  /** Inside the booking dialog: keep the photo steps, but don't scroll the page behind it. */
+  embedded?: boolean;
+  /** Drop the outer card when a parent already frames the wizard. */
+  unframed?: boolean;
+}) {
+  // Inline city pages already name the service, so they start at property.
+  // The booking dialog always opens on the photo step, with that service preselected.
+  const startStep = defaultService && !embedded ? 1 : 0;
   const [step, setStep] = useState(startStep);
   const [service, setService] = useState<string>(defaultService);
   const [property, setProperty] = useState<PropertyKey | "">("");
@@ -56,6 +55,9 @@ export function QuoteWizard({ defaultService = "" }: { defaultService?: string }
   const [city, setCity] = useState("");
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [channel, setChannel] = useState<DeliveryChannel | null>(null);
+  const [error, setError] = useState("");
   const rootRef = useRef<HTMLDivElement>(null);
   const firstRender = useRef(true);
 
@@ -66,9 +68,16 @@ export function QuoteWizard({ defaultService = "" }: { defaultService?: string }
     }
     const el = rootRef.current;
     if (!el) return;
+    if (embedded) {
+      const scroller = el.closest("[data-quote-scroll]");
+      if (scroller) {
+        scroller.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+    }
     const top = el.getBoundingClientRect().top + window.scrollY - 110;
     window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
-  }, [step]);
+  }, [step, embedded]);
 
   const totalSteps = STEP_LABELS.length - startStep;
   const progress = Math.round(((step - startStep + 1) / totalSteps) * 100);
@@ -91,29 +100,42 @@ export function QuoteWizard({ defaultService = "" }: { defaultService?: string }
     if (step > startStep) setStep((s) => s - 1);
   }
 
-  function submit() {
-    if (!canAdvance) return;
-    // No backend on a static host — open the visitor's mail client with the
-    // structured request pre-filled, and show the confirmation state.
-    const svc = titleCase(service);
-    const prop = PROPERTIES.find((p) => p.key === property)?.label || property;
-    const urg = URGENCIES.find((u) => u.key === urgency)?.label || urgency;
-    const subject = encodeURIComponent(`Quote request — ${svc} in ${city}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nPhone: ${phone}\nEmail: ${email || "—"}\nCity: ${city}\nService: ${svc}\nProperty: ${prop}\nTiming: ${urg}\n\nDetails:\n${message || "—"}`,
-    );
-    window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`;
-    setSent(true);
+  async function submit() {
+    if (!canAdvance || sending) return;
+    setSending(true);
+    setError("");
+    try {
+      const result = await deliverLead({
+        source: "quote-wizard",
+        name,
+        phone,
+        email,
+        city,
+        service: service ? titleCase(service) : "",
+        property: PROPERTIES.find((p) => p.key === property)?.label || "",
+        timing: URGENCIES.find((u) => u.key === urgency)?.label || "",
+        message,
+      });
+      setChannel(result.channel);
+      setSent(true);
+    } catch {
+      setError("We couldn't send that just now. Call us and we'll take the same details over the phone.");
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
     <div
       ref={rootRef}
-      className="relative overflow-hidden rounded-3xl border border-line bg-white shadow-lift"
+      className={cn(
+        "relative overflow-hidden bg-white",
+        embedded || unframed ? "" : "rounded-3xl border border-line shadow-lift",
+      )}
     >
       {/* header */}
       <div className="border-b border-line bg-sand px-5 py-4 md:px-8">
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+        <div className={cn("flex flex-wrap items-center gap-x-4 gap-y-1", embedded && "pr-8")}>
           <span className="inline-flex items-center gap-1.5 rounded-full bg-brand px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
             <Sparkles className="size-3" /> Free quote
           </span>
@@ -138,8 +160,9 @@ export function QuoteWizard({ defaultService = "" }: { defaultService?: string }
             </span>
             <h3 className="mt-5 text-2xl font-semibold text-navy">Your request is ready</h3>
             <p className="mx-auto mt-2 max-w-md text-ink/70">
-              Your email app should have opened with everything filled in. If it didn&apos;t, call us and we&apos;ll
-              take the same details over the phone.
+              {channel === "inbox"
+                ? "We have the request. We'll reply with a price range and the next open slot."
+                : "Your email app should have opened with everything filled in. If it didn't, call us and we'll take the same details over the phone."}
             </p>
             <a
               href={site.phoneHref}
@@ -155,7 +178,7 @@ export function QuoteWizard({ defaultService = "" }: { defaultService?: string }
                 <h2 className="text-2xl font-semibold text-navy md:text-3xl">What do you need cleaned?</h2>
                 <p className="mt-1 text-sm text-ink/60">Tap the service closest to your job.</p>
                 <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
-                  {SERVICES.map((slug) => {
+                  {QUOTE_SERVICES.map((slug) => {
                     const image = serviceImage(slug, "picker");
                     const active = service === slug;
                     return (
@@ -340,10 +363,10 @@ export function QuoteWizard({ defaultService = "" }: { defaultService?: string }
               <button
                 type="button"
                 onClick={submit}
-                disabled={!canAdvance}
+                disabled={!canAdvance || sending}
                 className="ml-auto inline-flex h-12 items-center gap-2 rounded-full bg-brand px-6 font-semibold text-white transition hover:bg-brand-dark disabled:opacity-40"
               >
-                <Send className="size-5" /> Send quote request
+                <Send className="size-5" /> {sending ? "Sending…" : "Send quote request"}
               </button>
             )}
             <a
@@ -352,6 +375,11 @@ export function QuoteWizard({ defaultService = "" }: { defaultService?: string }
             >
               <Phone className="size-3.5" /> {site.phone}
             </a>
+            {error ? (
+              <p className="w-full text-sm text-brand-dark" role="alert">
+                {error}
+              </p>
+            ) : null}
           </div>
         )}
       </div>

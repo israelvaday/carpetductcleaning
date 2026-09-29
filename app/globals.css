@@ -104,12 +104,20 @@ summary::-webkit-details-marker {
 }
 
 @utility prose-body {
+  & h2 {
+    margin-top: 2.25rem;
+    margin-bottom: 0.35rem;
+    font-size: 1.35rem;
+    line-height: 1.25;
+    color: var(--color-navy);
+  }
   & p {
     margin-top: 1.05rem;
     line-height: 1.78;
     font-size: 1.02rem;
     color: color-mix(in srgb, var(--color-ink) 76%, white);
   }
+  & h2:first-child,
   & p:first-child {
     margin-top: 0;
   }
@@ -127,30 +135,119 @@ summary::-webkit-details-marker {
   }
 }
 
-/* Scroll-reveal primitives (driven by components/fx.tsx IntersectionObserver). */
+/* Scroll-reveal. Short slides only — view() drives them where supported. */
 .reveal {
+  --reveal-x: 0px;
+  --reveal-y: 18px;
   opacity: 0;
-  transform: translateY(26px);
-  filter: blur(6px);
+  transform: translate3d(var(--reveal-x), var(--reveal-y), 0);
   transition:
-    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.7s cubic-bezier(0.18, 1.25, 0.32, 1),
-    filter 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: var(--reveal-delay, 0s);
-  will-change: transform, opacity;
+}
+.reveal-up {
+  --reveal-x: 0px;
+  --reveal-y: 18px;
+}
+.reveal-down {
+  --reveal-x: 0px;
+  --reveal-y: -18px;
+}
+.reveal-left {
+  --reveal-x: -24px;
+  --reveal-y: 0px;
+}
+.reveal-right {
+  --reveal-x: 24px;
+  --reveal-y: 0px;
 }
 .reveal.is-shown {
   opacity: 1;
-  transform: translateY(0);
-  filter: blur(0);
+  transform: translate3d(0, 0, 0);
+}
+
+@supports (animation-timeline: view()) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    animation-name: section-slide;
+    animation-duration: auto;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range:
+      entry calc(var(--reveal-shift, 0) * 12%)
+      entry calc(32% + var(--reveal-shift, 0) * 12%);
+  }
+  .reveal.is-shown {
+    opacity: unset;
+    transform: unset;
+  }
+}
+
+@keyframes section-slide {
+  from {
+    opacity: 0;
+    transform: translate3d(var(--reveal-x), var(--reveal-y), 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Process wizard: each stage slides in, then the photo eases forward. */
+@keyframes process-enter-next {
+  from {
+    transform: translate3d(4%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes process-enter-prev {
+  from {
+    transform: translate3d(-4%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes process-caption {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.process-enter-next {
+  animation: process-enter-next 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.process-enter-prev {
+  animation: process-enter-prev 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.process-caption {
+  animation: process-caption 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  .reveal,
+  .reveal.is-shown {
     opacity: 1;
     transform: none;
     filter: none;
     transition: none;
+    animation: none;
+  }
+  .process-enter-next,
+  .process-enter-prev,
+  .process-caption {
+    animation: none;
   }
   html {
     scroll-behavior: auto;

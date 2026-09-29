@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { LegalPage } from "@/components/legal";
+import { pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: { absolute: "SMS Messaging Terms and Conditions | Carpet & Duct Cleaning" },
+export const metadata: Metadata = pageMeta({
+  title: "SMS Messaging Terms and Conditions | Carpet & Duct Cleaning",
   description:
     "SMS terms for Carpet & Duct Cleaning text messages: what we send, how often, message and data rates, and how to reply STOP to opt out or HELP for help.",
-  alternates: { canonical: "/sms-terms/" },
-};
+  path: "/sms-terms/",
+});
 
 export default function SmsPage() {
   return (

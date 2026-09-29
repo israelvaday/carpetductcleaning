@@ -1,8 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight, MapPin, ShieldCheck, Star, Phone } from "lucide-react";
+import { MapPin, ShieldCheck, Star, Phone } from "lucide-react";
 import { type Img } from "@/lib/images";
-import { PhotoFrame } from "@/components/photo";
+import { QuoteButton } from "@/components/quote-button";
 import { site } from "@/lib/site";
 import { Reveal } from "@/components/fx";
 
@@ -14,27 +13,28 @@ const HERO_STATS = [
 ] as const;
 
 /**
- * Split hero: the photo sits in the open on top (mobile) or the right (desktop).
- * Copy stays on navy so the image is not washed out.
+ * Full-bleed photo behind the copy. A navy wash is heavier on the left so the
+ * type stays readable, and fades so the room stays visible through and beside it.
  */
 export function HomeHero({ image }: { image: Img }) {
   return (
-    <section className="bg-navy text-white">
-      <div className="grid items-center lg:grid-cols-2">
-        <PhotoFrame ratio="video" className="order-first lg:order-2">
-          <Image
-            src={image.src}
-            alt={image.alt}
-            fill
-            priority
-            sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover"
-          />
-        </PhotoFrame>
+    <section className="relative isolate overflow-hidden bg-navy text-white">
+      <Image
+        src={image.src}
+        alt={image.alt}
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-[center_40%]"
+      />
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-gradient-to-b from-navy/75 via-navy/60 to-navy/80 lg:bg-[linear-gradient(90deg,#0b2237f2_0%,#0b2237c7_28%,#0b223780_46%,#0b223733_68%,#0b223714_100%)]"
+      />
 
-        <div className="flex flex-col justify-end px-5 py-10 sm:px-8 lg:order-1 lg:px-12 lg:py-16 xl:pl-16">
-        <div className="grid gap-10">
-          <Reveal>
+      <div className="container-page relative z-10 flex flex-col gap-10 py-12 lg:py-16">
+        <div className="grid items-center gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10">
+          <Reveal from="left">
             <div className="inline-flex max-w-full flex-wrap items-center gap-2 rounded-full border border-brand-light/30 bg-brand/15 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-brand-50">
               <MapPin className="size-3.5 shrink-0" />
               <span>{site.city} · {site.area} · Since {site.foundingYear}</span>
@@ -57,18 +57,17 @@ export function HomeHero({ image }: { image: Img }) {
                 <Phone className="size-5" />
                 Call {site.phone}
               </a>
-              <Link
-                href="/contact/"
-                className="inline-flex h-14 flex-1 items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 px-6 text-base font-bold uppercase tracking-wide text-white backdrop-blur transition hover:border-gold/60 hover:text-gold"
-              >
-                Free quote
-                <ArrowRight className="size-5" />
-              </Link>
+              <QuoteButton
+                dark
+                label="Free quote"
+                service=""
+                className="h-14 flex-1 px-6 text-base"
+              />
             </div>
           </Reveal>
 
-          <Reveal delay={0.15} className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-1">
-            <div className="rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur-md">
+          <Reveal from="right" delay={0.12} className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-1">
+            <div className="rounded-2xl border border-white/20 bg-navy/35 p-5 shadow-lift backdrop-blur-md">
               <div className="flex items-center gap-2 text-gold">
                 <ShieldCheck className="size-5 shrink-0" />
                 <span className="text-xs font-bold uppercase tracking-wider">Why homeowners call us</span>
@@ -98,10 +97,10 @@ export function HomeHero({ image }: { image: Img }) {
           </Reveal>
         </div>
 
-        <Reveal delay={0.25}>
-          <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/15 bg-white/15 sm:grid-cols-4">
+        <Reveal from="up" delay={0.2}>
+          <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/20 bg-white/20 sm:grid-cols-4">
             {HERO_STATS.map(({ value, label }) => (
-              <div key={label} className="bg-navy/80 px-4 py-4 text-center backdrop-blur-sm md:py-5">
+              <div key={label} className="bg-navy/45 px-4 py-4 text-center backdrop-blur-md md:py-5">
                 <p className="text-2xl font-bold text-gold md:text-3xl">{value}</p>
                 <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-white/60 md:text-[11px]">
                   {label}
@@ -110,7 +109,6 @@ export function HomeHero({ image }: { image: Img }) {
             ))}
           </div>
         </Reveal>
-        </div>
       </div>
     </section>
   );

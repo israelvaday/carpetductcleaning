@@ -1,4 +1,5 @@
 import { Phone, Star, ShieldCheck, Clock } from "lucide-react";
+import { Reveal } from "@/components/fx";
 import { CallButton, QuoteButton, TrustRow } from "@/components/ui";
 import { site } from "@/lib/site";
 
@@ -10,10 +11,10 @@ export function Cta({
   body?: string;
 }) {
   return (
-    <section className="bg-white py-16 md:py-20">
+    <section className="overflow-x-clip bg-white py-16 md:py-20">
       <div className="container-page">
         <div className="grid overflow-hidden rounded-3xl bg-navy text-white shadow-lift lg:grid-cols-2">
-          <div className="p-8 md:p-12">
+          <Reveal from="left" className="p-8 md:p-12">
             <p className="eyebrow text-brand-50">Ready when you are</p>
             <h2 className="mt-3 text-3xl font-semibold md:text-4xl">{title}</h2>
             <p className="mt-4 text-lg leading-relaxed text-white/75">{body}</p>
@@ -27,11 +28,11 @@ export function Cta({
             <div className="mt-6">
               <TrustRow dark />
             </div>
-          </div>
+          </Reveal>
           {/* No photo here — the CTA band renders on every page, and repeating
               one image site-wide is against the house rule. A stat panel keeps
               the layout balanced without burning a photo. */}
-          <div className="relative flex min-h-64 flex-col justify-center gap-6 bg-gradient-to-br from-brand/25 via-navy to-navy p-8 md:p-12 lg:min-h-full">
+          <Reveal from="right" delay={0.1} className="relative flex min-h-64 flex-col justify-center gap-6 bg-gradient-to-br from-brand/25 via-navy to-navy p-8 md:p-12 lg:min-h-full">
             <div className="absolute inset-0 opacity-[0.07] [background-image:radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] [background-size:22px_22px]" />
             <div className="relative">
               <p className="flex items-center gap-1 text-gold">
@@ -59,7 +60,7 @@ export function Cta({
                 {site.phone}
               </a>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

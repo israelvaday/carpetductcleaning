@@ -1,0 +1,70 @@
+{
+  "source": "google-places",
+  "placeId": "ChIJoXAT4SMQIKkRuzslBL6opfQ",
+  "name": "Carpet and Duct Cleaning",
+  "phone": "(949) 992-3299",
+  "internationalPhone": "+1 949-992-3299",
+  "formattedAddress": "191 Pinestone, Irvine, CA 92604, USA",
+  "street": "191 Pinestone",
+  "neighborhood": "Woodbridge",
+  "city": "Irvine",
+  "region": "California",
+  "regionCode": "CA",
+  "postalCode": "92604",
+  "country": "US",
+  "latitude": 33.6840365,
+  "longitude": -117.8071432,
+  "plusCode": "8554M5MV+J4",
+  "mapsUrl": "https://maps.google.com/?cid=17628681850478476219",
+  "directionsUrl": "https://www.google.com/maps/dir//''/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0xa9201023e11370a1:0xf4a5a8be04253bbb!3e0",
+  "reviewsUrl": "https://www.google.com/maps/place//data=!4m4!3m3!1s0xa9201023e11370a1:0xf4a5a8be04253bbb!9m1!1b1",
+  "website": "https://carpetductcleaning.com/",
+  "businessStatus": "OPERATIONAL",
+  "primaryType": "service",
+  "timeZone": "America/Los_Angeles",
+  "wheelchairAccessibleParking": true,
+  "hoursSummary": "Mon–Thu open 24 hours · Fri 8:00 AM–5:00 PM · Sat closed · Sun open 24 hours",
+  "hours": [
+    {
+      "day": "Monday",
+      "hours": "Open 24 hours",
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "Open 24 hours",
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "Open 24 hours",
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    {
+      "day": "Thursday",
+      "hours": "Open 24 hours",
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    {
+      "day": "Friday",
+      "hours": "8:00 AM–5:00 PM",
+      "opens": "08:00",
+      "closes": "17:00"
+    },
+    {
+      "day": "Saturday",
+      "hours": "Closed"
+    },
+    {
+      "day": "Sunday",
+      "hours": "Open 24 hours",
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  ],
+  "fetchedAt": "2026-09-29T17:36:03.954Z"
+}

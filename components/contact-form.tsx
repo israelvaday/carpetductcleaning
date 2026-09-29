@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ConsentNote } from "@/components/legal";
+import { deliverLead, type DeliveryChannel } from "@/lib/leads/deliver";
 import { site } from "@/lib/site";
 
 const inputClass =
@@ -9,16 +10,34 @@ const inputClass =
 
 export function ContactForm() {
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [channel, setChannel] = useState<DeliveryChannel | null>(null);
+  const [error, setError] = useState("");
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     const get = (k: string) => String(data.get(k) || "").trim();
-    // Mail apps only read subject and body from a mailto link, so every field goes into the body.
-    const subject = encodeURIComponent(`Quote request from ${get("name")}`);
-    const body = encodeURIComponent(`Name: ${get("name")}\nPhone or email: ${get("contact")}\n\n${get("body")}`);
-    window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`;
-    setSent(true);
+    const contact = get("contact");
+    const email = contact.includes("@") ? contact : "";
+    const phone = email ? "" : contact;
+    setSending(true);
+    setError("");
+    try {
+      const result = await deliverLead({
+        source: "contact-form",
+        name: get("name"),
+        phone,
+        email,
+        message: get("body"),
+      });
+      setChannel(result.channel);
+      setSent(true);
+    } catch {
+      setError("We couldn't send that just now. Call us and we'll take it from here.");
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -37,15 +56,27 @@ export function ContactForm() {
       </label>
       <ConsentNote />
       <button
-        className="w-full rounded-full bg-brand px-6 py-3 font-semibold text-white transition hover:bg-brand-dark"
+        className="w-full rounded-full bg-brand px-6 py-3 font-semibold text-white transition hover:bg-brand-dark disabled:opacity-40"
         type="submit"
+        disabled={sending}
       >
-        Send quote request
+        {sending ? "Sending…" : "Send quote request"}
       </button>
+      {error ? (
+        <p className="text-sm font-medium text-navy" role="alert">
+          {error}
+        </p>
+      ) : null}
       {sent && (
         <p className="text-sm text-ink/70" role="status">
-          Your email app should have opened with your request filled in. If it didn&apos;t, call{" "}
-          <a className="font-semibold text-brand underline" href={site.phoneHref}>{site.phone}</a>.
+          {channel === "inbox" ? (
+            "We have your note. We'll reply on the next business day."
+          ) : (
+            <>
+              Your email app should have opened with your request filled in. If it didn&apos;t, call{" "}
+              <a className="font-semibold text-brand underline" href={site.phoneHref}>{site.phone}</a>.
+            </>
+          )}
         </p>
       )}
     </form>

@@ -12,15 +12,16 @@ import { cityLandmark, img } from "@/lib/images";
 import { PhotoFrame } from "@/components/photo";
 import { breadcrumbs } from "@/lib/schema";
 import { SERVICE_GROUPS } from "@/lib/services";
+import { pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 import { titleCase } from "@/lib/utils";
 
-export const metadata: Metadata = {
-  title: { absolute: "Service Areas in Orange County, CA | Carpet & Duct" },
+export const metadata: Metadata = pageMeta({
+  title: "Service Areas in Orange County, CA | Carpet & Duct",
   description:
     "Carpet, rug, upholstery, and air duct cleaning across Irvine and Orange County, CA. Find your city and open the exact service page your home needs.",
-  alternates: { canonical: "/locations/" },
-};
+  path: "/locations/",
+});
 
 export default function LocationsPage() {
   const all = cityEntries();

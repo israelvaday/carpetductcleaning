@@ -6,17 +6,19 @@ export function MapEmbed({
   title,
   className,
   height = "h-72",
+  zoom = 11,
 }: {
   query: string;
   title: string;
   className?: string;
   height?: string;
+  zoom?: number;
 }) {
   return (
     <div className={cn("overflow-hidden rounded-2xl border border-line shadow-card", className)}>
       <iframe
         title={title}
-        src={`https://www.google.com/maps?q=${encodeURIComponent(query)}&z=11&output=embed`}
+        src={`https://www.google.com/maps?q=${encodeURIComponent(query)}&z=${zoom}&output=embed`}
         className={cn("w-full border-0", height)}
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"

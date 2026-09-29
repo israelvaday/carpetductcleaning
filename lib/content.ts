@@ -10,6 +10,7 @@ export type WpPage = {
   slug: string;
   text?: string;
   wordCount?: number;
+  date?: string;
   seo?: { title?: string; description?: string };
 };
 
@@ -45,10 +46,14 @@ type GenCity = {
 };
 type GenPost = {
   title?: string;
+  description?: string;
   excerpt?: string;
+  keyword?: string;
   category?: string;
   readMinutes?: number;
   heroAlt?: string;
+  sections?: { heading: string; body: string }[];
+  links?: { href: string; label: string }[];
 };
 
 function loadGenerated<T>(name: string): Record<string, T> {
@@ -232,6 +237,21 @@ export function getPost(slug: string) {
 
 export function blogMeta(post: WpPage) {
   return GEN_POSTS[post.slug];
+}
+
+/** Title tag. A hand-set 50–60 character title is used as-is so a city suffix is not appended. */
+export function blogSeoTitle(post: WpPage) {
+  const title = blogTitle(post);
+  if (title.length >= 50 && title.length <= 60) return title;
+  return metaTitle(title);
+}
+
+export function blogDescription(post: WpPage) {
+  const desc = GEN_POSTS[post.slug]?.description?.replace(/\s+/g, " ").trim();
+  if (desc && desc.length >= 140 && desc.length <= 155) return desc;
+  return composeMeta([cleanParagraphs(post.text || "", 1)[0] || blogTitle(post)], [
+    "Call (949) 992-3299.",
+  ]);
 }
 
 export function blogTitle(post: WpPage) {

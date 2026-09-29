@@ -1,17 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Phone } from "lucide-react";
+import { SocialLinks } from "@/components/social-links";
 import { cityEntries } from "@/lib/content";
 import { asset } from "@/lib/images";
+import { getGoogleProfile } from "@/lib/google-profile";
 import { moneyServices, site } from "@/lib/site";
 import { titleCase } from "@/lib/utils";
 
-const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-  `${site.name} ${site.street} ${site.city} ${site.region} ${site.postalCode}`,
-)}`;
-
 export function Footer() {
   const cities = cityEntries().filter((c) => c.service === "carpet-cleaning");
+  const profile = getGoogleProfile();
+  const mapsHref =
+    profile?.mapsUrl ||
+    `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+      `${site.name} ${site.street} ${site.city} ${site.region} ${site.postalCode}`,
+    )}`;
+  const street = profile?.street || site.street;
+  const city = profile?.city || site.city;
+  const region = profile?.regionCode || site.region;
+  const postalCode = profile?.postalCode || site.postalCode;
 
   return (
     <footer className="bg-navy text-white">
@@ -28,11 +36,20 @@ export function Footer() {
           <a href={mapsHref} className="mt-3 flex items-start gap-2 text-sm leading-relaxed text-white/70 hover:text-white">
             <MapPin className="mt-0.5 size-4 shrink-0 text-brand-50" />
             <span>
-              {site.street}
+              {street}
               <br />
-              {site.city}, {site.region} {site.postalCode}
+              {city}, {region} {postalCode}
             </span>
           </a>
+          {profile?.hoursSummary ? (
+            <p className="mt-3 max-w-xs text-sm leading-relaxed text-white/70">{profile.hoursSummary}</p>
+          ) : null}
+          <div className="mt-6">
+            <p className="text-xs font-semibold uppercase tracking-wider text-white/50">Follow</p>
+            <div className="mt-3">
+              <SocialLinks />
+            </div>
+          </div>
           <div className="mt-5 flex items-center gap-4">
             <Image src={asset("/images/google.webp")} alt="Google Guaranteed badge" width={130} height={50} className="h-8 w-auto object-contain" />
             <Image src={asset("/images/bbb.webp")} alt="BBB Accredited Business A+ rating" width={130} height={52} className="h-8 w-auto object-contain" />
@@ -70,7 +87,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container-page flex flex-wrap items-center justify-between gap-4 py-5 text-sm text-white/55">
+        <div className="container-page flex flex-wrap items-center justify-between gap-4 py-5 text-sm text-white/55 lg:pb-20">
           <p>
             © {new Date().getFullYear()} {site.name}
           </p>

@@ -13,6 +13,7 @@ import { cityEntries, getCityDoc } from "@/lib/content";
 import { cityImage, cityJobs } from "@/lib/images";
 import { breadcrumbs, faqLd } from "@/lib/schema";
 import { PROOF_POINTS } from "@/lib/services";
+import { pageMeta } from "@/lib/seo";
 import { moneyServices, site } from "@/lib/site";
 import { titleCase } from "@/lib/utils";
 
@@ -28,11 +29,11 @@ export async function generateMetadata({
   const { service, city } = await params;
   const doc = getCityDoc(service, city);
   if (!doc) return {};
-  return {
-    title: { absolute: doc.title },
+  return pageMeta({
+    title: doc.title,
     description: doc.description,
-    alternates: { canonical: `/${doc.service}/${doc.city}/` },
-  };
+    path: `/${doc.service}/${doc.city}/`,
+  });
 }
 
 export default async function CityPage({

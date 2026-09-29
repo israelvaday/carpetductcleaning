@@ -1,6 +1,8 @@
 import { Star, ExternalLink, BadgeCheck } from "lucide-react";
+import { Reveal } from "@/components/fx";
 import { ReviewsCarousel } from "@/components/reviews-carousel";
 import { Section, SectionHead } from "@/components/ui";
+import { getGoogleProfile } from "@/lib/google-profile";
 import { getReviews } from "@/lib/reviews";
 import { site } from "@/lib/site";
 
@@ -19,19 +21,23 @@ function Stars({ n }: { n: number }) {
 // renders the rating summary with a link to the Google profile instead.
 export function Reviews() {
   const data = getReviews();
+  const profile = getGoogleProfile();
 
   return (
     <Section tone="sand">
       <div className="flex flex-wrap items-end justify-between gap-6">
-        <SectionHead
-          eyebrow="Reviews"
-          title="What Orange County says about the work"
-          body={
-            data
-              ? `${data.rating} out of 5 across ${data.totalRatings} Google ratings — pulled live from our Google Business Profile.`
-              : `${site.rating} on Google. Read the reviews on our Google Business Profile.`
-          }
-        />
+        <Reveal from="left">
+          <SectionHead
+            eyebrow="Reviews"
+            title="What Orange County says about the work"
+            body={
+              data
+                ? `${data.rating} out of 5 across ${data.totalRatings} Google ratings — pulled live from our Google Business Profile.`
+                : `${site.rating} on Google. Read the reviews on our Google Business Profile.`
+            }
+          />
+        </Reveal>
+        <Reveal from="right" delay={0.1}>
         <div className="flex items-center gap-3 rounded-2xl border border-line bg-white px-5 py-4 shadow-card">
           <span className="flex size-11 items-center justify-center rounded-xl bg-brand-50 text-brand">
             <BadgeCheck className="size-6" />
@@ -46,13 +52,18 @@ export function Reviews() {
             </p>
           </div>
         </div>
+        </Reveal>
       </div>
 
       {data && data.reviews.length > 0 ? <ReviewsCarousel reviews={data.reviews.slice(0, 30)} /> : null}
 
       <div className="mt-8">
         <a
-          href={data?.mapsUrl || "https://www.google.com/maps/search/Carpet+And+Duct+Cleaning+191+Pinestone+Irvine+CA+92604"}
+          href={
+            profile?.reviewsUrl ||
+            data?.mapsUrl ||
+            "https://www.google.com/maps/search/Carpet+And+Duct+Cleaning+191+Pinestone+Irvine+CA+92604"
+          }
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 font-semibold text-brand transition hover:text-brand-dark"

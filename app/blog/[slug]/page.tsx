@@ -7,11 +7,12 @@ import { ImageHero } from "@/components/blocks";
 import { Cta } from "@/components/cta";
 import { JsonLd } from "@/components/json-ld";
 import { Section, SectionHead } from "@/components/ui";
-import { blogTitle, getPost, getPosts } from "@/lib/content";
+import { blogDescription, blogMeta, blogSeoTitle, getPost, getPosts } from "@/lib/content";
 import { postImage } from "@/lib/images";
-import { breadcrumbs } from "@/lib/schema";
-import { cleanParagraphs, composeMeta } from "@/lib/text";
-import { metaTitle } from "@/lib/utils";
+import { blogPosting, breadcrumbs } from "@/lib/schema";
+import { pageMeta } from "@/lib/seo";
+import { cleanParagraphs } from "@/lib/text";
+import { siteUrl } from "@/lib/site";
 
 export function generateStaticParams() {
   return getPosts().map((p) => ({ slug: p.slug }));
@@ -21,24 +22,26 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) return {};
-  const title = blogTitle(post);
-  return {
-    title: { absolute: metaTitle(title) },
-    description: composeMeta([cleanParagraphs(post.text || "", 1)[0] || title], [
-      "Carpet & Duct Cleaning serves Irvine and Orange County. Call (949) 992-3299.",
-      "Serving Irvine and Orange County. Call (949) 992-3299.",
-      "Call (949) 992-3299.",
-    ]),
-    alternates: { canonical: `/blog/${post.slug}/` },
-  };
+  const title = blogSeoTitle(post);
+  return pageMeta({
+    title,
+    description: blogDescription(post),
+    path: `/blog/${post.slug}/`,
+  });
 }
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) notFound();
-  const title = blogTitle(post);
-  const paras = cleanParagraphs(post.text || "", 16);
+  const title = blogSeoTitle(post);
+  const description = blogDescription(post);
+  const gen = blogMeta(post);
+  const sections = gen?.sections?.filter((s) => s.heading && s.body) ?? [];
+  const paras = sections.length ? [] : cleanParagraphs(post.text || "", 16);
+  const baseImage = postImage(slug);
+  const image = gen?.heroAlt ? { ...baseImage, alt: gen.heroAlt } : baseImage;
+  const links = (gen?.links ?? []).filter((l) => l.href.startsWith("/") && l.label);
   const more = getPosts()
     .filter((p) => p.slug !== slug)
     .slice(0, 3);
@@ -52,9 +55,18 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           { name: title, href: `/blog/${slug}/` },
         ])}
       />
+      <JsonLd
+        data={blogPosting({
+          title,
+          description,
+          path: `/blog/${slug}/`,
+          date: post.date,
+          image: image.src.startsWith("http") ? image.src : `${siteUrl()}${image.src}`,
+        })}
+      />
 
       <ImageHero
-        image={postImage(slug)}
+        image={image}
         breadcrumb={[{ name: "Home", href: "/" }, { name: "Blog", href: "/blog/" }, { name: title }]}
         eyebrow="Guide"
         title={title}
@@ -62,9 +74,29 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
       <Section tone="light">
         <div className="prose-body mx-auto max-w-3xl">
+          {sections.map((s) => (
+            <div key={s.heading}>
+              <h2>{s.heading}</h2>
+              <p>{s.body}</p>
+            </div>
+          ))}
           {paras.map((p) => (
             <p key={p.slice(0, 48)}>{p}</p>
           ))}
+          {links.length ? (
+            <p>
+              {links.length > 1 ? "Related services: " : "Related service: "}
+              {links.map((l, i) => (
+                <span key={l.href}>
+                  {i > 0 ? (i === links.length - 1 ? " and " : ", ") : null}
+                  <Link href={l.href} className="font-semibold text-brand underline-offset-2 hover:underline">
+                    {l.label}
+                  </Link>
+                </span>
+              ))}
+              .
+            </p>
+          ) : null}
         </div>
       </Section>
 
@@ -74,7 +106,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             index only — never burned on a shared "more" rail. */}
         <div className="mt-8 grid gap-6 sm:grid-cols-3">
           {more.map((p) => {
-            const t = blogTitle(p);
+            const t = blogSeoTitle(p);
             return (
               <Link
                 key={p.slug}

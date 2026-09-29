@@ -28,26 +28,28 @@ export function ImageHero({
   bullets?: string[];
 }) {
   return (
-    <section className="bg-navy text-white">
-      <div className="grid items-center lg:grid-cols-2">
-        <PhotoFrame ratio="video" className="order-first lg:order-2">
-          <Image
-            src={image.src}
-            alt={image.alt}
-            fill
-            priority
-            sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover"
-          />
-        </PhotoFrame>
-        <div className="px-5 py-10 sm:px-8 lg:px-12 lg:py-14">
+    <section className="relative isolate overflow-hidden bg-navy text-white">
+      <Image
+        src={image.src}
+        alt={image.alt}
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-[center_40%]"
+      />
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-gradient-to-b from-navy/75 via-navy/60 to-navy/80 lg:bg-[linear-gradient(90deg,#0b2237f2_0%,#0b2237c7_28%,#0b223780_46%,#0b223733_68%,#0b223714_100%)]"
+      />
+      <div className="container-page relative z-10 py-12 lg:py-16">
+        <div className="max-w-3xl">
           {breadcrumb ? (
             <div className="mb-6">
               <Breadcrumb items={breadcrumb} tone="dark" />
             </div>
           ) : null}
           {eyebrow ? <p className="eyebrow text-brand-50">{eyebrow}</p> : null}
-          <h1 className="mt-3 max-w-xl text-4xl font-semibold leading-[1.08] md:text-5xl">{title}</h1>
+          <h1 className="mt-3 max-w-3xl text-4xl font-semibold leading-[1.08] md:text-5xl">{title}</h1>
           {body ? <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/80">{body}</p> : null}
           {bullets?.length ? (
             <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-white/80">
@@ -113,6 +115,7 @@ export function ServiceGrid({ slugs, priorityCount = 0 }: { slugs: string[]; pri
 }
 
 export function Stats({ tone = "navy" }: { tone?: "navy" | "sand" }) {
+  const navy = tone === "navy";
   const stats = [
     { value: site.jobs, label: "Jobs completed" },
     { value: `${site.rating}★`, label: "Google rating" },
@@ -122,14 +125,28 @@ export function Stats({ tone = "navy" }: { tone?: "navy" | "sand" }) {
   return (
     <div
       className={cn(
-        "grid gap-6 rounded-2xl px-6 py-8 sm:grid-cols-4",
-        tone === "navy" ? "bg-navy text-white" : "bg-sand",
+        "grid h-fit grid-cols-2 content-start self-start overflow-hidden rounded-2xl border",
+        navy ? "border-white/10 bg-navy" : "border-line bg-sand",
       )}
     >
-      {stats.map((s) => (
-        <div key={s.label}>
-          <p className={cn("text-3xl font-semibold", tone === "navy" ? "text-white" : "text-navy")}>{s.value}</p>
-          <p className={cn("mt-1 text-sm", tone === "navy" ? "text-white/65" : "text-ink/60")}>{s.label}</p>
+      {stats.map((s, i) => (
+        <div
+          key={s.label}
+          className={cn(
+            "min-w-0 px-4 py-5 text-center sm:px-5",
+            i % 2 === 0 && (navy ? "border-r border-white/10" : "border-r border-line"),
+            i < 2 && (navy ? "border-b border-white/10" : "border-b border-line"),
+          )}
+        >
+          <p
+            className={cn(
+              "font-display text-3xl font-semibold leading-none tracking-tight",
+              navy ? "text-gold" : "text-navy",
+            )}
+          >
+            {s.value}
+          </p>
+          <p className={cn("mt-2 text-sm leading-snug", navy ? "text-white/70" : "text-ink/65")}>{s.label}</p>
         </div>
       ))}
     </div>

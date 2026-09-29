@@ -31,24 +31,38 @@ function useInView<T extends HTMLElement>(once: boolean, rootMargin = "-60px") {
   return { ref, shown };
 }
 
-/** Scroll-triggered reveal. Pure CSS transition driven by IntersectionObserver. */
+export type RevealFrom = "up" | "down" | "left" | "right";
+
+/**
+ * Scroll-triggered reveal. Modern browsers use a CSS view timeline
+ * (animation-timeline: view()); everyone else falls back to this observer.
+ */
 export function Reveal({
   children,
   delay = 0,
   className,
   once = true,
+  from = "up",
   as: Tag = "div",
 }: {
   children: ReactNode;
   delay?: number;
   className?: string;
   once?: boolean;
+  from?: RevealFrom;
   as?: "div" | "section" | "li" | "span";
 }) {
   const { ref, shown } = useInView<HTMLDivElement>(once);
-  const style = { "--reveal-delay": `${delay}s` } as CSSProperties;
+  const style = {
+    "--reveal-delay": `${delay}s`,
+    "--reveal-shift": delay,
+  } as CSSProperties;
   return (
-    <Tag ref={ref as never} className={`reveal ${shown ? "is-shown" : ""} ${className ?? ""}`} style={style}>
+    <Tag
+      ref={ref as never}
+      className={`reveal reveal-${from} ${shown ? "is-shown" : ""} ${className ?? ""}`}
+      style={style}
+    >
       {children}
     </Tag>
   );

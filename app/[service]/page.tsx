@@ -11,6 +11,7 @@ import { getServiceDoc, serviceSlugs } from "@/lib/content";
 import { serviceImage, serviceSteps } from "@/lib/images";
 import { breadcrumbs, faqLd } from "@/lib/schema";
 import { PROOF_POINTS, serviceBlurb } from "@/lib/services";
+import { pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 import { buildServiceSteps } from "@/lib/process-steps";
 import { titleCase } from "@/lib/utils";
@@ -27,11 +28,11 @@ export async function generateMetadata({
   const { service } = await params;
   const doc = getServiceDoc(service);
   if (!doc) return {};
-  return {
-    title: { absolute: doc.title },
+  return pageMeta({
+    title: doc.title,
     description: doc.description,
-    alternates: { canonical: `/${doc.slug}/` },
-  };
+    path: `/${doc.slug}/`,
+  });
 }
 
 export default async function ServicePage({ params }: { params: Promise<{ service: string }> }) {

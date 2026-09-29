@@ -8,14 +8,15 @@ import { getUtility } from "@/lib/content";
 import { asset, img } from "@/lib/images";
 import { breadcrumbs } from "@/lib/schema";
 import { PROOF_POINTS } from "@/lib/services";
+import { pageMeta } from "@/lib/seo";
 import { site, siteUrl } from "@/lib/site";
 import { cleanParagraphs } from "@/lib/text";
 
-export const metadata: Metadata = {
-  title: { absolute: "About Carpet & Duct Cleaning | Irvine, CA Since 2013" },
+export const metadata: Metadata = pageMeta({
+  title: "About Carpet & Duct Cleaning | Irvine, CA Since 2013",
   description: `Carpet & Duct Cleaning has served Irvine and Orange County since ${site.foundingYear}. IICRC-certified technicians, Google Guaranteed, BBB A+. Call ${site.phone}.`,
-  alternates: { canonical: "/about/" },
-};
+  path: "/about/",
+});
 
 export default function AboutPage() {
   const page = getUtility("about-us");
@@ -66,7 +67,7 @@ export default function AboutPage() {
               <TrustRow />
             </div>
           </div>
-          <div className="grid gap-6">
+          <div className="grid content-start gap-6 self-start">
             <Stats />
             <div className="rounded-2xl border border-line bg-sand p-6 shadow-card">
               <p className="eyebrow">What that means on a job</p>

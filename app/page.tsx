@@ -13,9 +13,11 @@ import { Reveal } from "@/components/fx";
 import { Reviews } from "@/components/reviews";
 import { Section, SectionHead } from "@/components/ui";
 import { cityEntries, getUtility } from "@/lib/content";
+import { getGoogleProfile, mapQuery } from "@/lib/google-profile";
 import { asset, img } from "@/lib/images";
 import { breadcrumbs, faqLd } from "@/lib/schema";
 import { PROOF_POINTS } from "@/lib/services";
+import { pageMeta } from "@/lib/seo";
 import { moneyServices, site } from "@/lib/site";
 import { cleanParagraphs, extractFaqs } from "@/lib/text";
 import { titleCase } from "@/lib/utils";
@@ -39,12 +41,12 @@ const HOME_FAQS = [
   },
 ];
 
-export const metadata: Metadata = {
-  title: { absolute: "Carpet Cleaning in Irvine, CA | Air Duct & Rug Cleaning" },
+export const metadata: Metadata = pageMeta({
+  title: "Carpet Cleaning in Irvine, CA | Air Duct & Rug Cleaning",
   description:
     "Google Guaranteed carpet cleaning and air duct cleaning in Irvine since 2013. IICRC-certified crews, same-day openings. Call (949) 992-3299.",
-  alternates: { canonical: "/" },
-};
+  path: "/",
+});
 
 export default function HomePage() {
   const home = getUtility("home");
@@ -52,6 +54,7 @@ export default function HomePage() {
   const found = extractFaqs(home?.text || "");
   const faqs = found.length ? found : HOME_FAQS;
   const carpetCities = cityEntries().filter((c) => c.service === "carpet-cleaning");
+  const profile = getGoogleProfile();
 
   return (
     <>
@@ -65,7 +68,7 @@ export default function HomePage() {
       <HomeHero image={img("hero-home")} />
 
       <Section tone="light" className="lg:pt-24">
-        <Reveal>
+        <Reveal from="down">
           <SectionHead
             eyebrow="What we clean"
             title="Every service has its own page and its own crew"
@@ -90,7 +93,7 @@ export default function HomePage() {
       {/* Interactive quote wizard */}
       <Section tone="navy">
         <div className="grid items-start gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <Reveal>
+          <Reveal from="left">
             <SectionHead
               tone="navy"
               eyebrow="Get a price in minutes"
@@ -106,7 +109,7 @@ export default function HomePage() {
               ))}
             </ul>
           </Reveal>
-          <Reveal delay={0.15}>
+          <Reveal from="right" delay={0.12}>
             <QuoteWizard />
           </Reveal>
         </div>
@@ -116,7 +119,7 @@ export default function HomePage() {
 
       <Section tone="navy">
         <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_1fr]">
-          <Reveal>
+          <Reveal from="left">
             <SectionHead
               tone="navy"
               eyebrow="Carpet and air quality together"
@@ -138,7 +141,7 @@ export default function HomePage() {
               </Link>
             </div>
           </Reveal>
-          <Reveal delay={0.15} className="grid gap-4 sm:grid-cols-2">
+          <Reveal from="right" delay={0.12} className="grid gap-4 sm:grid-cols-2">
             <Link href="/carpet-cleaning/" className="group relative aspect-4/3 overflow-hidden rounded-2xl">
               <Image
                 src={asset("/images/carpet-stains.webp")}
@@ -175,7 +178,7 @@ export default function HomePage() {
       {paras.length > 1 ? (
         <Section tone="light">
           <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <Reveal>
+            <Reveal from="left">
               <SectionHead eyebrow="About the company" title={`${site.name} in ${site.city}`} />
               <div className="prose-body mt-6 max-w-2xl">
                 {paras.slice(1).map((p) => (
@@ -190,17 +193,22 @@ export default function HomePage() {
                 <ArrowRight className="size-4" />
               </Link>
             </Reveal>
-            <Reveal delay={0.1}>
+            <Reveal from="right" delay={0.12} className="self-start">
               <Stats />
               <MapEmbed
-                query="Irvine, CA"
-                title="Carpet & Duct Cleaning service area — Irvine and Orange County, CA"
+                query={mapQuery(profile)}
+                title={`${site.name} — ${profile?.formattedAddress || `${site.street}, ${site.city}, ${site.region} ${site.postalCode}`}`}
                 className="mt-6"
                 height="h-64"
+                zoom={15}
               />
               <p className="mt-3 text-sm text-ink/60">
-                Based in {titleCase(site.city.toLowerCase())}. Crews cover {site.area} daily.
+                Based in {profile?.neighborhood ? `${profile.neighborhood}, ` : ""}
+                {titleCase(site.city.toLowerCase())}. Crews cover {site.area} daily.
               </p>
+              {profile?.hoursSummary ? (
+                <p className="mt-1 text-sm text-ink/60">{profile.hoursSummary}</p>
+              ) : null}
             </Reveal>
           </div>
         </Section>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Phone, Star } from "lucide-react";
+import { Phone, Star } from "lucide-react";
 import { asset } from "@/lib/images";
 import { cn } from "@/lib/utils";
 import { site } from "@/lib/site";
@@ -22,7 +22,7 @@ export function Section({
     navy: "bg-navy text-white",
   };
   return (
-    <section id={id} className={cn("py-14 md:py-20", tones[tone], className)}>
+    <section id={id} className={cn("overflow-x-clip py-14 md:py-20", tones[tone], className)}>
       <div className="container-page">{children}</div>
     </section>
   );
@@ -78,23 +78,7 @@ export function CallButton({ className, label }: { className?: string; label?: s
   );
 }
 
-export function QuoteButton({ className, dark = false }: { className?: string; dark?: boolean }) {
-  return (
-    <Link
-      href="/contact/"
-      className={cn(
-        "inline-flex h-12 items-center justify-center gap-2 rounded-full border px-6 text-sm font-bold uppercase tracking-wide transition active:scale-[0.98]",
-        dark
-          ? "border-white/30 bg-white/10 text-white backdrop-blur hover:border-gold/60 hover:text-gold"
-          : "border-navy/25 text-navy hover:border-brand hover:text-brand",
-        className,
-      )}
-    >
-      Get a free quote
-      <ArrowRight className="size-4" />
-    </Link>
-  );
-}
+export { QuoteButton } from "@/components/quote-button";
 
 export function RatingPill({ dark = false }: { dark?: boolean }) {
   return (
