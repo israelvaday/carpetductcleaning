@@ -1,4 +1,3 @@
 User-Agent: *
-Allow: /
+Disallow: /
 
-Sitemap: https://israelvaday.github.io/carpetductcleaning/sitemap.xml
