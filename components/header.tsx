@@ -4,14 +4,12 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import * as Accordion from "@radix-ui/react-accordion";
 import * as Dialog from "@radix-ui/react-dialog";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { ChevronDown, Menu, Phone, X } from "lucide-react";
 import { asset } from "@/lib/images";
-import { SERVICE_GROUPS, serviceBlurb } from "@/lib/services";
+import { serviceBlurb } from "@/lib/services";
 import { moneyServices, site } from "@/lib/site";
-import { titleCase } from "@/lib/utils";
 
 const navLinks = [
   { href: "/locations/", label: "Locations" },
@@ -85,30 +83,6 @@ export function Header() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-4 grid grid-cols-2 gap-4 border-t border-line pt-4 sm:grid-cols-3">
-                  {SERVICE_GROUPS.map((group) => {
-                    const slugs = group.slugs.filter((slug) => !featured.some((f) => f.slug === slug));
-                    if (!slugs.length) return null;
-                    return (
-                    <div key={group.title}>
-                      <p className="px-2 text-[11px] font-semibold uppercase tracking-wider text-ink/45">{group.title}</p>
-                      <ul className="mt-1">
-                        {slugs.map((slug) => (
-                          <li key={slug}>
-                            <Link
-                              href={`/${slug}/`}
-                              className="block rounded-lg px-2 py-1.5 text-sm text-ink/80 hover:bg-sand hover:text-navy"
-                              onClick={() => setMenu("")}
-                            >
-                              {titleCase(slug)}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    );
-                  })}
-                </div>
               </NavigationMenu.Content>
             </NavigationMenu.Item>
 
@@ -165,32 +139,21 @@ export function Header() {
                       </Link>
                     ))}
                   </nav>
-                  <Accordion.Root type="single" collapsible className="mt-2 border-t border-line">
-                    {SERVICE_GROUPS.map((group) => (
-                      <Accordion.Item key={group.title} value={group.title} className="border-b border-line">
-                        <Accordion.Header>
-                          <Accordion.Trigger className="group flex w-full items-center justify-between px-3 py-3 text-left text-sm font-semibold text-navy">
-                            {group.title}
-                            <ChevronDown className="size-4 text-ink/50 transition group-data-[state=open]:rotate-180" />
-                          </Accordion.Trigger>
-                        </Accordion.Header>
-                        <Accordion.Content className="overflow-hidden pb-2">
-                          <ul>
-                            {group.slugs.map((slug) => (
-                              <li key={slug}>
-                                <Link
-                                  href={`/${slug}/`}
-                                  className="block rounded-lg px-3 py-2.5 text-sm text-ink/80 hover:bg-sand"
-                                >
-                                  {titleCase(slug)}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </Accordion.Content>
-                      </Accordion.Item>
+                  <p className="mt-3 border-t border-line px-3 pt-4 text-xs font-semibold uppercase tracking-wider text-ink/45">
+                    Services
+                  </p>
+                  <ul>
+                    {featured.map((item) => (
+                      <li key={item.href}>
+                        <Link
+                          href={item.href}
+                          className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-navy hover:bg-sand"
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
                     ))}
-                  </Accordion.Root>
+                  </ul>
                 </div>
                 <div className="border-t border-line p-4">
                   <a
