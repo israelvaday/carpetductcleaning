@@ -5,7 +5,7 @@ import { Cta } from "@/components/cta";
 import { JsonLd } from "@/components/json-ld";
 import { CheckList, Section, SectionHead, TrustRow } from "@/components/ui";
 import { getUtility } from "@/lib/content";
-import { asset, img } from "@/lib/images";
+import { img, serviceImage } from "@/lib/images";
 import { breadcrumbs } from "@/lib/schema";
 import { PROOF_POINTS } from "@/lib/services";
 import { pageMeta } from "@/lib/seo";
@@ -82,20 +82,20 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 gap-4">
             <div className="relative aspect-3/4 overflow-hidden rounded-2xl shadow-card">
               <Image
-                src={img("about-crew").src}
-                alt={img("about-crew").alt}
+                src={img("truck-mount").src}
+                alt="Truck-mounted extraction hose running into an Orange County home"
                 fill
                 sizes="(min-width: 1024px) 20rem, 45vw"
-                className="object-cover"
+                className="object-cover object-[72%_46%]"
               />
             </div>
             <div className="relative mt-8 aspect-3/4 overflow-hidden rounded-2xl shadow-card">
               <Image
-                src={asset("/images/truck-mount.webp")}
-                alt="Truck-mounted extraction hose running into an Orange County home"
+                src={serviceImage("encapsulation-carpet-cleaning").src}
+                alt="Low-moisture encapsulation machine cleaning carpet in a living room"
                 fill
                 sizes="(min-width: 1024px) 20rem, 45vw"
-                className="object-cover"
+                className="object-cover object-[center_70%]"
               />
             </div>
           </div>
