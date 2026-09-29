@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { JsonLd } from "@/components/json-ld";
 import { LegalPage } from "@/components/legal";
+import { breadcrumbs } from "@/lib/schema";
 import { pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 
@@ -13,7 +15,14 @@ export const metadata: Metadata = pageMeta({
 
 export default function SmsPage() {
   return (
-    <LegalPage
+    <>
+      <JsonLd
+        data={breadcrumbs([
+          { name: "Home", href: "/" },
+          { name: "SMS terms", href: "/sms-terms/" },
+        ])}
+      />
+      <LegalPage
       title="SMS terms"
       intro={`${site.name} sends text messages to customers who give us a mobile number and agree to be contacted about their quote or appointment.`}
       sections={[
@@ -49,5 +58,6 @@ export default function SmsPage() {
         },
       ]}
     />
+    </>
   );
 }

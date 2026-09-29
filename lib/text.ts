@@ -3,7 +3,7 @@ const CHROME =
 
 // Leftover WordPress badge strips and superlative headlines the audit told us to drop.
 const BADGE = /jobs completed.*google rating|google guaranteed\s*⭐|bbb a\+ rated\s*$/i;
-const SUPERLATIVE = /(#\s?1\b|most trusted|best\s+\w+\s+(company|service)|top[- ]rated|5[- ]star)/i;
+const SUPERLATIVE = /(#\s?1\b|most trusted|trusted choice|best\s+\w+\s+(company|service)|top[- ]rated|5[- ]star)/i;
 
 const ENTITIES: Record<string, string> = {
   "&nbsp;": " ",
@@ -60,7 +60,7 @@ export function cleanParagraphs(raw: string, limit = 14): string[] {
         !BADGE.test(p) &&
         !FOREIGN_DOMAIN.test(p) &&
         starCount(p) < 3 &&
-        !(p.length < 80 && SUPERLATIVE.test(p)),
+        !SUPERLATIVE.test(p),
     );
 
   const seen = new Set<string>();

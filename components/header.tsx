@@ -26,10 +26,10 @@ const featured = moneyServices.map((s) => ({
 
 function Logo() {
   return (
-    <Link href="/" className="flex shrink-0 items-center" aria-label={`${site.name} home`}>
+    <Link href="/" className="flex shrink-0 items-center">
       <Image
         src={asset("/images/logo.webp")}
-        alt=""
+        alt={site.name}
         width={220}
         height={47}
         className="h-9 w-auto"

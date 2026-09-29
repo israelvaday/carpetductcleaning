@@ -41,7 +41,7 @@ export function HomeHero({ image }: { image: Img }) {
             </div>
 
             <h1 className="mt-5 max-w-3xl text-4xl font-semibold leading-[1.08] tracking-tight text-white sm:text-5xl">
-              Carpet &amp; air duct cleaning that Orange County trusts.
+              Carpet and air duct cleaning for Irvine and Orange County.
             </h1>
 
             <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">

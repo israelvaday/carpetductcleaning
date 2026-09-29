@@ -16,6 +16,7 @@ function html(to) {
   return `<!doctype html>
 <meta charset="utf-8">
 <title>Moved</title>
+<meta name="robots" content="noindex, nofollow">
 <meta http-equiv="refresh" content="0;url=${dest}">
 <link rel="canonical" href="${dest}">
 <script>location.replace(${JSON.stringify(dest)})</script>

@@ -12,14 +12,13 @@ import { QuoteWizard } from "@/components/quote-wizard";
 import { Reveal } from "@/components/fx";
 import { Reviews } from "@/components/reviews";
 import { Section, SectionHead } from "@/components/ui";
-import { cityEntries, getUtility } from "@/lib/content";
+import { cityEntries } from "@/lib/content";
 import { getGoogleProfile, mapQuery } from "@/lib/google-profile";
 import { asset, img } from "@/lib/images";
 import { breadcrumbs, faqLd } from "@/lib/schema";
 import { PROOF_POINTS } from "@/lib/services";
 import { pageMeta } from "@/lib/seo";
 import { moneyServices, site } from "@/lib/site";
-import { cleanParagraphs, extractFaqs } from "@/lib/text";
 import { titleCase } from "@/lib/utils";
 
 const HOME_FAQS = [
@@ -49,10 +48,7 @@ export const metadata: Metadata = pageMeta({
 });
 
 export default function HomePage() {
-  const home = getUtility("home");
-  const paras = cleanParagraphs(home?.text || "", 4);
-  const found = extractFaqs(home?.text || "");
-  const faqs = found.length ? found : HOME_FAQS;
+  const faqs = HOME_FAQS;
   const carpetCities = cityEntries().filter((c) => c.service === "carpet-cleaning");
   const profile = getGoogleProfile();
 
@@ -175,16 +171,21 @@ export default function HomePage() {
         body="One city, one service, one URL. Every page below is written for that city."
       />
 
-      {paras.length > 1 ? (
-        <Section tone="light">
-          <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <Reveal from="left">
-              <SectionHead eyebrow="About the company" title={`${site.name} in ${site.city}`} />
-              <div className="prose-body mt-6 max-w-2xl">
-                {paras.slice(1).map((p) => (
-                  <p key={p.slice(0, 48)}>{p}</p>
-                ))}
-              </div>
+      <Section tone="light">
+        <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
+          <Reveal from="left">
+            <SectionHead eyebrow="About the company" title={`${site.name} in ${site.city}`} />
+            <div className="prose-body mt-6 max-w-2xl">
+              <p>
+                Carpet and duct cleaning in Irvine has been our work since 2013. Truck-mounted hot-water extraction
+                lifts soil out of the carpet. A HEPA negative-air machine pulls dust out of the ductwork. The same
+                crew can do both on one visit, and the price is itemized before anything starts.
+              </p>
+              <p>
+                Technicians are IICRC-certified. The solutions are EPA Safer Choice, so kids and pets can use the room
+                once it is dry. Quotes are given on site. Call (949) 992-3299 for a same-day or next-day opening.
+              </p>
+            </div>
               <Link
                 href="/about/"
                 className="mt-6 inline-flex items-center gap-2 font-semibold text-brand"
@@ -212,7 +213,6 @@ export default function HomePage() {
             </Reveal>
           </div>
         </Section>
-      ) : null}
 
       <FaqList items={faqs} />
       <Cta />

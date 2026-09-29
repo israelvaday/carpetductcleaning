@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/json-ld";
 import { LegalPage } from "@/components/legal";
+import { breadcrumbs } from "@/lib/schema";
 import { pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 
@@ -12,7 +14,14 @@ export const metadata: Metadata = pageMeta({
 
 export default function PrivacyPage() {
   return (
-    <LegalPage
+    <>
+      <JsonLd
+        data={breadcrumbs([
+          { name: "Home", href: "/" },
+          { name: "Privacy Policy", href: "/privacy-policy/" },
+        ])}
+      />
+      <LegalPage
       title="Privacy Policy"
       intro={`${site.name} ("we", "us") provides carpet, upholstery, rug, floor, and air duct cleaning in Irvine and across ${site.area}, California. This policy explains what we collect when you contact us or use this website, and what we do with it.`}
       sections={[
@@ -62,5 +71,6 @@ export default function PrivacyPage() {
         },
       ]}
     />
+    </>
   );
 }

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/json-ld";
 import { LegalPage } from "@/components/legal";
+import { breadcrumbs } from "@/lib/schema";
 import { pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 
@@ -12,7 +14,14 @@ export const metadata: Metadata = pageMeta({
 
 export default function TermsPage() {
   return (
-    <LegalPage
+    <>
+      <JsonLd
+        data={breadcrumbs([
+          { name: "Home", href: "/" },
+          { name: "Terms of Service", href: "/terms/" },
+        ])}
+      />
+      <LegalPage
       title="Terms of Service"
       intro={`These terms apply to cleaning services booked with ${site.name} by phone, text, email, or through this website. Booking a service means you agree to them.`}
       sections={[
@@ -55,5 +64,6 @@ export default function TermsPage() {
         },
       ]}
     />
+    </>
   );
 }
