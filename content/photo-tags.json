@@ -16900,5 +16900,185 @@
     ],
     "w": 384,
     "h": 512
+  },
+  "ba-carpet-bedroom-after.webp": {
+    "ok": true,
+    "kind": "result",
+    "services": [
+      "carpet-cleaning"
+    ],
+    "setting": "home",
+    "has_people": false,
+    "has_text": false,
+    "text_content": "",
+    "quality": "high",
+    "orientation": "landscape",
+    "alt": "Bedroom wall-to-wall carpet after cleaning",
+    "caption": "Bedroom wall-to-wall carpet after cleaning",
+    "best_for": [
+      "gallery"
+    ]
+  },
+  "ba-carpet-wine-living-after.webp": {
+    "ok": true,
+    "kind": "result",
+    "services": [
+      "carpet-cleaning"
+    ],
+    "setting": "home",
+    "has_people": false,
+    "has_text": false,
+    "text_content": "",
+    "quality": "high",
+    "orientation": "landscape",
+    "alt": "Living room carpet after a wine stain was lifted",
+    "caption": "Living room carpet after a wine stain was lifted",
+    "best_for": [
+      "gallery"
+    ]
+  },
+  "ba-carpet-pet-hall-after.webp": {
+    "ok": true,
+    "kind": "result",
+    "services": [
+      "carpet-cleaning"
+    ],
+    "setting": "home",
+    "has_people": false,
+    "has_text": false,
+    "text_content": "",
+    "quality": "high",
+    "orientation": "landscape",
+    "alt": "Hallway carpet after a pet stain was treated",
+    "caption": "Hallway carpet after a pet stain was treated",
+    "best_for": [
+      "gallery"
+    ]
+  },
+  "ba-carpet-coffee-dining-after.webp": {
+    "ok": true,
+    "kind": "result",
+    "services": [
+      "carpet-cleaning"
+    ],
+    "setting": "home",
+    "has_people": false,
+    "has_text": false,
+    "text_content": "",
+    "quality": "high",
+    "orientation": "landscape",
+    "alt": "Dining room carpet after a coffee spill was cleaned",
+    "caption": "Dining room carpet after a coffee spill was cleaned",
+    "best_for": [
+      "gallery"
+    ]
+  },
+  "ba-carpet-stairs-after.webp": {
+    "ok": true,
+    "kind": "result",
+    "services": [
+      "carpet-cleaning"
+    ],
+    "setting": "home",
+    "has_people": false,
+    "has_text": false,
+    "text_content": "",
+    "quality": "high",
+    "orientation": "landscape",
+    "alt": "Clean carpeted stairs after a professional clean",
+    "caption": "Clean carpeted stairs after a professional clean",
+    "best_for": [
+      "gallery"
+    ]
+  },
+  "ba-carpet-stairs-before.webp": {
+    "ok": true,
+    "kind": "result",
+    "services": [
+      "carpet-cleaning"
+    ],
+    "setting": "home",
+    "has_people": false,
+    "has_text": false,
+    "text_content": "",
+    "quality": "high",
+    "orientation": "landscape",
+    "alt": "Soiled carpeted stairs before cleaning",
+    "caption": "Soiled carpeted stairs before cleaning",
+    "best_for": [
+      "gallery"
+    ]
+  },
+  "ba-carpet-bedroom-before.webp": {
+    "ok": true,
+    "kind": "result",
+    "services": [
+      "carpet-cleaning"
+    ],
+    "setting": "home",
+    "has_people": false,
+    "has_text": false,
+    "text_content": "",
+    "quality": "high",
+    "orientation": "landscape",
+    "alt": "Bedroom carpet with traffic marks before cleaning",
+    "caption": "Bedroom carpet with traffic marks before cleaning",
+    "best_for": [
+      "gallery"
+    ]
+  },
+  "ba-carpet-wine-living-before.webp": {
+    "ok": true,
+    "kind": "result",
+    "services": [
+      "carpet-cleaning"
+    ],
+    "setting": "home",
+    "has_people": false,
+    "has_text": false,
+    "text_content": "",
+    "quality": "high",
+    "orientation": "landscape",
+    "alt": "Living room carpet with a wine stain before cleaning",
+    "caption": "Living room carpet with a wine stain before cleaning",
+    "best_for": [
+      "gallery"
+    ]
+  },
+  "ba-carpet-pet-hall-before.webp": {
+    "ok": true,
+    "kind": "result",
+    "services": [
+      "carpet-cleaning"
+    ],
+    "setting": "home",
+    "has_people": false,
+    "has_text": false,
+    "text_content": "",
+    "quality": "high",
+    "orientation": "landscape",
+    "alt": "Hallway carpet with a pet stain before cleaning",
+    "caption": "Hallway carpet with a pet stain before cleaning",
+    "best_for": [
+      "gallery"
+    ]
+  },
+  "ba-carpet-coffee-dining-before.webp": {
+    "ok": true,
+    "kind": "result",
+    "services": [
+      "carpet-cleaning"
+    ],
+    "setting": "home",
+    "has_people": false,
+    "has_text": false,
+    "text_content": "",
+    "quality": "high",
+    "orientation": "landscape",
+    "alt": "Dining room carpet with a coffee spill before cleaning",
+    "caption": "Dining room carpet with a coffee spill before cleaning",
+    "best_for": [
+      "gallery"
+    ]
   }
 }

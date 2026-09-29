@@ -52,6 +52,7 @@ export default async function CityPage({
     .map((s) => s.href.replaceAll("/", ""))
     .filter((s) => s !== doc.service)
     .slice(0, 6);
+  const jobs = cityJobs(doc.service, doc.city);
 
   return (
     <>
@@ -104,6 +105,7 @@ export default async function CityPage({
         </div>
       </Section>
 
+      {jobs.length > 0 && (
       <Section tone="sand">
         <SectionHead
           eyebrow="Recent work"
@@ -111,7 +113,7 @@ export default async function CityPage({
           body="Photos from our own crews working in this part of Orange County."
         />
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {cityJobs(doc.service, doc.city).map((photo) => (
+          {jobs.map((photo) => (
             <div key={photo.src} className="relative aspect-4/3 overflow-hidden rounded-xl shadow-card">
               <Image
                 src={photo.src}
@@ -124,6 +126,7 @@ export default async function CityPage({
           ))}
         </div>
       </Section>
+      )}
 
       <Section tone="light" id="quote">
         <div className="grid items-start gap-10 lg:grid-cols-[1fr_1.2fr]">
