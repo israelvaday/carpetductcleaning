@@ -255,18 +255,8 @@ export function blogDescription(post: WpPage) {
 }
 
 export function blogTitle(post: WpPage) {
-  const slug = post.slug;
-  const gen = GEN_POSTS[slug];
+  const gen = GEN_POSTS[post.slug];
   if (gen?.title) return gen.title;
-  const overrides: Record<string, string> = {
-    "air-duct-cleaning-tustin-ca": "Air Duct Cleaning in Tustin, CA",
-    "carpet-cleaning-air-quality-lake-forest-ca": "Carpet Cleaning and Air Quality in Lake Forest, CA",
-    "curtain-cleaning-tips-for-lasting-elegance": "Curtain and Drape Cleaning Tips",
-    "water-damage-restoration-in-irvine-ca": "Water Damage Restoration in Irvine, CA",
-    "7-powerful-tips-cleaning-outdoor-furniture": "Outdoor Furniture Cleaning Tips for Orange County",
-    "premium-sofa-and-couch-cleaning-yorba-linda": "Sofa and Couch Cleaning in Yorba Linda",
-  };
-  if (overrides[slug]) return overrides[slug];
   const t = (post.seo?.title || post.title || "").replace(/&amp;/g, "&");
   // The audit flagged superlative stacks, so they come out of titles too.
   return t
