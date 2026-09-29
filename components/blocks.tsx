@@ -104,7 +104,7 @@ export function ServiceGrid({ slugs, priorityCount = 0 }: { slugs: string[]; pri
   return (
     <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
       {slugs.map((slug, i) => (
-        <Reveal key={slug} delay={Math.min(i, 7) * 0.06}>
+        <Reveal key={slug} from={i % 2 === 0 ? "left" : "right"} delay={Math.min(i, 7) * 0.05}>
           <ServiceCard slug={slug} priority={i < priorityCount} />
         </Reveal>
       ))}
@@ -139,14 +139,14 @@ export function Stats({ tone = "navy" }: { tone?: "navy" | "sand" }) {
 export function Process({ tone = "sand", steps }: { tone?: "light" | "sand"; steps?: ProcessStep[] }) {
   return (
     <Section tone={tone}>
-      <Reveal>
+      <Reveal from="down">
         <SectionHead
           eyebrow="How it works"
           title="From first call to final walkthrough"
           body="Every job runs the same four steps whether it is one room or a whole building. Tap a step to see it."
         />
       </Reveal>
-      <Reveal delay={0.1} className="mt-12">
+      <Reveal from="up" delay={0.1} className="mt-12">
         <ProcessWizard steps={steps} />
       </Reveal>
     </Section>
@@ -172,23 +172,27 @@ export function Gallery({
     <Section>
       {compare ? (
         <>
-          <SectionHead
-            eyebrow="Before and after"
-            title="Vents and ducts, before and after cleaning"
-            body="Drag the handle on each photo — or focus it and use the arrow keys — to compare the vent before cleaning and after."
-          />
+          <Reveal from="left">
+            <SectionHead
+              eyebrow="Before and after"
+              title="Carpet and ducts, before and after"
+              body="Drag the handle on each photo — or focus it and use the arrow keys — to compare the job before cleaning and after. Carpet pairs are first."
+            />
+          </Reveal>
           <BeforeAfterGallery pairs={beforeAfter} />
         </>
       ) : null}
       <div className={compare ? "mt-16" : undefined}>
-        <SectionHead
-          eyebrow="Recent work"
-          title="Real jobs from Orange County homes"
-          body="Photos from our own crews — carpet, rugs, upholstery, tile, and duct work."
-        />
+        <Reveal from="right">
+          <SectionHead
+            eyebrow="Recent work"
+            title="Real jobs from Orange County homes"
+            body="Photos from our own crews — carpet, rugs, upholstery, and duct work."
+          />
+        </Reveal>
         <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
           {gallery.slice(offset, offset + limit).map((photo, i) => (
-            <Reveal key={photo.src} delay={Math.min(i, 7) * 0.05}>
+            <Reveal key={photo.src} from="up" delay={Math.min(i, 7) * 0.04}>
               <PhotoFrame ratio="photo" rounded="card" className="rounded-xl shadow-card">
                 <Image
                   src={photo.src}
@@ -210,7 +214,7 @@ export function WhyUs({ items }: { items: string[] }) {
   return (
     <Section tone="sand">
       <div className="grid items-center gap-12 lg:grid-cols-2">
-        <div>
+        <Reveal from="left">
           <SectionHead
             eyebrow="Why homeowners call us"
             title="Certified crews, upfront prices, no upsell games"
@@ -221,8 +225,8 @@ export function WhyUs({ items }: { items: string[] }) {
             <CallButton />
             <QuoteButton />
           </div>
-        </div>
-        <div className="grid gap-4 sm:grid-cols-2">
+        </Reveal>
+        <Reveal from="right" delay={0.1} className="grid gap-4 sm:grid-cols-2">
           <PhotoFrame ratio="photo" rounded="card" className="shadow-card sm:col-span-2">
             <Image
               src={asset("/images/tech.webp")}
@@ -250,7 +254,7 @@ export function WhyUs({ items }: { items: string[] }) {
                 className="object-cover"
               />
           </PhotoFrame>
-        </div>
+        </Reveal>
       </div>
     </Section>
   );
@@ -270,10 +274,13 @@ export function CityCards({
   if (!cities.length) return null;
   return (
     <Section tone="sand">
-      <SectionHead eyebrow="Service areas" title={title} body={body} />
+      <Reveal from="left">
+        <SectionHead eyebrow="Service areas" title={title} body={body} />
+      </Reveal>
       {/* Text chips, not photo cards: every city photo is reserved for its own
           city page and its /locations tile, so nothing ever repeats. */}
-      <ul className="mt-10 flex flex-wrap gap-2.5">
+      <Reveal from="up" delay={0.08} className="mt-10">
+      <ul className="flex flex-wrap gap-2.5">
         {cities.map((c) => (
           <li key={c.route}>
             <Link
@@ -286,6 +293,7 @@ export function CityCards({
           </li>
         ))}
       </ul>
+      </Reveal>
     </Section>
   );
 }

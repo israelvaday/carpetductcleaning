@@ -1,5 +1,40 @@
 [
   {
+    "before": "/images/ba-carpet-wine-living-before.webp",
+    "after": "/images/ba-carpet-wine-living-after.webp",
+    "width": 1200,
+    "height": 900,
+    "alt": "Living room carpet, red wine stain"
+  },
+  {
+    "before": "/images/ba-carpet-stairs-before.webp",
+    "after": "/images/ba-carpet-stairs-after.webp",
+    "width": 1200,
+    "height": 900,
+    "alt": "Carpeted stairs, soiled treads"
+  },
+  {
+    "before": "/images/ba-carpet-pet-hall-before.webp",
+    "after": "/images/ba-carpet-pet-hall-after.webp",
+    "width": 1200,
+    "height": 900,
+    "alt": "Hallway carpet, pet stain"
+  },
+  {
+    "before": "/images/ba-carpet-bedroom-before.webp",
+    "after": "/images/ba-carpet-bedroom-after.webp",
+    "width": 1200,
+    "height": 900,
+    "alt": "Bedroom carpet, traffic lanes"
+  },
+  {
+    "before": "/images/ba-carpet-coffee-dining-before.webp",
+    "after": "/images/ba-carpet-coffee-dining-after.webp",
+    "width": 1200,
+    "height": 900,
+    "alt": "Dining room carpet, coffee spill"
+  },
+  {
     "before": "/images/ba-round-supply-duct-before.webp",
     "after": "/images/ba-round-supply-duct-after.webp",
     "width": 896,
@@ -26,20 +61,6 @@
     "width": 896,
     "height": 1200,
     "alt": "Wall return air grille"
-  },
-  {
-    "before": "/images/ba-furnace-blower-wheel-before.webp",
-    "after": "/images/ba-furnace-blower-wheel-after.webp",
-    "width": 1200,
-    "height": 896,
-    "alt": "Furnace blower wheel"
-  },
-  {
-    "before": "/images/ba-evaporator-coil-before.webp",
-    "after": "/images/ba-evaporator-coil-after.webp",
-    "width": 896,
-    "height": 1200,
-    "alt": "Evaporator coil"
   },
   {
     "before": "/images/ba-dryer-vent-hood-before.webp",
@@ -119,24 +140,10 @@
     "alt": "Commercial ceiling diffuser"
   },
   {
-    "before": "/images/ba-furnace-burner-compartment-before.webp",
-    "after": "/images/ba-furnace-burner-compartment-after.webp",
-    "width": 1200,
-    "height": 896,
-    "alt": "Furnace burner compartment"
-  },
-  {
     "before": "/images/ba-panned-joist-return-before.webp",
     "after": "/images/ba-panned-joist-return-after.webp",
     "width": 1200,
     "height": 896,
     "alt": "Panned joist return"
-  },
-  {
-    "before": "/images/ba-ac-condenser-coil-before.webp",
-    "after": "/images/ba-ac-condenser-coil-after.webp",
-    "width": 896,
-    "height": 1200,
-    "alt": "Outdoor condenser coil"
   }
 ]
