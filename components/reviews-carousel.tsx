@@ -82,21 +82,21 @@ export function ReviewsCarousel({ reviews }: { reviews: Review[] }) {
         {reviews.map((r) => (
           <figure
             key={`${r.author}-${r.publishedAt}`}
-            className="flex w-[85%] flex-none snap-start flex-col rounded-2xl border border-line bg-white p-6 shadow-card sm:w-[60%] lg:w-[31.8%]"
+            className="flex w-[85%] flex-none snap-start flex-col items-center rounded-2xl border border-line bg-white p-6 text-center shadow-card sm:w-[60%] sm:items-start sm:text-left lg:w-[31.8%]"
           >
-            <div className="flex items-center justify-between gap-3">
+            <div className="flex w-full items-center justify-center gap-3 sm:justify-between">
               <Stars n={r.rating} />
               <span className="text-xs text-ink/50">{r.when}</span>
             </div>
             <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-ink/80">
               &ldquo;{r.text.length > 260 ? `${r.text.slice(0, 257)}…` : r.text}&rdquo;
             </blockquote>
-            <figcaption className="mt-4 flex items-center gap-2 border-t border-line pt-4 text-sm font-semibold text-navy">
+            <figcaption className="mt-4 flex w-full flex-wrap items-center justify-center gap-2 border-t border-line pt-4 text-sm font-semibold text-navy sm:justify-start">
               <span className="flex size-8 items-center justify-center rounded-full bg-navy text-xs font-bold text-white">
                 {r.author.charAt(0).toUpperCase()}
               </span>
               <span className="truncate">{r.author}</span>
-              <span className="ml-auto text-[10px] font-bold uppercase tracking-wider text-ink/40">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-ink/40 sm:ml-auto">
                 Google review
               </span>
             </figcaption>

@@ -25,7 +25,7 @@ export function Reviews() {
 
   return (
     <Section tone="sand">
-      <div className="flex flex-wrap items-end justify-between gap-6">
+      <div className="flex flex-col items-center gap-6 text-center md:flex-row md:items-end md:justify-between md:text-left">
         <Reveal from="left">
           <SectionHead
             eyebrow="Reviews"
@@ -57,7 +57,7 @@ export function Reviews() {
 
       {data && data.reviews.length > 0 ? <ReviewsCarousel reviews={data.reviews.slice(0, 30)} /> : null}
 
-      <div className="mt-8">
+      <div className="mt-8 text-center md:text-left">
         <a
           href={
             profile?.reviewsUrl ||

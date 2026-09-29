@@ -45,6 +45,8 @@ type GenCity = {
   keywords?: string[];
 };
 type GenPost = {
+  /** Public /blog/{slug}/ path. Matches the article topic, not the old city URL. */
+  slug?: string;
   title?: string;
   description?: string;
   excerpt?: string;
@@ -227,9 +229,20 @@ export function getPosts() {
     .sort((a, b) => a.title.localeCompare(b.title));
 }
 
+const FILE_BY_PUBLIC_SLUG = new Map<string, string>();
+for (const [file, gen] of Object.entries(GEN_POSTS)) {
+  if (gen.slug) FILE_BY_PUBLIC_SLUG.set(gen.slug, file);
+}
+
+/** URL slug. The WordPress file name stays the lookup key for copy and photos. */
+export function blogSlug(post: WpPage) {
+  return GEN_POSTS[post.slug]?.slug || post.slug;
+}
+
 export function getPost(slug: string) {
+  const file = FILE_BY_PUBLIC_SLUG.get(slug) || slug;
   try {
-    return readJson<WpPage>(`content/posts/${slug}.json`);
+    return readJson<WpPage>(`content/posts/${file}.json`);
   } catch {
     return null;
   }
@@ -280,6 +293,6 @@ export function allIndexRoutes() {
     "/sms-terms/",
     ...serviceSlugs().map((s) => `/${s}/`),
     ...cityEntries().map((c) => `/${c.service}/${c.city}/`),
-    ...getPosts().map((p) => `/blog/${p.slug}/`),
+    ...getPosts().map((p) => `/blog/${blogSlug(p)}/`),
   ];
 }

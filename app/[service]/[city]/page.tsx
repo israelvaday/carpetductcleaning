@@ -89,14 +89,14 @@ export default async function CityPage({
                 <p key={p.slice(0, 48)}>{p}</p>
               ))}
             </div>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
               <CallButton />
               <QuoteButton />
             </div>
           </div>
 
           <aside className="grid gap-6 lg:sticky lg:top-32 lg:self-start">
-            <div className="rounded-2xl border border-line bg-sand p-6 shadow-card">
+            <div className="rounded-2xl border border-line bg-sand p-6 text-center shadow-card md:text-left">
               <p className="eyebrow">Why {doc.cityName} calls us</p>
               <CheckList items={PROOF_POINTS} />
             </div>

@@ -72,8 +72,8 @@ export default function HomePage() {
           />
         </Reveal>
         <ServiceGrid slugs={moneyServices.map((s) => s.href.replaceAll("/", ""))} priorityCount={4} />
-        <Reveal className="mt-8">
-          <Link href="/locations/" className="inline-flex items-center gap-2 font-semibold text-brand">
+        <Reveal className="mt-8 text-center md:text-left">
+          <Link href="/locations/" className="inline-flex items-center justify-center gap-2 font-semibold text-brand">
             See all services and service areas
             <ArrowRight className="size-4" />
           </Link>
@@ -122,7 +122,7 @@ export default function HomePage() {
               title="Clean floors and clean air in one visit"
               body="Most Orange County homes need both. Booking carpet and duct cleaning together means one crew, one trip, and one itemized quote."
             />
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
               <Link
                 href="/carpet-cleaning/"
                 className="inline-flex h-12 items-center gap-2 rounded-full bg-gold px-6 text-sm font-bold uppercase tracking-wide text-navy transition hover:bg-gold-dark"
@@ -147,7 +147,7 @@ export default function HomePage() {
                 className="object-cover transition duration-500 group-hover:scale-105"
               />
               <span className="absolute inset-0 bg-linear-to-t from-navy/90 to-transparent" />
-              <span className="absolute bottom-4 left-4 font-semibold text-white">Carpet Cleaning</span>
+              <span className="absolute inset-x-0 bottom-4 text-center font-semibold text-white sm:inset-x-auto sm:left-4 sm:text-left">Carpet Cleaning</span>
             </Link>
             <Link href="/air-duct-cleaning/" className="group relative aspect-4/3 overflow-hidden rounded-2xl">
               <Image
@@ -158,7 +158,7 @@ export default function HomePage() {
                 className="object-cover transition duration-500 group-hover:scale-105"
               />
               <span className="absolute inset-0 bg-linear-to-t from-navy/90 to-transparent" />
-              <span className="absolute bottom-4 left-4 font-semibold text-white">Air Duct Cleaning</span>
+              <span className="absolute inset-x-0 bottom-4 text-center font-semibold text-white sm:inset-x-auto sm:left-4 sm:text-left">Air Duct Cleaning</span>
             </Link>
           </Reveal>
         </div>

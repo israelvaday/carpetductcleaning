@@ -42,7 +42,7 @@ export function SectionHead({
   align?: "left" | "center";
 }) {
   return (
-    <div className={cn("max-w-2xl", align === "center" && "mx-auto text-center")}>
+    <div className={cn("mx-auto max-w-2xl text-center md:mx-0 md:text-left", align === "center" && "md:mx-auto md:text-center")}>
       {eyebrow ? (
         <p className={cn("eyebrow", tone === "navy" && "text-gold")}>{eyebrow}</p>
       ) : null}
@@ -98,9 +98,9 @@ export function RatingPill({ dark = false }: { dark?: boolean }) {
   );
 }
 
-export function TrustRow({ dark = false }: { dark?: boolean }) {
+export function TrustRow({ dark = false, className }: { dark?: boolean; className?: string }) {
   return (
-    <div className={cn("flex flex-wrap items-center gap-x-6 gap-y-4", dark ? "text-white/70" : "text-ink/60")}>
+    <div className={cn("flex flex-wrap items-center gap-x-6 gap-y-4", dark ? "text-white/70" : "text-ink/60", className)}>
       <Image
         src={asset("/images/google.webp")}
         alt="Google Guaranteed badge"
@@ -155,7 +155,7 @@ export function Breadcrumb({
 
 export function CheckList({ items, dark = false }: { items: string[]; dark?: boolean }) {
   return (
-    <ul className="mt-6 grid gap-3">
+    <ul className="mx-auto mt-6 grid w-fit max-w-full gap-3 text-left md:mx-0">
       {items.map((item) => (
         <li key={item} className="flex gap-3">
           <span

@@ -34,22 +34,22 @@ export function HomeHero({ image }: { image: Img }) {
 
       <div className="container-page relative z-10 flex flex-col gap-10 py-12 lg:py-16">
         <div className="grid items-center gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10">
-          <Reveal from="left">
-            <div className="inline-flex max-w-full flex-wrap items-center gap-2 rounded-full border border-brand-light/30 bg-brand/15 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-brand-50">
+          <Reveal from="left" className="text-center lg:text-left">
+            <div className="mx-auto inline-flex max-w-full flex-wrap items-center justify-center gap-2 rounded-full border border-brand-light/30 bg-brand/15 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-brand-50 lg:mx-0">
               <MapPin className="size-3.5 shrink-0" />
               <span>{site.city} · {site.area} · Since {site.foundingYear}</span>
             </div>
 
-            <h1 className="mt-5 max-w-3xl text-4xl font-semibold leading-[1.08] tracking-tight text-white sm:text-5xl">
+            <h1 className="mx-auto mt-5 max-w-3xl text-4xl font-semibold leading-[1.08] tracking-tight text-white sm:text-5xl lg:mx-0">
               Carpet and air duct cleaning for Irvine and Orange County.
             </h1>
 
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
+            <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg lg:mx-0">
               Truck-mounted hot-water extraction and HEPA duct cleaning from IICRC-certified
               technicians — with an itemized quote before we start and same-day openings.
             </p>
 
-            <div className="mt-8 flex w-full max-w-xl flex-col gap-3 sm:flex-row">
+            <div className="mx-auto mt-8 flex w-full max-w-xl flex-col gap-3 sm:flex-row lg:mx-0">
               <a
                 href={site.phoneHref}
                 className="inline-flex h-14 flex-1 items-center justify-center gap-2 rounded-full bg-gold px-6 text-base font-bold uppercase tracking-wide text-navy shadow-glow transition hover:bg-gold-dark"
@@ -67,12 +67,12 @@ export function HomeHero({ image }: { image: Img }) {
           </Reveal>
 
           <Reveal from="right" delay={0.12} className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-1">
-            <div className="rounded-2xl border border-white/20 bg-navy/35 p-5 shadow-lift backdrop-blur-md">
-              <div className="flex items-center gap-2 text-gold">
+            <div className="rounded-2xl border border-white/20 bg-navy/35 p-5 text-center shadow-lift backdrop-blur-md lg:text-left">
+              <div className="flex items-center justify-center gap-2 text-gold lg:justify-start">
                 <ShieldCheck className="size-5 shrink-0" />
                 <span className="text-xs font-bold uppercase tracking-wider">Why homeowners call us</span>
               </div>
-              <ul className="mt-3 space-y-2 text-sm text-white/85">
+              <ul className="mx-auto mt-3 w-fit space-y-2 text-left text-sm text-white/85 lg:mx-0">
                 {["IICRC-certified, background-checked crews", "EPA Safer Choice products, kid & pet safe", "Itemized quote on-site — no bait-and-switch"].map((b) => (
                   <li key={b} className="flex items-start gap-2">
                     <Star className="mt-0.5 size-4 shrink-0 fill-gold text-gold" />
@@ -82,15 +82,15 @@ export function HomeHero({ image }: { image: Img }) {
               </ul>
             </div>
 
-            <div className="rounded-2xl border border-gold/40 bg-gradient-to-br from-brand to-brand-dark p-5 text-white shadow-lift">
-              <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider">
+            <div className="rounded-2xl border border-gold/40 bg-gradient-to-br from-brand to-brand-dark p-5 text-center text-white shadow-lift lg:text-left">
+              <div className="flex items-center justify-center gap-2 text-sm font-bold uppercase tracking-wider lg:justify-start">
                 <Phone className="size-5 shrink-0" />
                 Same-day openings
               </div>
               <p className="mt-2 text-sm font-medium leading-relaxed text-white/90">
                 Call now or send photos for a fast, itemized quote anywhere in {site.area}.
               </p>
-              <a href={site.phoneHref} className="mt-3 inline-flex items-center gap-2 text-sm font-extrabold underline-offset-4 hover:underline">
+              <a href={site.phoneHref} className="mt-3 inline-flex items-center justify-center gap-2 text-sm font-extrabold underline-offset-4 hover:underline">
                 {site.phone} →
               </a>
             </div>

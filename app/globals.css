@@ -83,6 +83,11 @@ summary::-webkit-details-marker {
   display: none;
 }
 
+@utility pin-center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @utility container-page {
   margin-inline: auto;
   max-width: 76rem;

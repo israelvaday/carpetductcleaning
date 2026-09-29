@@ -7,7 +7,7 @@ import { ImageHero } from "@/components/blocks";
 import { Cta } from "@/components/cta";
 import { JsonLd } from "@/components/json-ld";
 import { Section, SectionHead } from "@/components/ui";
-import { blogDescription, blogMeta, blogSeoTitle, getPost, getPosts } from "@/lib/content";
+import { blogDescription, blogMeta, blogSeoTitle, blogSlug, getPost, getPosts } from "@/lib/content";
 import { postImage } from "@/lib/images";
 import { blogPosting, breadcrumbs } from "@/lib/schema";
 import { pageMeta } from "@/lib/seo";
@@ -15,7 +15,7 @@ import { cleanParagraphs } from "@/lib/text";
 import { siteUrl } from "@/lib/site";
 
 export function generateStaticParams() {
-  return getPosts().map((p) => ({ slug: p.slug }));
+  return getPosts().map((p) => ({ slug: blogSlug(p) }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return pageMeta({
     title,
     description: blogDescription(post),
-    path: `/blog/${post.slug}/`,
+    path: `/blog/${blogSlug(post)}/`,
   });
 }
 
@@ -39,11 +39,11 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   const gen = blogMeta(post);
   const sections = gen?.sections?.filter((s) => s.heading && s.body) ?? [];
   const paras = sections.length ? [] : cleanParagraphs(post.text || "", 16);
-  const baseImage = postImage(slug);
+  const baseImage = postImage(post.slug);
   const image = gen?.heroAlt ? { ...baseImage, alt: gen.heroAlt } : baseImage;
   const links = (gen?.links ?? []).filter((l) => l.href.startsWith("/") && l.label);
   const more = getPosts()
-    .filter((p) => p.slug !== slug)
+    .filter((p) => blogSlug(p) !== slug)
     .slice(0, 3);
 
   return (
@@ -52,14 +52,14 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         data={breadcrumbs([
           { name: "Home", href: "/" },
           { name: "Blog", href: "/blog/" },
-          { name: title, href: `/blog/${slug}/` },
+          { name: title, href: `/blog/${blogSlug(post)}/` },
         ])}
       />
       <JsonLd
         data={blogPosting({
           title,
           description,
-          path: `/blog/${slug}/`,
+          path: `/blog/${blogSlug(post)}/`,
           date: post.date,
           image: image.src.startsWith("http") ? image.src : `${siteUrl()}${image.src}`,
         })}
@@ -109,12 +109,12 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             const t = blogSeoTitle(p);
             return (
               <Link
-                key={p.slug}
-                href={`/blog/${p.slug}/`}
-                className="group flex flex-col justify-between rounded-2xl border border-line bg-white p-5 shadow-card transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-lift"
+                key={blogSlug(p)}
+                href={`/blog/${blogSlug(p)}/`}
+                className="group flex flex-col items-center justify-between rounded-2xl border border-line bg-white p-5 text-center shadow-card transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-lift md:items-start md:text-left"
               >
                 <h3 className="font-semibold leading-snug text-navy group-hover:text-brand">{t}</h3>
-                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand">
+                <span className="mt-4 inline-flex items-center justify-center gap-1.5 text-sm font-semibold text-brand">
                   Read
                   <ArrowRight className="size-4 transition group-hover:translate-x-0.5" />
                 </span>

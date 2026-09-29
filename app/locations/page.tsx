@@ -86,7 +86,7 @@ export default function LocationsPage() {
                   />
                   <span className="absolute inset-0 bg-linear-to-t from-navy/90 via-navy/25 to-transparent" />
                 </PhotoFrame>
-                <span className="absolute bottom-0 left-0 right-0 flex items-end justify-between gap-2 p-4 text-white">
+                <span className="absolute bottom-0 left-0 right-0 flex flex-col items-center gap-1 p-4 text-center text-white sm:flex-row sm:items-end sm:justify-between sm:text-left">
                   <span>
                     <span className="block text-[11px] font-semibold uppercase tracking-wider text-white/80">Carpet cleaning</span>
                     <span className="block font-semibold">{titleCase(c.city)}</span>
@@ -130,7 +130,7 @@ export default function LocationsPage() {
         />
         <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {SERVICE_GROUPS.map((group) => (
-            <div key={group.title} className="rounded-2xl border border-line bg-sand p-6">
+            <div key={group.title} className="rounded-2xl border border-line bg-sand p-6 text-center md:text-left">
               <p className="eyebrow">{group.title}</p>
               <ul className="mt-3 space-y-2">
                 {group.slugs.map((slug) => (

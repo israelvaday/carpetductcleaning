@@ -1,12 +1,18 @@
 {
   "6-rug-cleaning-secrets-that-save-you-money": {
+    "slug": "area-rug-cleaning-vs-replacement",
     "title": "Area Rug Cleaning That Costs Less Than Replacing It",
     "description": "Area rug cleaning costs less than replacing a rug whose foundation is still sound. It is washed, rinsed, and dried flat. Call (949) 992-3299.",
     "keyword": "area rug cleaning",
     "category": "Rugs",
     "readMinutes": 4,
     "heroAlt": "Area rug washed and rinsed on a flat table in a cleaning plant",
-    "links": [{ "href": "/area-rug-cleaning/", "label": "area rug cleaning" }],
+    "links": [
+      {
+        "href": "/area-rug-cleaning/",
+        "label": "area rug cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "When a wash beats a replacement",
@@ -23,13 +29,19 @@
     ]
   },
   "7-easy-carpet-hacks-to-remove-pet-hair": {
+    "slug": "pet-hair-carpet-cleaning",
     "title": "Pet Hair Carpet Cleaning for Fur Trapped in Fibers",
     "description": "Pet hair carpet cleaning lifts fur and dander a vacuum leaves in the yarn. Truck-mounted hot-water extraction, safe for pets. Call (949) 992-3299.",
     "keyword": "pet hair carpet cleaning",
     "category": "Carpet",
     "readMinutes": 4,
     "heroAlt": "Close view of carpet fibers after pet hair has been extracted",
-    "links": [{ "href": "/carpet-cleaning/", "label": "carpet cleaning" }],
+    "links": [
+      {
+        "href": "/carpet-cleaning/",
+        "label": "carpet cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "Why the vacuum keeps missing fur",
@@ -46,13 +58,19 @@
     ]
   },
   "7-powerful-tips-cleaning-outdoor-furniture": {
+    "slug": "outdoor-furniture-cleaning",
     "title": "Outdoor Furniture Cleaning for Cushions and Frames",
     "description": "Outdoor furniture cleaning refreshes cushions, frames, and mildew film without soaking the foam. EPA Safer Choice products. Call (949) 992-3299.",
     "keyword": "outdoor furniture cleaning",
     "category": "Upholstery",
     "readMinutes": 4,
     "heroAlt": "Patio sofa cushions cleaned and left open to dry on a deck",
-    "links": [{ "href": "/outdoor-furniture-cleaning/", "label": "outdoor furniture cleaning" }],
+    "links": [
+      {
+        "href": "/outdoor-furniture-cleaning/",
+        "label": "outdoor furniture cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "Cushions, frames, and mildew film",
@@ -69,13 +87,19 @@
     ]
   },
   "air-duct-and-vent-cleaning-in-irvine": {
+    "slug": "air-duct-and-vent-cleaning",
     "title": "Air Duct and Vent Cleaning for Cleaner Indoor HVAC Air",
     "description": "Air duct and vent cleaning pulls dust from supply and return lines with a HEPA negative-air machine. IICRC-certified crew. Call (949) 992-3299.",
     "keyword": "air duct and vent cleaning",
     "category": "Air Duct",
     "readMinutes": 4,
     "heroAlt": "Technician cleaning a supply register with a HEPA vacuum hose",
-    "links": [{ "href": "/air-duct-cleaning/", "label": "air duct cleaning" }],
+    "links": [
+      {
+        "href": "/air-duct-cleaning/",
+        "label": "air duct cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "Supply lines, returns, and registers",
@@ -92,13 +116,19 @@
     ]
   },
   "air-duct-cleaning-does-it-help-allergies": {
+    "slug": "air-duct-cleaning-and-indoor-allergies",
     "title": "Does Air Duct Cleaning Help with Indoor Allergies?",
     "description": "Air duct cleaning can cut the dust and dander a blower recirculates, which helps many allergy households. HEPA filtration. Call (949) 992-3299.",
     "keyword": "air duct cleaning",
     "category": "Air Duct",
     "readMinutes": 4,
     "heroAlt": "Clean supply vent beside a filter coated with household dust",
-    "links": [{ "href": "/air-duct-cleaning/", "label": "air duct cleaning" }],
+    "links": [
+      {
+        "href": "/air-duct-cleaning/",
+        "label": "air duct cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "What the blower keeps sharing",
@@ -115,13 +145,19 @@
     ]
   },
   "air-duct-cleaning-irvine-guide": {
+    "slug": "hepa-air-duct-cleaning",
     "title": "What HEPA Air Duct Cleaning Removes from Your HVAC",
     "description": "HEPA air duct cleaning uses negative pressure so debris goes into the filter, not back into rooms. See what a visit removes. Call (949) 992-3299.",
     "keyword": "HEPA air duct cleaning",
     "category": "Air Duct",
     "readMinutes": 4,
     "heroAlt": "HEPA negative-air machine connected to a main return duct",
-    "links": [{ "href": "/air-duct-cleaning/", "label": "air duct cleaning" }],
+    "links": [
+      {
+        "href": "/air-duct-cleaning/",
+        "label": "air duct cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "Where the debris actually goes",
@@ -138,13 +174,19 @@
     ]
   },
   "air-duct-cleaning-tustin-ca": {
+    "slug": "air-duct-cleaning-visit",
     "title": "What a Full Air Duct Cleaning Visit Covers at Home",
     "description": "A full air duct cleaning visit covers trunks, branches, registers, and the blower compartment. Here is what is included. Call (949) 992-3299.",
     "keyword": "air duct cleaning visit",
     "category": "Air Duct",
     "readMinutes": 4,
     "heroAlt": "Technician inspecting an open return drop before duct cleaning",
-    "links": [{ "href": "/air-duct-cleaning/", "label": "air duct cleaning" }],
+    "links": [
+      {
+        "href": "/air-duct-cleaning/",
+        "label": "air duct cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "The parts a real visit includes",
@@ -161,6 +203,7 @@
     ]
   },
   "best-carpet-cleaning-method-irvine": {
+    "slug": "hot-water-extraction-carpet-cleaning",
     "title": "Hot Water Extraction Carpet Cleaning, Step by Step",
     "description": "Hot water extraction carpet cleaning injects heated solution and pulls it back out, lifting soil from the backing. See each step. Call (949) 992-3299.",
     "keyword": "hot water extraction carpet cleaning",
@@ -168,8 +211,14 @@
     "readMinutes": 5,
     "heroAlt": "Truck-mounted carpet wand extracting water from a soiled lane",
     "links": [
-      { "href": "/carpet-cleaning/", "label": "carpet cleaning" },
-      { "href": "/encapsulation-carpet-cleaning/", "label": "encapsulation carpet cleaning" }
+      {
+        "href": "/carpet-cleaning/",
+        "label": "carpet cleaning"
+      },
+      {
+        "href": "/encapsulation-carpet-cleaning/",
+        "label": "encapsulation carpet cleaning"
+      }
     ],
     "sections": [
       {
@@ -187,13 +236,19 @@
     ]
   },
   "best-carpet-cleaning-services-aliso-viejo": {
+    "slug": "high-traffic-carpet-cleaning",
     "title": "Carpet Cleaning for Stairs, Halls, and High Traffic",
     "description": "Carpet cleaning for stairs, halls, and other high-traffic lanes targets soil that flattens yarn first. Truck-mounted extraction. Call (949) 992-3299.",
     "keyword": "high-traffic carpet cleaning",
     "category": "Carpet",
     "readMinutes": 4,
     "heroAlt": "Carpeted hallway and stair landing after soil was extracted",
-    "links": [{ "href": "/carpet-cleaning/", "label": "carpet cleaning" }],
+    "links": [
+      {
+        "href": "/carpet-cleaning/",
+        "label": "carpet cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "Where the carpet actually fails",
@@ -210,13 +265,19 @@
     ]
   },
   "car-rv-cleaning-keep-your-ride-fresh": {
+    "slug": "car-seat-and-rv-interior-cleaning",
     "title": "Car Seat and RV Interior Cleaning for Ground-In Soil",
     "description": "Car seat and RV interior cleaning lifts soil from fabric and vinyl that a home vacuum leaves behind. EPA Safer Choice products. Call (949) 992-3299.",
     "keyword": "car seat and RV interior cleaning",
     "category": "Upholstery",
     "readMinutes": 4,
     "heroAlt": "Cleaned fabric car seats and floor mats in a vehicle cabin",
-    "links": [{ "href": "/car-seat-cleaning/", "label": "car seat cleaning" }],
+    "links": [
+      {
+        "href": "/car-seat-cleaning/",
+        "label": "car seat cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "Vehicle fabric is not a sofa",
@@ -233,6 +294,7 @@
     ]
   },
   "carpet-and-duct-cleaning-orange-county-summer": {
+    "slug": "summer-carpet-and-air-duct-cleaning",
     "title": "Summer Carpet and Air Duct Cleaning, Planned Together",
     "description": "Summer carpet and air duct cleaning tackles soil and dust a closed, cooled house keeps circulating. Plan both in one visit. Call (949) 992-3299.",
     "keyword": "summer carpet and air duct cleaning",
@@ -240,8 +302,14 @@
     "readMinutes": 4,
     "heroAlt": "Freshly cleaned carpet with a supply register in the same room",
     "links": [
-      { "href": "/carpet-cleaning/", "label": "carpet cleaning" },
-      { "href": "/air-duct-cleaning/", "label": "air duct cleaning" }
+      {
+        "href": "/carpet-cleaning/",
+        "label": "carpet cleaning"
+      },
+      {
+        "href": "/air-duct-cleaning/",
+        "label": "air duct cleaning"
+      }
     ],
     "sections": [
       {
@@ -259,13 +327,19 @@
     ]
   },
   "carpet-care-tips-irvine": {
+    "slug": "carpet-care-between-cleanings",
     "title": "Carpet Care Between Scheduled Professional Cleaning Visits",
     "description": "Carpet care between professional visits is vacuuming, fast spill pickup, and keeping grit off the yarn. A practical routine. Call (949) 992-3299.",
     "keyword": "carpet care between",
     "category": "Tips",
     "readMinutes": 4,
     "heroAlt": "Person vacuuming a maintained carpet in even, overlapping passes",
-    "links": [{ "href": "/carpet-cleaning/", "label": "carpet cleaning" }],
+    "links": [
+      {
+        "href": "/carpet-cleaning/",
+        "label": "carpet cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "The routine that actually matters",
@@ -282,6 +356,7 @@
     ]
   },
   "carpet-cleaning-air-quality-lake-forest-ca": {
+    "slug": "carpet-cleaning-and-indoor-air-quality",
     "title": "Carpet Cleaning and Indoor Air Quality in the Home",
     "description": "Carpet cleaning improves indoor air quality by removing dust and dander held in the pile, not just on the surface at home. Call (949) 992-3299.",
     "keyword": "carpet cleaning and indoor air quality",
@@ -289,8 +364,14 @@
     "readMinutes": 4,
     "heroAlt": "Carpet cleaning wand lifting soil from a living room carpet",
     "links": [
-      { "href": "/carpet-cleaning/", "label": "carpet cleaning" },
-      { "href": "/air-duct-cleaning/", "label": "air duct cleaning" }
+      {
+        "href": "/carpet-cleaning/",
+        "label": "carpet cleaning"
+      },
+      {
+        "href": "/air-duct-cleaning/",
+        "label": "air duct cleaning"
+      }
     ],
     "sections": [
       {
@@ -308,13 +389,19 @@
     ]
   },
   "carpet-cleaning-benefits-for-pet-owners": {
+    "slug": "pet-stain-and-odor-treatment",
     "title": "Pet Stain and Odor Treatment for Urine in Carpet Fibers",
     "description": "Pet stain and odor treatment finds urine in the carpet and pad, then breaks it down instead of covering it with perfume. Call (949) 992-3299.",
     "keyword": "pet stain and odor treatment",
     "category": "Carpet",
     "readMinutes": 4,
     "heroAlt": "UV light showing a pet urine spot on carpet before treatment",
-    "links": [{ "href": "/pet-stain-odor/", "label": "pet stain and odor treatment" }],
+    "links": [
+      {
+        "href": "/pet-stain-odor/",
+        "label": "pet stain and odor treatment"
+      }
+    ],
     "sections": [
       {
         "heading": "The smell is usually in the pad",
@@ -331,13 +418,19 @@
     ]
   },
   "carpet-cleaning-lake-forest-ca": {
+    "slug": "deep-carpet-cleaning",
     "title": "Deep Carpet Cleaning for Soil Packed into the Fibers",
     "description": "Deep carpet cleaning reaches soil packed against the backing, where a household vacuum never goes. Hot-water extraction does it. Call (949) 992-3299.",
     "keyword": "deep carpet cleaning",
     "category": "Carpet",
     "readMinutes": 4,
     "heroAlt": "Cross-section look of a carpet wand pulling dirty water from the pile",
-    "links": [{ "href": "/carpet-cleaning/", "label": "carpet cleaning" }],
+    "links": [
+      {
+        "href": "/carpet-cleaning/",
+        "label": "carpet cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "Soil under the yarn tips",
@@ -354,13 +447,19 @@
     ]
   },
   "carpet-cleaning-lake-forest-stain-removal": {
+    "slug": "carpet-stain-removal",
     "title": "Carpet Stain Removal for Wine, Coffee, and Food Spills",
     "description": "Carpet stain removal for wine, coffee, and food works while the spot is fresh and before the wrong cleaner sets it in the yarn. Call (949) 992-3299.",
     "keyword": "carpet stain removal",
     "category": "Carpet",
     "readMinutes": 4,
     "heroAlt": "Red wine spill on light carpet being treated with a spotting tool",
-    "links": [{ "href": "/carpet-cleaning/", "label": "carpet cleaning" }],
+    "links": [
+      {
+        "href": "/carpet-cleaning/",
+        "label": "carpet cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "Name the spill before you treat it",
@@ -377,6 +476,7 @@
     ]
   },
   "carpet-duct-cleaning-irvine-guide": {
+    "slug": "carpet-and-air-duct-cleaning-together",
     "title": "When to Schedule Carpet and Air Duct Cleaning Together",
     "description": "Schedule carpet and air duct cleaning together when floor dust and the HVAC keep trading the same particles back and forth. Call (949) 992-3299.",
     "keyword": "carpet and air duct cleaning",
@@ -384,8 +484,14 @@
     "readMinutes": 4,
     "heroAlt": "Living room with cleaned carpet and an open supply register",
     "links": [
-      { "href": "/carpet-cleaning/", "label": "carpet cleaning" },
-      { "href": "/air-duct-cleaning/", "label": "air duct cleaning" }
+      {
+        "href": "/carpet-cleaning/",
+        "label": "carpet cleaning"
+      },
+      {
+        "href": "/air-duct-cleaning/",
+        "label": "air duct cleaning"
+      }
     ],
     "sections": [
       {
@@ -403,6 +509,7 @@
     ]
   },
   "corona-area-rug-cleaning-and-restoration": {
+    "slug": "area-rug-cleaning-and-restoration",
     "title": "Area Rug Cleaning and Restoration for Worn, Matted Pile",
     "description": "Area rug cleaning and restoration lifts soil and stands pile that foot traffic has crushed flat. Washed off the floor, dried flat. Call (949) 992-3299.",
     "keyword": "area rug cleaning and restoration",
@@ -410,8 +517,14 @@
     "readMinutes": 4,
     "heroAlt": "Matted area rug pile opened up after a plant wash and groom",
     "links": [
-      { "href": "/area-rug-cleaning/", "label": "area rug cleaning" },
-      { "href": "/rug-pickup/", "label": "rug pickup and drop-off" }
+      {
+        "href": "/area-rug-cleaning/",
+        "label": "area rug cleaning"
+      },
+      {
+        "href": "/rug-pickup/",
+        "label": "rug pickup and drop-off"
+      }
     ],
     "sections": [
       {
@@ -429,13 +542,19 @@
     ]
   },
   "curtain-cleaning-tips-for-lasting-elegance": {
+    "slug": "curtain-and-drape-cleaning",
     "title": "Curtain and Drape Cleaning for Dust, Odors, and Pollen",
     "description": "Curtain and drape cleaning removes dust, odor, and pollen that window fabrics hold onto. A gentle wash, not a home machine. Call (949) 992-3299.",
     "keyword": "curtain and drape cleaning",
     "category": "Tips",
     "readMinutes": 4,
     "heroAlt": "Clean drapes hanging in front of a bright window",
-    "links": [{ "href": "/drape-cleaning/", "label": "drape and curtain cleaning" }],
+    "links": [
+      {
+        "href": "/drape-cleaning/",
+        "label": "drape and curtain cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "Window fabric is a filter",
@@ -452,13 +571,19 @@
     ]
   },
   "delicate-carpet-cleaning-service": {
+    "slug": "wool-and-delicate-carpet-cleaning",
     "title": "Wool and Delicate Carpet Cleaning Without Fiber Damage",
     "description": "Wool and delicate carpet cleaning uses lower agitation and the right pH so the fiber does not felt or fade. IICRC-certified care. Call (949) 992-3299.",
     "keyword": "wool and delicate carpet cleaning",
     "category": "Carpet",
     "readMinutes": 4,
     "heroAlt": "Technician cleaning a wool carpet with low agitation",
-    "links": [{ "href": "/carpet-cleaning/", "label": "carpet cleaning" }],
+    "links": [
+      {
+        "href": "/carpet-cleaning/",
+        "label": "carpet cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "Wool felts when you treat it like nylon",
@@ -475,13 +600,19 @@
     ]
   },
   "dryer-vent-cleaning-irvine-ca": {
+    "slug": "dryer-vent-cleaning",
     "title": "Dryer Vent Cleaning from the Appliance to the Outside Cap",
     "description": "Dryer vent cleaning clears lint from the appliance connection through to the exterior cap so moist air can leave the house. Call (949) 992-3299.",
     "keyword": "dryer vent cleaning",
     "category": "Air Duct",
     "readMinutes": 4,
     "heroAlt": "Lint being removed from a dryer vent line at the exterior cap",
-    "links": [{ "href": "/dryer-vent-cleaning/", "label": "dryer vent cleaning" }],
+    "links": [
+      {
+        "href": "/dryer-vent-cleaning/",
+        "label": "dryer vent cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "The whole run, not the lint screen",
@@ -498,13 +629,19 @@
     ]
   },
   "expert-guide-removing-common-carpet-stains": {
+    "slug": "set-in-carpet-stains",
     "title": "Set-In Carpet Stains and How a Pro Clean Lifts Them",
     "description": "Set-in carpet stains need different chemistry than a fresh spill. The spot is identified, then lifted, not scrubbed wider. Call (949) 992-3299.",
     "keyword": "set-in carpet stains",
     "category": "Carpet",
     "readMinutes": 4,
     "heroAlt": "Old darkened carpet spot being worked with a spotting tool",
-    "links": [{ "href": "/carpet-cleaning/", "label": "carpet cleaning" }],
+    "links": [
+      {
+        "href": "/carpet-cleaning/",
+        "label": "carpet cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "Old spots are not fresh spills",
@@ -521,13 +658,19 @@
     ]
   },
   "how-often-should-you-clean-air-ducts": {
+    "slug": "how-often-to-clean-air-ducts",
     "title": "How Often Air Ducts Should Be Cleaned in a Lived-In Home",
     "description": "Most homes need air duct cleaning every few years, sooner with pets, renovations, or dust at the registers. See the timing. Call (949) 992-3299.",
     "keyword": "how often air ducts",
     "category": "Air Duct",
     "readMinutes": 4,
     "heroAlt": "Household supply register that is due for duct cleaning",
-    "links": [{ "href": "/air-duct-cleaning/", "label": "air duct cleaning" }],
+    "links": [
+      {
+        "href": "/air-duct-cleaning/",
+        "label": "air duct cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "A cycle, not a yearly upsell",
@@ -544,13 +687,19 @@
     ]
   },
   "importance-of-fast-water-damage-restoration": {
+    "slug": "fast-water-damage-restoration",
     "title": "Fast Water Damage Restoration Limits Mold and Loss",
     "description": "Fast water damage restoration stops water from moving into pad, drywall, and cabinets. Extraction should start the same day. Call (949) 992-3299.",
     "keyword": "water damage restoration",
     "category": "Water Damage",
     "readMinutes": 4,
     "heroAlt": "Air movers and a dehumidifier set in a room after water extraction",
-    "links": [{ "href": "/water-damage-restoration/", "label": "water damage restoration" }],
+    "links": [
+      {
+        "href": "/water-damage-restoration/",
+        "label": "water damage restoration"
+      }
+    ],
     "sections": [
       {
         "heading": "Hours change the size of the loss",
@@ -567,13 +716,19 @@
     ]
   },
   "improved-air-quality-duct-cleaning-tustin": {
+    "slug": "duct-cleaning-that-cuts-dust",
     "title": "Duct Cleaning That Cuts Dust Moving Through the HVAC",
     "description": "Duct cleaning reduces the dust a blower pushes back into rooms each time the system runs. Uses HEPA negative-air removal. Call (949) 992-3299.",
     "keyword": "duct cleaning",
     "category": "Air Duct",
     "readMinutes": 4,
     "heroAlt": "Dust collected from an HVAC duct during negative-air cleaning",
-    "links": [{ "href": "/air-duct-cleaning/", "label": "air duct cleaning" }],
+    "links": [
+      {
+        "href": "/air-duct-cleaning/",
+        "label": "air duct cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "The dust you wipe is not all of it",
@@ -590,13 +745,19 @@
     ]
   },
   "is-your-air-duct-dirty-key-signs-to-watch": {
+    "slug": "signs-air-ducts-need-cleaning",
     "title": "Signs Your Air Ducts Are Due for a Professional Cleaning",
     "description": "Dust at the registers, musty air, and debris in the return are signs your air ducts are due for cleaning. What to look for. Call (949) 992-3299.",
     "keyword": "signs your air ducts",
     "category": "Air Duct",
     "readMinutes": 4,
     "heroAlt": "Supply register with visible dust at the opening",
-    "links": [{ "href": "/air-duct-cleaning/", "label": "air duct cleaning" }],
+    "links": [
+      {
+        "href": "/air-duct-cleaning/",
+        "label": "air duct cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "Signs that are actually the ducts",
@@ -613,13 +774,19 @@
     ]
   },
   "lake-forest-water-restoration-near-me": {
+    "slug": "water-extraction-and-structural-drying",
     "title": "Water Extraction and Structural Drying After a Leak",
     "description": "Water extraction and structural drying remove standing water, then pull moisture from carpet, pad, and framing. Metered, not guessed. Call (949) 992-3299.",
     "keyword": "water extraction and structural drying",
     "category": "Water Damage",
     "readMinutes": 4,
     "heroAlt": "Extraction tool pulling standing water from a soaked carpet",
-    "links": [{ "href": "/water-damage-restoration/", "label": "water damage restoration" }],
+    "links": [
+      {
+        "href": "/water-damage-restoration/",
+        "label": "water damage restoration"
+      }
+    ],
     "sections": [
       {
         "heading": "Extraction first",
@@ -636,13 +803,19 @@
     ]
   },
   "local-vinyl-floor-cleaning-in-tustin": {
+    "slug": "vinyl-floor-cleaning",
     "title": "Vinyl Floor Cleaning for LVP, Sheet, and Plank Floors",
     "description": "Vinyl floor cleaning for LVP, sheet, and plank lifts soil from the wear layer without pads that dull the finish you see. Call (949) 992-3299.",
     "keyword": "vinyl floor cleaning",
     "category": "Floors",
     "readMinutes": 4,
     "heroAlt": "Clean luxury vinyl plank floor with the wear layer intact",
-    "links": [{ "href": "/vinyl-floor-cleaning/", "label": "vinyl floor cleaning" }],
+    "links": [
+      {
+        "href": "/vinyl-floor-cleaning/",
+        "label": "vinyl floor cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "The wear layer is the floor you see",
@@ -659,13 +832,19 @@
     ]
   },
   "oriental-rug-cleaning-vital-for-longevity": {
+    "slug": "oriental-rug-cleaning",
     "title": "Oriental Rug Cleaning for Hand-Knotted Wool and Silk Pile",
     "description": "Oriental rug cleaning washes hand-knotted wool the way the construction requires: dusting, a controlled wash, and flat drying. Call (949) 992-3299.",
     "keyword": "oriental rug cleaning",
     "category": "Rugs",
     "readMinutes": 5,
     "heroAlt": "Hand-knotted oriental rug dusted before a controlled wash",
-    "links": [{ "href": "/oriental-rug-cleaning/", "label": "oriental rug cleaning" }],
+    "links": [
+      {
+        "href": "/oriental-rug-cleaning/",
+        "label": "oriental rug cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "Hand-knotted is not wall-to-wall",
@@ -682,13 +861,19 @@
     ]
   },
   "premium-sofa-and-couch-cleaning-yorba-linda": {
+    "slug": "sofa-and-couch-cleaning",
     "title": "Sofa and Couch Cleaning for Fabric Sofas and Sectionals",
     "description": "Sofa and couch cleaning works through fabric and sectional crevices where skin oils and spills collect. Safe for household fabric. Call (949) 992-3299.",
     "keyword": "sofa and couch cleaning",
     "category": "Upholstery",
     "readMinutes": 4,
     "heroAlt": "Fabric sectional sofa after upholstery cleaning",
-    "links": [{ "href": "/couch-cleaning/", "label": "couch and sectional cleaning" }],
+    "links": [
+      {
+        "href": "/couch-cleaning/",
+        "label": "couch and sectional cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "The soil is in the sits and the seams",
@@ -705,13 +890,19 @@
     ]
   },
   "pro-cleaning-extends-the-life-of-your-rugs": {
+    "slug": "rug-cleaning-extends-fiber-life",
     "title": "Rug Cleaning That Extends Fiber Life Under Foot Traffic",
     "description": "Rug cleaning extends fiber life by removing grit that cuts the yarn every time someone walks on it. Book it before the pile thins. Call (949) 992-3299.",
     "keyword": "rug cleaning",
     "category": "Rugs",
     "readMinutes": 4,
     "heroAlt": "Rug fibers after grit was washed out of the pile",
-    "links": [{ "href": "/area-rug-cleaning/", "label": "area rug cleaning" }],
+    "links": [
+      {
+        "href": "/area-rug-cleaning/",
+        "label": "area rug cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "Grit is what shortens a rug",
@@ -728,13 +919,19 @@
     ]
   },
   "pro-upholstery-cleaning-extends-life": {
+    "slug": "upholstery-cleaning-extends-fabric-life",
     "title": "Upholstery Cleaning That Extends the Life of Fabric",
     "description": "Upholstery cleaning extends fabric life by lifting body oils and soil that make fibers brittle and dingy. See what a visit includes. Call (949) 992-3299.",
     "keyword": "upholstery cleaning",
     "category": "Upholstery",
     "readMinutes": 4,
     "heroAlt": "Upholstery tool cleaning the arm of a fabric chair",
-    "links": [{ "href": "/upholstery-cleaning/", "label": "upholstery cleaning" }],
+    "links": [
+      {
+        "href": "/upholstery-cleaning/",
+        "label": "upholstery cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "Oil and soil break fabric down",
@@ -751,13 +948,19 @@
     ]
   },
   "professional-air-duct-cleaning-anaheim-ca": {
+    "slug": "air-duct-cleaning-for-offices",
     "title": "Air Duct Cleaning for Offices and Shared Buildings",
     "description": "Air duct cleaning for offices and shared buildings removes dust a large HVAC system recirculates all day. HEPA negative air. Call (949) 992-3299.",
     "keyword": "air duct cleaning for offices",
     "category": "Air Duct",
     "readMinutes": 4,
     "heroAlt": "Commercial ceiling diffuser opened for air duct cleaning",
-    "links": [{ "href": "/commercial-air-duct-cleaning/", "label": "commercial air duct cleaning" }],
+    "links": [
+      {
+        "href": "/commercial-air-duct-cleaning/",
+        "label": "commercial air duct cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "A shared system moves shared dust",
@@ -774,13 +977,19 @@
     ]
   },
   "professional-mattress-cleaning-in-tustin": {
+    "slug": "mattress-cleaning",
     "title": "Mattress Cleaning for Dust, Sweat, and Allergen Buildup",
     "description": "Mattress cleaning lifts dust, sweat, and allergen buildup from the comfort layers without soaking the core. Fabric-safe products. Call (949) 992-3299.",
     "keyword": "mattress cleaning",
     "category": "Upholstery",
     "readMinutes": 4,
     "heroAlt": "Mattress surface being cleaned with a low-moisture upholstery tool",
-    "links": [{ "href": "/upholstery-cleaning/", "label": "upholstery cleaning" }],
+    "links": [
+      {
+        "href": "/upholstery-cleaning/",
+        "label": "upholstery cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "The comfort layer holds the soil",
@@ -797,13 +1006,19 @@
     ]
   },
   "quality-hardwood-floor-cleaning-buena-park": {
+    "slug": "hardwood-floor-cleaning",
     "title": "Hardwood Floor Cleaning That Leaves the Finish Intact",
     "description": "Hardwood floor cleaning removes sticky soil without the extra water that cups boards or dulls the finish. See the method. Call (949) 992-3299.",
     "keyword": "hardwood floor cleaning",
     "category": "Floors",
     "readMinutes": 4,
     "heroAlt": "Finished hardwood floor cleaned without standing water",
-    "links": [{ "href": "/hardwood-floor-cleaning/", "label": "hardwood floor cleaning" }],
+    "links": [
+      {
+        "href": "/hardwood-floor-cleaning/",
+        "label": "hardwood floor cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "Water is the thing that ruins the job",
@@ -820,13 +1035,19 @@
     ]
   },
   "regular-cleaning-essential-for-health-home": {
+    "slug": "how-often-to-clean-carpet",
     "title": "How Often Carpet Cleaning Should Be Scheduled at Home",
     "description": "Most homes need carpet cleaning every 12 to 18 months, and sooner with pets or heavy foot traffic. Here is how to set the interval. Call (949) 992-3299.",
     "keyword": "how often carpet cleaning",
     "category": "Carpet",
     "readMinutes": 4,
     "heroAlt": "Maintained wall-to-wall carpet in a regularly cleaned home",
-    "links": [{ "href": "/carpet-cleaning/", "label": "carpet cleaning" }],
+    "links": [
+      {
+        "href": "/carpet-cleaning/",
+        "label": "carpet cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "Set the interval from the household",
@@ -843,13 +1064,19 @@
     ]
   },
   "reliable-dryer-vent-cleaning-corona-del-mar": {
+    "slug": "clogged-dryer-vent-fire-risk",
     "title": "Lint Buildup and the Fire Risk of a Clogged Dryer Vent",
     "description": "A clogged dryer vent raises fire risk when lint traps heat in the vent line. Clearing it restores airflow before a failure. Call (949) 992-3299.",
     "keyword": "clogged dryer vent",
     "category": "Air Duct",
     "readMinutes": 4,
     "heroAlt": "Packed lint removed from inside a dryer exhaust line",
-    "links": [{ "href": "/dryer-vent-cleaning/", "label": "dryer vent cleaning" }],
+    "links": [
+      {
+        "href": "/dryer-vent-cleaning/",
+        "label": "dryer vent cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "Lint plus heat is the risk",
@@ -866,13 +1093,19 @@
     ]
   },
   "residential-fabric-and-upholstery-protector": {
+    "slug": "fabric-protector-for-upholstery",
     "title": "Fabric Protector for Upholstery After a Deep Clean",
     "description": "Fabric protector on upholstery after a deep clean gives spills a moment to bead instead of soaking into the cushion foam. Call (949) 992-3299.",
     "keyword": "fabric protector",
     "category": "Upholstery",
     "readMinutes": 4,
     "heroAlt": "Water beading on upholstery fabric after a protector application",
-    "links": [{ "href": "/upholstery-cleaning/", "label": "upholstery cleaning" }],
+    "links": [
+      {
+        "href": "/upholstery-cleaning/",
+        "label": "upholstery cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "Protector is not a shield forever",
@@ -889,6 +1122,7 @@
     ]
   },
   "revitalize-your-home-spring-cleaning": {
+    "slug": "spring-carpet-cleaning",
     "title": "Spring Carpet Cleaning After Months of Closed Windows",
     "description": "Spring carpet cleaning removes the fine dust a closed-up heating season left in the pile. Pair it with a duct check if registers puff. Call (949) 992-3299.",
     "keyword": "spring carpet cleaning",
@@ -896,8 +1130,14 @@
     "readMinutes": 4,
     "heroAlt": "Living room carpet cleaned at the start of spring",
     "links": [
-      { "href": "/carpet-cleaning/", "label": "carpet cleaning" },
-      { "href": "/air-duct-cleaning/", "label": "air duct cleaning" }
+      {
+        "href": "/carpet-cleaning/",
+        "label": "carpet cleaning"
+      },
+      {
+        "href": "/air-duct-cleaning/",
+        "label": "air duct cleaning"
+      }
     ],
     "sections": [
       {
@@ -915,13 +1155,19 @@
     ]
   },
   "top-rated-upholstery-cleaning-anaheim-hills": {
+    "slug": "upholstery-cleaning-for-chairs",
     "title": "Upholstery Cleaning for Fabric Chairs and Ottomans",
     "description": "Upholstery cleaning for fabric chairs and ottomans reaches arms and seats that body oils darken first. Safe for household fabrics. Call (949) 992-3299.",
     "keyword": "upholstery cleaning for fabric chairs",
     "category": "Upholstery",
     "readMinutes": 4,
     "heroAlt": "Fabric armchair and ottoman after professional cleaning",
-    "links": [{ "href": "/upholstery-cleaning/", "label": "upholstery cleaning" }],
+    "links": [
+      {
+        "href": "/upholstery-cleaning/",
+        "label": "upholstery cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "Chairs soil differently than sofas",
@@ -938,13 +1184,19 @@
     ]
   },
   "top-tile-grout-cleaning-service-lake-forest": {
+    "slug": "tile-and-grout-cleaning",
     "title": "Tile and Grout Cleaning for Soil Stuck in the Lines",
     "description": "Tile and grout cleaning pulls the soil locked into grout lines that still looks dirty after a mop. See how the lines are cleaned. Call (949) 992-3299.",
     "keyword": "tile and grout cleaning",
     "category": "Floors",
     "readMinutes": 4,
     "heroAlt": "Tile floor with bright grout lines after professional cleaning",
-    "links": [{ "href": "/tile-and-grout-cleaning/", "label": "tile and grout cleaning" }],
+    "links": [
+      {
+        "href": "/tile-and-grout-cleaning/",
+        "label": "tile and grout cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "The mop never reaches the joint",
@@ -961,6 +1213,7 @@
     ]
   },
   "tustin-oriental-rug-care-you-need-to-know": {
+    "slug": "oriental-rug-care",
     "title": "Oriental Rug Care Between Professional Wash Cycles",
     "description": "Oriental rug care between washes is rotation, vacuuming without a beater bar, and blotting spills. The wash still has to happen. Call (949) 992-3299.",
     "keyword": "oriental rug care",
@@ -968,8 +1221,14 @@
     "readMinutes": 4,
     "heroAlt": "Oriental rug rotated and vacuumed with the beater bar off",
     "links": [
-      { "href": "/oriental-rug-cleaning/", "label": "oriental rug cleaning" },
-      { "href": "/rug-pickup/", "label": "rug pickup and drop-off" }
+      {
+        "href": "/oriental-rug-cleaning/",
+        "label": "oriental rug cleaning"
+      },
+      {
+        "href": "/rug-pickup/",
+        "label": "rug pickup and drop-off"
+      }
     ],
     "sections": [
       {
@@ -987,6 +1246,7 @@
     ]
   },
   "water-damage-restoration-in-irvine-ca": {
+    "slug": "water-damaged-carpet",
     "title": "Water-Damaged Carpet: Dry It, Clean It, or Replace It",
     "description": "Water-damaged carpet can be dried and cleaned when the water was clean and the pad is saved in time. If not, it is replaced. Call (949) 992-3299.",
     "keyword": "water-damaged carpet",
@@ -994,8 +1254,14 @@
     "readMinutes": 5,
     "heroAlt": "Water-damaged carpet lifted so the pad can be dried or removed",
     "links": [
-      { "href": "/water-damage-restoration/", "label": "water damage restoration" },
-      { "href": "/carpet-cleaning/", "label": "carpet cleaning" }
+      {
+        "href": "/water-damage-restoration/",
+        "label": "water damage restoration"
+      },
+      {
+        "href": "/carpet-cleaning/",
+        "label": "carpet cleaning"
+      }
     ],
     "sections": [
       {
@@ -1013,13 +1279,19 @@
     ]
   },
   "your-home-needs-carpet-protector-treatments": {
+    "slug": "carpet-protector",
     "title": "Carpet Protector After Hot-Water Extraction Cleaning",
     "description": "Carpet protector after hot-water extraction gives fresh spills less time to bond with dry fiber. Apply it once the carpet is dry. Call (949) 992-3299.",
     "keyword": "carpet protector",
     "category": "Carpet",
     "readMinutes": 4,
     "heroAlt": "Liquid beading on carpet fibers after a protector treatment",
-    "links": [{ "href": "/carpet-cleaning/", "label": "carpet cleaning" }],
+    "links": [
+      {
+        "href": "/carpet-cleaning/",
+        "label": "carpet cleaning"
+      }
+    ],
     "sections": [
       {
         "heading": "Protector goes on a clean, dry carpet",

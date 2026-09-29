@@ -82,7 +82,7 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
           </div>
 
           <aside className="lg:sticky lg:top-32 lg:self-start">
-            <div className="rounded-2xl border border-line bg-sand p-6 shadow-card">
+            <div className="rounded-2xl border border-line bg-sand p-6 text-center shadow-card md:text-left">
               <p className="eyebrow">Included on every job</p>
               <CheckList items={PROOF_POINTS} />
               <div className="mt-6 flex flex-col gap-3">
@@ -122,11 +122,11 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
             <li key={s}>
               <Link
                 href={`/${s}/`}
-                className="group flex h-full flex-col rounded-2xl border border-line bg-white p-5 shadow-card transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-lift"
+                className="group flex h-full flex-col items-center rounded-2xl border border-line bg-white p-5 text-center shadow-card transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-lift md:items-start md:text-left"
               >
                 <span className="font-semibold text-navy group-hover:text-brand">{titleCase(s)}</span>
                 <span className="mt-2 flex-1 text-sm leading-relaxed text-ink/65">{serviceBlurb(s, titleCase(s))}</span>
-                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand">
+                <span className="mt-4 inline-flex items-center justify-center gap-1.5 text-sm font-semibold text-brand">
                   View service
                   <ArrowRight className="size-4 transition group-hover:translate-x-0.5" />
                 </span>
@@ -134,8 +134,8 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
             </li>
           ))}
         </ul>
-        <div className="mt-8">
-          <Link href="/locations/" className="inline-flex items-center gap-2 font-semibold text-brand">
+        <div className="mt-8 text-center md:text-left">
+          <Link href="/locations/" className="inline-flex items-center justify-center gap-2 font-semibold text-brand">
             Browse every service
             <ArrowRight className="size-4" />
           </Link>

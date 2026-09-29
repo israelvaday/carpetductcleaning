@@ -6,7 +6,7 @@ import { ImageHero } from "@/components/blocks";
 import { Cta } from "@/components/cta";
 import { JsonLd } from "@/components/json-ld";
 import { Section } from "@/components/ui";
-import { blogMeta, blogSeoTitle, getPosts } from "@/lib/content";
+import { blogMeta, blogSeoTitle, blogSlug, getPosts } from "@/lib/content";
 import { img, postImage } from "@/lib/images";
 import { breadcrumbs } from "@/lib/schema";
 import { pageMeta } from "@/lib/seo";
@@ -49,8 +49,8 @@ export default function BlogIndex() {
             const excerpt = rawExcerpt.length > 155 ? `${rawExcerpt.slice(0, 152).trimEnd()}…` : rawExcerpt;
             return (
               <Link
-                key={p.slug}
-                href={`/blog/${p.slug}/`}
+                key={blogSlug(p)}
+                href={`/blog/${blogSlug(p)}/`}
                 className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-white shadow-card transition hover:-translate-y-0.5 hover:shadow-lift"
               >
                 <div className="relative aspect-16/10 overflow-hidden">
@@ -63,10 +63,10 @@ export default function BlogIndex() {
                     className="object-cover transition duration-500 group-hover:scale-105"
                   />
                 </div>
-                <div className="flex flex-1 flex-col p-5">
+                <div className="flex flex-1 flex-col items-center p-5 text-center md:items-start md:text-left">
                   <h2 className="text-lg font-semibold leading-snug text-navy">{title}</h2>
                   {excerpt ? <p className="mt-2 flex-1 text-sm leading-relaxed text-ink/70">{excerpt}</p> : null}
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand">
+                  <span className="mt-4 inline-flex items-center justify-center gap-1.5 text-sm font-semibold text-brand">
                     Read article
                     <ArrowRight className="size-4 transition group-hover:translate-x-0.5" />
                   </span>

@@ -58,7 +58,7 @@ export default function ContactPage() {
           <div>
             <SectionHead eyebrow="Talk to us" title="Reach the crew directly" />
             <div className="mt-8 grid gap-5">
-              <a href={site.phoneHref} className="flex items-start gap-4 rounded-2xl border border-line bg-sand p-5">
+              <a href={site.phoneHref} className="flex flex-col items-center gap-3 rounded-2xl border border-line bg-sand p-5 text-center sm:flex-row sm:items-start sm:text-left">
                 <Phone className="mt-1 size-5 text-brand" />
                 <span>
                   <span className="block text-sm font-semibold uppercase tracking-wide text-ink/55">Phone</span>
@@ -72,7 +72,7 @@ export default function ContactPage() {
                 }
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start gap-4 rounded-2xl border border-line bg-sand p-5"
+                className="flex flex-col items-center gap-3 rounded-2xl border border-line bg-sand p-5 text-center sm:flex-row sm:items-start sm:text-left"
               >
                 <MapPin className="mt-1 size-5 text-brand" />
                 <span>
@@ -88,7 +88,7 @@ export default function ContactPage() {
                   </span>
                 </span>
               </a>
-              <div className="flex items-start gap-4 rounded-2xl border border-line bg-sand p-5">
+              <div className="flex flex-col items-center gap-3 rounded-2xl border border-line bg-sand p-5 text-center sm:flex-row sm:items-start sm:text-left">
                 <Clock className="mt-1 size-5 text-brand" />
                 <span className="min-w-0 flex-1">
                   <span className="block text-sm font-semibold uppercase tracking-wide text-ink/55">Hours</span>

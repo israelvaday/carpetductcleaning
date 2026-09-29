@@ -42,9 +42,9 @@ export function ImageHero({
         className="absolute inset-0 bg-gradient-to-b from-navy/75 via-navy/60 to-navy/80 lg:bg-[linear-gradient(90deg,#0b2237f2_0%,#0b2237c7_28%,#0b223780_46%,#0b223733_68%,#0b223714_100%)]"
       />
       <div className="container-page relative z-10 py-12 lg:py-16">
-        <div className="max-w-3xl">
+        <div className="mx-auto max-w-3xl text-center lg:mx-0 lg:text-left">
           {breadcrumb ? (
-            <div className="mb-6">
+            <div className="mb-6 flex justify-center lg:justify-start">
               <Breadcrumb items={breadcrumb} tone="dark" />
             </div>
           ) : null}
@@ -52,7 +52,7 @@ export function ImageHero({
           <h1 className="mt-3 max-w-3xl text-4xl font-semibold leading-[1.08] md:text-5xl">{title}</h1>
           {body ? <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/80">{body}</p> : null}
           {bullets?.length ? (
-            <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-white/80">
+            <ul className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-medium text-white/80 lg:justify-start">
               {bullets.map((b) => (
                 <li key={b} className="flex items-center gap-2">
                   <span className="size-1.5 rounded-full bg-brand-50" aria-hidden />
@@ -61,7 +61,7 @@ export function ImageHero({
               ))}
             </ul>
           ) : null}
-          <div className="mt-8 flex flex-wrap items-center gap-3">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
             <CallButton />
             <QuoteButton dark />
             <RatingPill dark />
@@ -90,10 +90,10 @@ export function ServiceCard({ slug, priority = false }: { slug: string; priority
           className="object-cover transition duration-500 group-hover:scale-105"
         />
       </PhotoFrame>
-      <div className="flex flex-1 flex-col p-5">
+      <div className="flex flex-1 flex-col items-center p-5 text-center md:items-start md:text-left">
         <h3 className="text-lg font-semibold text-navy">{name}</h3>
         <p className="mt-2 flex-1 text-sm leading-relaxed text-ink/70">{serviceBlurb(slug, name)}</p>
-        <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand">
+        <span className="mt-4 inline-flex items-center justify-center gap-1.5 text-sm font-semibold text-brand">
           View service
           <ArrowRight className="size-4 transition group-hover:translate-x-0.5" />
         </span>
@@ -238,7 +238,7 @@ export function WhyUs({ items }: { items: string[] }) {
             body="The old site leaned on superlatives. We would rather show the credentials and let the work stand."
           />
           <CheckList items={items} />
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
             <CallButton />
             <QuoteButton />
           </div>

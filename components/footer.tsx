@@ -23,18 +23,18 @@ export function Footer() {
 
   return (
     <footer className="bg-navy text-white">
-      <div className="container-page grid gap-10 py-12 md:grid-cols-2 lg:grid-cols-12">
-        <div className="lg:col-span-5">
+      <div className="container-page grid gap-10 py-12 max-md:justify-items-center max-md:text-center md:grid-cols-2 lg:grid-cols-12">
+        <div className="flex flex-col items-center text-center lg:col-span-5 lg:items-start lg:text-left">
           <Image src={asset("/images/logo.webp")} alt={`${site.name} logo`} width={220} height={47} className="h-9 w-auto" />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/70">
             Carpet, rug, upholstery, and air duct cleaning across {site.area} since {site.foundingYear}.
           </p>
-          <a href={site.phoneHref} className="mt-5 inline-flex items-center gap-2 text-lg font-semibold text-white">
+          <a href={site.phoneHref} className="mt-5 inline-flex items-center justify-center gap-2 text-lg font-semibold text-white">
             <Phone className="size-4 text-brand-50" />
             {site.phone}
           </a>
-          <a href={mapsHref} className="mt-3 flex items-start gap-2 text-sm leading-relaxed text-white/70 hover:text-white">
-            <MapPin className="mt-0.5 size-4 shrink-0 text-brand-50" />
+          <a href={mapsHref} className="mt-3 inline-flex flex-col items-center gap-1.5 text-sm leading-relaxed text-white/70 hover:text-white lg:flex-row lg:items-start lg:text-left">
+            <MapPin className="size-4 shrink-0 text-brand-50 lg:mt-0.5" />
             <span>
               {street}
               <br />
@@ -44,19 +44,19 @@ export function Footer() {
           {profile?.hoursSummary ? (
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-white/70">{profile.hoursSummary}</p>
           ) : null}
-          <div className="mt-6">
+          <div className="mt-6 flex flex-col items-center lg:items-start">
             <p className="text-xs font-semibold uppercase tracking-wider text-white/50">Follow</p>
             <div className="mt-3">
               <SocialLinks />
             </div>
           </div>
-          <div className="mt-5 flex items-center gap-4">
+          <div className="mt-5 flex items-center justify-center gap-4">
             <Image src={asset("/images/google.webp")} alt="Google Guaranteed badge" width={130} height={50} className="h-8 w-auto object-contain" />
             <Image src={asset("/images/bbb.webp")} alt="BBB Accredited Business A+ rating" width={130} height={52} className="h-8 w-auto object-contain" />
           </div>
         </div>
 
-        <div className="lg:col-span-3">
+        <div className="flex flex-col items-center text-center lg:col-span-3 lg:items-start lg:text-left">
           <p className="text-xs font-semibold uppercase tracking-wider text-white/50">Services</p>
           <ul className="mt-3 space-y-2 text-sm">
             {moneyServices.map((s) => (
@@ -69,9 +69,9 @@ export function Footer() {
           </ul>
         </div>
 
-        <div className="lg:col-span-4">
+        <div className="flex flex-col items-center text-center lg:col-span-4 lg:items-start lg:text-left">
           <p className="text-xs font-semibold uppercase tracking-wider text-white/50">Cities</p>
-          <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-2 text-sm">
+          <ul className="mt-3 flex flex-wrap justify-center gap-x-3 gap-y-2 text-sm lg:justify-start">
             {cities.map((c) => (
               <li key={c.route}>
                 <Link href={`${c.route}/`} className="text-white/70 hover:text-white">
@@ -87,11 +87,11 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container-page flex flex-wrap items-center justify-between gap-4 py-5 text-sm text-white/55 lg:pb-20">
+        <div className="container-page flex flex-col items-center justify-center gap-4 py-5 pb-24 text-center text-sm text-white/55 lg:flex-row lg:justify-between lg:pb-20 lg:text-left">
           <p>
             © {new Date().getFullYear()} {site.name}
           </p>
-          <nav className="flex flex-wrap gap-4">
+          <nav className="flex flex-wrap justify-center gap-4">
             <Link href="/privacy-policy/" className="hover:text-white">
               Privacy
             </Link>

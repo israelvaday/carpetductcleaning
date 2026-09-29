@@ -69,7 +69,7 @@ export default function AboutPage() {
           </div>
           <div className="grid content-start gap-6 self-start">
             <Stats />
-            <div className="rounded-2xl border border-line bg-sand p-6 shadow-card">
+            <div className="rounded-2xl border border-line bg-sand p-6 text-center shadow-card md:text-left">
               <p className="eyebrow">What that means on a job</p>
               <CheckList items={PROOF_POINTS} />
             </div>

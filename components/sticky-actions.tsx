@@ -39,7 +39,7 @@ export function StickyActions() {
         type="button"
         onClick={() => openQuote({ service: serviceFromPath(pathname) })}
         aria-label="Book now"
-        className="fixed right-4 z-40 inline-flex items-center gap-2 rounded-full bg-gold py-3 pr-4 pl-3 text-sm font-bold text-navy shadow-glow lg:hidden bottom-[max(1rem,env(safe-area-inset-bottom))]"
+        className="pin-center fixed z-40 inline-flex items-center gap-2 rounded-full bg-gold py-3 pr-5 pl-4 text-sm font-bold text-navy shadow-glow lg:hidden bottom-[max(1rem,env(safe-area-inset-bottom))]"
       >
         <CalendarCheck className="size-5" />
         Book
