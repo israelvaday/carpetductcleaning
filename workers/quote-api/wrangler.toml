@@ -1,0 +1,16 @@
+name = "carpetduct-quote-api"
+main = "src/index.js"
+compatibility_date = "2026-06-01"
+account_id = "bf1930fdddc45c024e6db33190f46433"
+
+[vars]
+QUOTE_TO = "israelvaday97@gmail.com"
+FROM_EMAIL = "quotes@carpetductcleaning.com"
+SITE_ORIGIN = "https://carpetductcleaning.com"
+
+[[send_email]]
+name = "EMAIL"
+
+[[routes]]
+pattern = "api.carpetductcleaning.com"
+custom_domain = true

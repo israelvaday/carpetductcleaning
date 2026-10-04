@@ -16,7 +16,8 @@ export async function deliverLead(draft: LeadDraft): Promise<DeliveryResult> {
   const submittedAt = new Date().toISOString();
   const page = draft.page || (typeof window !== "undefined" ? window.location.pathname : "");
   const lead = acceptLead({ ...draft, page }, id, submittedAt);
-  const endpoint = process.env.NEXT_PUBLIC_LEAD_ENDPOINT;
+  const endpoint =
+    process.env.NEXT_PUBLIC_LEAD_ENDPOINT || "https://api.carpetductcleaning.com/";
 
   if (endpoint) {
     try {

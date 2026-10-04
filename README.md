@@ -20,7 +20,9 @@ npm run dev
 npm run build
 ```
 
-GitHub Pages preview (after Actions): `https://israelvaday.github.io/carpetductcleaning/`
+## Live
+
+Initial live version, 4 Oct 2026. `https://carpetductcleaning.com` is this site on GitHub Pages, with HTTPS enforced. `www` redirects to that address. Google still receives mail for the domain. Both quote forms send to `israelvaday97@gmail.com` until the client inbox is added.
 
 # Carpet & Duct Cleaning — Next.js content pack
 
