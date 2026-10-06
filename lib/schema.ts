@@ -1,5 +1,4 @@
 import { getGoogleProfile, openingHoursSpecification } from "./google-profile";
-import { getReviews } from "./reviews";
 import { site, siteUrl, socialLinks } from "./site";
 
 export function businessNode() {
@@ -29,8 +28,6 @@ export function businessNode() {
       addressCountry: profile?.country || "US",
     },
     sameAs: sameAsLinks(profile?.mapsUrl),
-    // Real numbers pulled from Google Places at build time (content/reviews.json).
-    ...aggregateRating(),
     // Hours, pin, and Maps URL from the same Place Details call (content/google-profile.json).
     // Google's place types include an off-base "laundry" label, so the @type stays CleaningService.
     ...profileSignals(profile),
@@ -74,18 +71,6 @@ function profileSignals(profile: ReturnType<typeof getGoogleProfile>) {
       areaServed: "Orange County, CA",
       availableLanguage: "English",
       ...(hours.length ? { hoursAvailable: hours } : {}),
-    },
-  };
-}
-
-function aggregateRating() {
-  const r = getReviews();
-  if (!r) return {}; // not fetched yet — omit rather than claim numbers
-  return {
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: String(r.rating),
-      reviewCount: String(r.totalRatings),
     },
   };
 }
