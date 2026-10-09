@@ -35,15 +35,23 @@ export function StickyActions() {
         </div>
       </div>
 
-      <button
-        type="button"
-        onClick={() => openQuote({ service: serviceFromPath(pathname) })}
-        aria-label="Book now"
-        className="pin-center fixed z-40 inline-flex items-center gap-2 rounded-full bg-gold py-3 pr-5 pl-4 text-sm font-bold text-navy shadow-glow lg:hidden bottom-[max(1rem,env(safe-area-inset-bottom))]"
-      >
-        <CalendarCheck className="size-5" />
-        Book
-      </button>
+      <div className="fixed right-3 z-40 flex gap-2 lg:hidden bottom-[max(0.75rem,env(safe-area-inset-bottom))]">
+        <a
+          href={site.phoneHref}
+          aria-label={`Call ${site.phone}`}
+          className="inline-flex size-12 items-center justify-center rounded-full bg-navy text-white shadow-lift ring-1 ring-white/15"
+        >
+          <Phone className="size-5" />
+        </a>
+        <button
+          type="button"
+          onClick={() => openQuote({ service: serviceFromPath(pathname) })}
+          className="inline-flex h-12 items-center gap-2 rounded-full bg-gold px-5 text-sm font-bold text-navy shadow-glow"
+        >
+          <CalendarCheck className="size-5" />
+          Book
+        </button>
+      </div>
     </>
   );
 }

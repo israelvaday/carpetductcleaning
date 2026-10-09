@@ -1,5 +1,6 @@
 import map from "@/content/image-map.json";
 import photoTags from "@/content/photo-tags.json";
+import sitePhotos from "@/content/site-photos.json";
 
 export type Img = { src: string; alt: string };
 
@@ -47,7 +48,18 @@ function fromSrc(src: string, size: "full" | "sm" = "full"): Img {
 // Named assets (logo, hero-home, truck, van, process steps, ...).
 const assetByKey = new Map(map.assets.map((a) => [a.key, a]));
 
+type Shot = { src: string; alt: string };
+
+const realAssets = sitePhotos.assets as Record<string, Shot>;
+const realServices = sitePhotos.services as Record<string, Shot>;
+
+function shot(photo: Shot): Img {
+  return { src: asset(photo.src), alt: photo.alt };
+}
+
 export function img(key: string, alt?: string): Img {
+  const real = realAssets[key];
+  if (real) return { src: asset(real.src), alt: alt ?? real.alt };
   const assetEntry = assetByKey.get(key);
   if (assetEntry) return { src: fromSrc(assetEntry.src).src, alt: alt ?? assetEntry.alt };
   return { src: asset(`/images/${key}.webp`), alt: alt ?? "" };
@@ -65,9 +77,11 @@ const serviceBySlug = new Map((map.services as unknown as ServiceEntry[]).map((s
 
 export type ServiceImageRole = "hero" | "card" | "picker";
 
-// Quote tiles reuse the generated category photo (usually the homepage card)
-// so each guided-quote option shows that service, not a repeated stock shot.
+// A crew photo replaces only the service-page hero. Cards, quote tiles, and
+// step photos stay on their own images so one file is never shown twice.
 export function serviceImage(slug: string, role: ServiceImageRole = "hero"): Img {
+  const real = role === "hero" ? realServices[slug] : undefined;
+  if (real?.src) return shot(real);
   const svc = serviceBySlug.get(slug);
   if (!svc) return img("hero-home");
   const src = svc[role] || svc.card || svc.hero;
@@ -75,6 +89,21 @@ export function serviceImage(slug: string, role: ServiceImageRole = "hero"): Img
 }
 
 // The four process-wizard panels on a service hub — unique to that service.
+// Quote tiles only get a photo when the map assigned one that is not already
+// the service card. A missing picker stays a text choice so the card photo
+// is not shown a second time.
+const PICKER_ALT: Record<string, string> = {
+  "drape-cleaning": "Sailboat curtains hanging in a bedroom",
+  "outdoor-furniture-cleaning": "Beige cushions in a wicker outdoor chair",
+};
+
+export function servicePickerImage(slug: string): Img | null {
+  const svc = serviceBySlug.get(slug);
+  if (!svc?.picker) return null;
+  const image = fromSrc(svc.picker, "sm");
+  return { ...image, alt: PICKER_ALT[slug] || image.alt };
+}
+
 export function serviceSteps(slug: string): Img[] {
   const svc = serviceBySlug.get(slug);
   if (!svc || !svc.steps?.length) return [];
@@ -87,7 +116,9 @@ const cityExact = map.cityExact as Record<string, string>;
 export function cityImage(service: string, city: string): Img {
   const exact = cityExact[`${service}/${city}`];
   if (exact) return fromSrc(exact);
-  return serviceImage(service, "hero");
+  const svc = serviceBySlug.get(service);
+  if (svc) return fromSrc(svc.hero);
+  return img("hero-home");
 }
 
 // The city's tile on /locations — a generated landmark photo of that city,

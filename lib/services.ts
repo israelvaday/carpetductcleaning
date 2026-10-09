@@ -26,6 +26,15 @@ export const SERVICE_BLURB: Record<string, string> = {
   "floor-cleaning": "Whole-home hard floor cleaning across tile, vinyl, wood, and stone.",
 };
 
+const SERVICE_NAME: Record<string, string> = {
+  "drape-cleaning": "Curtain Cleaning",
+  "outdoor-furniture-cleaning": "Outdoor Cushion Cleaning",
+};
+
+export function serviceName(slug: string, fallback?: string) {
+  return SERVICE_NAME[slug] || fallback || slug.replaceAll("-", " ").replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
 export function serviceBlurb(slug: string, name: string) {
   return SERVICE_BLURB[slug] || `Professional ${name.toLowerCase()} across Irvine and Orange County.`;
 }
@@ -163,14 +172,14 @@ export function cityFaqs(serviceName: string, cityName: string, blurb: string) {
       a: `${blurb} We inspect and quote first, protect corners and doorways, clean with commercial equipment and EPA Safer Choice products, then walk the finished work with you before we pack up.`,
     },
     {
-      q: `Are your technicians certified and insured?`,
-      a: `Yes. Our technicians are IICRC-certified and we are Google Guaranteed with a BBB A+ rating. We have worked across Irvine and Orange County since 2013.`,
+      q: `Are you licensed and insured?`,
+      a: `Yes. We are licensed and insured, Google Guaranteed, with a BBB A+ rating. We have worked across Irvine and Orange County since 2013.`,
     },
   ];
 }
 
 export const PROOF_POINTS = [
-  "IICRC-certified technicians",
+  "Background-checked technicians",
   "Google Guaranteed and BBB A+",
   "EPA Safer Choice products, safe for kids and pets",
   "Itemized quote on-site, no bait-and-switch",

@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 export function QuoteButton({
   className,
   dark = false,
-  label = "Get a free quote",
+  label = "Book",
   service,
 }: {
   className?: string;

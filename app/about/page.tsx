@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Gallery, ImageHero, Stats } from "@/components/blocks";
+import { ImageHero, Stats } from "@/components/blocks";
 import { Cta } from "@/components/cta";
 import { JsonLd } from "@/components/json-ld";
 import { CheckList, Section, SectionHead, TrustRow } from "@/components/ui";
@@ -14,7 +14,7 @@ import { cleanParagraphs } from "@/lib/text";
 
 export const metadata: Metadata = pageMeta({
   title: "About Carpet & Duct Cleaning | Irvine, CA Since 2013",
-  description: `Carpet & Duct Cleaning has served Irvine and Orange County since ${site.foundingYear}. IICRC-certified technicians, Google Guaranteed, BBB A+. Call ${site.phone}.`,
+  description: `Carpet & Duct Cleaning has served Irvine and Orange County since ${site.foundingYear}. Google Guaranteed, BBB A+, and same-day openings. Call ${site.phone}.`,
   path: "/about/",
 });
 
@@ -46,7 +46,7 @@ export default function AboutPage() {
         eyebrow={`${site.city}, ${site.region}`}
         title={`About ${site.name}`}
         body={`Founded in ${site.foundingYear}. A local crew cleaning carpets, rugs, upholstery, and air ducts across ${site.area}.`}
-        bullets={[`${site.jobs} jobs completed`, `${site.rating} Google rating`, "IICRC certified"]}
+        bullets={[`${site.jobs} jobs completed`, `${site.rating} Google rating`, "Google Guaranteed"]}
       />
 
       <Section tone="light">
@@ -109,7 +109,6 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Gallery limit={8} offset={8} />
       <Cta title="Work with a local Irvine crew" />
     </>
   );

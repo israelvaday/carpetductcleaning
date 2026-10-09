@@ -76,7 +76,7 @@ export default async function CityPage({
         ]}
         eyebrow={`${doc.cityName}, CA`}
         title={doc.h1}
-        body={`${doc.serviceName} for ${doc.cityName} homes and businesses. IICRC-certified technicians, itemized quotes, same-day openings.`}
+        body={`${doc.serviceName} for ${doc.cityName} homes and businesses. Google Guaranteed, itemized quotes, same-day openings.`}
         bullets={["Local crews", "Google Guaranteed", "Safe for kids and pets"]}
       />
 
@@ -110,7 +110,7 @@ export default async function CityPage({
         <SectionHead
           eyebrow="Recent work"
           title={`${doc.serviceName} jobs near ${doc.cityName}`}
-          body="Photos from our own crews working in this part of Orange County."
+          body="Recent work from jobs in this part of Orange County."
         />
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {jobs.map((photo) => (

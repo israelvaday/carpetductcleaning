@@ -119,12 +119,12 @@ export function BeforeAfterSlider({
   );
 }
 
-const INITIAL_COUNT = 6;
+const INITIAL_COUNT = 9;
 
-export function BeforeAfterGallery({ pairs }: { pairs: BeforeAfterPair[] }) {
-  const [open, setOpen] = useState(false);
+export function BeforeAfterGallery({ pairs, showAll = false }: { pairs: BeforeAfterPair[]; showAll?: boolean }) {
+  const [open, setOpen] = useState(showAll);
   const visible = open ? pairs : pairs.slice(0, INITIAL_COUNT);
-  const hidden = pairs.length - INITIAL_COUNT;
+  const hidden = pairs.length - visible.length;
 
   return (
     <>

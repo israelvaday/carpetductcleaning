@@ -1,9 +1,11 @@
 "use client";
 
-import { createContext, useCallback, useContext, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { X } from "lucide-react";
 import { QuoteWizard } from "@/components/quote-wizard";
+import { servicePickerImage } from "@/lib/images";
+import { QUOTE_SERVICES } from "@/lib/quote-services";
 
 type QuoteContextValue = {
   open: boolean;
@@ -27,6 +29,23 @@ export function QuoteProvider({ children }: { children: React.ReactNode }) {
     setService(options?.service || "");
     setSession((n) => n + 1);
     setOpen(true);
+  }, []);
+
+  useEffect(() => {
+    const links: HTMLLinkElement[] = [];
+    for (const slug of QUOTE_SERVICES) {
+      const image = servicePickerImage(slug);
+      if (!image) continue;
+      const link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "image";
+      link.href = image.src;
+      document.head.appendChild(link);
+      links.push(link);
+    }
+    return () => {
+      for (const link of links) link.remove();
+    };
   }, []);
 
   return (

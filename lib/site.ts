@@ -13,7 +13,7 @@ export const site = {
   email: "info@carpetductcleaning.com",
   jobs: "10,000+",
   rating: "4.9",
-  reviewCount: "309",
+  reviewCount: "311",
 } as const;
 
 /** Profile URLs from the previous site's social icon row. */
@@ -46,8 +46,10 @@ export function siteUrl() {
 export const moneyServices = [
   { href: "/carpet-cleaning/", label: "Carpet Cleaning" },
   { href: "/air-duct-cleaning/", label: "Air Duct Cleaning" },
-  { href: "/dryer-vent-cleaning/", label: "Dryer Vent Cleaning" },
+  { href: "/drape-cleaning/", label: "Curtain Cleaning" },
+  { href: "/outdoor-furniture-cleaning/", label: "Outdoor Cushion Cleaning" },
   { href: "/water-damage-restoration/", label: "Water Damage" },
+  { href: "/dryer-vent-cleaning/", label: "Dryer Vent Cleaning" },
   { href: "/area-rug-cleaning/", label: "Area Rugs" },
   { href: "/upholstery-cleaning/", label: "Upholstery" },
   { href: "/hardwood-floor-cleaning/", label: "Hardwood Floors" },

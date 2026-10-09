@@ -19,7 +19,7 @@ A static-friendly Next.js App Router site for a **lead-gen cleaning company** in
 
 - Phone: `(949) 992-3299`
 - Brand: Carpet And Duct Cleaning
-- Proof to keep: Google Guaranteed, BBB A+, IICRC, EPA Safer Choice, 10,000+ jobs, 4.9 Google
+- Proof to keep: Google Guaranteed, BBB A+, EPA Safer Choice, 10,000+ jobs, 4.9 Google. Do not claim IICRC.
 - Founding year: **2013** (homepage). About said 2021. Lock **2013** unless the client documents otherwise.
 
 This is not a store. No WordPress, no Elementor, no Rank Math, no `/cleaner-in-*` pages.

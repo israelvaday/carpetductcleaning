@@ -244,7 +244,7 @@ async function main() {
   const data = await fetchPlace(key, placeId);
 
   const reviews = (data.reviews || [])
-    .filter((r) => r.rating >= 4 && r.text?.text)
+    .filter((r) => r.text?.text)
     .map((r) => ({
       author: r.authorAttribution?.displayName || "Google user",
       rating: r.rating,

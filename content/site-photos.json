@@ -1,0 +1,74 @@
+{
+  "assets": {
+    "hero-home": {
+      "src": "/images/real-carpet-room.webp",
+      "alt": "Living room carpet after cleaning"
+    }
+  },
+  "services": {
+    "carpet-cleaning": {
+      "src": "/images/real-carpet-hall.webp",
+      "alt": "Hallway carpet with cleaning lines"
+    },
+    "air-duct-cleaning": {
+      "src": "/images/real-duct-machine.webp",
+      "alt": "Air duct cleaning machine set up in a living room"
+    },
+    "dryer-vent-cleaning": {
+      "src": "/images/real-dryer-drum.webp",
+      "alt": "Cleaning hose run into an open dryer"
+    },
+    "water-damage-restoration": {
+      "src": "/images/real-water-pads.webp",
+      "alt": "Absorbent pads laid on a wet tile floor"
+    },
+    "emergency-cleaning": {
+      "src": "/images/real-water-bucket.webp",
+      "alt": "Dirty water pumped into a bucket"
+    },
+    "area-rug-cleaning": {
+      "src": "/images/real-rug-dining.webp",
+      "alt": "Patterned area rug in a dining room"
+    },
+    "rug-pickup": {
+      "src": "/images/real-rug-clean.webp",
+      "alt": "Round area rug with a cleaning hose on it"
+    },
+    "upholstery-cleaning": {
+      "src": "/images/real-chair-soil.webp",
+      "alt": "Upholstered chair with a soiled seat"
+    },
+    "couch-cleaning": {
+      "src": "/images/real-couch.webp",
+      "alt": "Light sofa with a stained cushion and a clean cushion"
+    },
+    "leather-furniture-cleaning": {
+      "src": "/images/real-leather.webp",
+      "alt": "Worn brown leather loveseat"
+    },
+    "tile-and-grout-cleaning": {
+      "src": "/images/real-tile-bath.webp",
+      "alt": "Clean tile floor in a restroom"
+    },
+    "drape-cleaning": {
+      "src": "/images/real-drape.webp",
+      "alt": "Curtain being cleaned with an upholstery tool"
+    },
+    "outdoor-furniture-cleaning": {
+      "src": "/images/real-outdoor-pool.webp",
+      "alt": "Outdoor cushions on a patio beside a pool"
+    },
+    "commercial-carpet-cleaning": {
+      "src": "/images/real-commercial-wand.webp",
+      "alt": "Carpet wand cleaning office carpet tiles"
+    },
+    "commercial": {
+      "src": "/images/real-commercial-office.webp",
+      "alt": "Dark soil on commercial carpet beside a display table"
+    },
+    "commercial-air-duct-cleaning": {
+      "src": "/images/real-duct-hose.webp",
+      "alt": "Red duct hose in a floor vent"
+    }
+  }
+}

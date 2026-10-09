@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { MapPin, ShieldCheck, Star, Phone } from "lucide-react";
 import { type Img } from "@/lib/images";
+import { TrustBadges } from "@/components/ui";
 import { QuoteButton } from "@/components/quote-button";
 import { site } from "@/lib/site";
 import { Reveal } from "@/components/fx";
@@ -45,8 +46,8 @@ export function HomeHero({ image }: { image: Img }) {
             </h1>
 
             <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg lg:mx-0">
-              Truck-mounted hot-water extraction and HEPA duct cleaning from IICRC-certified
-              technicians — with an itemized quote before we start and same-day openings.
+              Truck-mounted hot-water extraction and HEPA duct cleaning from a Google Guaranteed
+              crew — with an itemized quote before we start and same-day openings.
             </p>
 
             <div className="mx-auto mt-8 flex w-full max-w-xl flex-col gap-3 sm:flex-row lg:mx-0">
@@ -59,11 +60,12 @@ export function HomeHero({ image }: { image: Img }) {
               </a>
               <QuoteButton
                 dark
-                label="Free quote"
+                label="Book"
                 service=""
                 className="h-14 flex-1 px-6 text-base"
               />
             </div>
+            <TrustBadges className="mx-auto mt-6 justify-center lg:mx-0 lg:justify-start" />
           </Reveal>
 
           <Reveal from="right" delay={0.12} className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-1">
@@ -73,7 +75,7 @@ export function HomeHero({ image }: { image: Img }) {
                 <span className="text-xs font-bold uppercase tracking-wider">Why homeowners call us</span>
               </div>
               <ul className="mx-auto mt-3 w-fit space-y-2 text-left text-sm text-white/85 lg:mx-0">
-                {["IICRC-certified, background-checked crews", "EPA Safer Choice products, kid & pet safe", "Itemized quote on-site — no bait-and-switch"].map((b) => (
+                {["Google Guaranteed, background-checked crews", "EPA Safer Choice products, kid & pet safe", "Itemized quote on-site — no bait-and-switch"].map((b) => (
                   <li key={b} className="flex items-start gap-2">
                     <Star className="mt-0.5 size-4 shrink-0 fill-gold text-gold" />
                     {b}

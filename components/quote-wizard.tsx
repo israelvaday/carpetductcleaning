@@ -6,9 +6,10 @@ import {
   ArrowLeft, ArrowRight, Building2, Calendar, CalendarClock, Check, Home, Phone, Send, Sparkles, Zap,
 } from "lucide-react";
 import { ConsentNote } from "@/components/legal";
-import { serviceImage } from "@/lib/images";
+import { servicePickerImage } from "@/lib/images";
 import { deliverLead, type DeliveryChannel } from "@/lib/leads/deliver";
 import { QUOTE_SERVICES } from "@/lib/quote-services";
+import { serviceName } from "@/lib/services";
 import { site } from "@/lib/site";
 import { cn, titleCase } from "@/lib/utils";
 
@@ -111,7 +112,7 @@ export function QuoteWizard({
         phone,
         email,
         city,
-        service: service ? titleCase(service) : "",
+        service: service ? serviceName(service, titleCase(service)) : "",
         property: PROPERTIES.find((p) => p.key === property)?.label || "",
         timing: URGENCIES.find((u) => u.key === urgency)?.label || "",
         message,
@@ -137,7 +138,7 @@ export function QuoteWizard({
       <div className="border-b border-line bg-sand px-5 py-4 md:px-8">
         <div className={cn("flex flex-wrap items-center gap-x-4 gap-y-1", embedded && "pr-8")}>
           <span className="inline-flex items-center gap-1.5 rounded-full bg-brand px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
-            <Sparkles className="size-3" /> Free quote
+            <Sparkles className="size-3" /> Book
           </span>
           <span className="text-[11px] font-bold uppercase tracking-wider text-ink/50">
             Step {step - startStep + 1} of {totalSteps} — {STEP_LABELS[step]}
@@ -179,8 +180,9 @@ export function QuoteWizard({
                 <p className="mt-1 text-sm text-ink/60">Tap the service closest to your job.</p>
                 <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
                   {QUOTE_SERVICES.map((slug) => {
-                    const image = serviceImage(slug, "picker");
+                    const image = servicePickerImage(slug);
                     const active = service === slug;
+                    const label = serviceName(slug, titleCase(slug));
                     return (
                       <button
                         key={slug}
@@ -195,13 +197,18 @@ export function QuoteWizard({
                         )}
                       >
                         <div className="relative aspect-[4/3] w-full bg-sand">
-                          <Image
-                            src={image.src}
-                            alt={image.alt}
-                            fill
-                            sizes="(max-width: 640px) 50vw, 33vw"
-                            className="object-cover transition group-hover:scale-105"
-                          />
+                          {image ? (
+                            <Image
+                              src={image.src}
+                              alt={image.alt}
+                              fill
+                              loading="eager"
+                              sizes="(max-width: 640px) 50vw, 220px"
+                              className="object-cover transition group-hover:scale-105"
+                            />
+                          ) : (
+                            <span className="absolute inset-0 bg-navy" />
+                          )}
                           <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/20 to-transparent" />
                           {active && (
                             <span className="absolute right-2 top-2 flex size-6 items-center justify-center rounded-full bg-brand text-white">
@@ -209,7 +216,7 @@ export function QuoteWizard({
                             </span>
                           )}
                           <span className="absolute bottom-0 left-0 right-0 p-2.5 text-xs font-bold text-white sm:text-sm">
-                            {titleCase(slug)}
+                            {label}
                           </span>
                         </div>
                       </button>
@@ -327,7 +334,7 @@ export function QuoteWizard({
                 <div className="mt-6 rounded-2xl border border-line bg-sand p-4">
                   <p className="text-[11px] font-bold uppercase tracking-wider text-brand">Summary</p>
                   <ul className="mt-2 grid gap-1 text-sm text-ink/80 sm:grid-cols-2">
-                    <li><span className="text-ink/50">Service:</span> {service ? titleCase(service) : "—"}</li>
+                    <li><span className="text-ink/50">Service:</span> {service ? serviceName(service, titleCase(service)) : "—"}</li>
                     <li><span className="text-ink/50">Property:</span> {PROPERTIES.find((p) => p.key === property)?.label || "—"}</li>
                     <li><span className="text-ink/50">Timing:</span> {URGENCIES.find((u) => u.key === urgency)?.label || "—"}</li>
                     <li><span className="text-ink/50">City:</span> {city || "—"}</li>

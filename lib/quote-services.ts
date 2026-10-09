@@ -7,6 +7,8 @@ export const QUOTE_SERVICES = [
   "hardwood-floor-cleaning",
   "water-damage-restoration",
   "dryer-vent-cleaning",
+  "drape-cleaning",
+  "outdoor-furniture-cleaning",
   "commercial-carpet-cleaning",
 ] as const;
 

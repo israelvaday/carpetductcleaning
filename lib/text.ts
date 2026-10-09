@@ -132,5 +132,5 @@ export function composeMeta(required: string[], optional: string[] = [], min = 1
 }
 
 export function cityIntro(serviceName: string, cityName: string) {
-  return `Professional ${serviceName.toLowerCase()} in ${cityName}, CA from Carpet & Duct Cleaning. IICRC-certified technicians, Google Guaranteed, BBB A+, serving Orange County since 2013. Same-day openings. Call (949) 992-3299.`;
+  return `Professional ${serviceName.toLowerCase()} in ${cityName}, CA from Carpet & Duct Cleaning. Google Guaranteed, BBB A+, serving Orange County since 2013. Same-day openings. Call (949) 992-3299.`;
 }

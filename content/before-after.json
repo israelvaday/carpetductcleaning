@@ -1,149 +1,100 @@
 [
   {
-    "before": "/images/ba-carpet-wine-living-before.webp",
-    "after": "/images/ba-carpet-wine-living-after.webp",
-    "width": 1200,
-    "height": 900,
-    "alt": "Living room carpet, red wine stain"
-  },
-  {
-    "before": "/images/ba-carpet-stairs-before.webp",
-    "after": "/images/ba-carpet-stairs-after.webp",
-    "width": 1200,
-    "height": 900,
-    "alt": "Carpeted stairs, soiled treads"
-  },
-  {
-    "before": "/images/ba-carpet-pet-hall-before.webp",
-    "after": "/images/ba-carpet-pet-hall-after.webp",
-    "width": 1200,
-    "height": 900,
-    "alt": "Hallway carpet, pet stain"
-  },
-  {
-    "before": "/images/ba-carpet-bedroom-before.webp",
-    "after": "/images/ba-carpet-bedroom-after.webp",
-    "width": 1200,
-    "height": 900,
-    "alt": "Bedroom carpet, traffic lanes"
-  },
-  {
-    "before": "/images/ba-carpet-coffee-dining-before.webp",
-    "after": "/images/ba-carpet-coffee-dining-after.webp",
-    "width": 1200,
-    "height": 900,
-    "alt": "Dining room carpet, coffee spill"
-  },
-  {
-    "before": "/images/ba-round-supply-duct-before.webp",
-    "after": "/images/ba-round-supply-duct-after.webp",
-    "width": 896,
-    "height": 1200,
-    "alt": "Round galvanized supply air duct"
-  },
-  {
-    "before": "/images/ba-rectangular-trunk-line-before.webp",
-    "after": "/images/ba-rectangular-trunk-line-after.webp",
-    "width": 1200,
-    "height": 896,
-    "alt": "Rectangular sheet-metal trunk line"
-  },
-  {
-    "before": "/images/ba-floor-register-boot-before.webp",
-    "after": "/images/ba-floor-register-boot-after.webp",
-    "width": 896,
-    "height": 1200,
-    "alt": "Floor supply register with the cover off"
-  },
-  {
-    "before": "/images/ba-return-air-grille-before.webp",
-    "after": "/images/ba-return-air-grille-after.webp",
-    "width": 896,
-    "height": 1200,
-    "alt": "Wall return air grille"
-  },
-  {
-    "before": "/images/ba-dryer-vent-hood-before.webp",
+    "before": "/images/ba-dryer-hood-before.webp",
     "after": "/images/ba-dryer-vent-hood-after.webp",
-    "width": 1200,
-    "height": 896,
-    "alt": "Exterior dryer vent hood"
-  },
-  {
-    "before": "/images/ba-dryer-duct-interior-before.webp",
-    "after": "/images/ba-dryer-duct-interior-after.webp",
-    "width": 896,
+    "width": 1600,
     "height": 1200,
-    "alt": "Dryer vent duct interior"
+    "alt": "Exterior dryer vent hood, lint packed in the opening beside the cleared hood"
   },
   {
-    "before": "/images/ba-ceiling-diffuser-before.webp",
+    "before": "/images/ba-diffuser-before.webp",
     "after": "/images/ba-ceiling-diffuser-after.webp",
-    "width": 896,
+    "width": 1400,
+    "height": 1875,
+    "alt": "Ceiling supply diffuser, a dust ring beside the cleared grille"
+  },
+  {
+    "before": "/images/ba-stairs-before.webp",
+    "after": "/images/ba-stairs-after.webp",
+    "width": 1400,
+    "height": 1050,
+    "alt": "Carpeted stairs, soiled treads beside a cleaned pass"
+  },
+  {
+    "before": "/images/ba-couch-before.webp",
+    "after": "/images/ba-couch-after.webp",
+    "width": 800,
+    "height": 510,
+    "alt": "Sofa cushion, a dark stain beside the cleaned cushion"
+  },
+  {
+    "before": "/images/ba-rug-before.webp",
+    "after": "/images/ba-rug-after.webp",
+    "width": 864,
+    "height": 346,
+    "alt": "Blue area rug, soiled field beside a lighter cleaned pass"
+  },
+  {
+    "before": "/images/ba-dryer-duct-before.webp",
+    "after": "/images/ba-dryer-duct-interior-after.webp",
+    "width": 1600,
     "height": 1200,
-    "alt": "Ceiling supply air diffuser"
+    "alt": "Dryer duct, lint packed inside beside the cleared metal"
   },
   {
-    "before": "/images/ba-main-return-drop-before.webp",
-    "after": "/images/ba-main-return-drop-after.webp",
-    "width": 1200,
-    "height": 896,
-    "alt": "Main return air drop"
-  },
-  {
-    "before": "/images/ba-flex-duct-interior-before.webp",
-    "after": "/images/ba-flex-duct-interior-after.webp",
-    "width": 896,
-    "height": 1200,
-    "alt": "Flexible air duct interior"
-  },
-  {
-    "before": "/images/ba-supply-plenum-before.webp",
-    "after": "/images/ba-supply-plenum-after.webp",
-    "width": 1200,
-    "height": 896,
-    "alt": "Supply plenum"
-  },
-  {
-    "before": "/images/ba-wall-supply-register-before.webp",
-    "after": "/images/ba-wall-supply-register-after.webp",
-    "width": 896,
-    "height": 1200,
-    "alt": "Wall supply register"
-  },
-  {
-    "before": "/images/ba-bathroom-exhaust-fan-before.webp",
+    "before": "/images/ba-bath-fan-before.webp",
     "after": "/images/ba-bathroom-exhaust-fan-after.webp",
-    "width": 896,
-    "height": 1200,
-    "alt": "Bathroom exhaust fan grille"
+    "width": 1200,
+    "height": 1600,
+    "alt": "Bathroom exhaust grille, dust caked on the cover beside the cleared grille"
   },
   {
-    "before": "/images/ba-cold-air-return-cavity-before.webp",
-    "after": "/images/ba-cold-air-return-cavity-after.webp",
-    "width": 896,
-    "height": 1200,
-    "alt": "Cold air return with the grille removed"
+    "before": "/images/ba-bedroom-before.webp",
+    "after": "/images/ba-bedroom-after.webp",
+    "width": 1400,
+    "height": 1050,
+    "alt": "Bedroom carpet, traffic soil beside a cleaned pass"
   },
   {
-    "before": "/images/ba-branch-duct-boot-before.webp",
-    "after": "/images/ba-branch-duct-boot-after.webp",
-    "width": 896,
-    "height": 1200,
-    "alt": "Branch duct boot"
-  },
-  {
-    "before": "/images/ba-commercial-ceiling-diffuser-before.webp",
+    "before": "/images/ba-commercial-diffuser-before.webp",
     "after": "/images/ba-commercial-ceiling-diffuser-after.webp",
-    "width": 1200,
-    "height": 896,
-    "alt": "Commercial ceiling diffuser"
+    "width": 1400,
+    "height": 1045,
+    "alt": "Commercial ceiling diffuser, dust streaks on the tile beside the cleared diffuser"
   },
   {
-    "before": "/images/ba-panned-joist-return-before.webp",
-    "after": "/images/ba-panned-joist-return-after.webp",
+    "before": "/images/ba-flex-before.webp",
+    "after": "/images/ba-flex-duct-interior-after.webp",
+    "width": 1400,
+    "height": 1875,
+    "alt": "Flexible duct, debris on the ribs beside the cleared liner"
+  },
+  {
+    "before": "/images/ba-entry-before.webp",
+    "after": "/images/ba-entry-after.webp",
+    "width": 1400,
+    "height": 1050,
+    "alt": "Entry carpet, soiled foreground and a cleaned pass by the door"
+  },
+  {
+    "before": "/images/ba-return-grille-before.webp",
+    "after": "/images/ba-return-air-grille-after.webp",
     "width": 1200,
-    "height": 896,
-    "alt": "Panned joist return"
+    "height": 1600,
+    "alt": "Return air grille, dust on the slats beside the cleared grille"
+  },
+  {
+    "before": "/images/ba-office-before.webp",
+    "after": "/images/ba-office-after.webp",
+    "width": 1400,
+    "height": 1050,
+    "alt": "Home office carpet, traffic soil beside a cleaned pass"
+  },
+  {
+    "before": "/images/ba-wall-register-before.webp",
+    "after": "/images/ba-wall-supply-register-after.webp",
+    "width": 1400,
+    "height": 1875,
+    "alt": "Wall supply register, a dust-caked grille beside the cleared register"
   }
 ]

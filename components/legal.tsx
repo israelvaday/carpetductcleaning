@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
-import { Section } from "@/components/ui";
+import { Section, TrustBadges } from "@/components/ui";
 import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -18,7 +18,8 @@ export function LegalPage({
   return (
     <Section tone="light">
       <div className="max-w-2xl">
-        <h1 className="text-4xl font-semibold text-navy">{title}</h1>
+        <TrustBadges />
+        <h1 className="mt-6 text-4xl font-semibold text-navy">{title}</h1>
         <p className="mt-2 text-sm text-ink/55">Last updated {LEGAL_UPDATED}</p>
         <p className="prose-body mt-6">{intro}</p>
         {sections.map((s) => (

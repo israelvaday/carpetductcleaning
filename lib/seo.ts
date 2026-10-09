@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { site } from "./site";
 
 export const OG_IMAGE = {
-  url: "/og.jpg",
+  url: "/og.webp",
   width: 1200,
   height: 630,
   alt: "Carpet & Duct Cleaning — carpet and air duct cleaning in Irvine and Orange County",

@@ -11,6 +11,7 @@ import { MapEmbed } from "@/components/map-embed";
 import { QuoteWizard } from "@/components/quote-wizard";
 import { Reveal } from "@/components/fx";
 import { Reviews } from "@/components/reviews";
+import { QuoteButton } from "@/components/quote-button";
 import { Section, SectionHead } from "@/components/ui";
 import { cityEntries } from "@/lib/content";
 import { getGoogleProfile, mapQuery } from "@/lib/google-profile";
@@ -43,7 +44,7 @@ const HOME_FAQS = [
 export const metadata: Metadata = pageMeta({
   title: "Carpet Cleaning in Irvine, CA | Air Duct & Rug Cleaning",
   description:
-    "Google Guaranteed carpet cleaning and air duct cleaning in Irvine since 2013. IICRC-certified crews, same-day openings. Call (949) 992-3299.",
+    "Google Guaranteed carpet and air duct cleaning in Irvine, CA since 2013. BBB A+, same-day openings across Orange County. Call (949) 992-3299.",
   path: "/",
 });
 
@@ -63,12 +64,55 @@ export default function HomePage() {
 
       <HomeHero image={img("hero-home")} />
 
-      <Section tone="light" className="lg:pt-24">
+      <Gallery
+        compare
+        showPhotos={false}
+        showAll
+        compareTitle="Real Photos from Our Actual Jobs."
+        compareBody="Dryer vents, air ducts, carpet, a sofa, and a rug. Slide across each photo to see that same spot before we started and after we finished."
+      />
+
+      <Section tone="sand" className="py-10 md:py-14">
+        <Reveal from="down">
+          <SectionHead
+            eyebrow="More than carpet"
+            title="Curtains, outdoor cushions, and the rest of the house"
+            body="A full set of curtains or a patio of cushions gets the same care as a whole house. Call and we will hold the next opening for you."
+          />
+        </Reveal>
+        <div className="mt-8 grid gap-3 sm:grid-cols-2">
+          {[
+            { href: "/drape-cleaning/", title: "Curtain Cleaning", detail: "Drapes and curtains cleaned in place, including full-length sets." },
+            { href: "/outdoor-furniture-cleaning/", title: "Outdoor Cushion Cleaning", detail: "Patio cushions and the frames they sit on." },
+            { href: "/carpet-cleaning/", title: "Whole-home carpet", detail: "Rooms, halls, and stairs in one visit." },
+            { href: "/air-duct-cleaning/", title: "Whole-house air ducts", detail: "Supply lines, returns, and the registers." },
+            { href: "/water-damage-restoration/", title: "Water damage", detail: "Extraction and drying when a room is soaked." },
+            { href: "/dryer-vent-cleaning/", title: "Dryer vent systems", detail: "The full duct run and the outside hood." },
+          ].map((job) => (
+            <Link
+              key={job.href}
+              href={job.href}
+              className="flex min-h-16 items-center justify-between gap-4 rounded-2xl bg-white px-5 py-4 shadow-card ring-1 ring-navy/5 transition hover:ring-brand"
+            >
+              <span>
+                <span className="block text-base font-semibold text-navy">{job.title}</span>
+                <span className="mt-1 block text-sm text-ink/65">{job.detail}</span>
+              </span>
+              <ArrowRight className="size-5 shrink-0 text-brand" />
+            </Link>
+          ))}
+        </div>
+        <div className="mt-6 flex flex-wrap justify-center gap-3 lg:justify-start">
+          <QuoteButton className="h-12 px-8" />
+        </div>
+      </Section>
+
+      <Section tone="light">
         <Reveal from="down">
           <SectionHead
             eyebrow="What we clean"
-            title="Every service has its own page and its own crew"
-            body="Carpet, ducts, rugs, upholstery, and hard floors. Pick the service you need and we will quote it on-site."
+            title="Carpet, ducts, curtains, cushions, and floors"
+            body="Carpet, ducts, curtains, outdoor cushions, rugs, and hard floors. Pick the service you need and we will quote it on-site."
           />
         </Reveal>
         <ServiceGrid slugs={moneyServices.map((s) => s.href.replaceAll("/", ""))} priorityCount={4} />
@@ -92,9 +136,9 @@ export default function HomePage() {
           <Reveal from="left">
             <SectionHead
               tone="navy"
-              eyebrow="Get a price in minutes"
-              title="Answer five quick questions"
-              body="Tell us the service, the property, and the timing. We come back with an itemized price range and the next open slot — no obligation."
+              eyebrow="Book the next opening"
+              title="Call, or send the job in one step"
+              body="The fastest booking is a phone call. If you would rather type it, pick the service and your city and we reply with a price range and the next slot."
             />
             <ul className="mt-8 space-y-3 text-white/85">
               {["Itemized quote before any work starts", "Same-day and next-day openings", "Safe for kids, pets, and allergies"].map((b) => (
@@ -111,7 +155,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Gallery compare />
+      <Gallery />
 
       <Section tone="navy">
         <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_1fr]">
@@ -168,7 +212,7 @@ export default function HomePage() {
         service="carpet-cleaning"
         cities={carpetCities}
         title="Carpet cleaning across Orange County"
-        body="One city, one service, one URL. Every page below is written for that city."
+        body="Choose your city. You will see carpet cleaning there, with a price before we start and the next opening."
       />
 
       <Section tone="light">
@@ -182,8 +226,8 @@ export default function HomePage() {
                 crew can do both on one visit, and the price is itemized before anything starts.
               </p>
               <p>
-                Technicians are IICRC-certified. The solutions are EPA Safer Choice, so kids and pets can use the room
-                once it is dry. Quotes are given on site. Call (949) 992-3299 for a same-day or next-day opening.
+                The company is Google Guaranteed. The products are EPA Safer Choice, so kids and pets can be back in the room
+                once it is dry. You get the price on site, before any work starts. Call (949) 992-3299 for a same-day or next-day opening.
               </p>
             </div>
               <Link
@@ -215,7 +259,7 @@ export default function HomePage() {
         </Section>
 
       <FaqList items={faqs} />
-      <Cta />
+      <Cta showTrust={false} />
     </>
   );
 }

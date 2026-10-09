@@ -130,15 +130,9 @@ const og = await sharp({
     { input: overlay, left: 0, top: 0 },
     { input: logoOnNavy, left: 64, top: 72 },
   ])
-  .jpeg({ quality: 86, mozjpeg: true })
+  .webp({ quality: 80 })
   .toBuffer();
 
-const logoCard = await sharp(path.join(publicDir, "images", "logo.webp"))
-  .resize({ width: 1266 })
-  .flatten({ background: NAVY })
-  .png()
-  .toBuffer();
-await writeFile(path.join(publicDir, "logo.png"), logoCard);
-await writeFile(path.join(publicDir, "og.jpg"), og);
+await writeFile(path.join(publicDir, "og.webp"), og);
 
 console.log("wrote brand assets", { mark: { minX, minY, maxX, maxY }, og: og.length });

@@ -22,7 +22,7 @@ npm run build
 
 ## Live
 
-Initial live version, 4 Oct 2026. `https://carpetductcleaning.com` is this site on GitHub Pages, with HTTPS enforced. `www` redirects to that address. Google still receives mail for the domain. Both quote forms send to `israelvaday97@gmail.com` until the client inbox is added.
+Initial live version, 4 Oct 2026. `https://carpetductcleaning.com` is this site on GitHub Pages, with HTTPS enforced. `www` redirects to that address. Google still receives mail for the domain. Both quote forms send to `info@carpetductcleaning.com`.
 
 # Carpet & Duct Cleaning — Next.js content pack
 

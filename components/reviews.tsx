@@ -32,10 +32,23 @@ export function Reviews() {
             title="What Orange County says about the work"
             body={
               data
-                ? `${data.rating} out of 5 across ${data.totalRatings} Google ratings — pulled live from our Google Business Profile.`
+                ? `${data.rating} out of 5 from ${data.totalRatings} Google reviews of work we did in their homes.`
                 : `${site.rating} on Google. Read the reviews on our Google Business Profile.`
             }
           />
+          <a
+            href={
+              profile?.reviewsUrl ||
+              data?.mapsUrl ||
+              "https://www.google.com/maps/search/Carpet+And+Duct+Cleaning+191+Pinestone+Irvine+CA+92604"
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-auto mt-4 flex w-fit items-center gap-2 font-semibold text-brand transition hover:text-brand-dark md:mx-0"
+          >
+            {data ? "Read every review on Google" : "Read our reviews on Google"}
+            <ExternalLink className="size-4" />
+          </a>
         </Reveal>
         <Reveal from="right" delay={0.1}>
         <div className="flex items-center gap-3 rounded-2xl border border-line bg-white px-5 py-4 shadow-card">
@@ -55,23 +68,8 @@ export function Reviews() {
         </Reveal>
       </div>
 
-      {data && data.reviews.length > 0 ? <ReviewsCarousel reviews={data.reviews.slice(0, 30)} /> : null}
+      {data && data.reviews.length > 0 ? <ReviewsCarousel reviews={data.reviews} /> : null}
 
-      <div className="mt-8 text-center md:text-left">
-        <a
-          href={
-            profile?.reviewsUrl ||
-            data?.mapsUrl ||
-            "https://www.google.com/maps/search/Carpet+And+Duct+Cleaning+191+Pinestone+Irvine+CA+92604"
-          }
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 font-semibold text-brand transition hover:text-brand-dark"
-        >
-          {data ? "Read every review on Google" : "Read our reviews on Google"}
-          <ExternalLink className="size-4" />
-        </a>
-      </div>
     </Section>
   );
 }

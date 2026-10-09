@@ -3,7 +3,7 @@ import { join } from "node:path";
 import urlMap from "@/audit/next-url-map.json";
 import { metaTitle, titleCase } from "./utils";
 import { cityIntro, cleanParagraphs, composeMeta, extractFaqs } from "./text";
-import { cityDetail, cityFaqs, onTopicFaqs, serviceBlurb } from "./services";
+import { cityDetail, cityFaqs, onTopicFaqs, serviceBlurb, serviceName } from "./services";
 
 export type WpPage = {
   title: string;
@@ -114,7 +114,7 @@ export function getServiceDoc(slug: string) {
   const source = HUB_SOURCE[slug];
   if (!source) return null;
   const page = loadPage(source);
-  const name = titleCase(slug);
+  const name = serviceName(slug, titleCase(slug));
   const gen = GEN_SERVICES[slug];
   // Prefer AI paragraphs; fall back to the cleaned WP dump.
   const paras = gen?.paragraphs?.length ? gen.paragraphs : cleanParagraphs(page?.text || "", 12);
@@ -126,7 +126,7 @@ export function getServiceDoc(slug: string) {
     h1: `${name} in Orange County`,
     title: metaTitle(`${name} in Orange County, CA`),
     description: composeMeta(
-      [`${name} in Irvine and across Orange County.`, "IICRC-certified technicians, Google Guaranteed."],
+      [`${name} in Irvine and across Orange County.`, "Google Guaranteed and BBB A+."],
       [
         "Same-day openings and upfront quotes. Call (949) 992-3299.",
         "Same-day openings, upfront quotes. Call (949) 992-3299.",
@@ -166,7 +166,7 @@ export function getCityDoc(service: string, city: string) {
       entry.rewrite === "new-write"
         ? [
             `${cityName} homes pick up beach sand, salt air, and everyday soil that settles into carpet fibers. Our truck-mounted hot-water extraction lifts that soil without leaving a sticky residue.`,
-            `If you need air duct cleaning in ${cityName}, that lives on its own page so Google and customers are not sent to the wrong service.`,
+            `Need the air ducts cleaned in ${cityName} too? We can do that on the same visit. Call (949) 992-3299.`,
           ]
         : [];
     body = [intro, ...extra, ...sourceParas.filter((p) => !/expert boat|yacht cleaning|leather couch cleaning in/i.test(p))];
@@ -185,7 +185,7 @@ export function getCityDoc(service: string, city: string) {
     h1: `${serviceName} in ${cityName}, CA`,
     title: metaTitle(`${serviceName} in ${cityName}, CA`),
     description: composeMeta(
-      [`${serviceName} in ${cityName}, CA.`, "IICRC-certified technicians, Google Guaranteed, upfront on-site quotes."],
+      [`${serviceName} in ${cityName}, CA.`, "Google Guaranteed, BBB A+, upfront on-site quotes."],
       [
         "Same-day and next-day openings. Call (949) 992-3299.",
         "Same-day openings. Call (949) 992-3299.",

@@ -14,9 +14,8 @@ function Stars({ n }: { n: number }) {
   );
 }
 
-// Sleek auto-playing review slider: scroll-snap track, edge fade, pauses on
-// hover/touch, arrows + dots. Google Places serves the 5 most relevant
-// reviews, refreshed on every deploy.
+// Auto-playing review slider: scroll-snap track, edge fade, pauses on
+// hover/touch, arrows, and a progress mark when there are many cards.
 export function ReviewsCarousel({ reviews }: { reviews: Review[] }) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
@@ -77,27 +76,27 @@ export function ReviewsCarousel({ reviews }: { reviews: Review[] }) {
       <div
         ref={trackRef}
         onScroll={onScroll}
-        className="no-scrollbar flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth py-2 [mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)]"
+        className="no-scrollbar flex snap-x snap-mandatory items-stretch gap-5 overflow-x-auto scroll-smooth py-2 [mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)]"
       >
-        {reviews.map((r) => (
+        {reviews.map((r, i) => (
           <figure
-            key={`${r.author}-${r.publishedAt}`}
-            className="flex w-[85%] flex-none snap-start flex-col items-center rounded-2xl border border-line bg-white p-6 text-center shadow-card sm:w-[60%] sm:items-start sm:text-left lg:w-[31.8%]"
+            key={`${r.author}-${r.publishedAt}-${i}`}
+            className="flex h-60 w-[85%] flex-none snap-start flex-col overflow-hidden rounded-2xl border border-line bg-white p-5 text-left shadow-card sm:w-[calc(50%-0.625rem)] lg:w-[calc(33.333%-0.875rem)]"
           >
-            <div className="flex w-full items-center justify-center gap-3 sm:justify-between">
+            <div className="flex w-full items-center justify-between gap-3">
               <Stars n={r.rating} />
-              <span className="text-xs text-ink/50">{r.when}</span>
+              <span className="shrink-0 text-xs text-ink/50">{r.when}</span>
             </div>
-            <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-ink/80">
-              &ldquo;{r.text.length > 260 ? `${r.text.slice(0, 257)}…` : r.text}&rdquo;
+            <blockquote className="mt-3 line-clamp-4 flex-1 text-sm leading-relaxed text-ink/80">
+              &ldquo;{r.text.replace(/\s+/g, " ").trim()}&rdquo;
             </blockquote>
-            <figcaption className="mt-4 flex w-full flex-wrap items-center justify-center gap-2 border-t border-line pt-4 text-sm font-semibold text-navy sm:justify-start">
-              <span className="flex size-8 items-center justify-center rounded-full bg-navy text-xs font-bold text-white">
+            <figcaption className="mt-4 flex w-full min-w-0 items-center gap-2 border-t border-line pt-3 text-sm font-semibold text-navy">
+              <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-navy text-xs font-bold text-white">
                 {r.author.charAt(0).toUpperCase()}
               </span>
-              <span className="truncate">{r.author}</span>
-              <span className="text-[10px] font-bold uppercase tracking-wider text-ink/40 sm:ml-auto">
-                Google review
+              <span className="min-w-0 flex-1 truncate">{r.author}</span>
+              <span className="shrink-0 text-[10px] font-bold uppercase tracking-wider text-ink/40">
+                Google
               </span>
             </figcaption>
           </figure>
@@ -109,7 +108,7 @@ export function ReviewsCarousel({ reviews }: { reviews: Review[] }) {
           type="button"
           onClick={() => step(-1)}
           aria-label="Previous review"
-          className="flex size-10 items-center justify-center rounded-full border border-line bg-white text-navy shadow-sm transition hover:border-brand hover:text-brand"
+          className="flex size-11 items-center justify-center rounded-full border border-line bg-white text-navy shadow-sm transition hover:border-brand hover:text-brand"
         >
           <ChevronLeft className="size-5" />
         </button>
@@ -144,7 +143,7 @@ export function ReviewsCarousel({ reviews }: { reviews: Review[] }) {
           type="button"
           onClick={() => step(1)}
           aria-label="Next review"
-          className="flex size-10 items-center justify-center rounded-full border border-line bg-white text-navy shadow-sm transition hover:border-brand hover:text-brand"
+          className="flex size-11 items-center justify-center rounded-full border border-line bg-white text-navy shadow-sm transition hover:border-brand hover:text-brand"
         >
           <ChevronRight className="size-5" />
         </button>

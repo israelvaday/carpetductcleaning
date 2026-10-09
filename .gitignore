@@ -5,6 +5,7 @@ out/
 .deploy/
 *.log
 media/webp/
+media/drive/
 .cursor/
 *.pdf
 

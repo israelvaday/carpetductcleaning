@@ -98,6 +98,27 @@ export function RatingPill({ dark = false }: { dark?: boolean }) {
   );
 }
 
+export function TrustBadges({ className }: { className?: string }) {
+  return (
+    <div className={cn("flex flex-wrap items-center gap-x-6 gap-y-3", className)}>
+      <Image
+        src={asset("/images/google.webp")}
+        alt="Google Guaranteed badge"
+        width={140}
+        height={54}
+        className="h-10 w-auto object-contain"
+      />
+      <Image
+        src={asset("/images/bbb.webp")}
+        alt="BBB Accredited Business A+ rating"
+        width={140}
+        height={56}
+        className="h-10 w-auto object-contain"
+      />
+    </div>
+  );
+}
+
 export function TrustRow({ dark = false, className }: { dark?: boolean; className?: string }) {
   return (
     <div className={cn("flex flex-wrap items-center gap-x-6 gap-y-4", dark ? "text-white/70" : "text-ink/60", className)}>
@@ -115,7 +136,6 @@ export function TrustRow({ dark = false, className }: { dark?: boolean; classNam
         height={56}
         className="h-9 w-auto object-contain"
       />
-      <span className="text-sm font-semibold">IICRC certified</span>
       <span className="text-sm font-semibold">EPA Safer Choice</span>
       <span className="text-sm font-semibold">Since {site.foundingYear}</span>
     </div>

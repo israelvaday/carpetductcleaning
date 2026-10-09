@@ -62,7 +62,7 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
         eyebrow={`${site.area} · Since ${site.foundingYear}`}
         title={doc.h1}
         body={serviceBlurb(doc.slug, doc.name)}
-        bullets={["IICRC certified", "Google Guaranteed", "Upfront on-site quote", "Same-day openings"]}
+        bullets={["Google Guaranteed", "BBB A+", "Upfront on-site quote", "Same-day openings"]}
       />
 
       <Section tone="light">
@@ -108,7 +108,7 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
         service={doc.slug}
         cities={doc.cities}
         title={`${doc.name} by city`}
-        body={`Pages below are written for that city. Anything not listed is still covered — call ${site.phone}.`}
+        body={`Pick your city for a local price and the next opening. If you do not see it, call ${site.phone}. We still cover it.`}
       />
 
       <FaqList items={doc.faqs} title={`${doc.name} questions`} />

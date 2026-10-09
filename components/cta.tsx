@@ -5,10 +5,12 @@ import { site } from "@/lib/site";
 
 export function Cta({
   title = "Book a cleaning in Orange County",
-  body = "Same-day and next-day openings. IICRC technicians, itemized quotes on-site, and products that are safe for kids and pets.",
+  body = "Same-day and next-day openings. Google Guaranteed, itemized quotes on-site, and products that are safe for kids and pets.",
+  showTrust = true,
 }: {
   title?: string;
   body?: string;
+  showTrust?: boolean;
 }) {
   return (
     <section className="overflow-x-clip bg-white py-16 md:py-20">
@@ -25,9 +27,11 @@ export function Cta({
             <p className="mt-6 text-sm text-white/60">
               Call {site.phone} · Serving {site.city} and {site.area} since {site.foundingYear}
             </p>
-            <div className="mt-6 flex justify-center lg:justify-start">
-              <TrustRow dark className="justify-center lg:justify-start" />
-            </div>
+            {showTrust ? (
+              <div className="mt-6 flex justify-center lg:justify-start">
+                <TrustRow dark className="justify-center lg:justify-start" />
+              </div>
+            ) : null}
           </Reveal>
           {/* No photo here — the CTA band renders on every page, and repeating
               one image site-wide is against the house rule. A stat panel keeps
@@ -46,7 +50,7 @@ export function Cta({
             <div className="relative flex flex-col items-center gap-3 text-sm lg:items-start">
               <p className="flex items-center gap-2.5 text-white/80">
                 <ShieldCheck className="size-4 shrink-0 text-brand-50" />
-                Google Guaranteed · BBB A+ · IICRC certified
+                Google Guaranteed · BBB A+
               </p>
               <p className="flex items-center gap-2.5 text-white/80">
                 <Clock className="size-4 shrink-0 text-brand-50" />

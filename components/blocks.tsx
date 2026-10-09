@@ -2,13 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { BeforeAfterGallery, type BeforeAfterPair } from "@/components/before-after-slider";
+import { JobGallery, type JobPhoto } from "@/components/job-gallery";
 import { ProcessWizard, type ProcessStep } from "@/components/process-wizard";
 import { Reveal } from "@/components/fx";
-import { Breadcrumb, CallButton, CheckList, QuoteButton, RatingPill, Section, SectionHead } from "@/components/ui";
+import { Breadcrumb, CallButton, CheckList, QuoteButton, RatingPill, Section, SectionHead, TrustBadges } from "@/components/ui";
 import beforeAfterJson from "@/content/before-after.json";
-import { asset, gallery, serviceImage, type Img } from "@/lib/images";
+import jobGalleryJson from "@/content/job-gallery.json";
+import { asset, serviceImage, type Img } from "@/lib/images";
 import { PhotoFrame } from "@/components/photo";
-import { serviceBlurb } from "@/lib/services";
+import { serviceBlurb, serviceName } from "@/lib/services";
 import { site } from "@/lib/site";
 import { cn, titleCase } from "@/lib/utils";
 
@@ -66,6 +68,7 @@ export function ImageHero({
             <QuoteButton dark />
             <RatingPill dark />
           </div>
+          <TrustBadges className="mt-6 justify-center lg:justify-start" />
         </div>
       </div>
     </section>
@@ -73,7 +76,7 @@ export function ImageHero({
 }
 
 export function ServiceCard({ slug, priority = false }: { slug: string; priority?: boolean }) {
-  const name = titleCase(slug);
+  const name = serviceName(slug);
   const image = serviceImage(slug, "card");
   return (
     <Link
@@ -176,15 +179,25 @@ const beforeAfter: BeforeAfterPair[] = (beforeAfterJson as BeforeAfterPair[]).ma
   after: asset(pair.after),
 }));
 
+const jobPhotos = jobGalleryJson as (JobPhoto & { place: "home" | "about" })[];
+
 export function Gallery({
-  limit = 8,
-  offset = 0,
   compare = false,
+  place = "home",
+  showPhotos = true,
+  showAll = false,
+  compareTitle = "The soiled side and the cleaned pass",
+  compareBody = "Dryer hoods, vent grilles, a couch, a rug, and carpet. Each slider is one real job. Drag the handle — or focus it and use the arrow keys — to compare the soiled side with the cleaned side.",
 }: {
-  limit?: number;
-  offset?: number;
   compare?: boolean;
+  place?: "home" | "about";
+  showPhotos?: boolean;
+  showAll?: boolean;
+  compareTitle?: string;
+  compareBody?: string;
 }) {
+  const photos = jobPhotos.filter((photo) => photo.place === place);
+
   return (
     <Section>
       {compare ? (
@@ -192,37 +205,25 @@ export function Gallery({
           <Reveal from="left">
             <SectionHead
               eyebrow="Before and after"
-              title="Carpet and ducts, before and after"
-              body="Drag the handle on each photo — or focus it and use the arrow keys — to compare the job before cleaning and after. Carpet pairs are first."
+              title={compareTitle}
+              body={compareBody}
             />
           </Reveal>
-          <BeforeAfterGallery pairs={beforeAfter} />
+          <BeforeAfterGallery pairs={beforeAfter} showAll={showAll} />
         </>
       ) : null}
+      {showPhotos ? (
       <div className={compare ? "mt-16" : undefined}>
         <Reveal from="right">
           <SectionHead
             eyebrow="Recent work"
             title="Real jobs from Orange County homes"
-            body="Photos from our own crews — carpet, rugs, upholstery, and duct work."
+            body="Curtains, outdoor cushions, rugs, floors, upholstery, and the truck-mount. Click a photo to see it larger."
           />
         </Reveal>
-        <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
-          {gallery.slice(offset, offset + limit).map((photo, i) => (
-            <Reveal key={photo.src} from="up" delay={Math.min(i, 7) * 0.04}>
-              <PhotoFrame ratio="photo" rounded="card" className="rounded-xl shadow-card">
-                <Image
-                  src={photo.src}
-                  alt={photo.alt}
-                  fill
-                  sizes="(min-width: 768px) 22vw, 45vw"
-                  className="object-cover transition duration-500 hover:scale-105"
-                />
-              </PhotoFrame>
-            </Reveal>
-          ))}
-        </div>
+        <JobGallery photos={photos} />
       </div>
+      ) : null}
     </Section>
   );
 }
@@ -234,8 +235,8 @@ export function WhyUs({ items }: { items: string[] }) {
         <Reveal from="left">
           <SectionHead
             eyebrow="Why homeowners call us"
-            title="Certified crews, upfront prices, no upsell games"
-            body="The old site leaned on superlatives. We would rather show the credentials and let the work stand."
+            title="Google Guaranteed crews, upfront prices, no upsell games"
+            body="You get a price before we start, a Google Guaranteed crew, and the finished work to judge for yourself."
           />
           <CheckList items={items} />
           <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">

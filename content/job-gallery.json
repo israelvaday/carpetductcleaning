@@ -1,0 +1,93 @@
+[
+  {
+    "src": "/images/job-rug-living.webp",
+    "width": 1350,
+    "height": 1800,
+    "alt": "Gray area rug on a wood floor in a living room",
+    "place": "home"
+  },
+  {
+    "src": "/images/job-tile-kitchen.webp",
+    "width": 1350,
+    "height": 1800,
+    "alt": "Tile floor in a kitchen after cleaning",
+    "place": "home"
+  },
+  {
+    "src": "/images/job-floor-machine.webp",
+    "width": 1350,
+    "height": 1800,
+    "alt": "Rotary floor machine on a light wood-look floor",
+    "place": "home"
+  },
+  {
+    "src": "/images/job-sectional.webp",
+    "width": 1800,
+    "height": 1350,
+    "alt": "White sectional with a cleaning hose on a geometric rug",
+    "place": "home"
+  },
+  {
+    "src": "/images/job-armchair.webp",
+    "width": 1350,
+    "height": 1800,
+    "alt": "Light armchair in a living room",
+    "place": "home"
+  },
+  {
+    "src": "/images/job-dark-rug.webp",
+    "width": 1012,
+    "height": 1800,
+    "alt": "Dark textured rug beside a bed",
+    "place": "home"
+  },
+  {
+    "src": "/images/job-carpet-lines.webp",
+    "width": 1800,
+    "height": 1350,
+    "alt": "Living room carpet with fresh cleaning lines",
+    "place": "home"
+  },
+  {
+    "src": "/images/job-clean-stairs.webp",
+    "width": 1350,
+    "height": 1800,
+    "alt": "Clean carpeted stairs",
+    "place": "home"
+  },
+  {
+    "src": "/images/job-truck-mount.webp",
+    "width": 1600,
+    "height": 1200,
+    "alt": "Truck-mount carpet machine in the service van",
+    "place": "home"
+  },
+  {
+    "src": "/images/job-sheer-curtains.webp",
+    "width": 1350,
+    "height": 1800,
+    "alt": "Sheer curtains along a sunroom window",
+    "place": "home"
+  },
+  {
+    "src": "/images/job-patio-swing.webp",
+    "width": 1013,
+    "height": 1800,
+    "alt": "Tan outdoor cushions on a patio swing",
+    "place": "home"
+  },
+  {
+    "src": "/images/job-patio-sofa.webp",
+    "width": 1600,
+    "height": 900,
+    "alt": "White outdoor sofa and chairs on a stone patio",
+    "place": "home"
+  },
+  {
+    "src": "/images/job-pool-cushions.webp",
+    "width": 1350,
+    "height": 1800,
+    "alt": "White outdoor cushions laid out beside a pool",
+    "place": "home"
+  }
+]

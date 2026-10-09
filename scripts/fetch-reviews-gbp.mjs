@@ -14,15 +14,25 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const ENV = join(ROOT, ".env.local");
 const OUT = join(ROOT, "content/reviews.json");
 const LOCATION_MATCH = /carpet|pinestone/i;
-const MAX_STORED = 120; // plenty for the slider; component slices for display
+const MAX_STORED = 400;
 
 for (const line of readFileSync(ENV, "utf8").split(/\r?\n/)) {
   const m = line.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*)\s*$/i);
   if (m && !process.env[m[1]]) process.env[m[1]] = m[2];
 }
 
-const { GBP_CLIENT_ID, GBP_CLIENT_SECRET, GBP_REFRESH_TOKEN } = process.env;
-if (!GBP_CLIENT_ID || !GBP_CLIENT_SECRET || !GBP_REFRESH_TOKEN) {
+if (process.env.GBP_VARS_FILE && existsSync(process.env.GBP_VARS_FILE)) {
+  const extra = JSON.parse(readFileSync(process.env.GBP_VARS_FILE, "utf8").replace(/^\uFEFF/, ""));
+  for (const [key, value] of Object.entries(extra)) {
+    if (typeof value === "string" && value && !process.env[key]) process.env[key] = value;
+  }
+}
+
+const clientId = process.env.GBP_CLIENT_ID || process.env.GOOGLE_CLIENT_ID;
+const clientSecret = process.env.GBP_CLIENT_SECRET || process.env.GOOGLE_CLIENT_SECRET;
+const refreshToken = process.env.GBP_REFRESH_TOKEN || process.env.GOOGLE_REFRESH_TOKEN;
+const accountName = process.env.GBP_ACCOUNT_NAME || "accounts/113074257338651759696";
+if (!clientId || !clientSecret || !refreshToken) {
   console.log("GBP credentials missing — run scripts/gbp-auth.mjs first. Keeping existing reviews.json.");
   process.exit(0);
 }
@@ -32,9 +42,9 @@ async function accessToken() {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams({
-      client_id: GBP_CLIENT_ID,
-      client_secret: GBP_CLIENT_SECRET,
-      refresh_token: GBP_REFRESH_TOKEN,
+      client_id: clientId,
+      client_secret: clientSecret,
+      refresh_token: refreshToken,
       grant_type: "refresh_token",
     }),
   });
@@ -43,10 +53,8 @@ async function accessToken() {
   return data.access_token;
 }
 
-async function gbp(path, token) {
-  const res = await fetch(`https://mybusiness.googleapis.com/v4/${path}`, {
-    headers: { Authorization: `Bearer ${token}` },
-  });
+async function gbpGet(url, token) {
+  const res = await fetch(url, { headers: { Authorization: `Bearer ${token}` } });
   if (!res.ok) throw new Error(`GBP ${res.status}: ${(await res.text()).slice(0, 300)}`);
   return res.json();
 }
@@ -66,18 +74,24 @@ function relativeTime(iso) {
 
 const token = await accessToken();
 
-// Find the account, then the location matching the business.
-const accounts = await gbp("accounts", token);
-const account = accounts.accounts?.[0];
-if (!account) throw new Error("No Business Profile accounts on this Google user");
-console.log("account:", account.accountName || account.name);
+const locations = [];
+let locationPage = "";
+do {
+  const url = new URL(`https://mybusinessbusinessinformation.googleapis.com/v1/${accountName}/locations`);
+  url.searchParams.set("readMask", "name,title");
+  url.searchParams.set("pageSize", "100");
+  if (locationPage) url.searchParams.set("pageToken", locationPage);
+  const page = await gbpGet(url, token);
+  locations.push(...(page.locations || []));
+  locationPage = page.nextPageToken || "";
+} while (locationPage);
 
-const locations = await gbp(`${account.name}/locations`, token);
 const location =
-  locations.locations?.find((l) => LOCATION_MATCH.test(`${l.locationName} ${l.address?.addressLines?.join(" ")}`)) ||
-  locations.locations?.[0];
+  locations.find((l) => LOCATION_MATCH.test(l.title || "")) ||
+  locations[0];
 if (!location) throw new Error("No locations found on this account");
-console.log("location:", location.locationName);
+console.log("locations:", locations.map((l) => l.title).join(" | "));
+console.log("using:", location.title);
 
 // Page through every review, newest first.
 const all = [];
@@ -87,13 +101,16 @@ let totalReviewCount = 0;
 do {
   const qs = new URLSearchParams({ pageSize: "50", orderBy: "updateTime desc" });
   if (pageToken) qs.set("pageToken", pageToken);
-  const page = await gbp(`${location.name}/reviews?${qs}`, token);
+  const page = await gbpGet(
+    `https://mybusiness.googleapis.com/v4/${accountName}/${location.name}/reviews?${qs}`,
+    token,
+  );
   averageRating = page.averageRating || averageRating;
   totalReviewCount = page.totalReviewCount || totalReviewCount;
   for (const r of page.reviews || []) {
     const rating = STAR[r.starRating] || 0;
     const text = r.comment || "";
-    if (rating < 4 || !text) continue; // site shows 4-5★ reviews with text
+    if (!text) continue;
     all.push({
       author: r.reviewer?.displayName || "Google user",
       rating,
@@ -105,7 +122,7 @@ do {
   pageToken = page.nextPageToken || "";
 } while (pageToken && all.length < MAX_STORED);
 
-console.log(`fetched ${totalReviewCount} total, kept ${all.length} (4-5★ with text)`);
+console.log(`fetched ${totalReviewCount} total, kept ${all.length} with written comments`);
 
 // Preserve the Places-sourced fields (placeId, mapsUrl) from the existing file.
 let prev = {};
@@ -121,8 +138,8 @@ writeFileSync(
     {
       source: "google-business-profile",
       placeId: prev.placeId || "",
-      business: location.locationName || prev.business || "Carpet And Duct Cleaning",
-      rating: averageRating || prev.rating,
+      business: location.title || prev.business || "Carpet And Duct Cleaning",
+      rating: averageRating ? Math.round(averageRating * 10) / 10 : prev.rating,
       totalRatings: totalReviewCount || prev.totalRatings,
       mapsUrl: prev.mapsUrl || "",
       fetchedAt: new Date().toISOString(),

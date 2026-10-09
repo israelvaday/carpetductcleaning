@@ -7,7 +7,7 @@ import { Cta } from "@/components/cta";
 import { JsonLd } from "@/components/json-ld";
 import { MapEmbed } from "@/components/map-embed";
 import { Section, SectionHead } from "@/components/ui";
-import { cityEntries, serviceSlugs } from "@/lib/content";
+import { cityEntries } from "@/lib/content";
 import { cityLandmark, img } from "@/lib/images";
 import { PhotoFrame } from "@/components/photo";
 import { breadcrumbs } from "@/lib/schema";
@@ -19,7 +19,7 @@ import { titleCase } from "@/lib/utils";
 export const metadata: Metadata = pageMeta({
   title: "Service Areas in Orange County, CA | Carpet & Duct",
   description:
-    "Carpet, rug, upholstery, and air duct cleaning across Irvine and Orange County, CA. Find your city and open the exact service page your home needs.",
+    "Carpet, rug, upholstery, and air duct cleaning across Irvine and Orange County, CA. Pick your city for a local price and the next opening we have.",
   path: "/locations/",
 });
 
@@ -44,8 +44,8 @@ export default function LocationsPage() {
         breadcrumb={[{ name: "Home", href: "/" }, { name: "Service areas" }]}
         eyebrow="Orange County, CA"
         title="Service areas across Orange County"
-        body={`Based in ${site.city}, our crews cover ${site.area} daily. Every city page matches one service, so you always land on the page you searched for.`}
-        bullets={["One city, one service, one URL", `Same-day openings`, `Since ${site.foundingYear}`]}
+        body={`Based in ${site.city}. We are out across ${site.area} every day. Pick your city and we will tell you the next opening.`}
+        bullets={[`Across ${site.area}`, `Same-day openings`, `Since ${site.foundingYear}`]}
       />
 
       <Section tone="light">
@@ -54,7 +54,7 @@ export default function LocationsPage() {
             <SectionHead
               eyebrow="Where we work"
               title="Our truck is in your neighborhood most days"
-              body={`From the coast to the inland foothills, ${site.name} runs daily routes across ${site.area}. Find your city below — every page is written for that city, with real pricing and the next open slot.`}
+              body={`From the coast to the inland hills, our trucks are on ${site.area} routes every day. Pick your city for a price and the next opening.`}
             />
           </div>
           <MapEmbed query="Orange County, CA" title="Carpet & Duct Cleaning service area — Orange County, CA" height="h-72" />
@@ -65,7 +65,7 @@ export default function LocationsPage() {
         <SectionHead
           eyebrow="Find your city"
           title="Carpet cleaning in your city"
-          body="Each tile is a carpet cleaning job in that city. Open it for pricing and the next open slot."
+          body="Carpet cleaning in each of these cities. Open yours for a price and the next opening."
         />
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {carpetCities.map((c) => {
@@ -126,7 +126,7 @@ export default function LocationsPage() {
         <SectionHead
           eyebrow="Full service list"
           title="Every service we offer"
-          body={`${serviceSlugs().length} service hubs, each with its own page and pricing conversation.`}
+          body="Carpet, ducts, rugs, upholstery, floors, curtains, and outdoor cushions. Pick the one your home needs."
         />
         <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {SERVICE_GROUPS.map((group) => (

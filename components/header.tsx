@@ -7,7 +7,9 @@ import { usePathname } from "next/navigation";
 import * as Dialog from "@radix-ui/react-dialog";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { ChevronDown, Menu, Phone, X } from "lucide-react";
+import { useQuote } from "@/components/quote-dialog";
 import { asset } from "@/lib/images";
+import { serviceFromPath } from "@/lib/quote-services";
 import { serviceBlurb } from "@/lib/services";
 import { moneyServices, site } from "@/lib/site";
 
@@ -32,7 +34,7 @@ function Logo() {
         alt={site.name}
         width={220}
         height={47}
-        className="h-9 w-auto"
+        className="h-8 w-auto max-w-[38vw] object-contain object-left sm:h-9 sm:max-w-none"
         priority
       />
     </Link>
@@ -41,6 +43,7 @@ function Logo() {
 
 export function Header() {
   const pathname = usePathname();
+  const { openQuote } = useQuote();
   const [menu, setMenu] = useState("");
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -102,10 +105,17 @@ export function Header() {
           <a
             href={site.phoneHref}
             aria-label={`Call ${site.phone}`}
-            className="inline-flex size-10 items-center justify-center rounded-full text-gold ring-1 ring-gold/70 transition hover:bg-gold hover:text-navy lg:hidden"
+            className="inline-flex size-11 items-center justify-center rounded-full text-gold ring-1 ring-gold/70 transition hover:bg-gold hover:text-navy lg:hidden"
           >
             <Phone className="size-4" />
           </a>
+          <button
+            type="button"
+            onClick={() => openQuote({ service: serviceFromPath(pathname) })}
+            className="inline-flex h-11 items-center rounded-full bg-gold px-3.5 text-sm font-bold text-navy lg:hidden"
+          >
+            Book
+          </button>
           <a
             href={site.phoneHref}
             className="hidden items-center gap-2 rounded-full bg-brand px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-dark lg:inline-flex"
@@ -115,7 +125,7 @@ export function Header() {
           </a>
 
           <Dialog.Root open={mobileOpen} onOpenChange={setMobileOpen}>
-            <Dialog.Trigger className="inline-flex items-center rounded-full border border-white/25 p-2.5 lg:hidden" aria-label="Open menu">
+            <Dialog.Trigger className="inline-flex size-11 items-center justify-center rounded-full border border-white/25 lg:hidden" aria-label="Open menu">
               <Menu className="size-5" />
             </Dialog.Trigger>
             <Dialog.Portal>
