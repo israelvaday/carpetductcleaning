@@ -33,7 +33,7 @@ const HOME_FAQS = [
   },
   {
     q: "Is professional carpet cleaning safe for kids and pets?",
-    a: "We use EPA Safer Choice certified, residue-free solutions. Products are safe for children, pets, and allergy sufferers once dry.",
+    a: "We use EPA Safer Choice certified solutions and rinse thoroughly so little residue is left behind. Products are safe for children, pets, and allergy sufferers once dry.",
   },
   {
     q: "Do you offer same-day carpet cleaning in Irvine?",

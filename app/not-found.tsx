@@ -8,7 +8,7 @@ export default function NotFound() {
     <Section tone="sand">
       <TrustBadges />
       <p className="eyebrow mt-6">404</p>
-      <h1 className="mt-3 text-4xl font-semibold text-navy">That page is not on the new site</h1>
+      <h1 className="mt-3 text-4xl font-semibold text-navy">We could not find that page</h1>
       <p className="mt-4 max-w-xl text-lg text-ink/70">
         That address is not a page on this site. Pick a service below, or call and we will point you to the right one.
       </p>
