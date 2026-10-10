@@ -39,7 +39,7 @@ function headers(key) {
   };
 }
 
-export async function chatJson(key, model, system, user, temperature = 0.7) {
+export async function chatJson(key, model, system, user, temperature = 0.7, maxTokens = 8000) {
   const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
     method: "POST",
     headers: headers(key),
@@ -47,6 +47,7 @@ export async function chatJson(key, model, system, user, temperature = 0.7) {
     body: JSON.stringify({
       model,
       temperature,
+      max_tokens: maxTokens,
       response_format: { type: "json_object" },
       messages: [
         { role: "system", content: system },
@@ -58,7 +59,8 @@ export async function chatJson(key, model, system, user, temperature = 0.7) {
   const data = await res.json();
   const text = data.choices?.[0]?.message?.content;
   if (!text) throw new Error("No chat content");
-  return JSON.parse(text);
+  const cleaned = text.replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, "");
+  return JSON.parse(cleaned);
 }
 
 /** Vision: send one image (data URL) + prompt, get JSON back. */

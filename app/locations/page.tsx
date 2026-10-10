@@ -65,7 +65,7 @@ export default function LocationsPage() {
         <SectionHead
           eyebrow="Find your city"
           title="Carpet cleaning in your city"
-          body="Carpet cleaning in each of these cities. Open yours for a price and the next opening."
+          body="Carpet cleaning in each of these cities. Call and we will tell you the price range and the next opening."
         />
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {carpetCities.map((c) => {
@@ -102,9 +102,9 @@ export default function LocationsPage() {
       {otherCityPages.length > 0 && (
         <Section tone="light">
           <SectionHead
-            eyebrow="More by city"
-            title="Air duct and hardwood pages by city"
-            body="Dedicated city pages for services beyond carpet cleaning."
+            eyebrow="Also nearby"
+            title="Air ducts and hardwood floors"
+            body="Air duct cleaning in Aliso Viejo and Huntington Beach. Hardwood floor cleaning in Aliso Viejo. Call and we will quote it before we start."
           />
           <ul className="mt-8 flex flex-wrap gap-2.5">
             {otherCityPages.map((c) => (

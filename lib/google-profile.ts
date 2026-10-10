@@ -59,6 +59,10 @@ export function mapQuery(profile: GoogleProfile | null = getGoogleProfile()) {
   return `${site.name}, ${site.street}, ${site.city}, ${site.region} ${site.postalCode}`;
 }
 
+export function mapCid(profile: GoogleProfile | null = getGoogleProfile()) {
+  return profile?.mapsUrl.match(/[?&]cid=(\d+)/)?.[1] ?? "";
+}
+
 const DAY_ORDER = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
 export function openingHoursSpecification(hours: ProfileHour[]) {

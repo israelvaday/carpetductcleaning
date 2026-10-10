@@ -14,7 +14,7 @@ import { Reviews } from "@/components/reviews";
 import { QuoteButton } from "@/components/quote-button";
 import { Section, SectionHead } from "@/components/ui";
 import { cityEntries } from "@/lib/content";
-import { getGoogleProfile, mapQuery } from "@/lib/google-profile";
+import { getGoogleProfile, mapCid, mapQuery } from "@/lib/google-profile";
 import { asset, img } from "@/lib/images";
 import { breadcrumbs, faqLd } from "@/lib/schema";
 import { PROOF_POINTS } from "@/lib/services";
@@ -69,7 +69,7 @@ export default function HomePage() {
         showPhotos={false}
         showAll
         compareTitle="Real Photos from Our Actual Jobs."
-        compareBody="Dryer vents, air ducts, carpet, a sofa, and a rug. Slide across each photo to see that same spot before we started and after we finished."
+        compareBody="Dryer vents, air ducts, carpet, a sofa, and a rug. Each photo is the same spot before we started and after we finished."
       />
 
       <Section tone="sand" className="py-10 md:py-14">
@@ -118,7 +118,7 @@ export default function HomePage() {
         <ServiceGrid slugs={moneyServices.map((s) => s.href.replaceAll("/", ""))} priorityCount={4} />
         <Reveal className="mt-8 text-center md:text-left">
           <Link href="/locations/" className="inline-flex items-center justify-center gap-2 font-semibold text-brand">
-            See all services and service areas
+            See every city we cover
             <ArrowRight className="size-4" />
           </Link>
         </Reveal>
@@ -212,7 +212,7 @@ export default function HomePage() {
         service="carpet-cleaning"
         cities={carpetCities}
         title="Carpet cleaning across Orange County"
-        body="Choose your city. You will see carpet cleaning there, with a price before we start and the next opening."
+        body="Choose your city. We quote the carpet before we start and tell you the next opening."
       />
 
       <Section tone="light">
@@ -238,14 +238,18 @@ export default function HomePage() {
                 <ArrowRight className="size-4" />
               </Link>
             </Reveal>
-            <Reveal from="right" delay={0.12} className="self-start">
-              <Stats />
+            <div className="self-start">
+              <Reveal from="right" delay={0.12}>
+                <Stats />
+              </Reveal>
               <MapEmbed
                 query={mapQuery(profile)}
+                cid={mapCid(profile)}
                 title={`${site.name} — ${profile?.formattedAddress || `${site.street}, ${site.city}, ${site.region} ${site.postalCode}`}`}
                 className="mt-6"
-                height="h-64"
+                height="h-80"
                 zoom={15}
+                loading="eager"
               />
               <p className="mt-3 text-sm text-ink/60">
                 Based in {profile?.neighborhood ? `${profile.neighborhood}, ` : ""}
@@ -254,7 +258,7 @@ export default function HomePage() {
               {profile?.hoursSummary ? (
                 <p className="mt-1 text-sm text-ink/60">{profile.hoursSummary}</p>
               ) : null}
-            </Reveal>
+            </div>
           </div>
         </Section>
 

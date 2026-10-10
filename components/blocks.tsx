@@ -163,7 +163,7 @@ export function Process({ tone = "sand", steps }: { tone?: "light" | "sand"; ste
         <SectionHead
           eyebrow="How it works"
           title="From first call to final walkthrough"
-          body="Every job runs the same four steps whether it is one room or a whole building. Tap a step to see it."
+          body="One room or a whole building, the job follows the same four steps."
         />
       </Reveal>
       <Reveal from="up" delay={0.1} className="mt-12">
@@ -218,7 +218,7 @@ export function Gallery({
           <SectionHead
             eyebrow="Recent work"
             title="Real jobs from Orange County homes"
-            body="Curtains, outdoor cushions, rugs, floors, upholstery, and the truck-mount. Click a photo to see it larger."
+            body="Curtains, outdoor cushions, rugs, floors, upholstery, and the truck. These are photos from jobs we finished."
           />
         </Reveal>
         <JobGallery photos={photos} />

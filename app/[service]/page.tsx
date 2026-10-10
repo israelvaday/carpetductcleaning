@@ -108,7 +108,7 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
         service={doc.slug}
         cities={doc.cities}
         title={`${doc.name} by city`}
-        body={`Pick your city for a local price and the next opening. If you do not see it, call ${site.phone}. We still cover it.`}
+        body={`Call ${site.phone} with your city. We will tell you the price range and the next opening, even if your city is not listed here.`}
       />
 
       <FaqList items={doc.faqs} title={`${doc.name} questions`} />

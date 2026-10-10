@@ -137,7 +137,7 @@ const SERVICE_TOPICS: Record<string, RegExp> = {
 
 // Drop questions that read like marketing CTAs or lean on the superlatives the
 // audit told us to remove.
-const BAD_FAQ = /#\s?1\b|most trusted|best\s+\w+\s+(company|service|cleaning)|top[- ]rated|5[- ]star|provides best|why choose us/i;
+const BAD_FAQ = /#\s?1\b|most trusted|best\s+\w+\s+(company|service|cleaning)|top[- ]rated|5[- ]star|provides best|why choose us|24\s*\/\s*7|24 hours a day|non-toxic|we understand|this service is|we provide professional|designed to|ideal for|seeking to|sanitized/i;
 
 // Keep a question when it is about this service or is service-neutral, and drop
 // it when it clearly belongs to a different service or reads like an ad.

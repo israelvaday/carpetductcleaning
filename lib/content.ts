@@ -28,8 +28,8 @@ function loadPage(slug: string): WpPage | null {
   }
 }
 
-// AI-generated copy lives in content/generated/*.json and is merged over the
-// raw WordPress dump. Missing keys fall back to the WP-derived content.
+// Customer sentences live in content/generated/*.json and are read when this
+// module loads. Touching this file reloads the generated JSON in the dev server.
 type GenService = {
   tagline?: string;
   description?: string;
@@ -166,7 +166,7 @@ export function getCityDoc(service: string, city: string) {
       entry.rewrite === "new-write"
         ? [
             `${cityName} homes pick up beach sand, salt air, and everyday soil that settles into carpet fibers. Our truck-mounted hot-water extraction lifts that soil without leaving a sticky residue.`,
-            `Need the air ducts cleaned in ${cityName} too? We can do that on the same visit. Call (949) 992-3299.`,
+            `If the air ducts need cleaning in ${cityName} as well, we can do that on the same visit. Call (949) 992-3299.`,
           ]
         : [];
     body = [intro, ...extra, ...sourceParas.filter((p) => !/expert boat|yacht cleaning|leather couch cleaning in/i.test(p))];

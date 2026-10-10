@@ -6,7 +6,7 @@ import { ContactQuote } from "@/components/contact-quote";
 import { JsonLd } from "@/components/json-ld";
 import { MapEmbed } from "@/components/map-embed";
 import { CheckList, Section, SectionHead, TrustRow } from "@/components/ui";
-import { getGoogleProfile, mapQuery } from "@/lib/google-profile";
+import { getGoogleProfile, mapCid, mapQuery } from "@/lib/google-profile";
 import { img } from "@/lib/images";
 import { breadcrumbs } from "@/lib/schema";
 import { PROOF_POINTS } from "@/lib/services";
@@ -121,10 +121,12 @@ export default function ContactPage() {
             </div>
             <MapEmbed
               query={mapQuery(profile)}
+              cid={mapCid(profile)}
               title={`${site.name} — ${street}, ${city}, ${region} ${postalCode}`}
               className="mt-8"
-              height="h-64"
+              height="h-80"
               zoom={15}
+              loading="eager"
             />
           </div>
 
