@@ -40,7 +40,7 @@ export default function LocationsPage() {
       />
 
       <ImageHero
-        image={img("truck")}
+        image={img("locations-hero")}
         breadcrumb={[{ name: "Home", href: "/" }, { name: "Service areas" }]}
         eyebrow="Orange County, CA"
         title="Service areas across Orange County"

@@ -11,6 +11,8 @@ export type BeforeAfterPair = {
   width: number;
   height: number;
   alt: string;
+  /** Short human caption shown under the slider. Falls back to alt. */
+  caption?: string;
 };
 
 export function BeforeAfterSlider({
@@ -114,7 +116,7 @@ export function BeforeAfterSlider({
           After
         </span>
       </div>
-      <figcaption className="mt-2 line-clamp-2 min-h-10 text-sm text-ink/70">{pair.alt}</figcaption>
+      <figcaption className="mt-2 line-clamp-2 min-h-10 text-sm text-ink/70">{pair.caption ?? pair.alt}</figcaption>
     </figure>
   );
 }

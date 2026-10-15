@@ -6,12 +6,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import * as Dialog from "@radix-ui/react-dialog";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import { ChevronDown, Menu, Phone, X } from "lucide-react";
+import { ChevronDown, Clock, Menu, Phone, X } from "lucide-react";
 import { useQuote } from "@/components/quote-dialog";
 import { asset } from "@/lib/images";
 import { serviceFromPath } from "@/lib/quote-services";
-import { serviceBlurb } from "@/lib/services";
-import { moneyServices, site } from "@/lib/site";
+import { SERVICE_GROUPS, serviceName } from "@/lib/services";
+import { site } from "@/lib/site";
+import { titleCase } from "@/lib/utils";
 
 const navLinks = [
   { href: "/locations/", label: "Locations" },
@@ -20,10 +21,12 @@ const navLinks = [
   { href: "/contact/", label: "Contact" },
 ];
 
-const featured = moneyServices.map((s) => ({
-  href: s.href,
-  label: s.label,
-  slug: s.href.replaceAll("/", ""),
+const groups = SERVICE_GROUPS.map((group) => ({
+  title: group.title,
+  items: group.slugs.map((slug) => ({
+    href: `/${slug}/`,
+    label: serviceName(slug, titleCase(slug)),
+  })),
 }));
 
 function Logo() {
@@ -41,7 +44,7 @@ function Logo() {
   );
 }
 
-export function Header() {
+export function Header({ hours }: { hours?: string }) {
   const pathname = usePathname();
   const { openQuote } = useQuote();
   const [menu, setMenu] = useState("");
@@ -54,6 +57,14 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-navy text-white">
+      {hours ? (
+        <div className="border-b border-white/10 bg-navy-800">
+          <div className="container-page flex min-h-9 items-center justify-center gap-2 py-1 text-center text-[13px] font-medium text-white/85 sm:text-sm">
+            <Clock className="size-4 shrink-0 text-gold" aria-hidden />
+            <span>{hours}</span>
+          </div>
+        </div>
+      ) : null}
       <div className="container-page flex h-16 items-center justify-between gap-3">
         <Logo />
 
@@ -64,35 +75,38 @@ export function Header() {
         >
           <NavigationMenu.List className="flex items-center gap-1">
             <NavigationMenu.Item className="relative">
-              <NavigationMenu.Trigger className="group inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium outline-none hover:bg-white/10 data-[state=open]:bg-white/10">
+              <NavigationMenu.Trigger className="group inline-flex items-center gap-1 rounded-full px-3 py-2 text-[15px] font-medium outline-none hover:bg-white/10 data-[state=open]:bg-white/10">
                 Services
                 <ChevronDown className="size-4 transition group-data-[state=open]:rotate-180" />
               </NavigationMenu.Trigger>
-              <NavigationMenu.Content className="fixed left-1/2 top-16 z-50 mt-2 w-[min(52rem,calc(100vw-2rem))] -translate-x-1/2 rounded-2xl border border-line bg-white p-5 text-ink shadow-lift">
-                <p className="px-2 text-xs font-semibold uppercase tracking-wider text-brand">Most booked</p>
-                <ul className="mt-2 grid grid-cols-2 gap-1">
-                  {featured.map((item) => (
-                    <li key={item.href}>
-                      <Link
-                        href={item.href}
-                        className="block rounded-xl px-3 py-2.5 hover:bg-sand"
-                        onClick={() => setMenu("")}
-                      >
-                        <span className="block text-sm font-semibold text-navy">{item.label}</span>
-                        <span className="mt-0.5 block text-xs leading-snug text-ink/60">
-                          {serviceBlurb(item.slug, item.label)}
-                        </span>
-                      </Link>
-                    </li>
+              <NavigationMenu.Content className="fixed left-1/2 top-[6.5rem] z-50 mt-2 max-h-[calc(100vh-8.5rem)] w-[min(68rem,calc(100vw-2rem))] -translate-x-1/2 overflow-y-auto rounded-2xl border border-line bg-white p-6 text-ink shadow-lift">
+                <div className="grid grid-cols-2 gap-x-8 gap-y-6 md:grid-cols-4">
+                  {groups.map((group) => (
+                    <div key={group.title}>
+                      <p className="text-xs font-bold uppercase tracking-wider text-brand">{group.title}</p>
+                      <ul className="mt-2 space-y-0.5">
+                        {group.items.map((item) => (
+                          <li key={item.href}>
+                            <Link
+                              href={item.href}
+                              className="block rounded-lg px-2 py-1.5 text-[15px] font-medium text-navy hover:bg-sand hover:text-brand"
+                              onClick={() => setMenu("")}
+                            >
+                              {item.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </NavigationMenu.Content>
             </NavigationMenu.Item>
 
             {navLinks.map((l) => (
               <NavigationMenu.Item key={l.href}>
                 <NavigationMenu.Link asChild>
-                  <Link href={l.href} className="inline-flex rounded-full px-3 py-2 text-sm font-medium hover:bg-white/10">
+                  <Link href={l.href} className="inline-flex rounded-full px-3 py-2 text-[15px] font-medium hover:bg-white/10">
                     {l.label}
                   </Link>
                 </NavigationMenu.Link>
@@ -105,24 +119,31 @@ export function Header() {
           <a
             href={site.phoneHref}
             aria-label={`Call ${site.phone}`}
-            className="inline-flex size-11 items-center justify-center rounded-full text-gold ring-1 ring-gold/70 transition hover:bg-gold hover:text-navy lg:hidden"
+            className="inline-flex size-11 items-center justify-center rounded-full bg-gold text-navy shadow-glow transition hover:bg-gold-dark lg:hidden"
           >
-            <Phone className="size-4" />
+            <Phone className="size-5" />
           </a>
           <button
             type="button"
             onClick={() => openQuote({ service: serviceFromPath(pathname) })}
-            className="inline-flex h-11 items-center rounded-full bg-gold px-3.5 text-sm font-bold text-navy lg:hidden"
+            className="inline-flex h-11 items-center rounded-full border border-white/30 px-3.5 text-sm font-bold text-white lg:hidden"
           >
             Book
           </button>
           <a
             href={site.phoneHref}
-            className="hidden items-center gap-2 rounded-full bg-brand px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-dark lg:inline-flex"
+            className="hidden h-12 items-center gap-2 rounded-full bg-gold px-6 text-sm font-bold uppercase tracking-wide text-navy shadow-glow transition hover:bg-gold-dark lg:inline-flex"
           >
             <Phone className="size-4" />
-            {site.phone}
+            Call {site.phone}
           </a>
+          <button
+            type="button"
+            onClick={() => openQuote({ service: serviceFromPath(pathname) })}
+            className="hidden h-12 items-center rounded-full border-2 border-white/40 px-6 text-sm font-bold uppercase tracking-wide text-white transition hover:border-gold hover:text-gold lg:inline-flex"
+          >
+            Book
+          </button>
 
           <Dialog.Root open={mobileOpen} onOpenChange={setMobileOpen}>
             <Dialog.Trigger className="inline-flex size-11 items-center justify-center rounded-full border border-white/25 lg:hidden" aria-label="Open menu">
@@ -138,7 +159,13 @@ export function Header() {
                   </Dialog.Close>
                 </div>
                 <div className="flex-1 overflow-y-auto px-3 py-3">
-                  <nav className="grid">
+                  {hours ? (
+                    <p className="flex items-start gap-2 rounded-xl bg-sand px-3 py-2.5 text-sm font-medium text-navy">
+                      <Clock className="mt-0.5 size-4 shrink-0 text-brand" aria-hidden />
+                      {hours}
+                    </p>
+                  ) : null}
+                  <nav className="mt-2 grid">
                     {navLinks.map((l) => (
                       <Link
                         key={l.href}
@@ -149,26 +176,30 @@ export function Header() {
                       </Link>
                     ))}
                   </nav>
-                  <p className="mt-3 border-t border-line px-3 pt-4 text-xs font-semibold uppercase tracking-wider text-ink/45">
-                    Services
-                  </p>
-                  <ul>
-                    {featured.map((item) => (
-                      <li key={item.href}>
-                        <Link
-                          href={item.href}
-                          className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-navy hover:bg-sand"
-                        >
-                          {item.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                  {groups.map((group) => (
+                    <div key={group.title}>
+                      <p className="mt-3 border-t border-line px-3 pt-4 text-xs font-bold uppercase tracking-wider text-ink/50">
+                        {group.title}
+                      </p>
+                      <ul>
+                        {group.items.map((item) => (
+                          <li key={item.href}>
+                            <Link
+                              href={item.href}
+                              className="block rounded-lg px-3 py-2.5 text-[15px] font-semibold text-navy hover:bg-sand"
+                            >
+                              {item.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
                 </div>
                 <div className="border-t border-line p-4">
                   <a
                     href={site.phoneHref}
-                    className="flex h-12 items-center justify-center gap-2 rounded-full bg-brand font-semibold text-white"
+                    className="flex h-12 items-center justify-center gap-2 rounded-full bg-gold font-bold uppercase tracking-wide text-navy shadow-glow"
                   >
                     <Phone className="size-4" />
                     Call {site.phone}

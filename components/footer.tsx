@@ -51,8 +51,8 @@ export function Footer() {
             </div>
           </div>
           <div className="mt-5 flex items-center justify-center gap-4">
-            <Image src={asset("/images/google.webp")} alt="Google Guaranteed badge" width={130} height={50} className="h-8 w-auto object-contain" />
-            <Image src={asset("/images/bbb.webp")} alt="BBB Accredited Business A+ rating" width={130} height={52} className="h-8 w-auto object-contain" />
+            <Image src={asset("/images/google.webp")} alt="Google Guaranteed badge" width={160} height={62} className="h-10 w-auto rounded-md bg-white object-contain px-1.5 py-1 lg:h-12" />
+            <Image src={asset("/images/bbb.webp")} alt="BBB Accredited Business A+ rating" width={160} height={64} className="h-10 w-auto rounded-md bg-white object-contain px-1.5 py-1 lg:h-12" />
           </div>
         </div>
 

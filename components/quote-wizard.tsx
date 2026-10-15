@@ -167,7 +167,7 @@ export function QuoteWizard({
             </p>
             <a
               href={site.phoneHref}
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 font-semibold text-white transition hover:bg-brand-dark"
+              className="mt-6 inline-flex h-12 items-center gap-2 rounded-full bg-gold px-6 text-sm font-bold uppercase tracking-wide text-navy shadow-glow transition hover:bg-gold-dark"
             >
               <Phone className="size-4" /> Call {site.phone}
             </a>

@@ -1,100 +1,114 @@
 [
   {
-    "before": "/images/ba-dryer-hood-before.webp",
-    "after": "/images/ba-dryer-vent-hood-after.webp",
-    "width": 1600,
-    "height": 1200,
-    "alt": "Exterior dryer vent hood, lint packed in the opening beside the cleared hood"
-  },
-  {
-    "before": "/images/ba-diffuser-before.webp",
-    "after": "/images/ba-ceiling-diffuser-after.webp",
-    "width": 1400,
-    "height": 1875,
-    "alt": "Ceiling supply diffuser, a dust ring beside the cleared grille"
-  },
-  {
     "before": "/images/ba-stairs-before.webp",
     "after": "/images/ba-stairs-after.webp",
     "width": 1400,
     "height": 1050,
-    "alt": "Carpeted stairs, soiled treads beside a cleaned pass"
+    "alt": "Carpeted stairs, soiled treads beside a cleaned pass",
+    "caption": "Carpeted stairs — traffic soil on every tread"
   },
   {
     "before": "/images/ba-couch-before.webp",
     "after": "/images/ba-couch-after.webp",
     "width": 800,
     "height": 510,
-    "alt": "Sofa cushion, a dark stain beside the cleaned cushion"
+    "alt": "Sofa cushion, a dark stain beside the cleaned cushion",
+    "caption": "Sofa cushion — dark stain lifted out"
   },
   {
     "before": "/images/ba-rug-before.webp",
     "after": "/images/ba-rug-after.webp",
     "width": 864,
     "height": 346,
-    "alt": "Blue area rug, soiled field beside a lighter cleaned pass"
-  },
-  {
-    "before": "/images/ba-dryer-duct-before.webp",
-    "after": "/images/ba-dryer-duct-interior-after.webp",
-    "width": 1600,
-    "height": 1200,
-    "alt": "Dryer duct, lint packed inside beside the cleared metal"
-  },
-  {
-    "before": "/images/ba-bath-fan-before.webp",
-    "after": "/images/ba-bathroom-exhaust-fan-after.webp",
-    "width": 1200,
-    "height": 1600,
-    "alt": "Bathroom exhaust grille, dust caked on the cover beside the cleared grille"
+    "alt": "Blue area rug, soiled field beside a lighter cleaned pass",
+    "caption": "Blue area rug — full wash"
   },
   {
     "before": "/images/ba-bedroom-before.webp",
     "after": "/images/ba-bedroom-after.webp",
     "width": 1400,
     "height": 1050,
-    "alt": "Bedroom carpet, traffic soil beside a cleaned pass"
-  },
-  {
-    "before": "/images/ba-commercial-diffuser-before.webp",
-    "after": "/images/ba-commercial-ceiling-diffuser-after.webp",
-    "width": 1400,
-    "height": 1045,
-    "alt": "Commercial ceiling diffuser, dust streaks on the tile beside the cleared diffuser"
-  },
-  {
-    "before": "/images/ba-flex-before.webp",
-    "after": "/images/ba-flex-duct-interior-after.webp",
-    "width": 1400,
-    "height": 1875,
-    "alt": "Flexible duct, debris on the ribs beside the cleared liner"
+    "alt": "Bedroom carpet, traffic soil beside a cleaned pass",
+    "caption": "Bedroom carpet — walking lanes cleaned"
   },
   {
     "before": "/images/ba-entry-before.webp",
     "after": "/images/ba-entry-after.webp",
     "width": 1400,
     "height": 1050,
-    "alt": "Entry carpet, soiled foreground and a cleaned pass by the door"
-  },
-  {
-    "before": "/images/ba-return-grille-before.webp",
-    "after": "/images/ba-return-air-grille-after.webp",
-    "width": 1200,
-    "height": 1600,
-    "alt": "Return air grille, dust on the slats beside the cleared grille"
+    "alt": "Entry carpet, soiled foreground and a cleaned pass by the door",
+    "caption": "Entry carpet — soil by the front door"
   },
   {
     "before": "/images/ba-office-before.webp",
     "after": "/images/ba-office-after.webp",
     "width": 1400,
     "height": 1050,
-    "alt": "Home office carpet, traffic soil beside a cleaned pass"
+    "alt": "Home office carpet, traffic soil beside a cleaned pass",
+    "caption": "Home office — desk traffic lanes"
   },
   {
-    "before": "/images/ba-wall-register-before.webp",
-    "after": "/images/ba-wall-supply-register-after.webp",
-    "width": 1400,
-    "height": 1875,
-    "alt": "Wall supply register, a dust-caked grille beside the cleared register"
+    "before": "/images/ba-doorway-before.webp",
+    "after": "/images/ba-doorway-after.webp",
+    "width": 1200,
+    "height": 1600,
+    "alt": "Bedroom doorway carpet, a blackened walking lane beside the cleaned carpet",
+    "caption": "Bedroom doorway — blackened walking lane"
+  },
+  {
+    "before": "/images/ba-hall-lane-before.webp",
+    "after": "/images/ba-hall-lane-after.webp",
+    "width": 1200,
+    "height": 1600,
+    "alt": "Hallway carpet, a soiled walking lane beside the cleaned hall",
+    "caption": "Hallway — soiled walking lane"
+  },
+  {
+    "before": "/images/ba-red-spill-before.webp",
+    "after": "/images/ba-red-spill-after.webp",
+    "width": 1200,
+    "height": 1600,
+    "alt": "Red spill on a home office carpet beside the cleaned carpet",
+    "caption": "Home office — red spill removed"
+  },
+  {
+    "before": "/images/ba-living-split-before.webp",
+    "after": "/images/ba-living-split-after.webp",
+    "width": 1200,
+    "height": 900,
+    "alt": "Living room carpet, footprint soil beside the cleaned side of the room",
+    "caption": "Irvine living room — footprint soil"
+  },
+  {
+    "before": "/images/ba-anaheim-living-before.webp",
+    "after": "/images/ba-anaheim-living-after.webp",
+    "width": 1200,
+    "height": 900,
+    "alt": "Apartment living room, ground-in soil beside the first cleaned strip",
+    "caption": "Anaheim apartment — ground-in soil"
+  },
+  {
+    "before": "/images/ba-stairs-landing-before.webp",
+    "after": "/images/ba-stairs-landing-after.webp",
+    "width": 1200,
+    "height": 900,
+    "alt": "Stair landing, the soiled bottom step beside the cleaned landing",
+    "caption": "Stair landing — soiled bottom step"
+  },
+  {
+    "before": "/images/ba-pattern-doorway-before.webp",
+    "after": "/images/ba-pattern-doorway-after.webp",
+    "width": 1200,
+    "height": 900,
+    "alt": "Patterned carpet at a doorway, a blackened field beside the cleaned carpet",
+    "caption": "Patterned carpet — blackened doorway"
+  },
+  {
+    "before": "/images/ba-hose-room-before.webp",
+    "after": "/images/ba-hose-room-after.webp",
+    "width": 900,
+    "height": 1200,
+    "alt": "Bedroom carpet, matted soil beside the cleaned side mid-job",
+    "caption": "Bedroom carpet — cleaned mid-job"
   }
 ]

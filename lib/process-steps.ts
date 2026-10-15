@@ -24,15 +24,18 @@ const STEP_COPY: { title: string; body: string; icon: ProcessStep["icon"] }[] = 
   },
 ];
 
-// Service hubs: each service gets its own four step photos so no image ever
-// repeats across pages.
+// Service hubs: each service gets its own four step photos so no job photo
+// ever repeats across pages. Hubs without step photos fall back to the four
+// process illustrations, the same set the city pages already use.
+const STEP_ART = ["process-book", "process-inspect", "process-clean", "process-dry"];
+
 export function buildServiceSteps(slug: string, photos: Img[]): ProcessStep[] {
   const name = slug.replaceAll("-", " ");
   return STEP_COPY.map((s, i) => {
     const photo = photos.length ? photos[i % photos.length] : null;
     return {
       ...s,
-      image: photo?.src ?? img("hero-home").src,
+      image: photo?.src ?? img(STEP_ART[i]).src,
       alt: photo?.alt || `${name} step ${i + 1}`,
     };
   });

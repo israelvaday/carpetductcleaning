@@ -75,6 +75,14 @@ export function titleCase(slug: string) {
     "emergency-cleaning": "Emergency Cleaning",
     "floor-cleaning": "Floor Cleaning",
     commercial: "Commercial Cleaning",
+    "coffee-and-wine-stain-removal": "Coffee and Wine Stain Removal",
+    "carpet-protection": "Carpet Protection",
+    "laminate-floor-cleaning": "Laminate Floor Cleaning",
+    "area-rug-repair": "Area Rug Repair",
+    "drape-pickup": "Drape Pickup and Dry Cleaning",
+    "mattress-cleaning": "Mattress Cleaning",
+    "yacht-cleaning": "Yacht Cleaning",
+    "rv-cleaning": "RV Cleaning",
   };
   if (special[slug]) return special[slug];
   return slug

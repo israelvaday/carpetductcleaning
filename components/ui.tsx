@@ -55,7 +55,7 @@ export function SectionHead({
         {title}
       </h2>
       {body ? (
-        <p className={cn("mt-4 text-lg leading-relaxed", tone === "navy" ? "text-white/75" : "text-ink/70")}>
+        <p className={cn("mt-4 text-lg leading-relaxed", tone === "navy" ? "text-white/85" : "text-ink/80")}>
           {body}
         </p>
       ) : null}
@@ -104,16 +104,16 @@ export function TrustBadges({ className }: { className?: string }) {
       <Image
         src={asset("/images/google.webp")}
         alt="Google Guaranteed badge"
-        width={140}
-        height={54}
-        className="h-10 w-auto object-contain"
+        width={180}
+        height={69}
+        className="h-11 w-auto rounded-md bg-white object-contain px-1.5 py-1 lg:h-[4.25rem]"
       />
       <Image
         src={asset("/images/bbb.webp")}
         alt="BBB Accredited Business A+ rating"
-        width={140}
-        height={56}
-        className="h-10 w-auto object-contain"
+        width={180}
+        height={72}
+        className="h-11 w-auto rounded-md bg-white object-contain px-1.5 py-1 lg:h-[4.25rem]"
       />
     </div>
   );
@@ -121,20 +121,20 @@ export function TrustBadges({ className }: { className?: string }) {
 
 export function TrustRow({ dark = false, className }: { dark?: boolean; className?: string }) {
   return (
-    <div className={cn("flex flex-wrap items-center gap-x-6 gap-y-4", dark ? "text-white/70" : "text-ink/60", className)}>
+    <div className={cn("flex flex-wrap items-center gap-x-6 gap-y-4", dark ? "text-white/80" : "text-ink/70", className)}>
       <Image
         src={asset("/images/google.webp")}
         alt="Google Guaranteed badge"
-        width={140}
-        height={54}
-        className="h-9 w-auto object-contain"
+        width={160}
+        height={62}
+        className="h-10 w-auto rounded-md bg-white object-contain px-1.5 py-1 lg:h-12"
       />
       <Image
         src={asset("/images/bbb.webp")}
         alt="BBB Accredited Business A+ rating"
-        width={140}
-        height={56}
-        className="h-9 w-auto object-contain"
+        width={160}
+        height={64}
+        className="h-10 w-auto rounded-md bg-white object-contain px-1.5 py-1 lg:h-12"
       />
       <span className="text-sm font-semibold">EPA Safer Choice</span>
       <span className="text-sm font-semibold">Since {site.foundingYear}</span>
@@ -153,7 +153,7 @@ export function Breadcrumb({
   return (
     <nav
       aria-label="Breadcrumb"
-      className={cn("text-sm font-medium", dark ? "text-white/70" : "text-ink/55")}
+      className={cn("text-sm font-medium", dark ? "text-white/80" : "text-ink/70")}
     >
       <ol className="flex flex-wrap items-center gap-2">
         {items.map((item, i) => (

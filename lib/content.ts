@@ -36,6 +36,7 @@ type GenService = {
   paragraphs?: string[];
   bullets?: string[];
   keywords?: string[];
+  faqs?: { q: string; a: string }[];
 };
 type GenCity = {
   intro?: string;
@@ -97,6 +98,16 @@ const HUB_SOURCE: Record<string, string> = {
   "encapsulation-carpet-cleaning": "encapsulation-carpet-cleaning",
   "emergency-cleaning": "emergency-cleaning-services",
   "floor-cleaning": "floor-cleaning",
+  // Pages added after the WordPress migration. There is no old dump to fall
+  // back on; every sentence comes from content/generated/services.json.
+  "coffee-and-wine-stain-removal": "coffee-and-wine-stain-removal",
+  "carpet-protection": "carpet-protection",
+  "laminate-floor-cleaning": "laminate-floor-cleaning",
+  "area-rug-repair": "area-rug-repair",
+  "drape-pickup": "drape-pickup",
+  "mattress-cleaning": "mattress-cleaning",
+  "yacht-cleaning": "yacht-cleaning",
+  "rv-cleaning": "rv-cleaning",
 };
 
 export function serviceSlugs() {
@@ -136,7 +147,9 @@ export function getServiceDoc(slug: string) {
       ],
     ),
     paragraphs: paras,
-    faqs: topUpFaqs(onTopicFaqs(slug, extractFaqs(page?.text || "")), name, "Orange County", slug),
+    faqs: gen?.faqs?.length
+      ? gen.faqs
+      : topUpFaqs(onTopicFaqs(slug, extractFaqs(page?.text || "")), name, "Orange County", slug),
     cities: cityEntries().filter((c) => c.service === slug),
   };
 }

@@ -10,25 +10,36 @@ export const SERVICE_BLURB: Record<string, string> = {
   "couch-cleaning": "Deep cleaning for couches and sectionals, including cushions and crevices.",
   "leather-furniture-cleaning": "Clean and condition leather so it stays soft instead of drying and cracking.",
   "microfiber-couch-cleaning": "Microfiber-specific method that lifts body oils without water rings.",
-  "hardwood-floor-cleaning": "Deep clean and polish that removes grime without stripping the finish.",
+  "hardwood-floor-cleaning": "Deep cleaning that lifts ground-in grime without harming the finish.",
   "tile-and-grout-cleaning": "Pressure cleaning that pulls grease and soil out of porous grout lines.",
   "vinyl-floor-cleaning": "Machine scrub for LVP and sheet vinyl that restores the original sheen.",
   "natural-stone-cleaning": "Marble, travertine, and granite cleaning, honing, and sealing.",
   "pet-stain-odor": "Enzyme treatment that neutralizes urine at the pad, not just the surface.",
   "commercial-carpet-cleaning": "After-hours carpet service for offices, retail, and property managers.",
-  "commercial-air-duct-cleaning": "HVAC and duct sanitizing for commercial buildings and multi-unit properties.",
+  "commercial-air-duct-cleaning": "HVAC and duct cleaning for commercial buildings and multi-unit properties.",
   commercial: "One crew for carpet, hard floors, upholstery, and air quality in your building.",
   "car-seat-cleaning": "Interior detailing for car, truck, and RV upholstery and carpet.",
   "drape-cleaning": "On-site drape and curtain cleaning with no take-down damage.",
   "outdoor-furniture-cleaning": "Patio cushions and frames cleaned and protected against sun and salt air.",
   "encapsulation-carpet-cleaning": "Low-moisture method for high-traffic areas that need to be walked on quickly.",
   "emergency-cleaning": "Same-day response for overflows, sewage backups, and storm damage.",
-  "floor-cleaning": "Whole-home hard floor cleaning across tile, vinyl, wood, and stone.",
+  "floor-cleaning": "Whole-home hard floor cleaning across tile, vinyl, laminate, wood, and stone.",
+  "coffee-and-wine-stain-removal": "Coffee and wine spots lifted from carpet, rugs, and upholstery.",
+  "carpet-protection": "A protective treatment after the clean so the next spill blots up instead of soaking in.",
+  "laminate-floor-cleaning": "Machine scrub for laminate floors that lifts grime without soaking the seams.",
+  "area-rug-repair": "Fringe and edge repair for area rugs, quoted before any work starts.",
+  "drape-pickup": "We take drapes down, send them for dry cleaning, and hang them back up.",
+  "mattress-cleaning": "Hot-water extraction that lifts sweat, dust, and stains out of the mattress.",
+  "yacht-cleaning": "Carpet, upholstery, and curtains cleaned aboard boats in Orange County harbors.",
+  "rv-cleaning": "Carpet, seats, and the sleeping area cleaned inside motorhomes and trailers.",
 };
 
 const SERVICE_NAME: Record<string, string> = {
-  "drape-cleaning": "Curtain Cleaning",
+  "drape-cleaning": "Drape and Curtain Cleaning",
   "outdoor-furniture-cleaning": "Outdoor Cushion Cleaning",
+  "coffee-and-wine-stain-removal": "Coffee and Wine Stain Removal",
+  "drape-pickup": "Drape Pickup and Dry Cleaning",
+  "rv-cleaning": "RV Cleaning",
 };
 
 export function serviceName(slug: string, fallback?: string) {
@@ -41,16 +52,43 @@ export function serviceBlurb(slug: string, name: string) {
 
 export const SERVICE_GROUPS: { title: string; slugs: string[] }[] = [
   {
-    title: "Carpet & floors",
+    title: "Carpet",
     slugs: [
       "carpet-cleaning",
       "encapsulation-carpet-cleaning",
       "pet-stain-odor",
+      "coffee-and-wine-stain-removal",
+      "carpet-protection",
+    ],
+  },
+  {
+    title: "Floors",
+    slugs: [
+      "floor-cleaning",
       "hardwood-floor-cleaning",
       "tile-and-grout-cleaning",
       "vinyl-floor-cleaning",
+      "laminate-floor-cleaning",
       "natural-stone-cleaning",
-      "floor-cleaning",
+    ],
+  },
+  {
+    title: "Rugs",
+    slugs: ["area-rug-cleaning", "oriental-rug-cleaning", "rug-pickup", "area-rug-repair"],
+  },
+  {
+    title: "Drapes & curtains",
+    slugs: ["drape-cleaning", "drape-pickup"],
+  },
+  {
+    title: "Furniture",
+    slugs: [
+      "upholstery-cleaning",
+      "couch-cleaning",
+      "leather-furniture-cleaning",
+      "microfiber-couch-cleaning",
+      "mattress-cleaning",
+      "outdoor-furniture-cleaning",
     ],
   },
   {
@@ -58,20 +96,8 @@ export const SERVICE_GROUPS: { title: string; slugs: string[] }[] = [
     slugs: ["air-duct-cleaning", "dryer-vent-cleaning", "commercial-air-duct-cleaning"],
   },
   {
-    title: "Rugs",
-    slugs: ["area-rug-cleaning", "oriental-rug-cleaning", "rug-pickup"],
-  },
-  {
-    title: "Furniture & interiors",
-    slugs: [
-      "upholstery-cleaning",
-      "couch-cleaning",
-      "leather-furniture-cleaning",
-      "microfiber-couch-cleaning",
-      "drape-cleaning",
-      "outdoor-furniture-cleaning",
-      "car-seat-cleaning",
-    ],
+    title: "Vehicles & boats",
+    slugs: ["car-seat-cleaning", "rv-cleaning", "yacht-cleaning"],
   },
   {
     title: "Commercial & emergency",
@@ -133,6 +159,14 @@ const SERVICE_TOPICS: Record<string, RegExp> = {
   "commercial-carpet-cleaning": /commercial.{0,30}carpet|carpet.{0,30}commercial/i,
   "water-damage-restoration": /water damage|flood|\bleak|restoration|moisture/i,
   "emergency-cleaning": /emergency|sewage|overflow|burst/i,
+  "coffee-and-wine-stain-removal": /coffee|wine|\bstain/i,
+  "carpet-protection": /protect/i,
+  "laminate-floor-cleaning": /laminate/i,
+  "area-rug-repair": /repair|fringe|binding/i,
+  "drape-pickup": /drape|curtain|dry.?clean/i,
+  "mattress-cleaning": /mattress/i,
+  "yacht-cleaning": /yacht|boat/i,
+  "rv-cleaning": /\brv\b|motor ?home|trailer/i,
 };
 
 // Drop questions that read like marketing CTAs or lean on the superlatives the

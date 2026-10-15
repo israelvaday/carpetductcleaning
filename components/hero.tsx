@@ -65,7 +65,7 @@ export function HomeHero({ image }: { image: Img }) {
                 className="h-14 flex-1 px-6 text-base"
               />
             </div>
-            <TrustBadges className="mx-auto mt-6 justify-center lg:mx-0 lg:justify-start" />
+            <TrustBadges className="mx-auto mt-6 justify-center lg:hidden" />
           </Reveal>
 
           <Reveal from="right" delay={0.12} className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-1">
@@ -98,6 +98,9 @@ export function HomeHero({ image }: { image: Img }) {
             </div>
           </Reveal>
         </div>
+
+        {/* Desktop: badges centered across the full page width. Mobile shows them under the buttons instead. */}
+        <TrustBadges className="hidden justify-center lg:flex" />
 
         <Reveal from="up" delay={0.2}>
           <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/20 bg-white/20 sm:grid-cols-4">

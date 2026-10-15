@@ -68,8 +68,9 @@ export function ImageHero({
             <QuoteButton dark />
             <RatingPill dark />
           </div>
-          <TrustBadges className="mt-6 justify-center lg:justify-start" />
         </div>
+        {/* Centered across the full page width on all screens. */}
+        <TrustBadges className="mt-6 justify-center" />
       </div>
     </section>
   );
@@ -95,7 +96,7 @@ export function ServiceCard({ slug, priority = false }: { slug: string; priority
       </PhotoFrame>
       <div className="flex flex-1 flex-col items-center p-5 text-center md:items-start md:text-left">
         <h3 className="text-lg font-semibold text-navy">{name}</h3>
-        <p className="mt-2 flex-1 text-sm leading-relaxed text-ink/70">{serviceBlurb(slug, name)}</p>
+        <p className="mt-2 flex-1 text-sm leading-relaxed text-ink/80">{serviceBlurb(slug, name)}</p>
         <span className="mt-4 inline-flex items-center justify-center gap-1.5 text-sm font-semibold text-brand">
           View service
           <ArrowRight className="size-4 transition group-hover:translate-x-0.5" />

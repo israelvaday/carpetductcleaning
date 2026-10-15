@@ -48,6 +48,9 @@
 }
 
 html {
+  /* 17px root scales every rem-based size up ~6% so older readers get larger
+     type and larger touch targets without a per-component rewrite. */
+  font-size: 17px;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
 }

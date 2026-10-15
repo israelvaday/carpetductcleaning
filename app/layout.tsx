@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer";
 import { QuoteProvider } from "@/components/quote-dialog";
 import { StickyActions } from "@/components/sticky-actions";
 import { JsonLd } from "@/components/json-ld";
+import { compactHours } from "@/lib/google-profile";
 import { businessNode } from "@/lib/schema";
 import { OG_IMAGE } from "@/lib/seo";
 import { site, siteUrl } from "@/lib/site";
@@ -62,7 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen antialiased">
         <JsonLd data={businessNode()} />
         <QuoteProvider>
-          <Header />
+          <Header hours={compactHours()} />
           <main>{children}</main>
           <Footer />
           <StickyActions />

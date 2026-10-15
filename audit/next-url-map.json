@@ -39,7 +39,15 @@
     { "route": "/outdoor-furniture-cleaning", "from": ["/outdoor-furniture-cushion-cleaning/", "/outdoor-cleaning-services/"] },
     { "route": "/encapsulation-carpet-cleaning", "from": ["/encapsulation-carpet-cleaning/"] },
     { "route": "/emergency-cleaning", "from": ["/emergency-cleaning-services/"] },
-    { "route": "/floor-cleaning", "from": ["/floor-cleaning/"] }
+    { "route": "/floor-cleaning", "from": ["/floor-cleaning/"] },
+    { "route": "/coffee-and-wine-stain-removal", "from": [] },
+    { "route": "/carpet-protection", "from": [] },
+    { "route": "/laminate-floor-cleaning", "from": [] },
+    { "route": "/area-rug-repair", "from": [] },
+    { "route": "/drape-pickup", "from": [] },
+    { "route": "/mattress-cleaning", "from": [] },
+    { "route": "/yacht-cleaning", "from": [] },
+    { "route": "/rv-cleaning", "from": [] }
   ],
   "cityPages": [
     { "route": "/carpet-cleaning/anaheim", "from": ["/carpet-cleaning-in-anaheim/", "/cleaner-in-anaheim/"], "source": "carpet-cleaning-in-anaheim", "rewrite": "light" },

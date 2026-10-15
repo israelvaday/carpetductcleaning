@@ -3,6 +3,10 @@
     "hero-home": {
       "src": "/images/real-carpet-room.webp",
       "alt": "Living room carpet after cleaning"
+    },
+    "locations-hero": {
+      "src": "/images/real-locations-wand.webp",
+      "alt": "Truck-mounted cleaning wand crossing a soiled living room carpet on an Anaheim job"
     }
   },
   "services": {
@@ -69,6 +73,38 @@
     "commercial-air-duct-cleaning": {
       "src": "/images/real-duct-hose.webp",
       "alt": "Red duct hose in a floor vent"
+    },
+    "mattress-cleaning": {
+      "src": "/images/real-mattress.webp",
+      "alt": "Clean mattress on a bed frame in a bright bedroom"
+    },
+    "yacht-cleaning": {
+      "src": "/images/real-yacht-cabin.webp",
+      "alt": "Cleaning hose run down the carpeted stairs of a boat cabin with bunks"
+    },
+    "rv-cleaning": {
+      "src": "/images/real-rv-carpet.webp",
+      "alt": "Sunlight on the carpet inside a motorhome"
+    },
+    "coffee-and-wine-stain-removal": {
+      "src": "/images/real-red-stain.webp",
+      "alt": "Red stain on a bedroom carpet with the cleaning wand at the edge"
+    },
+    "drape-pickup": {
+      "src": "/images/real-drape-pickup.webp",
+      "alt": "Full-length drapes on a rod beside tall bedroom windows"
+    },
+    "carpet-protection": {
+      "src": "/images/real-protect-living.webp",
+      "alt": "Living room carpet after cleaning, ready for protective treatment"
+    },
+    "laminate-floor-cleaning": {
+      "src": "/images/real-laminate-landing.webp",
+      "alt": "Laminate landing meeting carpet at a hallway corner"
+    },
+    "area-rug-repair": {
+      "src": "/images/real-rug-fringe.webp",
+      "alt": "Floral area rug with worn fringe along the edge"
     }
   }
 }

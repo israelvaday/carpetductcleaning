@@ -21,6 +21,24 @@
       "hot water extraction orange county",
       "residential carpet cleaning",
       "commercial carpet cleaning"
+    ],
+    "faqs": [
+      {
+        "q": "How much does carpet cleaning cost?",
+        "a": "Price depends on how many rooms and how soiled the carpet is. We look at the rooms first and give you an itemized quote before any work starts. Call (949) 992-3299 with your room count and we will give you a range on the phone."
+      },
+      {
+        "q": "How long until I can walk on the carpet?",
+        "a": "We pull most of the moisture out with the truck-mounted equipment. Most rooms are dry to the touch in four to eight hours, and we groom the pile and open airflow to speed that up before we go."
+      },
+      {
+        "q": "Do I need to move furniture before you arrive?",
+        "a": "We move the light pieces ourselves and clean around the heavy ones, sliding sofas and tables and setting them back on protective blocks. Clearing small items off the floor before we arrive is all we ask."
+      },
+      {
+        "q": "Can you get old stains out?",
+        "a": "We pre-treat every spot and flush it with truck-mounted hot-water extraction. Some old stains are permanent, and if we think one will not come out we tell you at the walkthrough, before you pay for anything."
+      }
     ]
   },
   "air-duct-cleaning": {
@@ -36,7 +54,7 @@
       "Full system inspection",
       "HEPA negative-air cleaning",
       "Vent and register cleaning",
-      "Sanitization treatment (optional)",
+      "Deodorizing treatment (optional)",
       "Post-cleaning system check"
     ],
     "keywords": [
@@ -46,6 +64,24 @@
       "hepa air duct cleaning",
       "indoor air quality irvine",
       "residential duct cleaning"
+    ],
+    "faqs": [
+      {
+        "q": "How often should air ducts be cleaned?",
+        "a": "For most homes, every three to five years. Sooner if you see dust blowing from the registers, you just finished a renovation, or the home has never had it done. We inspect first, and if your ducts do not need cleaning we tell you that."
+      },
+      {
+        "q": "How long does air duct cleaning take?",
+        "a": "Two to four hours for a typical home, depending on the number of vents and returns. We clean the supply and return runs, the registers, and the main trunk."
+      },
+      {
+        "q": "Will it make a mess in my house?",
+        "a": "No. The system is under negative pressure with HEPA filtration while we work, so the dust goes into our equipment instead of your rooms. We protect the floors and leave the registers wiped down."
+      },
+      {
+        "q": "How much does it cost?",
+        "a": "We quote by the system, counting vents and returns on-site before we start. Call (949) 992-3299 with the number of vents and we will give you a range on the phone."
+      }
     ]
   },
   "dryer-vent-cleaning": {
@@ -71,6 +107,24 @@
       "dryer fire prevention",
       "residential dryer vent",
       "safe dryer operation"
+    ],
+    "faqs": [
+      {
+        "q": "How often should a dryer vent be cleaned?",
+        "a": "Once a year for most homes. Households that run laundry daily, have pets, or have a long vent run to the roof or a far wall should have it done every six months."
+      },
+      {
+        "q": "How do I know my dryer vent is clogged?",
+        "a": "Towels take two cycles to dry, the dryer and the laundry room get hot, or you smell something burning. Those are the signs we hear before most visits. If any of them sound familiar, call (949) 992-3299 — a packed vent is a fire risk."
+      },
+      {
+        "q": "Why is not the lint trap enough?",
+        "a": "The trap catches only part of the lint. The rest packs into the duct run between the dryer and the outside hood, including bends a brush kit cannot reach. We clean the full run from the drum connection to the exterior hood."
+      },
+      {
+        "q": "How long does the visit take?",
+        "a": "About an hour for most homes. We clean the run, check the airflow at the hood, and show you the lint that came out."
+      }
     ]
   },
   "water-damage-restoration": {
@@ -87,7 +141,7 @@
       "Water extraction and removal",
       "Structural drying and dehumidification",
       "Moisture monitoring and assessment",
-      "Sanitization of affected areas"
+      "Odor and moisture treatment of affected areas"
     ],
     "keywords": [
       "water damage irvine ca",
@@ -95,6 +149,24 @@
       "emergency water restoration",
       "flood cleanup orange county",
       "burst pipe cleanup irvine"
+    ],
+    "faqs": [
+      {
+        "q": "How fast can you get here?",
+        "a": "We hold same-day openings for water calls because the first hours decide how much of the floor and drywall can be saved. Call (949) 992-3299 and tell us what is wet."
+      },
+      {
+        "q": "What do you do when you arrive?",
+        "a": "We extract the standing water, take moisture readings in the floor and walls, set drying equipment, and photograph everything as we go so you have documentation for your insurance company."
+      },
+      {
+        "q": "How long does drying take?",
+        "a": "Usually two to three days of equipment run time, depending on how long the water sat and what it soaked into. We come back to re-check readings rather than guessing."
+      },
+      {
+        "q": "Can my carpet be saved?",
+        "a": "Often yes, if we get to it quickly and the water was clean. We tell you at the first visit what can be dried in place and what has to come out, before any demolition."
+      }
     ]
   },
   "area-rug-cleaning": {
@@ -104,6 +176,7 @@
       "Need your area rug cleaned in Irvine? We have washed wool and synthetic rugs across Orange County since 2013, fringe included, with a wash matched to the fiber.",
       "Dirt sinks deep into the pile. We take the rug off the floor and pull the dry soil out first. Then we wash and rinse, so no detergent is left in the yarn.",
       "Worried about shrinking? The rug dries flat, so the back keeps its shape. We use EPA Safer Choice products.",
+      "If the fringe or an edge is wearing, we can repair it while the rug is in for a wash. You see what the repair costs before we start.",
       "Call (949) 992-3299 for the price and the next opening. We can set a pickup or come look at the rug on site."
     ],
     "bullets": [
@@ -120,6 +193,24 @@
       "synthetic rug cleaning",
       "natural fiber rug cleaning",
       "rug cleaning services ca"
+    ],
+    "faqs": [
+      {
+        "q": "Do you pick up rugs?",
+        "a": "Yes. We pick up across Orange County, wash the rug at our facility, and bring it back. Smaller or sturdier rugs can sometimes be cleaned at your home — we tell you which makes sense when you call (949) 992-3299."
+      },
+      {
+        "q": "How much does rug cleaning cost?",
+        "a": "By the rug's size and fiber. Wool and delicate fibers take more careful handling than synthetics. We confirm the price before any cleaning starts."
+      },
+      {
+        "q": "Is it safe for wool and delicate rugs?",
+        "a": "We identify the fiber and test the dyes before anything touches the rug, then wash to match what it is made of. If a rug is too fragile to clean safely, we say so instead of risking it."
+      },
+      {
+        "q": "How long until I get my rug back?",
+        "a": "We give you the turnaround when we quote the job — it depends on the fiber and how long the rug needs to dry flat. On-site cleanings dry the same day."
+      }
     ]
   },
   "oriental-rug-cleaning": {
@@ -145,6 +236,24 @@
       "hand wash rug cleaning",
       "delicate rug cleaning",
       "heirloom rug cleaning"
+    ],
+    "faqs": [
+      {
+        "q": "Is it safe to wash a handmade Oriental rug?",
+        "a": "Yes, when the wash matches the rug. We test every dye before water touches it, wash by hand, and control the drying so the foundation stays straight. Machine-era shortcuts are what damage these rugs, and we do not use them."
+      },
+      {
+        "q": "My rug is old or valuable. Will you still clean it?",
+        "a": "We inspect it first and tell you honestly what cleaning can and cannot do. If we think a rug is too fragile or the dyes are unstable, we say so before taking the job."
+      },
+      {
+        "q": "Something spilled on my Oriental rug. What now?",
+        "a": "Do not scrub it — that spreads the spill and breaks the pile. Soak up what you can with a dry white towel and call (949) 992-3299. The sooner we wash it, the better the odds it comes out completely."
+      },
+      {
+        "q": "Do you repair fringe and edges?",
+        "a": "Yes. We also do area rug repair, so worn fringe, unraveling edges, and small holes can be handled in the same visit as the cleaning."
+      }
     ]
   },
   "rug-pickup": {
@@ -170,6 +279,20 @@
       "rug pickup service",
       "persian rug cleaning",
       "local rug cleaners"
+    ],
+    "faqs": [
+      {
+        "q": "How does rug pickup work?",
+        "a": "You call (949) 992-3299, we schedule a window, roll the rug, and take it to our facility. After the wash and controlled drying we bring it back and lay it where it was."
+      },
+      {
+        "q": "What does pickup cost?",
+        "a": "Pickup and delivery are priced together with the cleaning, by the rug's size and fiber. You get the full number before we take the rug anywhere."
+      },
+      {
+        "q": "How long will you have my rug?",
+        "a": "We tell you the turnaround when we schedule the pickup. It depends on the fiber and how long the rug needs to dry flat before it is safe to roll."
+      }
     ]
   },
   "upholstery-cleaning": {
@@ -195,6 +318,24 @@
       "chair cleaning orange county",
       "fabric upholstery cleaning",
       "local upholstery cleaners"
+    ],
+    "faqs": [
+      {
+        "q": "How often should furniture be professionally cleaned?",
+        "a": "Every twelve to eighteen months for most homes. With pets, kids, or allergies in the house, every six to twelve months keeps the fabric and the air in better shape."
+      },
+      {
+        "q": "Is your cleaning safe for my fabric?",
+        "a": "We check the manufacturer's care code on every piece and test a hidden area before cleaning. The method changes with the fabric — what works on a synthetic weave is wrong for silk or a loose linen."
+      },
+      {
+        "q": "How long does upholstery take to dry?",
+        "a": "A few hours for most pieces. We extract as much moisture as the fabric allows and leave cushions positioned to finish drying evenly."
+      },
+      {
+        "q": "What does it cost?",
+        "a": "We price per piece — sofa, loveseat, chair, sectional by the section. Call (949) 992-3299 with what you have and we will give you a range on the phone, then confirm it in person before we start."
+      }
     ]
   },
   "couch-cleaning": {
@@ -220,6 +361,24 @@
       "fabric couch cleaning",
       "deep couch cleaning",
       "local couch cleaners"
+    ],
+    "faqs": [
+      {
+        "q": "How much does couch cleaning cost?",
+        "a": "By the size — a three-seat sofa, a loveseat, and a large sectional are each priced differently. Call (949) 992-3299 with what you have and we will quote it, then confirm on-site before any work starts."
+      },
+      {
+        "q": "Can you get the stains out of my couch?",
+        "a": "We pre-treat each spot and clean with equipment matched to the fabric's care code. Most food, drink, and body-oil soil comes out. If a stain has set permanently, we tell you before we start rather than after."
+      },
+      {
+        "q": "How long until I can sit on it?",
+        "a": "Most couches are dry in two to six hours depending on the fabric. We leave the cushions set up to dry evenly so you are back on it the same day."
+      },
+      {
+        "q": "Do you use steam on every couch?",
+        "a": "No. We check the manufacturer's code first. Some fabrics take hot-water extraction, others need a low-moisture method. Picking the wrong one is how couches get ruined, so we match the method to the piece."
+      }
     ]
   },
   "leather-furniture-cleaning": {
@@ -245,6 +404,20 @@
       "leather couch cleaning",
       "aniline leather cleaning",
       "protected leather cleaning"
+    ],
+    "faqs": [
+      {
+        "q": "What do you use on leather?",
+        "a": "Leather-specific cleaner and conditioner, tested on a hidden spot first. Leather is skin — generic cleaners strip its oils, which is why we never use them."
+      },
+      {
+        "q": "Can you fix dry or cracking leather?",
+        "a": "Cleaning and conditioning restores suppleness to leather that is drying out. Cracks that have already opened and dye that has worn off are permanent, and we tell you which is which at the walkthrough."
+      },
+      {
+        "q": "How often should leather furniture be serviced?",
+        "a": "A professional clean and condition every six to twelve months keeps the leather from drying out, especially here where the sun is on it most of the year."
+      }
     ]
   },
   "microfiber-couch-cleaning": {
@@ -270,6 +443,20 @@
       "orange county microfiber cleaning",
       "stain removal microfiber",
       "local microfiber cleaners"
+    ],
+    "faqs": [
+      {
+        "q": "What makes microfiber different to clean?",
+        "a": "The care code decides everything — some microfiber takes water, some only takes solvent, and using the wrong one leaves rings and stiff patches. We check the code and match the method to it."
+      },
+      {
+        "q": "Will cleaning leave water spots?",
+        "a": "No. Water spots come from soaking the fabric. We use controlled moisture and even strokes so the couch dries uniformly, then brush the nap back up as it dries."
+      },
+      {
+        "q": "How long does a microfiber couch take to dry?",
+        "a": "A few hours. We set the cushions to dry evenly and the nap is restored before we leave."
+      }
     ]
   },
   "hardwood-floor-cleaning": {
@@ -295,6 +482,20 @@
       "laminate floor cleaning",
       "deep clean hardwood floors",
       "local floor cleaning"
+    ],
+    "faqs": [
+      {
+        "q": "How long does hardwood floor cleaning take?",
+        "a": "Most homes take one to two hours, depending on the area and the buildup. The floor is dry enough to walk on almost right away."
+      },
+      {
+        "q": "Will the cleaning harm the finish?",
+        "a": "No. We clean with a light mix and a machine made for sealed wood. We do not flood the boards and we do not strip the finish. If the finish is already worn through in a walking lane, we point it out before we start."
+      },
+      {
+        "q": "How much does hardwood floor cleaning cost?",
+        "a": "Price depends on the area and the condition of the floor, so we quote on-site before any work starts. Call (949) 992-3299 with the rough square footage and we will give you a range on the phone."
+      }
     ]
   },
   "tile-and-grout-cleaning": {
@@ -320,6 +521,24 @@
       "kitchen tile cleaning",
       "bathroom tile cleaning",
       "irvine floor cleaning"
+    ],
+    "faqs": [
+      {
+        "q": "How do you clean grout?",
+        "a": "We spray an alkaline pre-treatment into the grout lines, machine-scrub them, then rinse with hot water under pressure while extracting at the same time. The soil leaves with the rinse water instead of being pushed around with a mop."
+      },
+      {
+        "q": "Can you seal the grout afterward?",
+        "a": "Yes, and right after cleaning is the best time, while the lines are clean and open. Sealed grout stays cleaner longer and wipes up instead of absorbing the next spill."
+      },
+      {
+        "q": "Will the equipment damage my tile?",
+        "a": "No. We match the products and the pressure to the surface — ceramic, porcelain, and natural stone each get set up differently. Stone never gets acidic products from us."
+      },
+      {
+        "q": "How much does it cost?",
+        "a": "By the square footage and the condition of the grout. Call (949) 992-3299 with the rooms you want done and we will give you a range, then confirm it on-site before we start."
+      }
     ]
   },
   "vinyl-floor-cleaning": {
@@ -345,6 +564,20 @@
       "commercial vinyl cleaning",
       "residential vinyl cleaning",
       "irvine floor care"
+    ],
+    "faqs": [
+      {
+        "q": "What do you do that mopping does not?",
+        "a": "A mop slides over the texture of vinyl and leaves the soil in the low spots. We machine-scrub with a cleaner matched to the floor and extract the soil out, so the texture comes clean instead of just the high points."
+      },
+      {
+        "q": "Is your process safe for vinyl plank?",
+        "a": "Yes. We use controlled moisture and pick it back up as we go, and we never use steam on vinyl — heat is what warps planks and breaks down the adhesive."
+      },
+      {
+        "q": "How long before I can walk on the floor?",
+        "a": "Right away for socks and clean shoes. The floor is dry within the hour."
+      }
     ]
   },
   "natural-stone-cleaning": {
@@ -370,6 +603,20 @@
       "travertine floor cleaning",
       "stone floor restoration",
       "irvine stone care"
+    ],
+    "faqs": [
+      {
+        "q": "How do you clean natural stone?",
+        "a": "With pH-neutral products matched to the stone and machine agitation, then a controlled rinse. Acids etch marble, travertine, and limestone permanently, so nothing acidic ever touches your stone on our jobs."
+      },
+      {
+        "q": "Can you fix dull spots and etching?",
+        "a": "Cleaning removes soil and buildup, which handles most dullness. Etching is physical damage to the surface, and we tell you at the walkthrough which spots cleaning will fix and which need refinishing."
+      },
+      {
+        "q": "Should the stone be sealed?",
+        "a": "Most natural stone should be, especially in kitchens, showers, and entries. We seal right after cleaning, while the stone is clean and open, and tell you how long that seal should last in your spot."
+      }
     ]
   },
   "pet-stain-odor": {
@@ -395,6 +642,24 @@
       "cat urine odor removal",
       "dog stain cleaning",
       "irvine carpet refresh"
+    ],
+    "faqs": [
+      {
+        "q": "Can you get pet urine smell out of carpet?",
+        "a": "If the urine stayed in the yarn, yes — we treat it with an enzyme and flush it with truck-mounted hot-water extraction. If it soaked into the pad, that is a bigger job, and we tell you which one you have after we inspect with UV light."
+      },
+      {
+        "q": "What should I do before you arrive?",
+        "a": "Soak up fresh accidents with a dry towel and leave the spot alone — scrubbing and store chemicals can set the stain and make our job harder. Then call (949) 992-3299 and tell us how old the spots are."
+      },
+      {
+        "q": "Can you find spots I cannot see?",
+        "a": "Yes. Urine that dried weeks ago is invisible in daylight but shows under UV light. We walk the room with it so the treatment covers every spot, not just the ones you knew about."
+      },
+      {
+        "q": "Will the stain come back?",
+        "a": "A spot that reappears days after cleaning usually means the pad underneath is still holding urine. That is exactly what our inspection is for — we tell you up front whether the pad is involved, before you pay for a surface treatment that will not hold."
+      }
     ]
   },
   "commercial-carpet-cleaning": {
@@ -420,6 +685,20 @@
       "commercial floor cleaning",
       "irvine commercial services",
       "retail carpet cleaning"
+    ],
+    "faqs": [
+      {
+        "q": "Can you work around our business hours?",
+        "a": "Yes. We schedule evenings and weekends so the carpet is clean and dry before your staff and customers come back in. Call (949) 992-3299 and tell us your hours."
+      },
+      {
+        "q": "Which cleaning method do you use?",
+        "a": "It depends on the carpet and the deadline. Low-moisture encapsulation dries in about an hour and suits regular maintenance. Truck-mounted hot-water extraction is the deep clean for glue-down and high-traffic carpet. We recommend one after walking the space."
+      },
+      {
+        "q": "How do you price commercial work?",
+        "a": "By square footage, after a walk-through. You get an itemized quote, and recurring service is priced lower than one-off visits."
+      }
     ]
   },
   "commercial-air-duct-cleaning": {
@@ -445,6 +724,20 @@
       "commercial vent cleaning",
       "irvine air quality",
       "duct cleaning for businesses"
+    ],
+    "faqs": [
+      {
+        "q": "What do you clean in a commercial system?",
+        "a": "The supply and return runs, the registers and diffusers, and the main trunk, working register by register under negative pressure so dust ends up in our equipment instead of your space."
+      },
+      {
+        "q": "Will it disrupt our business?",
+        "a": "We contain the work area and can schedule outside your operating hours. Most tenants never know we were there except for the registers being clean."
+      },
+      {
+        "q": "How do you quote commercial duct work?",
+        "a": "With a site visit — vent count, system size, and access determine the price. Call (949) 992-3299 to set up a walk-through and you get an itemized quote before any work is scheduled."
+      }
     ]
   },
   "commercial": {
@@ -470,6 +763,20 @@
       "commercial duct cleaning irvine",
       "orange county commercial cleaning",
       "irvine commercial cleaning services"
+    ],
+    "faqs": [
+      {
+        "q": "What kinds of businesses do you serve?",
+        "a": "Offices, retail, restaurants, gyms, medical suites, and property managers across Orange County. Carpet, air ducts, tile, and upholstery under one visit when you want it that way."
+      },
+      {
+        "q": "Do you offer recurring service?",
+        "a": "Yes. Most of our commercial accounts are on a schedule — monthly, quarterly, or seasonal — and recurring service is priced lower than one-off calls."
+      },
+      {
+        "q": "How do we get a quote?",
+        "a": "Call (949) 992-3299 and we set up a walk-through. You get an itemized quote for exactly the areas you want covered, before anything is scheduled."
+      }
     ]
   },
   "car-seat-cleaning": {
@@ -495,6 +802,20 @@
       "vehicle seat stain removal",
       "irvine car detailing",
       "orange county auto cleaning"
+    ],
+    "faqs": [
+      {
+        "q": "Do you come to me?",
+        "a": "Yes. We clean car seats and interiors at your home or workplace in Orange County. Call (949) 992-3299 and tell us what you drive and what happened to it."
+      },
+      {
+        "q": "Can you clean leather seats too?",
+        "a": "Yes. Fabric seats get extraction cleaning, leather gets a leather-specific cleaner and conditioner. We check what you have and use the right process for each surface."
+      },
+      {
+        "q": "How long does it take?",
+        "a": "One to two hours for seats, longer for a full interior. The seats are dry enough to drive on within a few hours."
+      }
     ]
   },
   "drape-cleaning": {
@@ -502,6 +823,7 @@
     "description": "Revitalize your drapes with our expert cleaning service, removing accumulated dust, allergens, and odors. We help maintain the appearance and extend the life of your window treatments.",
     "paragraphs": [
       "We clean drapes in Orange County homes right where they hang, so you don't have to take them down. We remove the dust and the film that builds up on the window side.",
+      "Fabrics that need dry cleaning are the exception. Those we take down, send out, and hang back up when they come back, so you never touch a ladder.",
       "We check the fabric first and give you the price before we start. Our products are EPA Safer Choice.",
       "We have cleaned drapes here since 2013. We are Google Guaranteed.",
       "Call (949) 992-3299 and tell us how many panels. We can come the same day or the next when the truck is free."
@@ -520,6 +842,20 @@
       "fabric drape cleaning irvine",
       "orange county curtain cleaners",
       "irvine drape restoration"
+    ],
+    "faqs": [
+      {
+        "q": "Do you take the drapes down?",
+        "a": "When the job calls for it, yes — we take them down, clean them, and rehang them. Many drapes can also be cleaned in place. We tell you which your fabric needs after we look at it."
+      },
+      {
+        "q": "Is it safe for delicate fabric?",
+        "a": "We check the fabric and lining first and match the method to it. Silk, lined panels, and anything with embellishments get handled differently than everyday polyester."
+      },
+      {
+        "q": "How do you price drape cleaning?",
+        "a": "By the panel, counting size and fabric. Call (949) 992-3299 with how many windows you have and we will give you a range on the phone."
+      }
     ]
   },
   "outdoor-furniture-cleaning": {
@@ -545,6 +881,20 @@
       "outdoor cushion cleaning irvine",
       "orange county outdoor cleaning",
       "irvine patio refresh"
+    ],
+    "faqs": [
+      {
+        "q": "What outdoor furniture do you clean?",
+        "a": "Cushions, slings, frames, and umbrellas — full patio sets. Sun, dust, and marine air build up a film that a hose does not touch, and that is what we remove."
+      },
+      {
+        "q": "Can you get mold and mildew off cushions?",
+        "a": "Yes. We treat the growth, extract it out of the fabric, and the cushions dry outside the same day. If fabric is too far gone to save, we say so instead of charging you to clean it."
+      },
+      {
+        "q": "When should I book?",
+        "a": "Before you need the patio — spring and ahead of holidays book up first. Call (949) 992-3299 with the size of your set and we will quote it."
+      }
     ]
   },
   "encapsulation-carpet-cleaning": {
@@ -570,6 +920,20 @@
       "fast drying carpet cleaning irvine",
       "orange county carpet maintenance",
       "irvine commercial floor cleaning"
+    ],
+    "faqs": [
+      {
+        "q": "What is encapsulation cleaning?",
+        "a": "A low-moisture method where the cleaning agent crystallizes around the soil and comes out with normal vacuuming. The carpet is dry in about an hour, which is why offices and busy households book it."
+      },
+      {
+        "q": "Is it better than steam cleaning?",
+        "a": "They solve different problems. Encapsulation is fast-drying maintenance between deep cleans. Truck-mounted hot-water extraction is the deep clean. We recommend one after seeing the carpet, and sometimes the honest answer is both on a rotation."
+      },
+      {
+        "q": "How fast can the area be used again?",
+        "a": "About an hour. That makes it the method we bring when a lobby, office, or hallway cannot be out of service for an afternoon."
+      }
     ]
   },
   "emergency-cleaning": {
@@ -595,6 +959,20 @@
       "same day cleaning irvine",
       "orange county emergency services",
       "irvine rapid cleaning response"
+    ],
+    "faqs": [
+      {
+        "q": "How fast can you get here?",
+        "a": "We hold same-day openings for emergencies — flooding, a big spill before guests arrive, a pet accident that cannot wait. Call (949) 992-3299 and we will tell you the next opening honestly."
+      },
+      {
+        "q": "What counts as an emergency job?",
+        "a": "Water on the floor, a spill setting into carpet or upholstery, or a mess that has to be gone before an event. If it is getting worse by the hour, call — waiting is what turns small jobs into big ones."
+      },
+      {
+        "q": "Does emergency service cost extra?",
+        "a": "You get the price before we start, the same as any job. The quote is itemized on-site, so there is no surprise on the invoice."
+      }
     ]
   },
   "floor-cleaning": {
@@ -620,6 +998,212 @@
       "hard surface cleaning",
       "residential floor cleaning",
       "commercial floor cleaning"
+    ],
+    "faqs": [
+      {
+        "q": "Which floors do you clean?",
+        "a": "Hardwood, tile and grout, vinyl, laminate, and natural stone. Each gets its own products and equipment — the setup that cleans grout lines would be wrong on a sealed wood floor."
+      },
+      {
+        "q": "How do you decide the method?",
+        "a": "We look at the floor first. The material, the finish, and the condition decide the products, the moisture level, and the machine. Then we quote the job before any work starts."
+      },
+      {
+        "q": "How much does floor cleaning cost?",
+        "a": "By square footage and floor type. Call (949) 992-3299 with the rooms and what the floor is made of, and we will give you a range on the phone."
+      }
+    ]
+  },
+  "coffee-and-wine-stain-removal": {
+    "tagline": "Coffee and wine stain removal for Orange County homes.",
+    "paragraphs": [
+      "A coffee or wine spill does not have to stay in your carpet. We treat the spot, rinse it with hot-water extraction, and pull the stain out to the truck instead of rubbing it deeper in.",
+      "What came out of the cup matters less than what happened after. A spot that was scrubbed with a store product or hit with the wrong cleaner can set. We look at the stain first and tell you honestly what will lift and what has already dyed the fiber.",
+      "Red wine, coffee with cream, and tea each get a different treatment. We test a small area, treat the spot, then rinse so no sticky residue is left to catch new dirt. The same work handles rugs and upholstery fabric.",
+      "You get the price before we start. If a stain will not come out all the way, we say so before any work begins, not after.",
+      "The sooner we get to a spill, the better the odds. Blot it with a dry white towel, skip the scrubbing, and call (949) 992-3299. We hold same-day and next-day openings across Irvine and Orange County."
+    ],
+    "faqs": [
+      {
+        "q": "Can you get red wine out of carpet?",
+        "a": "Often yes, especially when the spill is fresh and has not been scrubbed with a store product. We look at the spot first and tell you before we start how much will lift."
+      },
+      {
+        "q": "What should I do right after a spill?",
+        "a": "Blot with a dry white towel from the outside of the spot toward the middle. Do not scrub and do not use hot water. Then call (949) 992-3299 and we will tell you the next opening."
+      },
+      {
+        "q": "Does stain removal cost extra on top of carpet cleaning?",
+        "a": "Spot treatment for a few spills is usually part of the carpet cleaning price. A large or set stain can take extra work, and we price that on-site before we start."
+      }
+    ]
+  },
+  "carpet-protection": {
+    "tagline": "Protective treatment after carpet cleaning in Orange County.",
+    "paragraphs": [
+      "After we clean your carpet, we can apply a protective treatment while the fiber is still open. The treatment coats the fiber so the next spill beads up and blots away instead of soaking straight in.",
+      "Protection does not make carpet stain-proof. It buys you time. A glass of juice that would have soaked in within seconds sits on the surface long enough to grab a towel. Vacuuming also pulls dry soil out more easily because the dirt grips the fiber less.",
+      "New carpet comes with a factory treatment that wears off in the walking lanes after a few years of traffic and cleanings. Applying protection after a deep clean puts that layer back where it wears first: hallways, stairs, and the path around the couch.",
+      "We quote the protection with the cleaning so you see the whole price before we start. It adds a little drying time, and the carpet is ready to walk on the same day.",
+      "If you are already booking a carpet cleaning, ask about adding protection to the rooms that get the most traffic. Call (949) 992-3299 and we will price both together on the phone."
+    ],
+    "faqs": [
+      {
+        "q": "Does the protective treatment make carpet stain-proof?",
+        "a": "No, and we will not tell you it does. It slows a spill down so you can blot it up before it soaks in, and it helps vacuuming pull out dry soil."
+      },
+      {
+        "q": "How long does carpet protection last?",
+        "a": "It wears off with foot traffic, fastest in hallways and on stairs. Most homes reapply it with each deep cleaning to keep the walking lanes covered."
+      },
+      {
+        "q": "Can I walk on the carpet after the treatment?",
+        "a": "Yes. The carpet needs the usual 4 to 8 hours to dry after cleaning and protection together, and socks are fine while it finishes drying."
+      }
+    ]
+  },
+  "laminate-floor-cleaning": {
+    "tagline": "Laminate floor cleaning for Orange County homes.",
+    "paragraphs": [
+      "Laminate looks like wood, but it cleans differently. The boards are a picture layer over a pressed core, and that core swells if water sits in the seams. So we clean laminate with a machine scrub and a light mix, and we do not flood the floor.",
+      "The gray film that builds up on laminate is usually residue from string mops and store cleaners. Each mopping leaves a little more behind, and the film catches dirt. We scrub that film off and lift the dirt away instead of pushing it around.",
+      "We do not wax or polish laminate. Coatings sit on top of the picture layer, look cloudy, and peel. What a laminate floor needs is the buildup removed so the finish underneath can show again.",
+      "You get the price before we start, based on the area and how much buildup is on the floor. The floor is dry enough to walk on almost right away.",
+      "If some rooms are laminate and others are tile or wood, we clean each one the way that floor needs on the same visit. Call (949) 992-3299 and tell us roughly how many rooms."
+    ],
+    "faqs": [
+      {
+        "q": "Why does my laminate floor look cloudy?",
+        "a": "Usually it is a film left by mopping products, not damage. Each pass leaves a thin layer that catches dirt. A machine scrub removes the film without soaking the seams."
+      },
+      {
+        "q": "Do you polish laminate floors?",
+        "a": "No. Polish and wax do not bond to laminate. They look cloudy and peel. We remove buildup so the original finish shows, and we skip coatings that do not belong on this floor."
+      },
+      {
+        "q": "Will water damage my laminate during cleaning?",
+        "a": "We use a light mix and pick the moisture back up as we go, so water does not sit in the seams. That is the main thing that separates this from mopping."
+      }
+    ]
+  },
+  "area-rug-repair": {
+    "tagline": "Area rug repair alongside cleaning in Orange County.",
+    "paragraphs": [
+      "A good rug does not have to be replaced because the edge is fraying or the fringe is worn. We repair fringe, edges, and binding on area rugs, usually together with a wash.",
+      "Fringe wears first because vacuums catch it and feet drag it. Worn fringe can be secured, rebuilt, or removed cleanly, depending on the rug and what you want it to look like. An unraveling edge gets rebound before the wear spreads into the field of the rug.",
+      "We look at the rug first and tell you what the repair involves and what it costs before any work starts. On some rugs a repair is simple. On others, especially hand-knotted pieces, we tell you honestly whether the repair is worth it against the value of the rug.",
+      "Most repairs happen at our facility. We pick the rug up, wash it, make the repair, and bring it back. Pickup and delivery work the same way as our regular rug service.",
+      "If a rug you like is starting to fray, call (949) 992-3299. Send a photo of the damage if you can, and we will tell you what is possible before we come out."
+    ],
+    "faqs": [
+      {
+        "q": "Can worn fringe be fixed?",
+        "a": "Yes. Depending on the rug, fringe can be secured so it stops unraveling, rebuilt, or removed cleanly with the end bound. We show you the options and the price before we start."
+      },
+      {
+        "q": "Is repair worth it on my rug?",
+        "a": "We tell you honestly. On a machine-made rug a big repair may cost more than the rug is worth, and we say so. On wool and hand-knotted rugs a repair usually protects what the rug is worth."
+      },
+      {
+        "q": "Do you repair rugs in the home?",
+        "a": "Most repairs happen at our facility together with a wash. We pick the rug up and bring it back. Call (949) 992-3299 and tell us what the damage looks like."
+      }
+    ]
+  },
+  "drape-pickup": {
+    "tagline": "Drape pickup and dry cleaning in Orange County.",
+    "paragraphs": [
+      "Most drapes we clean right where they hang. But some fabrics should not be wet cleaned at all: lined silk, some older weaves, and panels with water stains that need a solvent process. Those we take down, send through dry cleaning, and hang back up.",
+      "You do not climb a ladder at any point. We take the panels down, note how each one hangs, and rehang them the same way when they come back.",
+      "We tell you which process your drapes need when we see the fabric. If they can be cleaned in place, that is faster and costs less, and we say so. Pickup and dry cleaning is for the fabrics that truly need it.",
+      "The price covers take-down, cleaning, and rehanging, and you get it before we start. Most drapes are back on the window within the week.",
+      "Call (949) 992-3299 and tell us what the drapes are made of if you know, or send a photo. We will tell you on the phone which way to go."
+    ],
+    "faqs": [
+      {
+        "q": "How do I know if my drapes need dry cleaning?",
+        "a": "Lined silk, loose older weaves, and fabrics that water-spot need the dry cleaning route. We check the fabric and tell you before anything is taken down. Many drapes can be cleaned where they hang instead."
+      },
+      {
+        "q": "Do you rehang the drapes?",
+        "a": "Yes. We note how each panel hangs when we take it down and rehang everything the same way when it comes back. You do not touch a ladder."
+      },
+      {
+        "q": "How long are the drapes gone?",
+        "a": "Usually less than a week from pickup to rehanging. We tell you the expected day when we pick them up."
+      }
+    ]
+  },
+  "mattress-cleaning": {
+    "tagline": "Mattress cleaning for Orange County homes.",
+    "paragraphs": [
+      "You spend a third of your life on the mattress, and it collects sweat, skin, dust, and the occasional spill the whole time. We clean mattresses with hot-water extraction: hot water and cleaning solution go in, and the soil comes back out to the truck.",
+      "The most common calls are a child's accident, a pet that got on the bed, and a mattress that smells stale. All three respond to extraction because the problem is in the top layers, which is what the machine reaches and rinses.",
+      "We clean the sleeping surface and the sides, treat spots and odors, and leave the mattress damp to the touch, not wet. It is ready to sleep on the same night with normal airflow in the room.",
+      "A stain that soaked deep into the core years ago may shadow even after cleaning. We look first and tell you what will lift before we start, and you get the price up front.",
+      "A mattress cleaning pairs well with carpet or upholstery on the same visit. Call (949) 992-3299 and tell us the size and what happened to it."
+    ],
+    "faqs": [
+      {
+        "q": "How long until I can sleep on the mattress?",
+        "a": "The same night. We extract most of the moisture as we clean, so the mattress is damp, not wet. Leave the bedding off and the room airing for the afternoon."
+      },
+      {
+        "q": "Can you get urine out of a mattress?",
+        "a": "Fresh accidents usually clean up well because they sit in the top layers. An old stain that reached the core can leave a shadow, and we tell you that before we start."
+      },
+      {
+        "q": "How much does mattress cleaning cost?",
+        "a": "It depends on the size and the condition. Call (949) 992-3299 with the size and what happened, and we will give you a price range on the phone and the exact price on-site before we start."
+      }
+    ]
+  },
+  "yacht-cleaning": {
+    "tagline": "Boat and yacht interior cleaning in Orange County harbors.",
+    "paragraphs": [
+      "A boat cabin collects the same soil as a living room, plus salt air and damp. We clean the carpet, the upholstered seating, the mattresses in the berths, and the curtains on board, at the dock.",
+      "Marine interiors hold moisture, so the method matters. We use low-moisture cleaning where the cabin needs it and extraction where the fabric allows it, so the cabin dries instead of staying damp under the waterline vents.",
+      "We have cleaned boats at Newport Beach, Dana Point, and Huntington Harbour slips. Tell us the marina and the slip, and we bring the equipment down the dock. Curtains are cleaned where they hang, the same as in a house.",
+      "A musty cabin smell usually lives in the soft surfaces: the V-berth cushions, the carpet, the curtains. Cleaning those is what moves the needle. We tell you honestly if what you have is a mildew problem that cleaning alone will not fix.",
+      "We walk the boat with you and give the price before we start. Call (949) 992-3299 with the boat size and the marina, and we will tell you the next opening."
+    ],
+    "faqs": [
+      {
+        "q": "Do you come to the marina?",
+        "a": "Yes. We clean at the slip. Tell us the marina, the dock, and the slip number, and we bring the equipment to the boat at Newport Beach, Dana Point, Huntington Harbour, and the rest of Orange County."
+      },
+      {
+        "q": "Can you get the musty smell out of the cabin?",
+        "a": "If the smell lives in the cushions, carpet, and curtains, cleaning them makes a real difference. If there is active mildew behind panels, we tell you that cleaning alone will not fix it."
+      },
+      {
+        "q": "How long does the cabin take to dry?",
+        "a": "We use low-moisture methods where the cabin needs them, so most interiors are dry the same day with the hatches open. We tell you the drying time before we start."
+      }
+    ]
+  },
+  "rv-cleaning": {
+    "tagline": "RV and motorhome interior cleaning in Orange County.",
+    "paragraphs": [
+      "An RV is a house that drives, and the carpet in it works harder than the carpet in a house: sand from campsites, grease from the cockpit step, food in the dinette, and pets everywhere. We clean the carpet, the seats, the dinette cushions, and the mattress over the cab.",
+      "We clean the RV where it is parked: your driveway, the storage lot, or the campground if the hoses reach. The truck stays outside and the hoses run in through the door, the same way we clean a house.",
+      "Captain's chairs and dinette fabric get upholstery extraction. Carpet gets hot-water extraction. The over-cab mattress, which traps dust and sun heat, cleans up the same way a bedroom mattress does.",
+      "RVs that sat closed for a season come out stale. Cleaning the soft surfaces, which is where the smell lives, is the right first step, and we tell you honestly if a smell is coming from a tank or a leak instead of the fabric.",
+      "We walk the rig with you and give the price before we start, based on what is inside, not a flat guess. Call (949) 992-3299 with the length and where it is parked."
+    ],
+    "faqs": [
+      {
+        "q": "Where do you clean the RV?",
+        "a": "Where it is parked: your driveway, a storage lot, or a campground if the hoses reach. Tell us where it sits and we will tell you if the truck can work there."
+      },
+      {
+        "q": "Can you clean the over-cab mattress and the dinette?",
+        "a": "Yes. The mattress, the dinette cushions, and the captain's chairs all get cleaned along with the carpet. We quote the whole interior before we start."
+      },
+      {
+        "q": "The RV smells stale after storage. Will cleaning fix it?",
+        "a": "If the smell lives in the carpet, cushions, and mattress, yes, that is where it usually is. If it is coming from a tank or a leak, we tell you that honestly instead of selling you a cleaning."
+      }
     ]
   }
 }

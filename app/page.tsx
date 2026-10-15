@@ -68,8 +68,8 @@ export default function HomePage() {
         compare
         showPhotos={false}
         showAll
-        compareTitle="Real Photos from Our Actual Jobs."
-        compareBody="Dryer vents, air ducts, carpet, a sofa, and a rug. Each photo is the same spot before we started and after we finished."
+        compareTitle="See the Difference for Yourself."
+        compareBody="Real photos from our jobs around Orange County. Drag the handle on any photo to compare the same spot before we started and after we finished."
       />
 
       <Section tone="sand" className="py-10 md:py-14">

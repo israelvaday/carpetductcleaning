@@ -39,7 +39,7 @@ export function StickyActions() {
         <a
           href={site.phoneHref}
           aria-label={`Call ${site.phone}`}
-          className="inline-flex size-12 items-center justify-center rounded-full bg-navy text-white shadow-lift ring-1 ring-white/15"
+          className="inline-flex size-12 items-center justify-center rounded-full bg-gold text-navy shadow-glow"
         >
           <Phone className="size-5" />
         </a>
