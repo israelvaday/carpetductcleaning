@@ -119,7 +119,7 @@ const overlay = Buffer.from(`<svg width="${W}" height="${H}" xmlns="http://www.w
   <text x="72" y="378" font-family="Segoe UI, Arial, sans-serif" font-size="28" fill="#d5e4e2">Carpet · Air ducts · Rugs · Upholstery</text>
   <rect x="72" y="418" width="248" height="52" rx="26" fill="${TEAL}"/>
   <text x="196" y="452" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="white">(949) 992-3299</text>
-  <text x="72" y="548" font-family="Segoe UI, Arial, sans-serif" font-size="20" letter-spacing="2" fill="${GOLD}">SINCE 2013  ·  GOOGLE GUARANTEED</text>
+  <text x="72" y="548" font-family="Segoe UI, Arial, sans-serif" font-size="20" letter-spacing="2" fill="${GOLD}">SINCE 2021  ·  GOOGLE GUARANTEED</text>
 </svg>`);
 
 const og = await sharp({

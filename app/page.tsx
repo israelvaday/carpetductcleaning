@@ -44,7 +44,7 @@ const HOME_FAQS = [
 export const metadata: Metadata = pageMeta({
   title: "Carpet Cleaning in Irvine, CA | Air Duct & Rug Cleaning",
   description:
-    "Google Guaranteed carpet and air duct cleaning in Irvine, CA since 2013. BBB A+, same-day openings across Orange County. Call (949) 992-3299.",
+    "Google Guaranteed carpet and air duct cleaning in Irvine, CA since 2021. BBB A+, same-day openings across Orange County. Call (949) 992-3299.",
   path: "/",
 });
 
@@ -221,7 +221,7 @@ export default function HomePage() {
             <SectionHead eyebrow="About the company" title={`${site.name} in ${site.city}`} />
             <div className="prose-body mt-6 max-w-2xl">
               <p>
-                Carpet and duct cleaning in Irvine has been our work since 2013. Truck-mounted hot-water extraction
+                Carpet and duct cleaning in Irvine has been our work since 2021. Truck-mounted hot-water extraction
                 lifts soil out of the carpet. A HEPA negative-air machine pulls dust out of the ductwork. The same
                 crew can do both on one visit, and the price is itemized before anything starts.
               </p>

@@ -13,7 +13,7 @@ import { site, siteUrl } from "@/lib/site";
 import { cleanParagraphs } from "@/lib/text";
 
 export const metadata: Metadata = pageMeta({
-  title: "About Carpet & Duct Cleaning | Irvine, CA Since 2013",
+  title: "About Carpet & Duct Cleaning | Irvine, CA Since 2021",
   description: `Carpet & Duct Cleaning has served Irvine and Orange County since ${site.foundingYear}. Google Guaranteed, BBB A+, and same-day openings. Call ${site.phone}.`,
   path: "/about/",
 });

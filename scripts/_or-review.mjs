@@ -21,11 +21,11 @@ function visibleText(html) {
     .trim();
 }
 
-const SYSTEM = `You review one page of a local cleaning company website (Carpet And Duct Cleaning, Irvine/Orange County, founded 2013, phone (949) 992-3299). The company DOES the work for customers. Report ONLY real problems from this checklist:
+const SYSTEM = `You review one page of a local cleaning company website (Carpet And Duct Cleaning, Irvine/Orange County, founded 2021, phone (949) 992-3299). The company DOES the work for customers. Report ONLY real problems from this checklist:
 1. DIY-voice content: any FAQ or paragraph that teaches the reader to clean it themselves (recipes like vinegar/baking soda, product recommendations to buy, step-by-step home instructions). Honest prep advice before a visit (e.g. "blot it and call us") is FINE.
 2. Scraped junk: citation fragments like "The Spruce+6", "Wikipedia+1", publication names mid-sentence, or navigation text bleeding into answers.
 3. Banned marketing: "#1", "best in", "most trusted", "top-rated", "5-star" (outside customer review quotes), "24/7", "IICRC", "non-toxic", "sanitized".
-4. Wrong facts: founding year not 2013, phone not (949) 992-3299.
+4. Wrong facts: founding year not 2021, phone not (949) 992-3299.
 5. Gibberish, truncated sentences, or text that contradicts itself.
 Customer review quotes are exempt from all checks.
 Respond with JSON only: {"pass": true} or {"pass": false, "problems": ["short description", ...]}. Do not invent problems. Style preferences are not problems.`;

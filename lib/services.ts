@@ -207,7 +207,7 @@ export function cityFaqs(serviceName: string, cityName: string, blurb: string) {
     },
     {
       q: `Are you licensed and insured?`,
-      a: `Yes. We are licensed and insured, Google Guaranteed, with a BBB A+ rating. We have worked across Irvine and Orange County since 2013.`,
+      a: `Yes. We are licensed and insured, Google Guaranteed, with a BBB A+ rating. We have worked across Irvine and Orange County since 2021.`,
     },
   ];
 }

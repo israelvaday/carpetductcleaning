@@ -24,7 +24,7 @@ const MODEL = process.env.OPENROUTER_CHAT_MODEL || "google/gemini-2.5-flash";
 
 const BIZ = "Carpet And Duct Cleaning";
 const PHONE = "(949) 992-3299";
-const FOUNDED = 2013;
+const FOUNDED = 2021;
 const REGION = "Orange County, CA";
 const BASE = "Irvine, CA";
 

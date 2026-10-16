@@ -25,7 +25,7 @@ const fraunces = Fraunces({
 
 const defaultTitle = "Carpet Cleaning in Irvine, CA | Air Duct & Rug Cleaning";
 const defaultDescription =
-  "Google Guaranteed carpet and air duct cleaning in Irvine, CA since 2013. BBB A+, same-day openings across Orange County. Call (949) 992-3299.";
+  "Google Guaranteed carpet and air duct cleaning in Irvine, CA since 2021. BBB A+, same-day openings across Orange County. Call (949) 992-3299.";
 
 export const viewport: Viewport = {
   themeColor: "#0b2237",

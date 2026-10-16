@@ -72,7 +72,7 @@ for (const [route, html] of pages) {
       const data = JSON.parse(m[1]);
       const flat = JSON.stringify(data);
       if (/SearchAction/.test(flat)) add(route, "JSON-LD SearchAction");
-      if (/"foundingDate":"(?!2013)/.test(flat)) add(route, "JSON-LD foundingDate not 2013");
+      if (/"foundingDate":"(?!2021)/.test(flat)) add(route, "JSON-LD foundingDate not 2021");
     } catch {
       add(route, "JSON-LD parse error");
     }
@@ -80,7 +80,7 @@ for (const [route, html] of pages) {
 
   const text = strip(html.replace(/<script[\s\S]*?<\/script>/g, ""));
   for (const m of text.matchAll(/\(?\d{3}\)?[ .-]\d{3}-\d{4}/g)) if (!PHONE_OK.test(m[0])) phonesSeen.add(`${m[0]} on ${route}`);
-  for (const m of text.matchAll(/(?:since|founded in|established in)\s+(\d{4})/gi)) if (m[1] !== "2013") add(route, `year ${m[0]}`);
+  for (const m of text.matchAll(/(?:since|founded in|established in)\s+(\d{4})/gi)) if (m[1] !== "2021") add(route, `year ${m[0]}`);
 
   for (const m of html.matchAll(/href="(\/carpetductcleaning[^"#?]*)"/g)) {
     let target = m[1].slice(BASE.length) || "/";
@@ -100,7 +100,7 @@ const sa = redirects.get("/service-area/");
 if (!sa || !/\/locations\/?$/.test(sa)) add("/service-area/", `should redirect to /locations (got ${sa})`);
 
 const about = pages.get("/about/") || "";
-if (!/2013/.test(about)) add("/about/", "does not mention 2013");
+if (!/2021/.test(about)) add("/about/", "does not mention 2021");
 if (!/AboutPage/.test(about)) add("/about/", "missing AboutPage JSON-LD");
 if (!/ContactPage/.test(pages.get("/contact/") || "")) add("/contact/", "missing ContactPage JSON-LD");
 
