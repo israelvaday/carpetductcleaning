@@ -13,7 +13,7 @@ export const site = {
   email: "info@carpetductcleaning.com",
   jobs: "10,000+",
   rating: "4.9",
-  reviewCount: "311",
+  reviewCount: "312",
 } as const;
 
 /** Profile URLs from the previous site's social icon row. */
