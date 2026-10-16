@@ -74,7 +74,15 @@ const SHORT_DAY: Record<string, string> = {
 };
 
 /**
- * Hours as grouped ranges for the navigation bar:
+ * The one hours line used everywhere on the site, written as the continuous
+ * weekly stretch the owner wants instead of a day-by-day list.
+ */
+export function hoursLine() {
+  return "Open Sunday through Friday 5 PM · Closed Saturday";
+}
+
+/**
+ * Hours as grouped ranges:
  * "Mon–Thu & Sun open 24 hours · Fri 8 AM–5 PM · Sat closed".
  * Days with the same hours are merged instead of listed one by one.
  */

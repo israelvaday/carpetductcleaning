@@ -14,7 +14,7 @@ import { Reviews } from "@/components/reviews";
 import { QuoteButton } from "@/components/quote-button";
 import { Section, SectionHead } from "@/components/ui";
 import { cityEntries } from "@/lib/content";
-import { getGoogleProfile, mapCid, mapQuery } from "@/lib/google-profile";
+import { getGoogleProfile, hoursLine, mapCid, mapQuery } from "@/lib/google-profile";
 import { asset, img } from "@/lib/images";
 import { breadcrumbs, faqLd } from "@/lib/schema";
 import { PROOF_POINTS } from "@/lib/services";
@@ -255,9 +255,7 @@ export default function HomePage() {
                 Based in {profile?.neighborhood ? `${profile.neighborhood}, ` : ""}
                 {titleCase(site.city.toLowerCase())}. Crews cover {site.area} daily.
               </p>
-              {profile?.hoursSummary ? (
-                <p className="mt-1 text-sm text-ink/60">{profile.hoursSummary}</p>
-              ) : null}
+              <p className="mt-1 text-sm text-ink/60">{hoursLine()}</p>
             </div>
           </div>
         </Section>

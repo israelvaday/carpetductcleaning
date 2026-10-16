@@ -4,7 +4,7 @@ import { MapPin, Phone } from "lucide-react";
 import { SocialLinks } from "@/components/social-links";
 import { cityEntries } from "@/lib/content";
 import { asset } from "@/lib/images";
-import { getGoogleProfile } from "@/lib/google-profile";
+import { getGoogleProfile, hoursLine } from "@/lib/google-profile";
 import { moneyServices, site } from "@/lib/site";
 import { titleCase } from "@/lib/utils";
 
@@ -41,9 +41,7 @@ export function Footer() {
               {city}, {region} {postalCode}
             </span>
           </a>
-          {profile?.hoursSummary ? (
-            <p className="mt-3 max-w-xs text-sm leading-relaxed text-white/70">{profile.hoursSummary}</p>
-          ) : null}
+          <p className="mt-3 max-w-xs text-sm leading-relaxed text-white/70">{hoursLine()}</p>
           <div className="mt-6 flex flex-col items-center lg:items-start">
             <p className="text-xs font-semibold uppercase tracking-wider text-white/50">Follow</p>
             <div className="mt-3">
