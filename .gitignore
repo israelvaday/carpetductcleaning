@@ -12,3 +12,5 @@ media/drive/
 .env.local
 gbp-posts/
 media/_generated-v1/
+audit/ui-report/
+photo-picker.html

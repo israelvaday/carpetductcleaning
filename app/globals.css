@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  /* Core palette — deep navy, teal brand, warm gold accent, soft sand. */
+  /* Core palette — deep navy, teal brand, light-blue accent, soft sand. */
   --color-ink: #0a1526;
   --color-navy: #0b2237;
   --color-navy-800: #0e2c46;
@@ -11,8 +11,18 @@
   --color-brand-dark: #0a615d;
   --color-brand-light: #14a19a;
   --color-brand-50: #e9f5f4;
-  --color-gold: #f0a92e;
-  --color-gold-dark: #d18a14;
+  /* Accent — was warm gold; the client asked for no yellow, so the "gold"
+     token now resolves to a light action blue. Class names stay the same. */
+  --color-gold: #7fb4f7;
+  --color-gold-dark: #1766d9;
+  /* Action blue — every Call/submit button uses this pair. */
+  --color-cta: #1766d9;
+  --color-cta-dark: #114fae;
+  --color-cta-light: #7fb4f7;
+  /* Book green — only the floating/sticky Book button, so Call (blue) and
+     Book (green) read as two different actions. */
+  --color-book: #16a34a;
+  --color-book-dark: #15803d;
   --color-sand: #f7f4ee;
   --color-sand-dark: #efe9df;
   --color-line: #e6e0d5;
@@ -22,7 +32,7 @@
 
   --shadow-card: 0 1px 2px rgb(11 34 55 / 0.05), 0 14px 30px -14px rgb(11 34 55 / 0.16);
   --shadow-lift: 0 2px 6px rgb(11 34 55 / 0.07), 0 30px 60px -24px rgb(11 34 55 / 0.30);
-  --shadow-glow: 0 0 0 1px rgb(240 169 46 / 0.25), 0 18px 48px -16px rgb(240 169 46 / 0.45);
+  --shadow-glow: 0 0 0 1px rgb(23 102 217 / 0.25), 0 18px 48px -16px rgb(23 102 217 / 0.45);
 
   --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
   --animate-marquee: marquee 42s linear infinite;

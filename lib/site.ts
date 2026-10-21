@@ -10,6 +10,7 @@ export const site = {
   area: "Orange County",
   street: "191 Pinestone",
   postalCode: "92604",
+  mapsUrl: "https://maps.google.com/?cid=17628681850478476219",
   email: "info@carpetductcleaning.com",
   jobs: "10,000+",
   rating: "4.9",

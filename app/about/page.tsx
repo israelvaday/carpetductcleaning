@@ -91,8 +91,8 @@ export default function AboutPage() {
             </div>
             <div className="relative mt-8 aspect-3/4 overflow-hidden rounded-2xl shadow-card">
               <Image
-                src={serviceImage("encapsulation-carpet-cleaning").src}
-                alt="Low-moisture encapsulation machine cleaning carpet in a living room"
+                src={serviceImage("upholstery-cleaning").src}
+                alt="Technician deep cleaning a fabric sofa cushion"
                 fill
                 sizes="(min-width: 1024px) 20rem, 45vw"
                 className="object-cover object-[center_70%]"
@@ -102,8 +102,8 @@ export default function AboutPage() {
           <div>
             <SectionHead
               eyebrow="Equipment"
-              title="Truck-mounted power, low-moisture options when it fits"
-              body="Hot-water extraction pulls soil out of the fiber instead of pushing it down. When a space has to be used the same day, we switch to low-moisture encapsulation instead of forcing one method onto every job."
+              title="Truck-mounted power on every job"
+              body="Hot-water extraction pulls soil out of the fiber instead of pushing it down. Air movers go down before we pack up, so most rooms are back in use the same day."
             />
           </div>
         </div>

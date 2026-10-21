@@ -1,114 +1,130 @@
 [
   {
-    "before": "/images/ba-stairs-before.webp",
-    "after": "/images/ba-stairs-after.webp",
+    "before": "/images/ba-area-rug-before.webp",
+    "after": "/images/ba-area-rug-after.webp",
+    "width": 1050,
+    "height": 1400,
+    "alt": "Area rug, soiled field beside the cleaned rug",
+    "caption": "Area rug — full wash"
+  },
+  {
+    "before": "/images/ba-dana-point-couch-before.webp",
+    "after": "/images/ba-dana-point-couch-after.webp",
     "width": 1400,
     "height": 1050,
-    "alt": "Carpeted stairs, soiled treads beside a cleaned pass",
-    "caption": "Carpeted stairs — traffic soil on every tread"
+    "alt": "Couch cushions, soiled seats beside the cleaned couch",
+    "caption": "Dana Point couch — seat cushions cleaned"
   },
   {
-    "before": "/images/ba-couch-before.webp",
-    "after": "/images/ba-couch-after.webp",
-    "width": 800,
-    "height": 510,
-    "alt": "Sofa cushion, a dark stain beside the cleaned cushion",
-    "caption": "Sofa cushion — dark stain lifted out"
+    "before": "/images/ba-orange-stains-before.webp",
+    "after": "/images/ba-orange-stains-after.webp",
+    "width": 1050,
+    "height": 1400,
+    "alt": "Bedroom carpet, dark stains beside the cleaned carpet",
+    "caption": "Orange — carpet stains removed"
   },
   {
-    "before": "/images/ba-rug-before.webp",
-    "after": "/images/ba-rug-after.webp",
-    "width": 864,
-    "height": 346,
-    "alt": "Blue area rug, soiled field beside a lighter cleaned pass",
-    "caption": "Blue area rug — full wash"
-  },
-  {
-    "before": "/images/ba-bedroom-before.webp",
-    "after": "/images/ba-bedroom-after.webp",
+    "before": "/images/ba-costa-mesa-red-spot-before.webp",
+    "after": "/images/ba-costa-mesa-red-spot-after.webp",
     "width": 1400,
     "height": 1050,
-    "alt": "Bedroom carpet, traffic soil beside a cleaned pass",
-    "caption": "Bedroom carpet — walking lanes cleaned"
+    "alt": "Carpet with a red spot beside the cleaned carpet",
+    "caption": "Costa Mesa — red spot lifted out"
   },
   {
-    "before": "/images/ba-entry-before.webp",
-    "after": "/images/ba-entry-after.webp",
+    "before": "/images/ba-irvine-pet-stain-before.webp",
+    "after": "/images/ba-irvine-pet-stain-after.webp",
+    "width": 788,
+    "height": 1400,
+    "alt": "Carpet with pet stains beside the cleaned carpet",
+    "caption": "Irvine — pet stains removed"
+  },
+  {
+    "before": "/images/ba-irvine-pet-hall-before.webp",
+    "after": "/images/ba-irvine-pet-hall-after.webp",
     "width": 1400,
     "height": 1050,
-    "alt": "Entry carpet, soiled foreground and a cleaned pass by the door",
-    "caption": "Entry carpet — soil by the front door"
+    "alt": "Hallway carpet, soiled lane beside the cleaned hallway",
+    "caption": "Irvine hallway — pet treatment and clean"
   },
   {
-    "before": "/images/ba-office-before.webp",
-    "after": "/images/ba-office-after.webp",
+    "before": "/images/ba-laguna-niguel-paint-before.webp",
+    "after": "/images/ba-laguna-niguel-paint-after.webp",
+    "width": 1050,
+    "height": 1400,
+    "alt": "Carpet with paint color beside the cleaned carpet",
+    "caption": "Laguna Niguel — paint lifted from carpet"
+  },
+  {
+    "before": "/images/ba-newport-coast-spot-before.webp",
+    "after": "/images/ba-newport-coast-spot-after.webp",
+    "width": 1050,
+    "height": 1400,
+    "alt": "Carpeted stairs, stained treads beside the cleaned stairs",
+    "caption": "Newport Coast — stair carpet cleaned"
+  },
+  {
+    "before": "/images/ba-water-damage-before.webp",
+    "after": "/images/ba-water-damage-after.webp",
+    "width": 1050,
+    "height": 1400,
+    "alt": "Water-damaged carpet beside the dried and cleaned carpet",
+    "caption": "Water damage — dried and cleaned"
+  },
+  {
+    "before": "/images/ba-upholstery-seat-before.webp",
+    "after": "/images/ba-upholstery-seat-after.webp",
+    "width": 768,
+    "height": 1024,
+    "alt": "Restaurant booth seat, soiled fabric beside the cleaned seat",
+    "caption": "Restaurant booth — upholstery cleaned"
+  },
+  {
+    "before": "/images/ba-carpet-stain-before.webp",
+    "after": "/images/ba-carpet-stain-after.webp",
+    "width": 1050,
+    "height": 1400,
+    "alt": "Carpet with a stain beside the cleaned carpet",
+    "caption": "Carpet stain — gone after one pass"
+  },
+  {
+    "before": "/images/ba-stairs-traffic-before.webp",
+    "after": "/images/ba-stairs-traffic-after.webp",
+    "width": 1050,
+    "height": 1400,
+    "alt": "Carpeted stairs, soiled treads beside the cleaned stairs",
+    "caption": "Carpeted stairs — traffic soil cleaned"
+  },
+  {
+    "before": "/images/ba-new-carpet-stains-before.webp",
+    "after": "/images/ba-new-carpet-stains-after.webp",
+    "width": 1050,
+    "height": 1400,
+    "alt": "Carpet with stains beside the cleaned carpet",
+    "caption": "Carpet stains — removed"
+  },
+  {
+    "before": "/images/ba-stairs-clean-before.webp",
+    "after": "/images/ba-stairs-clean-after.webp",
+    "width": 1050,
+    "height": 1400,
+    "alt": "Carpeted stairs, soiled treads beside the cleaned stairs",
+    "caption": "Stairs — every tread cleaned"
+  },
+  {
+    "before": "/images/ba-cabinet-spot-before.webp",
+    "after": "/images/ba-cabinet-spot-after.webp",
+    "width": 1050,
+    "height": 1400,
+    "alt": "Carpet spot by a cabinet beside the cleaned carpet",
+    "caption": "Carpet spot by the cabinet — removed"
+  },
+  {
+    "before": "/images/ba-rug-brightened-before.webp",
+    "after": "/images/ba-rug-brightened-after.webp",
     "width": 1400,
     "height": 1050,
-    "alt": "Home office carpet, traffic soil beside a cleaned pass",
-    "caption": "Home office — desk traffic lanes"
-  },
-  {
-    "before": "/images/ba-doorway-before.webp",
-    "after": "/images/ba-doorway-after.webp",
-    "width": 1200,
-    "height": 1600,
-    "alt": "Bedroom doorway carpet, a blackened walking lane beside the cleaned carpet",
-    "caption": "Bedroom doorway — blackened walking lane"
-  },
-  {
-    "before": "/images/ba-hall-lane-before.webp",
-    "after": "/images/ba-hall-lane-after.webp",
-    "width": 1200,
-    "height": 1600,
-    "alt": "Hallway carpet, a soiled walking lane beside the cleaned hall",
-    "caption": "Hallway — soiled walking lane"
-  },
-  {
-    "before": "/images/ba-red-spill-before.webp",
-    "after": "/images/ba-red-spill-after.webp",
-    "width": 1200,
-    "height": 1600,
-    "alt": "Red spill on a home office carpet beside the cleaned carpet",
-    "caption": "Home office — red spill removed"
-  },
-  {
-    "before": "/images/ba-living-split-before.webp",
-    "after": "/images/ba-living-split-after.webp",
-    "width": 1200,
-    "height": 900,
-    "alt": "Living room carpet, footprint soil beside the cleaned side of the room",
-    "caption": "Irvine living room — footprint soil"
-  },
-  {
-    "before": "/images/ba-anaheim-living-before.webp",
-    "after": "/images/ba-anaheim-living-after.webp",
-    "width": 1200,
-    "height": 900,
-    "alt": "Apartment living room, ground-in soil beside the first cleaned strip",
-    "caption": "Anaheim apartment — ground-in soil"
-  },
-  {
-    "before": "/images/ba-stairs-landing-before.webp",
-    "after": "/images/ba-stairs-landing-after.webp",
-    "width": 1200,
-    "height": 900,
-    "alt": "Stair landing, the soiled bottom step beside the cleaned landing",
-    "caption": "Stair landing — soiled bottom step"
-  },
-  {
-    "before": "/images/ba-pattern-doorway-before.webp",
-    "after": "/images/ba-pattern-doorway-after.webp",
-    "width": 1200,
-    "height": 900,
-    "alt": "Patterned carpet at a doorway, a blackened field beside the cleaned carpet",
-    "caption": "Patterned carpet — blackened doorway"
-  },
-  {
-    "before": "/images/ba-hose-room-before.webp",
-    "after": "/images/ba-hose-room-after.webp",
-    "width": 900,
-    "height": 1200,
-    "alt": "Bedroom carpet, matted soil beside the cleaned side mid-job",
-    "caption": "Bedroom carpet — cleaned mid-job"
+    "alt": "Area rug, dull and soiled beside the cleaned rug",
+    "caption": "Area rug — cleaned and brightened"
   }
 ]

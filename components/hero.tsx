@@ -53,7 +53,7 @@ export function HomeHero({ image }: { image: Img }) {
             <div className="mx-auto mt-8 flex w-full max-w-xl flex-col gap-3 sm:flex-row lg:mx-0">
               <a
                 href={site.phoneHref}
-                className="inline-flex h-14 flex-1 items-center justify-center gap-2 rounded-full bg-gold px-6 text-base font-bold uppercase tracking-wide text-navy shadow-glow transition hover:bg-gold-dark"
+                className="inline-flex h-14 flex-1 items-center justify-center gap-2 rounded-full bg-cta px-6 text-base font-bold uppercase tracking-wide text-white shadow-glow transition hover:bg-cta-dark"
               >
                 <Phone className="size-5" />
                 Call {site.phone}
@@ -65,7 +65,8 @@ export function HomeHero({ image }: { image: Img }) {
                 className="h-14 flex-1 px-6 text-base"
               />
             </div>
-            <TrustBadges className="mx-auto mt-6 justify-center lg:hidden" />
+            {/* Centered on mobile and centered within the left column on desktop. */}
+            <TrustBadges className="mt-6 justify-center" />
           </Reveal>
 
           <Reveal from="right" delay={0.12} className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-1">
@@ -98,9 +99,6 @@ export function HomeHero({ image }: { image: Img }) {
             </div>
           </Reveal>
         </div>
-
-        {/* Desktop: badges centered across the full page width. Mobile shows them under the buttons instead. */}
-        <TrustBadges className="hidden justify-center lg:flex" />
 
         <Reveal from="up" delay={0.2}>
           <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/20 bg-white/20 sm:grid-cols-4">

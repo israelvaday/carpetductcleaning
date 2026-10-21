@@ -20,7 +20,7 @@ export function StickyActions() {
             href={site.phoneHref}
             className="inline-flex h-11 items-center gap-2.5 rounded-full pr-4 pl-1.5 text-sm font-semibold text-white transition hover:bg-white/10"
           >
-            <span className="flex size-8 items-center justify-center rounded-full bg-gold text-navy">
+            <span className="flex size-8 items-center justify-center rounded-full bg-cta text-white">
               <Phone className="size-4" />
             </span>
             {site.phone}
@@ -28,7 +28,7 @@ export function StickyActions() {
           <button
             type="button"
             onClick={() => openQuote({ service: serviceFromPath(pathname) })}
-            className="inline-flex h-11 items-center gap-2 rounded-full bg-gold px-5 text-sm font-bold uppercase tracking-wide text-navy transition hover:bg-gold-dark"
+            className="inline-flex h-11 items-center gap-2 rounded-full bg-book px-5 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-book-dark"
           >
             Book now
           </button>
@@ -39,14 +39,14 @@ export function StickyActions() {
         <a
           href={site.phoneHref}
           aria-label={`Call ${site.phone}`}
-          className="inline-flex size-12 items-center justify-center rounded-full bg-gold text-navy shadow-glow"
+          className="inline-flex size-12 items-center justify-center rounded-full bg-cta text-white shadow-glow"
         >
           <Phone className="size-5" />
         </a>
         <button
           type="button"
           onClick={() => openQuote({ service: serviceFromPath(pathname) })}
-          className="inline-flex h-12 items-center gap-2 rounded-full bg-gold px-5 text-sm font-bold text-navy shadow-glow"
+          className="inline-flex h-12 items-center gap-2 rounded-full bg-book px-5 text-sm font-bold text-white shadow-glow"
         >
           <CalendarCheck className="size-5" />
           Book

@@ -82,7 +82,6 @@ const HUB_SOURCE: Record<string, string> = {
   "rug-pickup": "rug-pickup-drop-off",
   "upholstery-cleaning": "furniture-upholstery-cleaning",
   "couch-cleaning": "couch-sectional-cleaning",
-  "leather-furniture-cleaning": "leather-furniture-cleaning",
   "microfiber-couch-cleaning": "microfiber-couch-cleaning",
   "hardwood-floor-cleaning": "hardwood-floor-cleaning",
   "tile-and-grout-cleaning": "tile-and-grout-cleaning-3",
@@ -95,7 +94,6 @@ const HUB_SOURCE: Record<string, string> = {
   "car-seat-cleaning": "car-seat-cleaning",
   "drape-cleaning": "drapes-curtain-cleaning",
   "outdoor-furniture-cleaning": "outdoor-furniture-cushion-cleaning",
-  "encapsulation-carpet-cleaning": "encapsulation-carpet-cleaning",
   "emergency-cleaning": "emergency-cleaning-services",
   "floor-cleaning": "floor-cleaning",
   // Pages added after the WordPress migration. There is no old dump to fall

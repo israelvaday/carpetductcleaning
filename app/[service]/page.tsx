@@ -16,6 +16,8 @@ import { site } from "@/lib/site";
 import { buildServiceSteps } from "@/lib/process-steps";
 import { titleCase } from "@/lib/utils";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return serviceSlugs().map((service) => ({ service }));
 }

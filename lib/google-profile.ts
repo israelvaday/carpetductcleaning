@@ -78,7 +78,7 @@ const SHORT_DAY: Record<string, string> = {
  * weekly stretch the owner wants instead of a day-by-day list.
  */
 export function hoursLine() {
-  return "Open Sunday through Friday 5 PM · Closed Saturday";
+  return "Sun–Thu: Open 24 Hours · Fri: Until 5 PM · Sat: Closed";
 }
 
 /**

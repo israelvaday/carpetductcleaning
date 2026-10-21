@@ -81,7 +81,7 @@ export function titleCase(slug: string) {
     "area-rug-repair": "Area Rug Repair",
     "drape-pickup": "Drape Pickup and Dry Cleaning",
     "mattress-cleaning": "Mattress Cleaning",
-    "yacht-cleaning": "Yacht Cleaning",
+    "yacht-cleaning": "Yacht/Boat Cleaning",
     "rv-cleaning": "RV Cleaning",
   };
   if (special[slug]) return special[slug];

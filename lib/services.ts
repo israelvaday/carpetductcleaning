@@ -8,7 +8,6 @@ export const SERVICE_BLURB: Record<string, string> = {
   "rug-pickup": "We pick up your rug, clean it at our facility, and deliver it back.",
   "upholstery-cleaning": "Fabric-safe extraction for sofas, sectionals, chairs, and dining seats.",
   "couch-cleaning": "Deep cleaning for couches and sectionals, including cushions and crevices.",
-  "leather-furniture-cleaning": "Clean and condition leather so it stays soft instead of drying and cracking.",
   "microfiber-couch-cleaning": "Microfiber-specific method that lifts body oils without water rings.",
   "hardwood-floor-cleaning": "Deep cleaning that lifts ground-in grime without harming the finish.",
   "tile-and-grout-cleaning": "Pressure cleaning that pulls grease and soil out of porous grout lines.",
@@ -21,7 +20,6 @@ export const SERVICE_BLURB: Record<string, string> = {
   "car-seat-cleaning": "Interior detailing for car, truck, and RV upholstery and carpet.",
   "drape-cleaning": "On-site drape and curtain cleaning with no take-down damage.",
   "outdoor-furniture-cleaning": "Patio cushions and frames cleaned and protected against sun and salt air.",
-  "encapsulation-carpet-cleaning": "Low-moisture method for high-traffic areas that need to be walked on quickly.",
   "emergency-cleaning": "Same-day response for overflows, sewage backups, and storm damage.",
   "floor-cleaning": "Whole-home hard floor cleaning across tile, vinyl, laminate, wood, and stone.",
   "coffee-and-wine-stain-removal": "Coffee and wine spots lifted from carpet, rugs, and upholstery.",
@@ -55,7 +53,6 @@ export const SERVICE_GROUPS: { title: string; slugs: string[] }[] = [
     title: "Carpet",
     slugs: [
       "carpet-cleaning",
-      "encapsulation-carpet-cleaning",
       "pet-stain-odor",
       "coffee-and-wine-stain-removal",
       "carpet-protection",
@@ -85,7 +82,6 @@ export const SERVICE_GROUPS: { title: string; slugs: string[] }[] = [
     slugs: [
       "upholstery-cleaning",
       "couch-cleaning",
-      "leather-furniture-cleaning",
       "microfiber-couch-cleaning",
       "mattress-cleaning",
       "outdoor-furniture-cleaning",
@@ -96,7 +92,7 @@ export const SERVICE_GROUPS: { title: string; slugs: string[] }[] = [
     slugs: ["air-duct-cleaning", "dryer-vent-cleaning", "commercial-air-duct-cleaning"],
   },
   {
-    title: "Vehicles & boats",
+    title: "Vehicle, Boat & Yacht Cleaning",
     slugs: ["car-seat-cleaning", "rv-cleaning", "yacht-cleaning"],
   },
   {

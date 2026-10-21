@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import * as Dialog from "@radix-ui/react-dialog";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import { ChevronDown, Clock, Menu, Phone, X } from "lucide-react";
+import { ChevronDown, Clock, MapPin, Menu, Phone, X } from "lucide-react";
 import { useQuote } from "@/components/quote-dialog";
 import { asset } from "@/lib/images";
 import { serviceFromPath } from "@/lib/quote-services";
@@ -57,16 +57,46 @@ export function Header({ hours }: { hours?: string }) {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-navy text-white">
-      {hours ? (
-        <div className="border-b border-white/10 bg-navy-800">
-          <div className="container-page flex min-h-9 items-center justify-center gap-2 py-1 text-center text-[13px] font-medium text-white/85 sm:text-sm">
-            <Clock className="size-4 shrink-0 text-gold" aria-hidden />
-            <span>{hours}</span>
+      <div className="border-b border-white/10 bg-navy-800 xl:hidden">
+        <div className="container-page flex min-h-9 flex-wrap items-center justify-center gap-x-5 gap-y-0.5 py-1 text-center text-[13px] font-medium text-white/85 sm:text-sm">
+          {hours ? (
+            <span className="flex items-center gap-2">
+              <Clock className="size-4 shrink-0 text-gold" aria-hidden />
+              <span>{hours}</span>
+            </span>
+          ) : null}
+          <a
+            href={site.mapsUrl}
+            target="_blank"
+            rel="noopener"
+            className="flex items-center gap-2 transition hover:text-white"
+          >
+            <MapPin className="size-4 shrink-0 text-gold" aria-hidden />
+            <span>{`${site.street}, ${site.city}, ${site.region} ${site.postalCode}`}</span>
+          </a>
+        </div>
+      </div>
+      <div className="container-page flex h-16 items-center justify-between gap-3">
+        <div className="flex min-w-0 items-center gap-4">
+          <Logo />
+          <div className="hidden min-w-0 flex-col gap-0.5 border-l border-white/15 pl-4 text-[13px] font-medium leading-snug text-white/85 xl:flex">
+            {hours ? (
+              <p className="flex items-start gap-2">
+                <Clock className="mt-0.5 size-4 shrink-0 text-gold" aria-hidden />
+                <span>{hours}</span>
+              </p>
+            ) : null}
+            <a
+              href={site.mapsUrl}
+              target="_blank"
+              rel="noopener"
+              className="flex items-start gap-2 transition hover:text-white"
+            >
+              <MapPin className="mt-0.5 size-4 shrink-0 text-gold" aria-hidden />
+              <span>{`${site.street}, ${site.city}, ${site.region} ${site.postalCode}`}</span>
+            </a>
           </div>
         </div>
-      ) : null}
-      <div className="container-page flex h-16 items-center justify-between gap-3">
-        <Logo />
 
         <NavigationMenu.Root
           value={menu}
@@ -119,7 +149,7 @@ export function Header({ hours }: { hours?: string }) {
           <a
             href={site.phoneHref}
             aria-label={`Call ${site.phone}`}
-            className="inline-flex size-11 items-center justify-center rounded-full bg-gold text-navy shadow-glow transition hover:bg-gold-dark lg:hidden"
+            className="inline-flex size-11 items-center justify-center rounded-full bg-cta text-white shadow-glow transition hover:bg-cta-dark lg:hidden"
           >
             <Phone className="size-5" />
           </a>
@@ -132,7 +162,7 @@ export function Header({ hours }: { hours?: string }) {
           </button>
           <a
             href={site.phoneHref}
-            className="hidden h-12 items-center gap-2 rounded-full bg-gold px-6 text-sm font-bold uppercase tracking-wide text-navy shadow-glow transition hover:bg-gold-dark lg:inline-flex"
+            className="hidden h-12 items-center gap-2 whitespace-nowrap rounded-full bg-cta px-6 text-sm font-bold uppercase tracking-wide text-white shadow-glow transition hover:bg-cta-dark lg:inline-flex"
           >
             <Phone className="size-4" />
             Call {site.phone}
@@ -140,7 +170,7 @@ export function Header({ hours }: { hours?: string }) {
           <button
             type="button"
             onClick={() => openQuote({ service: serviceFromPath(pathname) })}
-            className="hidden h-12 items-center rounded-full border-2 border-white/40 px-6 text-sm font-bold uppercase tracking-wide text-white transition hover:border-gold hover:text-gold lg:inline-flex"
+            className="hidden h-12 items-center rounded-full border-2 border-white/40 px-6 text-sm font-bold uppercase tracking-wide text-white transition hover:border-cta-light hover:text-cta-light lg:inline-flex"
           >
             Book
           </button>
@@ -165,6 +195,15 @@ export function Header({ hours }: { hours?: string }) {
                       {hours}
                     </p>
                   ) : null}
+                  <a
+                    href={site.mapsUrl}
+                    target="_blank"
+                    rel="noopener"
+                    className="mt-2 flex items-start gap-2 rounded-xl bg-sand px-3 py-2.5 text-sm font-medium text-navy"
+                  >
+                    <MapPin className="mt-0.5 size-4 shrink-0 text-brand" aria-hidden />
+                    {`${site.street}, ${site.city}, ${site.region} ${site.postalCode}`}
+                  </a>
                   <nav className="mt-2 grid">
                     {navLinks.map((l) => (
                       <Link
@@ -199,7 +238,7 @@ export function Header({ hours }: { hours?: string }) {
                 <div className="border-t border-line p-4">
                   <a
                     href={site.phoneHref}
-                    className="flex h-12 items-center justify-center gap-2 rounded-full bg-gold font-bold uppercase tracking-wide text-navy shadow-glow"
+                    className="flex h-12 items-center justify-center gap-2 rounded-full bg-cta font-bold uppercase tracking-wide text-white shadow-glow"
                   >
                     <Phone className="size-4" />
                     Call {site.phone}

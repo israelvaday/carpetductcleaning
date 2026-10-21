@@ -6,7 +6,7 @@ import type { Review } from "@/lib/reviews";
 
 function Stars({ n }: { n: number }) {
   return (
-    <span className="flex items-center gap-0.5 text-gold" aria-label={`${n} out of 5 stars`}>
+    <span className="flex items-center gap-0.5 text-cta" aria-label={`${n} out of 5 stars`}>
       {Array.from({ length: 5 }).map((_, i) => (
         <Star key={i} className={i < n ? "size-4 fill-current" : "size-4 text-line"} />
       ))}

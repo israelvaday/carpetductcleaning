@@ -25,11 +25,11 @@ import { titleCase } from "@/lib/utils";
 const HOME_FAQS = [
   {
     q: "How much does carpet cleaning cost in Irvine, CA?",
-    a: "Carpet cleaning in Irvine typically costs $35 to $65 per room or $150 to $300 for a whole home depending on size and condition. We quote on-site before work begins.",
+    a: "Carpet cleaning starts at $69 per room. The $69 option includes a full steam cleaning with truck-mounted hot-water extraction. The final price depends on the size and condition of your carpet, and we give you an itemized on-site quote before any work begins.",
   },
   {
     q: "How long does carpet cleaning take to dry in Irvine?",
-    a: "Most carpets dry within 4 to 8 hours after hot-water extraction. Keep HVAC on Auto and open windows to speed drying.",
+    a: "Most carpets dry within 4 to 8 hours after hot-water extraction. Leaving a window open or running a regular fan helps speed up drying.",
   },
   {
     q: "Is professional carpet cleaning safe for kids and pets?",
@@ -169,13 +169,13 @@ export default function HomePage() {
             <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
               <Link
                 href="/carpet-cleaning/"
-                className="inline-flex h-12 items-center gap-2 rounded-full bg-gold px-6 text-sm font-bold uppercase tracking-wide text-navy transition hover:bg-gold-dark"
+                className="inline-flex h-12 items-center gap-2 rounded-full bg-cta px-6 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-cta-dark"
               >
                 Carpet cleaning
               </Link>
               <Link
                 href="/air-duct-cleaning/"
-                className="inline-flex h-12 items-center gap-2 rounded-full border border-white/30 bg-white/10 px-6 text-sm font-bold uppercase tracking-wide text-white transition hover:border-gold/60 hover:text-gold"
+                className="inline-flex h-12 items-center gap-2 rounded-full border border-white/30 bg-white/10 px-6 text-sm font-bold uppercase tracking-wide text-white transition hover:border-cta-light/60 hover:text-cta-light"
               >
                 Air duct cleaning
               </Link>

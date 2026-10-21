@@ -5,7 +5,7 @@
 import { loadEnvLocal } from "./or-lib.mjs";
 
 loadEnvLocal();
-const BASE = "http://127.0.0.1:3002";
+const BASE = "http://127.0.0.1:3005";
 
 const res = await fetch(`${BASE}/sitemap.xml`);
 const xml = await res.text();

@@ -28,7 +28,7 @@ export function QuoteButton({
       className={cn(
         "inline-flex h-12 items-center justify-center gap-2 rounded-full border px-6 text-sm font-bold uppercase tracking-wide transition active:scale-[0.98]",
         dark
-          ? "border-white/30 bg-white/10 text-white backdrop-blur hover:border-gold/60 hover:text-gold"
+          ? "border-white/30 bg-white/10 text-white backdrop-blur hover:border-cta-light/60 hover:text-cta-light"
           : "border-navy/25 bg-white text-navy hover:border-brand hover:text-brand",
         className,
       )}

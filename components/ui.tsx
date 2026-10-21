@@ -68,7 +68,7 @@ export function CallButton({ className, label }: { className?: string; label?: s
     <a
       href={site.phoneHref}
       className={cn(
-        "inline-flex h-12 items-center justify-center gap-2 rounded-full bg-gold px-6 text-sm font-bold uppercase tracking-wide text-navy shadow-glow transition hover:bg-gold-dark active:scale-[0.98]",
+        "inline-flex h-12 items-center justify-center gap-2 rounded-full bg-cta px-6 text-sm font-bold uppercase tracking-wide text-white shadow-glow transition hover:bg-cta-dark active:scale-[0.98]",
         className,
       )}
     >
@@ -90,7 +90,7 @@ export function RatingPill({ dark = false }: { dark?: boolean }) {
     >
       <span className="flex" aria-hidden>
         {[0, 1, 2, 3, 4].map((i) => (
-          <Star key={i} className="size-3.5 fill-gold text-gold" />
+          <Star key={i} className={cn("size-3.5", dark ? "fill-gold text-gold" : "fill-cta text-cta")} />
         ))}
       </span>
       {site.rating} Google · {site.jobs} jobs
@@ -104,16 +104,16 @@ export function TrustBadges({ className }: { className?: string }) {
       <Image
         src={asset("/images/google.webp")}
         alt="Google Guaranteed badge"
-        width={180}
-        height={69}
-        className="h-11 w-auto rounded-md bg-white object-contain px-1.5 py-1 lg:h-[4.25rem]"
+        width={220}
+        height={84}
+        className="h-14 w-auto rounded-md bg-white object-contain px-2 py-1 lg:h-20"
       />
       <Image
         src={asset("/images/bbb.webp")}
         alt="BBB Accredited Business A+ rating"
-        width={180}
-        height={72}
-        className="h-11 w-auto rounded-md bg-white object-contain px-1.5 py-1 lg:h-[4.25rem]"
+        width={220}
+        height={88}
+        className="h-14 w-auto rounded-md bg-white object-contain px-2 py-1 lg:h-20"
       />
     </div>
   );

@@ -160,7 +160,7 @@ export function composeLeadEmail(lead: LeadRecord): LeadMail {
     <tr><td align="center">
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#ffffff;border-radius:16px;overflow:hidden">
         <tr><td style="background:#0b2237;padding:20px 24px">
-          <p style="margin:0;font-family:Arial,sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#f0a92e">Carpet &amp; Duct Cleaning</p>
+          <p style="margin:0;font-family:Arial,sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#7fb4f7">Carpet &amp; Duct Cleaning</p>
           <h1 style="margin:8px 0 0;font-size:22px;line-height:1.3;color:#ffffff">${esc(subject)}</h1>
         </td></tr>
         <tr><td style="padding:8px 12px 4px">

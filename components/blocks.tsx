@@ -68,9 +68,9 @@ export function ImageHero({
             <QuoteButton dark />
             <RatingPill dark />
           </div>
+          {/* Centered on mobile and centered within the left content block on desktop. */}
+          <TrustBadges className="mt-6 justify-center" />
         </div>
-        {/* Centered across the full page width on all screens. */}
-        <TrustBadges className="mt-6 justify-center" />
       </div>
     </section>
   );
